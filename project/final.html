@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ladies Learning Code HTML and CSS</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <style>
+    /* normalize.css 2011-06-23T00:50 UTC //github.com/jonathantneal/normalize.css */
+    article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}html{cursor:default;font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:transparent;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body,form,input,button,select,textarea{font-size:100%;margin:0}a,a:active,a:hover{outline:none}a:focus{outline:thin dotted}abbr{_border-bottom:expression(this.title ? '1px dotted':'none')}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#FF0;color:#000}pre,code,kbd,samp{font-family:monospace,monospace;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small,sub,sup{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}nav ul{list-style:none}audio[controls],canvas,video{display:inline-block;*display:inline}audio{display:none;_display:expression(this.controls ? 'inline':'none');*zoom:1}audio[controls]{display:inline-block}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){ overflow:hidden}legend{*margin-left:-7px}button,input,select,textarea{vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal;_overflow:expression(this.type == 'button|reset|submit' ? 'visible':'')}button,input[type="button"],input[type="reset"],input[type="submit"]{overflow:visible;-webkit-appearance:button}input[type="checkbox"],input[type="radio"]{box-sizing:border-box}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{ -webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+    body {
+      color: #444444;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h1, h2, h3 {
+      font-family: 'Oswald', sans-serif;
+    }
+    p {
+      line-height: 1.4;
+      font-size: 15px;
+    }
+    img.logo {
+      margin: 0 auto;
+      display: block;
+    }
+    img.profile {
+      border: 1px solid grey;
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+      float: left;
+      margin-right: 20px;
+    }
+    img.favourite {
+      border: 1px solid #A8258D;
+      border-radius: 50%;
+      width: 200px;
+      padding: 5px;
+      margin: 10px;
+    }
+    section.banner {
+      padding-top: 110px;
+      padding-bottom: 100px;
+      background: url('images/background.jpg');
+      background-attachment: fixed;
+      color: #ffffff;
+      text-align: center;
+    }
+    section.banner p {
+      font-size: 22px;
+    }
+    section.banner h1 {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    section.about {
+      background: url('images/tile1.png');
+      overflow: hidden;
+    }
+    section.about h2 {
+      text-align: center;
+    }
+    section.favourites {
+      text-align: center;
+    }
+    section.contact {
+      text-align: center;
+      background: url('images/tile2.png');
+    }
+    section.contact img {
+      margin: 20px;
+    }
+    section.box {
+      padding: 50px 100px;
+    }
+    section.box h2, section.box h3 {
+      color: #A8258D;
+    }
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      border-bottom: 1px solid #434A5C;
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .menu li {
+      display: inline-block;
+      padding: 20px 35px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#favourites">Favourites</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <section class="banner">
+    <img class="logo" src="images/logo.png">
+    <h1>Your name here</h1>
+    <p>Your tagline here</p>
+  </section>
+  <section id="about" class="about box">
+    <h2>About Me</h2>
+    <img class="profile" src="images/profile.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo.</p>
+  </section>
+  <section id="favourites" class="favourites box">
+    <h2>My Favourite Things</h2>
+    <h3>Here are a few things I really love</h3>
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+  </section>
+  <section id="contact" class="contact box">
+    <h2>Contact Me</h2>
+    <a href="https://twitter.com/tessthornton"><img src="images/twitter.png"></a>
+    <a href="https://facebook.com/tessthornton"><img src="images/facebook.png"></a>
+    <a href="https://linkedin.com/tessthornton"><img src="images/linkedin.png"></a>
+  </section>
+</body>
+</html>
