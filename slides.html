@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
-  <link rel="shortcut icon" href="framework/img/favicon.ico"> 
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
 
   <!-- Workshop-specific styles -->
   <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
@@ -26,7 +26,7 @@
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
 <body data-duration="360">
-  
+
   <!-- Welcome slide -->
   <header class="slide intro first">
     <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
@@ -40,6 +40,8 @@
         <span class="light">NETWORK: network name</span><br>
         <span class="light">PASSWORD: thepassword</span>
       </div>
+
+      <p>Download Learner materials: bit.ly/html-css-onepage</p>
     </div>
 
     <div class="sponsor">
@@ -54,8 +56,8 @@
       <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
       <div class="info">
         <h1 class="heading-bg">
-          <span>Title of Workshop</span><br>
-          <span>Second line if title is long</span>
+          <span>Intro to HTML & CSS:</span><br>
+          <span>Build a one-page website</span>
         </h1>
         <h2><span>with</span> Instructor Name</h2>
 
@@ -69,285 +71,350 @@
     </section>
 
     <section class="slide" data-markdown>
-      ##Customizing slides
+      <script type="text/template">
+        ##Getting Started
 
-      Slide #1: if you don't know the wi-fi info in advance, just delete/comment out the `&lt;header&gt;` slide.
+        **Text Editor**
 
-      Put all workshop specific images in **framework/img/workshop**.
-      
-      All CSS for this template is written in Sass.  Avoid editing the core files (theme-llc.scss, _mixins.scss, _variable.scss).  Put all personal customizations in **framework/sass/workshop.scss**.  If you'd like to add an improvement or enhancement, please submit a pull request, open an issue or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
+        * Used to write and edit code.
+        * Default text editors come preinstalled on your computers. (Notepad - Windows or TextEdit - Apple)
+        * Lots of paid and free options that include features such as colour highlighting and plugins.
 
-      To change the background image in slide #1 and slide #2, there are several images to choose from in **framework/img**. See **theme-llc.scss**, `.intro` CSS block to make the change.
+        **[Sublime Text](http://www.sublimetext.com/)** is the editor we'll be using today.
 
-      The progress bar at the top of the page can be defined by adding the presentation duration, in minutes, in the `data-duration` attribute on the `body` tag.  If you do not want to use it at all, leave the value empty.
+        (<!-- .element: class="footnote" --> [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Apple) are also great options.)
 
-      Since most of the links included in the workshops are to external resources, all links open in a new window by default to allow learners to always have access to the slides.  Note that this feature is included using `&lt;base target="_blank"&gt;` in the `head` tag.
+        **Web Browser**
 
-      View the rest of the presentation for examples of styles included in the theme.  Many styles can be accomplished by adding a specific classes.
+        * Choose a modern web browser that supports current web standards and development tools.
+        * Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
 
-      There is also support for using Markdown as well as including in-slide CSS examples.
+        Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
+
+        To set Chrome as your default browser, follow <!-- .element: class="footnote" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+
+        **Learner files**
+
+        Today's slides and exercise files are contained within the **llc-html-css-one-page-master** zip folder.
+
+        Make sure the entire folder has been unzipped (for Windows, right click and select "Extract All").  Right click or two-finger tap on "slides.html" or "slides" and "Open in Chrome" to view the slides.
+      </script>
     </section>
-
-    <section class="slide title">
-      <h1>Title Slide Example</h1>
-    </section>
-
-    <section class="slide title">
-      <h1>Title Slide Example</h1>
-      <h2>Sub-heading example</h2>
-    </section>
-
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Title slides
-
-        For the previous two examples of Title slides, add a `title` class to `<section>` and use an `h1` tag for the main heading and `h2` for a subheading.
-        
-        ```xml
-        <section class="slide title">
-          <h1>Title Slide Example</h1>
-          <h2>Sub-heading example</h2>
-        </section>
-        ```
-
-        <br>
-        Also, use the class of `.footnote` for links to extra resources or any other type of footnotes.
-
-        Footnote example here.  Some more text and a  <!-- .element: class="footnote" -->[link]().
+        ##Today&rsquo;s project
       </script>
     </section>
-    <section class="slide">
-      <h2>Incremental display of content</h2>
-      <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
 
-      <ul>
-        <li class="delayed">Make sure your computer is setup</li>
-        <li class="delayed">Web development breakdown</li>
-        <li class="delayed">Dive into HTML</li>
-        <li class="delayed">CSS fundamentals</li>
-      </ul>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Course Outline
+
+        * Getting started
+        * Intro to HTML & CSS
+        * Write the HTML for your project
+        * Write the CSS for your project
+        * Final touches
+        * Next steps
+      </script>
     </section>
 
-    <section class="slide centered" data-markdown>
-      ##Centered content
-
-      Add a class of `centered` to `&lt;section>`.
-
-      ![](http://cl.ly/image/14193Y1x1f2c/mic-drop.gif)
-    </section>
-
-    <section class="slide side-by-side" data-markdown>
-    ##Two images
-
-Add a class of `side-by-side` to `&lt;section>` to align two images.
-
-![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
-![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)
-    </section>
-
-    <section class="slide">
-      <h2>Syntax Highlighting</h2>
-      <p>Code highlighting is provided by <a href="http://highlightjs.org">highlight.js</a> and will be applied to any code wrapped in <code>&lt;pre>&lt;code>&lt;/code>&lt;/pre></code>. The syntax highlighting theme files can be found in <strong>framework > css > highlightjs-themes</strong>. If you wish to change it, update the css link in the <code>&lt;head&gt;</code>. Visit <a href="http://highlightjs.org">highlight.js</a> to see the full list of supported languages, themes and other usage information.</p>
-
-      <p>The default theme for this slide presentation uses a light background because some workshop settings don't allow for the dimming of classroom lights or the projector does not show syntax highlighting on dark backgrounds very well.</p>
-
-      <p>For HTML, the left angled bracket, <code>&lt;</code>, needs to be escaped to show. Sometimes, for HTML snippets, the plugin may not register it properly as HTML.  If that is the case, add an <code>xml</code> class to the <code>&lt;pre&gt;</code> tag.</p>
-      <p>Here's a tool to help with the conversion: <a href="http://www.htmlescape.net/htmlescape_tool.html">http://www.htmlescape.net/htmlescape_tool.html</a></p>
-
-      <h3>HTML</h3>
-      <pre><code>&lt;!DOCTYPE html>
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p class="hello"&gt;Paragraph example.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html></code></pre>
-
-      <h3>JavaScript</h3>
-<pre><code>var greeting = "Hello!";
-
-function sayHello() {
-  console.log(greeting);
-}
-
-sayHello();
-</code></pre>
-
-      <h3>CSS</h3>
-<pre><code>body {
-  margin: 0;
-  padding: 0;
-}</code></pre>
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Getting Started
+        ##The Web Browser & Editing HTML
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-##Markdown support
+      <script type="text/template">
+        ##Web Browsers
 
-Markdown is a text-to-HTML conversion tool and allows you to write using plain text formatting.
+        Choose a modern web browser that supports current web standards and development tools. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers. Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
 
-This slide deck supports automatic conversion from Markdown to HTML.
+        The main functionality of the browser is to present the *web resource* and display it in the browser window. The *web resource* is usually an HTML document, but can be other types such as PDFs or images.
 
-See the [markdown documentation](http://daringfireball.net/projects/markdown/) for formatting syntax.
+        HTML documents are saved with an **.html** file extension (just like PDFs have a .pdf file extension).
 
-Markdown support can be added in two ways. See the next two slides for more info.
+        Go to http://ladieslearningcode.com, right-click or two-finger tap and select "View Page Source".
+
+        That&rsquo;s HTML!  You can do this on ANY web page.
+
+        <br>
+        To set Chrome as your default browser, follow <!-- .element: class="footnote" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-##Markdown: Option 1
+      <script type="text/template">
+        ##Edit some HTML!
 
-Include the `data-markdown` attribute in the section tag. 
+        * Open Sublime Text and select **File > Open**.
+        * Navigate to the **llc-html-css-one-page-master** folder.
+        * Click on the **project** folder *once* to select it and click **Open**.
+          The project folder and all its contents will appear in the sidebar.
+        * In the sidebar, double-click on **basic.html** to open it in Sublime.
+        * Make a change to the text *between* the `<h1></h1>` and save it (**File > Save**).
+        * Right click or two-finger tap in Sublime and select Open in Browser to open the HTML file in your *default* browser.
 
-```xml
-&lt;section class="slide" data-markdown>
-  ##This is markdown!
-&lt;/section>
-```
-**If you need to use any HTML tags in the slide or add a class/id to an element, the entire slide has to be written in HTML and the markdown syntax will no longer be supported.  See option 2 for more info about mixing markdown and HTML.**
-
-Code blocks can be denoted either by three back ticks (```) **or** with one 4 space tab.  
-Using back ticks, immediately followed by the language, will allow you to specify a language for syntax highlighting.
-View the HTML source or see below for examples.
+        If Chrome is not your default browser, go to your Window/Finder and navigate to the project folder, right-click/two-finger tap on index.html and choose Open With > Chrome
 
 
-#### Javascript Example: 
+        * Now change the text *between* the `<p></p>` & save it.
+        * This time, go to your browser and *refresh* the web page.
 
-\```javascript
-
-```javascript
-var myJSVariable = "Syntax Highlighting for JavaScript";
-```
-
-#### CSS Example
-\```css
-```css
-.css-selector {
-  property: value;
-}
-```
-
-#### HTML Example
-For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, just like the `&lt;code&gt;` in the previous example, the left angled bracket of the HTML tag needs to be escaped. View source to see example.
-
-\```xml
-```xml
-&lt;header>
-  &lt;h1>I'm an H1!&lt;/h1>
-  &lt;p>This is a paragraph&lt;/p>
-&lt;/header>
-
-```
-#### indented example
-
-  code block that has to guess at the language and likely gets it wrong.
+        This is your editing work flow. Make changes. Save. Refresh browser. Repeat.
+      </script>
     </section>
 
-    <section class="slide">
-      <h2>Markdown: Option 2</h2>
-      <p>Add the <code>data-markdown</code> attribute to the <code>&lt;section&gt;</code> tag and wrap the content in a <code>&lt;script type="text/template"&gt;&lt;/script&gt;</code>. With this option, you can mix HTML markup (does not need to be escaped) with Markdown syntax though avoid using any additional <code>&lt;script&gt;</code> tags within.</p>
-
-      <p>Also, using single or double quotes in the content may throw off the syntax highlighting in your editor, though the content will still be rendered properly in the browser.  You can use the HTML code instead.</p>
-<pre><code>&lt;section class="slide" data-markdown&gt;
-  &lt;script type="text/template"&gt;
-    ## Heading2
-
-    A paragraph with some text and a [link](http://hakim.se).
-
-    &lt;p class="delayed">delayed text&lt;/p&gt;
-  &lt;/script&gt;
-&lt;/section&gt;
-</code></pre>
-    <p>You can also add an attribute like this:</p>
-
-<pre><code>Footnote text&lt;!-- .element: class="footnote" --&gt;
-</code></pre>
-
-<p>Be sure to place the snippet before any nested elements.</p>
-
-<pre><code>Footnote text and &lt;!-- .element: class="footnote" --&gt; [link](http://website.com)
-</code></pre>
-
-<p>Will be converted to:</p>
-
-<pre><code>&lt;p class="footnote"&gt;A paragraph with some text and a &lt;a href="http://hakim.se"&gt;link&lt;/a&gt;.&lt;/p&gt;
-</code></pre>
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Intro to HTML & CSS
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Some useful tools
-      
-      Here are some tools that may come in handy for creating content and adding code snippets.
+      <script type="text/template">
+        ##HTML: Then content layer
 
-      Replace special characters with HTML Entities  
-      http://www.htmlescape.net/htmlescape_tool.html
+        When writing HTML, *tags* are used to wrap and describe the content that is inside of them.
 
-      Converts markdown to HTML  
-      https://stackedit.io/editor
+        Here are a couple tags you've seen already:
 
-      Converts HTML to markdown  
-      http://domchristie.github.io/to-markdown/
+        ```
+        <h1>This tag describes a heading</h1>
+        <p>This tag is for paragraphs.</p>
+        ```
+        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>` (`shift` + `,` and `shift` + `.` ).  Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to wrap the content.  Note that the closing tag has a forward slash (`/`).
 
-      LICEcap - simple animated screen captures  
-      http://www.cockos.com/licecap/
-    </section>
+        ```
+        <tag> opening tag --- closing tag</tag>
+        ```
 
-    <section class="slide">
-      <h2>CSS demos</h2>
-      <p>You can include in-slide CSS demos. In this example, The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!</p>
-
-      <textarea class="snippet">background-color: lightblue;
-font-family: "Times New Roman", serif;</textarea>
-
-      <p>Just add the CSS to a <code>textarea</code> with a class of <code>.snippet</code>. (View the source for this slide.)</p>
-    </section>
-
-    <section class="slide">
-      <h2>More CSS demos</h2>
-      <p>You can also target specific elements rather than the whole slide.</p>
-      <textarea class="snippet" data-subject="#test">color: slateblue;
-font-family: "Times New Roman", serif;
-padding: 20px;</textarea>
-      <div id="test" class="example">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
-      </div>
-
-      <p>Just like the previous example, the CSS is added in a <code>textarea</code> element but also include a <code>data-subject</code> attribute.</p>  
-
-      <p>In the element to be targeted, add an <code>id</code> with a value that matches the <code>data-subject</code> of the  <code>textarea</code> and add a class of <code>.example</code> to add the border style. (View the source for this slide.)</p>
-    </section>
-
-    <section class="slide">
-      <h2>Presentation mode</h2>
-
-      <p>This slide has presenter notes. They are only visible in presenter view (Ctrl+P or Shift+P).  Just add the <code>.presenter-notes</code> class to the element container the notes.
-
-      <p>Check out the notes in this slide!</p>
-
-      <p class="presenter-notes">
-        Notes! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt soluta sit maiores nihil doloribus tempore dolor debitis a repudiandae recusandae natus officia, ad asperiores quaerat facilis nobis illo alias? Quaerat.
-      </p>
+        To create an HTML document, all you have to do is save the file with an `.html` extension.
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Getting your site online
+      <script type="text/template">
+        ##Nested tags
 
-      [Affiliate info for last slide]
+        Tags can be *nested* within other tags like this:
 
-      You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
-      
-      * [hover.com](http://hover.com/ladiescode) - Domain registration
-      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - Domain and hosting - Use coupon code **LLC40** to get $40 off your registration!
+        ```
+        <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
+        ```
 
-      To get your files online, you will need upload your files to your newly purchased hosting server. There are a few pieces of information you will need and are usually provided to you by your hosting service provider.
+        Nested tags create a family tree-like relationship and is often referred to as the *parent* node and *child* nodes.  The inner tag is the child of the outer tag.
 
-      * FTP Address
-      * Username
-      * Password
+        HTML was created for web browsers to easily read (not humans) so this makes perfect sense to a web browser:
 
-      Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)  
-      Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
+        ```
+        <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
+        ```
+      </script>
+    </section>
+
+    <section id="basic-tags" class="slide" data-markdown>
+      <script type="text/template">
+        ##Organizing your code
+
+        Whitespace through indentation (tabs) make your HTML more human-readable.
+
+        Every time a tag is nested, add one tab.  Getting into this habit early on will help keep your code organized from the start. Also, use HTML *comments* to leave notes for yourself or for organizing your code. Note the syntax in the example below.
+
+        **The tags below should be included in all HTML documents.**
+
+        ```
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title></title>
+          </head>
+          <body>
+            <!-- page content here -->
+          </body>
+        </html>
+        ```
+      </script>
+    </section>
+
+    <section class="slide highlighted-tags" data-markdown>
+      <script type="text/template">
+        ##The Doctype
+
+        * must be the first item
+        * not an HTML tag
+        * tells the browser what HTML version the page is written in
+        * the below example is the HTML5 doctype
+
+        <pre><code><strong>&lt;!DOCTYPE html&gt;</strong>
+        &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;!-- page content here --&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+
+        [todo] add resource
+      </script>
+    </section>
+
+    <section class="slide highlighted-tags" data-markdown>
+      <script type="text/template">
+        ##THE HTML ELEMENT
+
+        * always the first tag
+        * it is the root element & ancestor of all other elements because everything is nested inside.
+        * identifies document as HTML
+        * the `lang` *attribute* classifies the language (more about attributes later)
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+        <strong>&lt;html lang=&quot;en&quot;&gt;</strong>
+          &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;!-- page content here --&gt;
+          &lt;/body&gt;
+        <strong>&lt;/html&gt;</strong>
+        </code></pre>
+      </script>
+    </section>
+
+    <section class="slide highlighted-tags" data-markdown>
+      <script type="text/template">
+        ##The HEAD ELEMENT
+
+        * includes information about the page but does not display content
+        not displaying content
+        * the `<title></title>` element is the only required element
+          * defines title of the web page/document
+          * displayed in the browser toolbar, bookmarks and search engine results
+        * CSS, JavaScript & [metadata](searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags) can also be included
+          * `<meta charset="UTF-8">` sets the [character encoding](https://code.google.com/p/doctype-mirror/wiki/MetaCharsetAttribute) of an HTML document
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+          <strong>&lt;head&gt;</strong>
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;My page title&lt;/title&gt;
+          <strong>&lt;/head&gt;</strong>
+          &lt;body&gt;
+            &lt;!-- page content here --&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+      </script>
+    </section>
+
+
+    <section class="slide highlighted-tags" data-markdown>
+      <script type="text/template">
+        ##THE BODY ELEMENT
+
+        All content to be displayed in the browser window goes between the `<body></body>` tags.
+
+        Also known as the *viewport*.
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;My page title&lt;/title&gt;
+          &lt;/head&gt;
+          <strong>&lt;body&gt;</strong>
+            &lt;!-- page content here --&gt;
+          <strong>&lt;/body&gt;</strong>
+        &lt;/html&gt;
+        </code></pre>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Adding Content
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Presentational tags - nope!
+
+        It’s important to create semantic, clean and valid markup before adding styles. Though HTML has some default styles, remember, it is used to only describing the content - not defining how it looks. That's what CSS is for.
+
+        Here are a few (deprecated) tags you should no longer use:
+
+        ```
+        <marquee>Anyone remember the marquee tag?</marquee>
+        ```
+        ```
+        <font size="large">LARGE FONTS!</font>
+        ```
+        ```
+        <center>I'm centered text!</center>
+        ```
+
+        <marquee>Anyone remember the marquee tag?</marquee>
+        <font size="large">LARGE FONTS!</font>
+        <center>I'm centered text!</center>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Exercise #1: Create your project's HTML page
+
+        1. In your text editor, create a new file (**File** > **New File**)
+        2. Save and name it `index.html` (**File** > **Save**)
+        3. Add all of the basic HTML tags. You can refer to the previous example in [basic.html](project/basic.html) for reference or [this slide](slides.html#basic-tags).
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##CSS: The presentation layer
+
+        * CSS = cascading style sheet
+        * stylesheet language with its own syntax rules
+        * used to separate content from presentation
+        * introduced to solve the issues of using HTML tags and attributes for presentation
+        * a stylesheet contains a list of rules that cascade to reduce redundancy and saves time
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Websites without CSS
+
+        ![](framework/img/workshop/no-css-comparison.png)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##CSS: The presentation layer
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##
+      </script>
     </section>
 
     <!-- Last slide -->
@@ -367,7 +434,7 @@ padding: 20px;</textarea>
         <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
       </ul>
 
-      <p class="attribution">Slide presentation created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      <p class="attribution">Slide presentation created with <a href="https://github.com/LeaVerou/csss">Lea Verou&rsquo;s CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </section>
 
   </main><!-- cls main section -->
@@ -376,7 +443,7 @@ padding: 20px;</textarea>
     <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
     <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
   </footer>
-  
+
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="framework/scripts/slideshow.js"></script>
 
