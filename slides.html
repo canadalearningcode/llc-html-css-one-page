@@ -70,40 +70,13 @@
       </div>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Getting Started
-
-        **Text Editor**
-
-        * Used to write and edit code.
-        * Default text editors come preinstalled on your computers. (Notepad - Windows or TextEdit - Apple)
-        * Lots of paid and free options that include features such as colour highlighting and plugins.
-
-        **[Sublime Text](http://www.sublimetext.com/)** is the editor we'll be using today.
-
-        (<!-- .element: class="footnote" --> [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Apple) are also great options.)
-
-        **Web Browser**
-
-        * Choose a modern web browser that supports current web standards and development tools.
-        * Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
-
-        Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
-
-        To set Chrome as your default browser, follow <!-- .element: class="footnote" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
-
-        **Learner files**
-
-        Today's slides and exercise files are contained within the **llc-html-css-one-page-master** zip folder.
-
-        Make sure the entire folder has been unzipped (for Windows, right click and select "Extract All").  Right click or two-finger tap on "slides.html" or "slides" and "Open in Chrome" to view the slides.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
+    <section class="slide centered" data-markdown>
       <script type="text/template">
         ##Today&rsquo;s project
+
+        See the whole project [here](project/final.html).
+
+        ![final project](framework/img/workshop/final-project.jpg)
       </script>
     </section>
 
@@ -123,7 +96,7 @@
     <section class="slide title" data-markdown>
       <script type="text/template">
         #Getting Started
-        ##The Web Browser & Editing HTML
+        ##Editing HTML, CSS & the Web Browser
       </script>
     </section>
 
@@ -148,51 +121,114 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Edit some HTML!
+        ##Text Editor
 
-        * Open Sublime Text and select **File > Open**.
-        * Navigate to the **llc-html-css-one-page-master** folder.
-        * Click on the **project** folder *once* to select it and click **Open**.
-          The project folder and all its contents will appear in the sidebar.
-        * In the sidebar, double-click on **basic.html** to open it in Sublime.
-        * Make a change to the text *between* the `<h1></h1>` and save it (**File > Save**).
-        * Right click or two-finger tap in Sublime and select Open in Browser to open the HTML file in your *default* browser.
+        * Used to write and edit code.
+        * Default text editors come preinstalled on your computers (Notepad - Windows or TextEdit - Apple) but don't include many frills.
+        * Lots of paid and free options that include useful features such as colour highlighting and various plugins for improving workflow. Find one that works for you.
+        * Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Atom](https://atom.io/), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/)
 
-        If Chrome is not your default browser, go to your Window/Finder and navigate to the project folder, right-click/two-finger tap on index.html and choose Open With > Chrome
-
-
-        * Now change the text *between* the `<p></p>` & save it.
-        * This time, go to your browser and *refresh* the web page.
-
-        This is your editing work flow. Make changes. Save. Refresh browser. Repeat.
+        <br>
+        **[Sublime Text](http://www.sublimetext.com/)** is the editor we'll be using today.
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+
+    <section class="slide" data-markdown>
       <script type="text/template">
-        #Intro to HTML & CSS
+        ##Edit some HTML!
+
+        1. Open Sublime Text and select **File > Open**.
+        1. Navigate to the **llc-html-css-one-page-master** folder.
+        1. Click on the **project** folder *once* to select it and click **Open**.
+           The project folder and all its contents will appear in the sidebar.
+        1. In the sidebar, double-click on **basic.html** to open it in Sublime.
+        1. Make a change to the text *between* the `<h1></h1>` and save it (**File > Save**).
+        1. Right click or two-finger tap in Sublime and select Open in Browser to open the HTML file in your *default* browser.
+        1. Now change the text *between* the `<p></p>` & save it.
+        1. This time, go to your browser and *refresh* the web page.
+
+        This is your editing work flow: Make changes. Save. Refresh browser. Repeat. Repeat. Repeat.
+
+        If Chrome is not your default browser, go to your Window/Finder and navigate to the project folder, right-click/two-finger tap on index.html and choose Open With > Chrome <!-- .element: class="footnote" -->
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##HTML: Then content layer
+        ## Edit some CSS!
+
+        There are few different ways to add CSS to an HTML page.  Let's use the *in-page* method for this example. In the `<head></head>` section of **basic.html**, add a pair of `<style></style>` tags for the CSS rules.
+
+        ```
+        <head>
+          <meta charset="UTF-8">
+          <title>Ladies Learning Code HTML and CSS Workshop</title>
+          <style>
+
+          </style>
+        </head>
+        ```
+        To make all of the paragraphs red, it would look like the example below. Add it between the style tags. Save and refresh your browser!
+
+        ```
+        p {
+          color: red;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        ## Ta-da!
+        You just created your first website.
+
+        HTML + CSS = website
+
+        [add gif]
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##HTML vs HTML & css
+
+        ![HTML vs HTML & css](framework/img/workshop/no-css-comparison.png)
+      </script>
+    </section>
+
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Intro to HTML
+        ##HyperText Markup Language
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##HTML: The content layer
 
         When writing HTML, *tags* are used to wrap and describe the content that is inside of them.
 
-        Here are a couple tags you've seen already:
+        Here are a couple tags you've just seen, used for adding content to the page.
 
         ```
         <h1>This tag describes a heading</h1>
         <p>This tag is for paragraphs.</p>
         ```
-        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>` (`shift` + `,` and `shift` + `.` ).  Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to wrap the content.  Note that the closing tag has a forward slash (`/`).
+
+        <br>
+        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>` (`shift` + `,` and `shift` + `.` ).
+
+        Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to wrap the content.  Note that the closing tag has a forward slash (`/`).
 
         ```
-        <tag> opening tag --- closing tag</tag>
+        <tag> opening tag --- closing tag </tag>
         ```
 
-        To create an HTML document, all you have to do is save the file with an `.html` extension.
+
       </script>
     </section>
 
@@ -261,8 +297,6 @@
           &lt;/body&gt;
         &lt;/html&gt;
         </code></pre>
-
-        [todo] add resource
       </script>
     </section>
 
@@ -340,9 +374,374 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Adding Content
+        ## Attributes
+
+        Provides additional information or instruction for the HTML element and is included *inside* the opening HTML tag in the form of `attribute="value"`.
+
+        ```
+        <tag attribute="value">content</tag>
+        ```
+
+        There are many different types of attributes for used different purposes. We just saw two attributes in our basic HTML page example .
+
+        The `lang` attribute is used to classify the language.
+
+        ```
+        <html lang="en">
+        ```
+
+        The `charset` attribute sets the character encoding.
+        ```
+        <meta charset="UTF-8">
+        ```
+
+        We will be using more attributes throughout today's exercises.
       </script>
     </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Exercise #1: Create your project's HTML page
+
+        1. In your text editor, create a new file (**File** > **New File**)
+        2. Save and name it `index.html` (**File** > **Save**)
+        3. Add all of the basic HTML tags.
+          Refer to [this slide](slides.html#basic-tags) or the previous example in [basic.html](project/basic.html) for reference.
+        4. Update the `<title></title>` to properly reflect your page.
+
+        We're not adding content yet so all you will see in the browser is a blank page and your page title in the browser toolbar.
+
+        ![exercise 1 example](framework/img/workshop/exercise-1.jpg)
+
+      </script>
+    </section>
+
+    <section class="slide page-layout" data-markdown>
+      <script type="text/template">
+        ## PLANNING THE PAGE LAYOUT
+
+        An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with semantic markup is a good way to start.
+
+        If you don't have a design to work from, many developers and designers like to start planning with a simple sketch. For today, let's take a look at the final design to see how to group related elements and create a page structure.
+
+        There are many structural HTML tags that are used just for this purpose.
+
+        ![final project](framework/img/workshop/final-project.jpg) <!-- .element: class="screenshot" -->
+
+        <div class="labels">
+
+        navigation <!-- .element: class="nav" -->
+
+        header <!-- .element: class="header" -->
+
+        about <!-- .element: class="about" -->
+
+        loves <!-- .element: class="loves" -->
+
+        footer <!-- .element: class="footer" -->
+        </div>
+        </header>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## STRUCTURAL HTML TAGS
+
+        The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>` is the other.) It is used purely for grouping elements together for styling.
+
+        `<div>` tags are often used with the `class` attribute to differentiate them (more on class later). To create the page layout, the HTML could look something like this:
+
+
+        ```xml
+        <div class="nav">
+          nav links here
+        </div>
+
+        <div class="header">
+          header content here
+        </div>
+
+        <div class="about">
+          about content here
+        </div>
+
+        <div class="loves">
+          stuff I love goes here
+        </div>
+
+        <div class="footer">
+          footer / contact info here
+        </div>
+        ```
+
+        Be careful of "divitis"! Use the<!-- .element: class="footnote" --> `<div>` to group related elements to be styled together as one section. If you need to style a single element, like an `<h1>` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##HTML5 Structural Elements
+
+        In HTML5, new semantic tags were introduced to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. Using HTML5 tags, the previous example could look like this instead:
+
+        ```xml
+        <nav>
+          nav links here
+        </nav>
+
+        <header>
+          header content here
+        </header>
+
+        <section class="about">
+          about content here
+        </section>
+
+        <section class="loves">
+          stuff I love goes here
+        </section>
+
+        <footer>
+          footer / contact info here
+        </footer>
+        ```
+
+        `<div>` can still be used when no other tag properly describes the element. When in doubt, it&#39;s ok to continue to use `<div>`.
+
+        Additional resources:<!-- .element: class="footnote" --> [html5doctor.com](http://html5doctor.com), [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #2: Page structure
+
+        Back in the text editor, add the HTML5 structural tags to setup the page layout.
+
+        You will need these tags: `<nav>`, `<header>`, two `<section>`'s and the `<footer>` for the contact info. Only add the structural blocks in this step, no content just yet.
+
+        Also, use HTML comments to help organize the code like so:
+
+        ```
+        <!-- site navigation -->
+        <nav>
+          nav content here
+        </nav>
+        ```
+
+        For reference, view **references > exercise-2.html** included in **llc-html-css-one-page-master** folder.
+
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown>
+      #Adding content
+      ##Headings, paragraphs, images and links
+    </section>
+
+    <section class="slide" data-markdown>
+    <script type="text/template">
+      ##Paragraphs & Headings
+
+      **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
+
+      ```xml
+      <p>This is a paragraph.</p>
+      ```
+
+      **Headings:** There are six page headings tags ranging from `<h1>` to `<h6>` used to describe the *hierarchy* of the page structure. To decide which heading to use, think about how you would arrange an essay outline.
+
+      <div class="example essay-headings">
+      <p><strong>Essay Title</strong></p>
+      <ol>
+       <li>Introduction</li>
+       <li>First supporting idea
+         <ul>
+           <li>point 1</li>
+           <li>point 2</li>
+         </ul>
+       </li>
+       <li>Second supporting idea
+         <ul>
+           <li>point 1</li>
+           <li>point 2</li>
+         </ul>
+       </li>
+       <li>Conclusion</li>
+      </ol>
+      </div>
+
+      How would we describe this hierarchy using heading tags?
+    </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Headings & HTML5 Sectioning tags
+
+        Prior to HTML5, generally only one `<h1>` was used per page.  With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its *own* outline.
+
+        **Pre-HTML5 Heading Outline**
+        ```xml
+        <h1>Essay Title</h1>
+
+        <div class="intro">
+         <h2>Introduction</h2>
+         <p>stuff here</p>
+        </div>
+
+        <div class="first-idea">
+         <h2>First supporting idea</h2>
+         <h3>point 1</h3>
+         <h3>point 2</h3>
+        </div>
+        ```
+
+        **HTML5 Heading Outline**
+        ```xml
+        <h1>Essay Title</h1>
+
+        <section class="intro">
+         <h1>Introduction</h1>
+         <p>stuff here</p>
+        </section>
+
+        <section class="first-idea">
+         <h1>First supporting idea</h1>
+         <h2>point 1</h2>
+         <h2>point 2</h2>
+        </section>
+        ```
+
+        Read more about headings and HTML5<!-- .element: class="footnote" --> [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) and [here](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #3: Add Content (10mins)
+
+        Add in some text based content. Images & links will be added in the next exercise.
+
+        1. Add your name & tagline in the `<header>` section using the appropriate heading tags. (Leave the navigation blank for now.)
+        1. In the **About** section, add a heading and a couple paragraphs.
+        1. In the **Loves** section, add a heading and a paragraph.
+        1. In the **Footer**, add a heading.
+
+        Your page will look similar to this:
+
+        ![](framework/img/workshop/exercise-3.png)
+
+        Example:<!-- .element: class="footnote" --> [reference/exercise-3.html](reference/exercise-3.html)
+
+        <div class="footnote">
+          Don&#39;t know what content to add? Use placeholder text!
+          <br>
+          http://meettheipsums.com <br>
+          http://thewireipsum.com <br>
+          http://www.quotes.net <br>
+          http://blokkfont.com <br>
+          (blokkfont.com an nice design alternative but make sure you have some actual text on your page to style later.)
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Self-closing tags, attributes & Images
+
+        Self-closing tags don't format content. Instead they are used to embed objects onto the page, they *are* the content. Because of this, they do not require a closing tag.
+
+        Images are an example of a self-closing tag. It also requires a `src` *attribute* to tell the browser the source of the image file location.
+
+        ```
+        <img src="path/to/image/file">
+
+        ```
+
+        `alt` is another attribute that is added to images to provide *alternative text* to visually impaired web visitors using screen readers.
+
+        ```
+        <img src="http://placekitten.com/g/200/300" alt="kitten!">
+
+        ```
+        <img src="http://placekitten.com/g/200/300" alt="kitten!">
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Image files
+
+        It's best practice to organize your images into its own folder.  In *project*, there is already a folder called *images* with some sample images you can use today (or add your own to that folder).
+
+        Since the images are not in the same folder as **index.html**, you would need to use a *relative* path to link to the file.
+
+        From your starting point (**index.html**), you need to tell the folder to go into a specific folder, in this case "images", then the filename.
+
+        ```
+        <img src="images/image-file.jpg">
+        ```
+
+        If you have a folder in a folder, then add include that path.
+
+        ```
+        <img src="folder/sub-folder/filename">
+        ```
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Links / Anchor tag
+
+        Links (hyperlinks) are represented by the anchor (`<a>`) tag. It also needs an `href` attribute to provide information for where the link should go.
+
+        #####Link to an external site
+        ```xml
+        <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
+        ```
+
+        #####Link to other HTML pages
+        ```xml
+        <a href="page-name.html">Another page</a>
+        ```
+
+        #####Link to a specific spot on a page
+        Add an `id` attribute to the tag where you would like the link to go to. In the `href` attribute value, use the `#` symbol followed by the id name, with no spaces.
+        ```xml
+        <a href="#linkSpot">Click this link to navigate to a spot on the page</a>
+        ```
+        ```xml
+        <h2 id="linkSpot">This where you want the link to go TO.</h2>
+        ```
+
+        #####LINK TO A SPECIFIC SPOT ON Another page
+        ```xml
+        <a href="about.html#linkSpot">Click this link to navigate to a spot on the page</a>
+        ```
+
+        #####Set link to open in a new window
+        Add an second attribute, `target`.
+        ```xml
+        <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
+        ```
+
+        #####Set an email link
+        ```xml
+        <a href="mailto:hello@myemail.com">hello@myemail.com</a>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #4: Add images and links (15mins)
+      </script>
+    </section>
+
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -368,14 +767,10 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide title" data-markdown>
       <script type="text/template">
-        ## Exercise #1: Create your project's HTML page
-
-        1. In your text editor, create a new file (**File** > **New File**)
-        2. Save and name it `index.html` (**File** > **Save**)
-        3. Add all of the basic HTML tags. You can refer to the previous example in [basic.html](project/basic.html) for reference or [this slide](slides.html#basic-tags).
-
+        #Intro to css
+        ##Cascading Style Sheets
       </script>
     </section>
 

@@ -26,19 +26,15 @@
       background: url('images/toronto.jpg') fixed;
       background-size: cover;
     }
-    h2, h3 {
+    h1 {
       font-weight: normal;
       font-family: 'Bad Script', cursive;
       text-transform: lowercase;
-
-    }
-    h1 {
-      font-family: 'Bad Script', cursive;
-      font-size: 125px;
-    }
-    h2 {
       font-size: 100px;
       margin: 0;
+    }
+    h2 {
+      font-family: 'Bad Script', cursive;
     }
     header,
     section {
@@ -87,6 +83,8 @@
     }
     header h1 {
       margin-bottom: 10px;
+      font-size: 125px;
+      text-transform: none;
     }
     header h2 {
       font-size: 34px;
@@ -130,7 +128,7 @@
 </head>
 <body>
   <nav>
-    <ul class="menu">
+    <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#loves">Loves</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -139,13 +137,13 @@
 
   <header>
     <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
-    <h2>I'm a <strong>digital designer</strong> and <strong>developer</strong> with an penchant for gourmet doughnuts.</h2>
+    <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
   </header>
 
   <section id="about" class="about">
 
     <img class="profile-image" src="images/profile.jpg">
-    <h2>About Me</h2>
+    <h1>About Me</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -153,7 +151,7 @@
   </section>
 
   <section id="loves" class="favs">
-    <h2>Love, Love, Love</h2>
+    <h1>Love, Love, Love</h1>
     <p>Here are a few things that I really love.</p>
     <img src="images/logo-llc.jpg">
     <img src="images/doughnuts.jpg">
@@ -161,7 +159,7 @@
   </section>
 
   <footer id="contact" class="contact">
-    <h2>Contact Me</h2>
+    <h1>Contact Me</h1>
     <p>Email me at <a href="mailto:hello@myemail.com">hello@myemail.com</a> or find me around the web!</p>
     <a href="https://twitter.com/"><img src="images/twitter.png"></a>
     <a href="https://facebook.com/"><img src="images/facebook.png"></a>
