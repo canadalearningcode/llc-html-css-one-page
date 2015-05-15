@@ -2,138 +2,170 @@
 <html>
 <head>
   <title>Ladies Learning Code HTML and CSS</title>
-  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'> -->
   <style>
     /* normalize.css 2011-06-23T00:50 UTC //github.com/jonathantneal/normalize.css */
     article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}html{cursor:default;font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:transparent;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body,form,input,button,select,textarea{font-size:100%;margin:0}a,a:active,a:hover{outline:none}a:focus{outline:thin dotted}abbr{_border-bottom:expression(this.title ? '1px dotted':'none')}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#FF0;color:#000}pre,code,kbd,samp{font-family:monospace,monospace;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small,sub,sup{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}nav ul{list-style:none}audio[controls],canvas,video{display:inline-block;*display:inline}audio{display:none;_display:expression(this.controls ? 'inline':'none');*zoom:1}audio[controls]{display:inline-block}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){ overflow:hidden}legend{*margin-left:-7px}button,input,select,textarea{vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal;_overflow:expression(this.type == 'button|reset|submit' ? 'visible':'')}button,input[type="button"],input[type="reset"],input[type="submit"]{overflow:visible;-webkit-appearance:button}input[type="checkbox"],input[type="radio"]{box-sizing:border-box}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{ -webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
     body {
-      color: #444444;
-      font-family: Helvetica, Arial, sans-serif;
+      color: #0F110C;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      line-height: 1.4;
+      font-size: 18px;
+      font-weight: 300;
+      background: url('images/toronto.jpg') fixed;
+      background-size: cover;
+    }
+    h2, h3 {
+      font-weight: normal;
+      font-family: 'Bad Script', cursive;
+      text-transform: lowercase;
+
     }
     h1 {
-      font-size: 48px;
+      font-family: 'Bad Script', cursive;
+      font-size: 125px;
     }
     h2 {
-      font-size: 32px;
-    }
-    h1, h2, h3 {
-      font-family: 'Oswald', sans-serif;
-    }
-    p {
-      line-height: 1.4;
-      font-size: 15px;
-    }
-    img.logo {
-      margin: 0 auto;
-      display: block;
-    }
-    img.profile {
-      border: 1px solid grey;
-      width: 200px;
-      height: 200px;
-      padding: 5px;
-      float: left;
-      margin-right: 20px;
-    }
-    img.favourite {
-      border: 1px solid #A8258D;
-      border-radius: 50%;
-      width: 200px;
-      padding: 5px;
-      margin: 10px;
-    }
-    section.banner {
-      padding-top: 110px;
-      padding-bottom: 100px;
-      background: url('images/background.jpg');
-      background-attachment: fixed;
-      color: #ffffff;
-      text-align: center;
-    }
-    section.banner p {
-      font-size: 22px;
-    }
-    section.banner h1 {
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    section.about {
-      background: url('images/tile1.png');
-      overflow: hidden;
-    }
-    section.about h2 {
-      text-align: center;
-    }
-    section.favourites {
-      text-align: center;
-    }
-    section.contact {
-      text-align: center;
-      background: url('images/tile2.png');
-    }
-    section.contact img {
-      margin: 20px;
-    }
-    section.box {
-      padding: 50px 100px;
-    }
-    section.box h2, section.box h3 {
-      color: #A8258D;
-    }
-    .menu {
-      list-style: none;
-      padding: 0;
+      font-size: 100px;
       margin: 0;
-      text-align: center;
-      border-bottom: 1px solid #434A5C;
-      background: #ffffff;
+    }
+    header,
+    section {
+      padding: 100px 10%;
+    }
+    strong, a {
+      color: #9D6381;
+    }
+    nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
     }
-    .menu li {
-      display: inline-block;
+    nav ul {
+      background: #CECCCC;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
       padding: 20px 35px;
     }
-    .menu a {
+    nav ul li {
+      display: inline-block;
+      margin-left: 15px;
+    }
+    nav ul a {
       text-decoration: none;
-      color: #333333;
-      font-weight: bold;
+      color: #0F110C;
       text-transform: uppercase;
-      font-family: 'Oswald', sans-serif;
+      padding: 10px 15px;
+      display: block;
+    }
+    .menu a:hover {
+      background: #9D6381;
+      border-radius: 4px;
+      color: #CECCCC;
+    }
+    header {
+      padding-top: 175px;
+      padding-bottom: 100px;
+      background: #CECCCC;
+    }
+    header p {
+      font-size: 22px;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    header h2 {
+      font-size: 34px;
+      text-transform: none;
+    }
+    .about {
+      overflow: hidden;
+      background: rgba(97, 41, 64, 0.95);
+      color: #ddd;
+    }
+    .profile-image {
+      border-radius: 50%;
+      width: 45%;
+      float: right;
+      margin-left: 20px;
+    }
+    .about p {
+      text-align: left;
+    }
+    .favs {
+      text-align: center;
+      background: #9D6381;
+    }
+    .favs img {
+      border-radius: 50%;
+      width: 200px;
+      padding: 5px;
+      margin: 10px;
+    }
+    footer {
+      text-align: center;
+      background: #0F110C;
+      color: #CECCCC;
+      padding: 30px;
+    }
+    footer img {
+      margin: 20px;
+      width: 40px;
     }
   </style>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#favourites">Favourites</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <section class="banner">
-    <img class="logo" src="images/logo.png">
-    <h1>Your name here</h1>
-    <p>Your tagline here</p>
-  </section>
-  <section id="about" class="about box">
+  <nav>
+    <ul class="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#loves">Loves</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
+    <h2>I'm a <strong>digital designer</strong> and <strong>developer</strong> with an penchant for gourmet doughnuts.</h2>
+  </header>
+
+  <section id="about" class="about">
+
+    <img class="profile-image" src="images/profile.jpg">
     <h2>About Me</h2>
-    <img class="profile" src="images/profile.jpg">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
-  <section id="favourites" class="favourites box">
-    <h2>My Favourite Things</h2>
-    <h3>Here are a few things I really love</h3>
-    <img class="favourite" src="images/kitten.jpg">
-    <img class="favourite" src="images/kitten.jpg">
-    <img class="favourite" src="images/kitten.jpg">
-    <img class="favourite" src="images/kitten.jpg">
+
+  <section id="loves" class="favs">
+    <h2>Love, Love, Love</h2>
+    <p>Here are a few things that I really love.</p>
+    <img src="images/logo-llc.jpg">
+    <img src="images/doughnuts.jpg">
+    <img src="images/robots.jpg">
   </section>
-  <section id="contact" class="contact box">
+
+  <footer id="contact" class="contact">
     <h2>Contact Me</h2>
-    <a href="https://twitter.com/tessthornton"><img src="images/twitter.png"></a>
-    <a href="https://facebook.com/tessthornton"><img src="images/facebook.png"></a>
-    <a href="https://linkedin.com/tessthornton"><img src="images/linkedin.png"></a>
-  </section>
+    <p>Email me at <a href="mailto:hello@myemail.com">hello@myemail.com</a> or find me around the web!</p>
+    <a href="https://twitter.com/"><img src="images/twitter.png"></a>
+    <a href="https://facebook.com/"><img src="images/facebook.png"></a>
+    <a href="https://linkedin.com/"><img src="images/linkedin.png"></a>
+  </footer>
 </body>
 </html>
