@@ -234,7 +234,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Nested tags
+        ##Nested tags & attributes
 
         Tags can be *nested* within other tags like this:
 
@@ -244,11 +244,18 @@
 
         Nested tags create a family tree-like relationship and is often referred to as the *parent* node and *child* nodes.  The inner tag is the child of the outer tag.
 
-        HTML was created for web browsers to easily read (not humans) so this makes perfect sense to a web browser:
+        **Attributes** provides additional information or instruction for the element and is included inside the opening HTML tag in the form of attribute="value". We'll be seeing different kinds of attributes as today's project progresses.
+
+        ```
+        <tag attribute="value">content</tag>
+        ```
+
+        HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
         ```
         <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
+
       </script>
     </section>
 
@@ -401,7 +408,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Exercise #1: Create your project's HTML page
+        ## Class Exercise #1: Create your project's HTML page
 
         1. In your text editor, create a new file (**File** > **New File**)
         2. Save and name it `index.html` (**File** > **Save**)
@@ -515,7 +522,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #2: Page structure
+        ##Class Exercise #2: Page structure
 
         Back in the text editor, add the HTML5 structural tags to setup the page layout.
 
@@ -572,7 +579,7 @@
       </ol>
       </div>
 
-      How would we describe this hierarchy using heading tags?
+      Let's look at how we could describe this hierarchy using heading tags.
     </script>
     </section>
 
@@ -672,6 +679,23 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
+        ##Image file types
+
+        gif - smaller file size when used for line art, charts, and images with minimal colour variation
+
+        jpg - smaller file size when used for photographs with lots of rich colours or gradients
+
+        png - larger file size but has best quality and is great for images with transparent backgrounds
+
+        svg - [todo]
+        
+        List placeholder images.
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
         ##Image files
 
         It's best practice to organize your images into its own folder.  In *project*, there is already a folder called *images* with some sample images you can use today (or add your own to that folder).
@@ -738,9 +762,69 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #4: Add images and links (15mins)
+        ##Exercise #4: Add the navigation
+
+        On one-page websites, we can still create a navigation by setting the links to specific spots on the page.
+
+        In the `<nav>` section, let's add three links (About, Loves, Contact).
+
+        ```
+        <nav>
+          <a href="">About</a>
+          <a href="">Loves</a>
+          <a href="">Contact</a>
+        </nav>
+        ```
+
+        What should the value be for the `href` attribute?
+
+        ```
+        <nav>
+          <a href="#about">About</a>
+          <a href="#loves">Loves</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        ```
+
+        How do we get it to link to the part of the page? Make sure the `id` matches the `href` value.
+
+        ```
+        <section id="about" class="about">
+          ...
+        </section>
+
+        <section id="loves" class="loves">
+          ...
+        </section>
+
+        <footer id="contact">
+          ...
+        </footer>
+        ```
+
+        You may have seen or heard about navigation links traditionally created using a list. Here are some extra readings about navigation as lists or links only [here](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/) and [here](http://www.sitepoint.com/are-navigation-lists-necessary/).
       </script>
     </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #5: Add links and images (15mins)
+
+        1. Add a profile image
+        2. Add three or four images to your "Loves" section
+        3. Add the social links to the contact section.  Make the images into links!
+
+        **Bonus** Take some time to make sure everything in indented properly to make it easier to read.
+
+        And that's it! That's all of the HTML we'll need today for your project.
+
+        Your page should look something like this:
+
+        [reference/exercise-5.html](reference/exercise-5.html)
+
+      </script>
+    </section>
+
 
 
     <section class="slide" data-markdown>
@@ -783,35 +867,616 @@
         * used to separate content from presentation
         * introduced to solve the issues of using HTML tags and attributes for presentation
         * a stylesheet contains a list of rules that cascade to reduce redundancy and saves time
+
+        Every browser has its own *user agent stylesheet* that adds default styles to tags. We can use CSS to override these styles as well as add our own.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Websites without CSS
+        ##CSS Syntax
 
-        ![](framework/img/workshop/no-css-comparison.png)
+        CSS is a different language from HTML.  It's a stylesheet language with its own syntax rules. A style sheet contains a list of style rules to define how the HTML elements should look.
+
+        **Selectors:** determines which HTML element(s) to apply the styles to.
+
+        **Declarations:** style rules written in `property:value` pairs, are wrapped by curly brackets `{ }` and must end with a semi-colon `;`
+
+        ```
+        selector {
+          property: value;
+        }
+        ```
+        **Properties** determine the type of style to be applied (e.g. color). **Values** are specific to the property (red). The example below changes the font colour of all paragraphs to red.
+        ```
+        p {
+          color: red;
+        }
+        ```
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS: The presentation layer
+        ##Multiple CSS Declarations
+
+        Multiple declarations (property: value; sets) can be added to one selector and declaration block to add and modify multiple styles.
+
+        ```
+        h2 {
+          background-color: green;
+          font-size: 50px;
+        }
+        ```
+        Just be sure to end each declaration with a semi-colon.
+
+        There are many CSS properties with new ones being added and old ones being retired (deprecated).  It's good to have a few resources on hand.
+
+        http://caniuse.com
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+        http://htmldog.com/reference/cssproperties/
+      </script>
+    </section>
+
+    <section class="slide centered css-gif" data-markdown>
+      <script type="text/template">
+        ##CSS: Breaking stuff and putting it back together
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##
+        ##Referencing CSS
+
+        There are several ways to include CSS in an HTML page. We used the in-page method earlier but for the rest of the lesson we&#39;ll be using the **external** method.
+
+        This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
+
+        The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet.
+
+        Though not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
+        ```
+        <head>
+          <title>Page Title</title>
+          <link rel="stylesheet" href="css/style.css">
+        </head>
+        ```
+        Read more about the difference ways to reference CSS <!-- .element: class="footnote" -->[here](http://reference.sitepoint.com/css/linkingcss).
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##
+        ##Create a CSS File
+
+        Back in Sublime Text, create a new CSS file by selecting **File > New File**.
+
+        Let&#39;s call it **styles.css** and add it to **index.html**.
+
+        <p class="footnote">**PRO TIP!** Sublime Text has a shortcut.  Type "link" with no brackets, then the tab key. Voila!</p>
+
+        ```
+        <link rel="stylesheet" href="css/styles.css">
+        ```
+
+        <br>
+        Try a quick test to see if it is linked properly by adding a background color on the entire viewport.
+
+        ```
+        body {
+          background: lightblue;
+        }
+        ```
       </script>
     </section>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##CSS colours
+
+          **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+
+          **RGB (red-green-blue)** - uses 3 numerical values between `0` (represents black) and `255` (represents white)
+
+          **hex code** - number sign (`#`) followed by six hexadecimal characters (0-9, A-F)
+
+          ```
+          /* These are all the same colour - this is a CSS comment by the way! */
+          p {
+            background: firebrick;
+            background: rgb(178,34,34);
+            background: #B22222;
+          }
+          ```
+
+          <div class="footnote">
+            <br>
+            **Colour resources:**
+
+            http://colours.neilorangepeel.com
+            http://www.colorpicker.com
+            http://www.colourlovers.com
+            http://flatuicolors.com
+            http://color.hailpixel.com
+          </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##CSS Font Styles
+
+        Let&#39;s look at a few CSS properties for styling text. Change some values below and see what happens!
+
+        <textarea class="snippet" data-subject="#css-type">color: slateblue;
+line-height: 1.25;
+font-family: Helvetica, Arial, serif;
+font-size: 16px;
+font-weight: normal;
+text-transform: lowercase;</textarea>
+
+        <div id="css-type" class="example">
+          <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+        </div>
+
+        Additional Resource:<!-- .element: class="footnote" --> [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+
+        <div class="presenter-notes">
+            <p>Explain what each property does while updating each example in the code editor. Talk about the difference between using line-height with and without a measurement unit.</p>
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Web safe fonts
+
+        Web safe fonts are pre-installed fonts on your computer but not all operating systems have the same fonts installed.  Use a font *stack* and choose fonts that look similar to provide a fallback option.
+
+        If you want to use fonts other than ones pre-installed, as of CSS3, you can use Web Fonts like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
+
+        The web has a number of fonts that are considered "web safe". Some of the most used fonts are:
+
+        Arial
+        Verdana
+        Times New Roman
+        Georgia
+        Courier
+
+        http://www.cssfontstack.com
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Web Fonts: Using Google Fonts
+
+        Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted files making it available to all users that visit your site.
+
+        1. Select the fonts you want to use and **Add to Collection**.<br>
+          * The LLC example project uses Open Sans and Bad Script.
+        1. You can **Review** them to take a closer look, then choose **Use** when ready.
+        1. Select font weights. The more you choose, the more it will slow down page load time.<br>
+          * The LLC example project uses Open Sans Light 300, regular 400 and Bad Script normal 400.
+          * The default character set should contain what you need.
+          * Select another option if you need to add additional language support.
+        1. Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
+        1. Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
+
+        That&#39;s it!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Inheritance and Specificity
+
+        One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
+
+        ```
+        <body>
+          <h1>My Website</h1><!-- child of body -->
+          <p>This is a paragraph.</p><!-- sibling of h1 -->
+        </body>
+        ```
+        ```
+        body {
+          color: #222222;
+        }
+        h1 {
+          color: blue;
+        }
+        ```
+
+        In the above example, the CSS properties in the body selector is inherited by the descendants elements (all nested elements). When a more specific selector is used (e.g. `h1`), it overrides the inherited values.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #6: Typography
+
+        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on your webpage.)<!-- .element: class="footnote" -->
+
+        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.
+        Change the `font-weight` if you want to change it to a thinner or thicker font.
+
+        ```
+        body {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+        }
+        ```
+
+        Now let&#39;s set just the headings to use a different font from the body style. We can target multiple selectors at the same time by *combining* them with a comma.
+
+        ```
+        h1, h2 {
+          font-family: 'Bad Script', cursive;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Default Styles & CSS Reset
+
+        Every browser has its own default *user agent* stylesheet that adds default styles to the html elements. This can result in inconsistencies across different browsers.
+
+        **CSS Reset:**
+
+          * collection of CSS rules that resets the user agent styles
+          * creates a consistent baseline
+          * some default styles are removed
+          * several popular CSS resets to choose from
+          * You can use them as is, modify them or create your own.
+
+        For today's project, let's go to http://www.cssreset.com/ and use **Eric Meyer’s “Reset CSS” 2.0**.
+        Select "Get The Code" to copy it and add it to the very top of our **styles.css** stylesheet.
+        Save and refresh your browser!
+
+        Your page should now look something like this:
+
+        ![](framework/img/workshop/css-reset.png)
+
+        **Further reading:**<!-- .element: class="footnote" --> http://www.cssreset.com/to-reset-or-to-normalize-that-is-the-question/<!-- .element: class="footnote" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Lunchtime!
+
+        Optional exercises:
+
+        1. check your code with exercise6.html and styles6.css
+        2. pick some new fonts
+        3. pick a color pallette - the final project has three colours
+        
+        
+        add resources
+      </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ##Reset CSS review
+
+        Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements?
+        
+        The space between and around the elements can be changes using CSS properties, `margin` and `padding`.
+
+        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
+
+        ![](framework/img/workshop/css-reset-1.png)
+        ![](framework/img/workshop/css-reset-2.jpg)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #7 - Background colours
+        
+        Let's add the background colours to each section of the page.  This will also help to visualize the blocks of content as well.
+        
+        (You can use the sample colours for now if you don't have a palette in mind.) <!-- .element: class="footnote" -->
+        
+        Now would also be a good time to use `/* CSS comments */` to organize your code. You can put any letters and characters in your comments as long as they start with `/*` and end with `*/` .
+        
+        In the final sample project, both the header and navigation have the same background colour.  How would you select them both at the same time?
+        
+        (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
+        
+        ```
+        /* PAGE HEADER - heading and nav
+        -----------------------------------------*/
+        header, 
+        nav {
+          background: #CECCCC;
+        }
+
+        ```  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Class attributes
+        
+        We're going to give the About section a different treatment later so leave it for now.  
+        
+        Let's add background colours to Loves & Footer.  For the Loves `<section>`, we can't use `section` as our selector since that will also apply to the About `<section>` as well.  Remember we added a `class` *attribute*?
+          
+        ```
+        <section id="about" class="about">
+          ...
+        </section>
+        <section id="loves" class="loves">
+          ...
+        </section>
+        ```
+      
+        Targets ALL `section` elements.
+        ```
+        section { background: blue; }
+        ```
+        Applies to any element that contains this class, defined by leading period.
+        ```
+        .about { background: red; }
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #7 - Background colours, part 2
+        
+        To apply a background colour to just the "Loves" section, what selector should we use?
+        
+        ```
+        /* LOVES - things I love 
+        -----------------------------------------*/
+        .loves {
+          background: #9D6381;
+        }
+        ```
+        
+        Since there's only one `<footer>`, we can use that as our selector.
+        
+        ```
+        /* FOOTER - contact info
+        -----------------------------------------*/
+        footer {
+          background: #0F110C;
+        }
+        ```
+        
+        Not exactly super polished yet but it's getting there.  Your page should look something like [exercise-7.html](reference/exercise-7.html) in your **reference** folder.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #The Box Model
+      </script>
+    </section>
+    
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ## The Box Model
+        
+        The CSS **Box Model** describes the way CSS determines the size and spacing of HTML elements.
+        To the browser, every HTML element is a rectangular / square box.
+
+        If we show the outlines of all the elements in our current and final HTML document, it will look like this:
+        
+        ![](framework/img/workshop/box-borders.png)
+        ![](framework/img/workshop/box-borders-final.png)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## The Box Model
+        
+        There are 5 CSS properties used to determine the size and spacing of these boxes. `width` and `height` are used to set specific sizes but there are 3 properties that also changes the size of the HTML elements.
+        
+        <div class="col-2">
+          ![Box Model example](framework/img/workshop/box-model-layout.png)
+        </div>
+        
+        <div class="col-2">
+          <p><strong>width</strong> - can be set to a specific size via CSS </p>
+          <p><strong>height</strong> - can be set to a specific size via CSS </p>
+          <p><strong>margin</strong> - adds / removes space *outside* of the element  </p>
+          <p><strong>padding</strong> - adds / removes space *inside* of the element </p>
+          <p><strong>border</strong> - adds a border just outside of the element</p>
+        </div>
+        
+        Image source: <!-- .element: class="footnote" --> [W3C](http://www.w3.org/wiki/The_CSS_layout_model_-_boxes_borders_margins_padding)
+      </script>
+    </section>
+    
+    <section id="margin-padding" class="slide" data-markdown>
+      <script type="text/template">
+        ##Margin and Padding
+
+        **margin** - adds/removes space **outside** of the element  
+        **padding** - adds/removes space **inside** of the element
+
+        The values for both properties can be declared using 1 to 4 values.  
+        A variety of measurement units (px, %, ems, rems, etc) can be used.
+
+        Setting the value to "0" will *remove* any default space and any positive value will *add* space.
+
+        ```css
+        padding: 2px 10px 2px 10px; /* top, right, bottom, left */
+        padding: 2px 10px 2px; /* top, right & left, bottom */
+        padding: 2px 10px; /* top & bottom, right and left */
+        padding: 2px /* all sides have the same value */
+        ```
+
+        Both margin and padding can also be used by targeting a specific side.
+
+        ```css
+        margin-top: 2px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Practice!
+
+        Practice changing the margin and padding example below with 1 to 4 values. 
+        
+        Notice that the background colour doesn't flow into the space created by margin, since margin adds space *around* and *outside* of the element.
+
+        <textarea class="snippet" data-subject="#example">background: lightblue;
+padding: 0px;
+margin: 0px;</textarea>
+        <div id="example" class="example">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Border box: width & padding
+        
+        In CSS the relationship between `width` and `padding` can be confusing.  
+        
+        For example, if you set the width of a box to be 500px and adding 20px of padding on the left and right side, the size of the box will actually be: 500 + 20 + 20 = 540px.
+        
+        <pre class="delayed"><code style="background:transparent;border:none;">¯\_(ツ)_/¯</code></pre>
+        
+        
+        <div class="delayed">
+          <p>Luckily, there's a fix for this. Let's compare how this works with and without the fix.</p>
+          
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#example">background: lightblue;
+width: 500px;
+padding: 0px 20px;</textarea>
+            <div id="example" class="example" style="box-sizing: content-box;">
+              <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
+            </div>
+          </div>    
+          
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#example2">background: lightblue;
+width: 500px;
+padding: 0px 20px;</textarea>
+            <div id="example2" class="example">
+              <p>This example DOES have the border box fix.</p>
+            </div>
+          </div> 
+          
+        </div>
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## * { Box-sizing: Border-box } FTW
+        
+        Add this snippet to all your project now (and to all future objects) to fix the width/padding issue.
+        
+        ```
+        /* apply a natural box layout model to all elements, but allowing components to change */
+        html {
+          box-sizing: border-box;
+        }
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        ```
+        See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #8 - Spacing
+        
+        (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding.)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## 
+        Let's style the all the `<h1>` and change the font size. What selector and property should we use?
+          
+        We'll come back to the `<h2>` in the header and spacing soon. 
+          
+        ```
+        h1 {
+          font-size: 100px;
+        }
+        ```
+      </script>
+    </section>
+    
+    
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        
+        What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a *descendant selector* to specifically select a tag nested within another tag.
+
+        ```xml
+        <header>
+          <h1>Hi! I'm Laura Ipsum.</h1>
+          <h2>I'm a digital designer and developer with a penchant for gourmet doughnuts.</h2>
+        </header>
+        ```
+
+        ```
+        h1, h2 {
+          font-family: 'Bad Script', cursive;
+        }
+        header h1 {
+          font-size: 125px;
+        }
+        ```
+
+        `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
+
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/typography.html](project/examples/typography.html) and [project/examples/css/typography.css](project/examples/css/typography.css)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Descendant selectors
+
+        Matches any element that is a descendant (nested tag) of the element declared before it. Note the space in *between* each selector. This is a requirement.
+
+        ```css
+        p a {
+          /* targets only anchor link tags nested inside of a p tag */
+        }
+        ```
+        **Pro tip!** Avoid going more than three levels.
+
+        ```
+        nav ul li a span {
+          /* NOOOOOOOOOOO */
+        }
+        ```
+
+        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific.
+
+        It&#39;s generally better to start with generic selectors and make them more specific, as needed.
+      </script>
+    </section>
     <!-- Last slide -->
     <section class="slide last">
       <h2>Thank you!</h2>

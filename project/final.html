@@ -43,7 +43,7 @@
     strong, a {
       color: #9D6381;
     }
-    nav {
+    /*nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -68,7 +68,25 @@
       padding: 10px 15px;
       display: block;
     }
-    .menu a:hover {
+    */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #CECCCC;
+      text-align: right;
+      padding: 20px 35px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0F110C;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      display: inline-block;
+      margin-left: 15px;
+    }
+    nav a:hover {
       background: #9D6381;
       border-radius: 4px;
       color: #CECCCC;
@@ -127,12 +145,18 @@
   </style>
 </head>
 <body>
-  <nav>
+  <!-- <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#loves">Loves</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+  </nav> -->
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#loves">Loves</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <header>
