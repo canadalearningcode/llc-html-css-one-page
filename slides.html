@@ -1144,9 +1144,24 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ##Reset CSS review
+
+        Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements?
+        
+        The space between and around the elements can be changes using CSS properties, `margin` and `padding` (more on this soon).
+
+        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
+
+        ![](framework/img/workshop/css-reset-1.png)
+        ![](framework/img/workshop/css-reset-2.jpg)
+      </script>
+    </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Lunchtime!
+        ## Lunchtime! [2.25hrs]
 
         Optional exercises:
 
@@ -1158,47 +1173,13 @@ text-transform: lowercase;</textarea>
         add resources
       </script>
     </section>
-
-    <section class="slide side-by-side" data-markdown>
+    
+    <section class="slide title" data-markdown>
       <script type="text/template">
-        ##Reset CSS review
-
-        Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements?
-        
-        The space between and around the elements can be changes using CSS properties, `margin` and `padding`.
-
-        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
-
-        ![](framework/img/workshop/css-reset-1.png)
-        ![](framework/img/workshop/css-reset-2.jpg)
+        #CSS & Class attributes
       </script>
     </section>
     
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Class Exercise #7 - Background colours
-        
-        Let's add the background colours to each section of the page.  This will also help to visualize the blocks of content as well.
-        
-        (You can use the sample colours for now if you don't have a palette in mind.) <!-- .element: class="footnote" -->
-        
-        Now would also be a good time to use `/* CSS comments */` to organize your code. You can put any letters and characters in your comments as long as they start with `/*` and end with `*/` .
-        
-        In the final sample project, both the header and navigation have the same background colour.  How would you select them both at the same time?
-        
-        (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
-        
-        ```
-        /* PAGE HEADER - heading and nav
-        -----------------------------------------*/
-        header, 
-        nav {
-          background: #CECCCC;
-        }
-
-        ```  
-      </script>
-    </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -1225,6 +1206,32 @@ text-transform: lowercase;</textarea>
         ```
         .about { background: red; }
         ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #7 - Background colours
+        
+        Let's add the background colours to each section of the page.  This will also help to visualize the blocks of content as well.
+        
+        (You can use the sample colours for now if you don't have a palette in mind.) <!-- .element: class="footnote" -->
+        
+        Now would also be a good time to use `/* CSS comments */` to organize your code. You can put any letters and characters in your comments as long as they start with `/*` and end with `*/` .
+        
+        In the final sample project, both the header and navigation have the same background colour.  How would you select them both at the same time?
+        
+        (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
+        
+        ```
+        /* PAGE HEADER - heading and nav
+        -----------------------------------------*/
+        header, 
+        nav {
+          background: #CECCCC;
+        }
+
+        ```  
       </script>
     </section>
     
@@ -1402,7 +1409,7 @@ padding: 0px 20px;</textarea>
   
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8 - Spacing
+        ##Class Exercise #8 - Spacing [30]
         
         (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding. Also, feel free to use the amount of space that looks good to you or follow the examples below.)
         
@@ -1480,7 +1487,7 @@ padding: 0px 20px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Exercise #9: Style the header & footer
+        ## Class Exercise #9: Style the header & footer
         
         Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page so use *descendant selectors* instead.
         
@@ -1499,7 +1506,6 @@ padding: 0px 20px;</textarea>
           font-size: 34px;
         }
         ```
-        <br>
         Next, add importance to some keywords in the header (e.g. name). The `<strong>` tag can be used to give importance to text on the page and we can also use it as a "hook" to style the elements as well.
           
         ```
@@ -1514,8 +1520,13 @@ padding: 0px 20px;</textarea>
           color: #9D6381;
         }
         ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #9: Style the header & footer, part 2
         
-        <br>
         Since the footer has a dark background, we now need to change the default dark text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
         
         ```
@@ -1537,15 +1548,174 @@ padding: 0px 20px;</textarea>
       </script>
     </section>
     
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Customize! (15mins)
+        ## Customize! (15mins) [30 2:15pm]
         
-        We still have a few more concepts to cover such as aligning and styling the images and the navigation but take some time to do some customizing of your page.
+        We still have a few more concepts to cover such as aligning, styling the images and the navigation but take some time to customize your page.
         
-        Don't worry about the size of the images or position of it just yet.  Stick to the concepts covered thus far (spacing, colours and font styles), update the content or compare your code to  [exercise-9.html](reference/exercise-9.html) in your **reference** folder.  
+        Don't worry about the positioning of the images and nav just yet.  Stick to the concepts covered so far (spacing, colours and font styles). 
+        
+        You can also update the content or compare your code to  [exercise-9.html](reference/exercise-9.html) in your **reference** folder.  
+        
+        Square images are also better for the upcoming exercises.  You can crop and resize them using this free tool, [Pixlr](https://pixlr.com/web), between 200px - 400px is best. 
         
         [List resources]
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #More CSS!
+        ##Page layout, Rounded corners,<br> Background images [gif]?
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Aligning content
+        
+        Next up, we're going to align the image and the text to make it look like the below example, but first a few more CSS concepts.
+        
+        ![](framework/img/workshop/about-image-float.png)
+      </script>
+    </section>
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Inline & Block Elements
+
+        **Block** elements span 100% of its container and takes sizing properties (margin, padding, height and width).
+        **Inline** elements are the same height and width of their content, does not apply sizing properties as expected and displays side by side, in a line.
+
+        When in doubt, put a background colour on the element and if it spans the width of the container, then it's a block element. Otherwise, it's an inline element.
+
+        <textarea class="snippet" data-subject="#block" style="margin:0;">background: ;</textarea>
+        <p id="block">paragraph example</p>
+        <br>
+        <textarea class="snippet" data-subject="#inline">background: ;</textarea>
+        <a id="inline" href="#">link example</a>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Stacked elements
+
+        By default, all of the *block* level elements also stack on top of each other (since they take up 100% width).  
+        
+        If we look at the previous box outline example, you can see that regardless of the width of the content, the content in the heading tags stack on top of each other.  But the links are sitting side by side, in a line.
+        
+        ![](framework/img/workshop/box-borders-stack.png)
+        
+        There are two ways to align content.  Let's first look at the `float` property.
+        
+      </script>
+    </section>
+  
+    <section class="slide">
+      <!-- <script type="text/template"> -->
+        <h2>Float left or right</h2>
+        
+        <p style="float:none;border:none;">To get block level elements to line up side by side, we have to *break* the stacking flow.  Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side. This will cause any element after the floated element to move up beside it.</p>
+        
+        <textarea class="snippet" data-subject="float">p {
+  border: 2px solid red;
+}
+
+h1 { 
+  border: 1px solid blue;
+  float: ;
+}</textarea>
+        <div id="float" class="box">
+          <h1 style="font-size:25px;">heading1 tag</h1>
+          <p>paragraph tag</p>
+        </div>
+      <!-- </script> -->
+    </section>
+    
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #10: Float & style the image
+        
+        Add a class to the profile image so we can apply the float only to this image. Then float the image (right or left).  Also, add some space between the image and text using `margin`.
+        
+        ```
+        <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
+        ```
+        ```
+        .profile-img {
+          float: right;
+          margin-left: 20px;
+        }
+        ```
+        
+        Floating elements may have unexpected results, especially if the content following it varies in size or length.  See example below to see how the page will look based on different paragraph lengths.
+        
+        ![](framework/img/workshop/float-long-text.png)
+        ![](framework/img/workshop/float-short-text.png)
+        
+        If your content is the same size or longer than the floated element (the profile image) as shown on the left,  you won't notice this problem.  But it's still good to understand it and fix it to save the headaches that will come later!
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Reset the float
+        
+        Floating the element takes it out of the natural stacking flow so we need to restore the regular stacking of boxes after the floated elements.  There's a couple ways to do this.  Let's use the `overflow` option.
+        
+        Adding `overflow: hidden;` to the *parent* element forces the element to 'contain' any floated child elements, so they don't disrupt the elements after them.
+        
+        ```
+        <section id="about" class="about">
+          <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
+          ...
+        </section>
+        ```
+        ```
+        .about {
+          overflow: hidden;
+        }
+        ```
+        
+        This can be a confusing concept and requires more dicussion outside of the scope for today.  For more information, check out these extra resources:
+        
+        http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664
+
+        http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+        
+        http://css-tricks.com/snippets/css/clear-fix/
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #10: Float & style the image, part 2 (10mins)
+        
+        CSS3 (the latest version of CSS) introduce some new properties such as `border-radius` to make rounded corners or perfect circles, removing the need to manipulate image files.
+        
+        The value can be set using various measurement units such as `px`, percentage `%`, `em` and `rem` (relative units). Let's use `px` and `%` today.
+        
+        <div class="group">
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#rounded">border-radius: 15px;</textarea>
+            
+            <img id="rounded" src="reference/images/robots.jpg" alt="doughnuts" width="150">
+          </div>
+          
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#circle">border-radius: 50%;</textarea>
+            
+            <img id="circle" src="reference/images/robots.jpg" alt="doughnuts" width="150">
+          </div>
+        </div>
+        
+        Using these examples, take some time to style your About and Loves images.
+      
+        For your reference, check out [exercise-10.html](reference/exercise-10.html) in your reference folder.
       </script>
     </section>
     
