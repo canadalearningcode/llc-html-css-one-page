@@ -1385,7 +1385,7 @@ padding: 0px 20px;</textarea>
       <script type="text/template">
         ## * { Box-sizing: Border-box } FTW
         
-        Add this snippet to all your project now (and to all future objects) to fix the width/padding issue.
+        Add this snippet to your project now (and to all future projects) to fix the width/padding issue.
         
         ```
         /* apply a natural box layout model to all elements, but allowing components to change */
@@ -1404,33 +1404,86 @@ padding: 0px 20px;</textarea>
       <script type="text/template">
         ##Class Exercise #8 - Spacing
         
-        (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding.)
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ## 
-        Let's style the all the `<h1>` and change the font size. What selector and property should we use?
-          
-        We'll come back to the `<h2>` in the header and spacing soon. 
-          
+        (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding. Also, feel free to use the amount of space that looks good to you or follow the examples below.)
+        
+        Let's add some padding to all the sections (except the nav) so the content is not all squished to the edge and has consistent styling throughout the parts of the page. What selectors should we use to target them all at the same time?
+        
         ```
-        h1 {
-          font-size: 100px;
+        header, section, footer {
+          padding: 100px 150px
         }
         ```
+        
+        The final project has the content in the "Loves" and footer section centered.  How can we target all the content in both of those sections at the same time?
+        
+        ```
+        .loves, footer {
+          text-align: center;
+        }
+        ```
+        
+        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! Also, adding `line-height` will add some space *between* the lines of text in the paragraph and bumping up the font-size will make it easier to read.
+        
+        ```
+        h1 {
+          margin-bottom: 40px;
+        }
+        p {
+          margin-bottom: 20px;
+          font-size: 18px;
+          line-height: 1.5;
+        }
+        ```
+        
+        Your page should now look similar to [exercise-8.html](reference/exercise-8.html) in your **reference** folder.
       </script>
     </section>
     
-    
-    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Building a web page in blocks
+        
+        There are general best practices for building a web page, such as starting with the HTML structure, then adding CSS styles from general styles to more specific styles.
+        
+        But as you may have already noticed, there's no clear cut path for what to build first.  It takes a step by step approach of slowly building it, piece by piece.
+        
+        Let's keep going!
+        
+        [ add gif? ]
+      </script>
+    </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        
-        What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a *descendant selector* to specifically select a tag nested within another tag.
+        ##Descendant selectors
 
+        Matches any element that is a descendant (nested tag) of another element. This is useful when you want to target elements inside of a block (e.g. the header)  without adding a class to every element. 
+        
+        Note the space in *between* each selector. This is a requirement.
+
+        ```css
+        p a {
+          /* targets only anchor link tags nested inside of a p tag */
+        }
+        ```
+        **Pro tip!** Just like [Inception](http://www.imdb.com/title/tt1375666/), avoid going more than three levels.
+
+        ```
+        nav ul li a span {
+          /* NOOOOOOOOOOO */
+        }
+        ```
+
+        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. It&#39;s generally better to start with generic selectors and make them more specific, as needed.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Exercise #9: Style the header & footer
+        
+        Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page so use *descendant selectors* instead.
+        
         ```xml
         <header>
           <h1>Hi! I'm Laura Ipsum.</h1>
@@ -1439,44 +1492,64 @@ padding: 0px 20px;</textarea>
         ```
 
         ```
-        h1, h2 {
-          font-family: 'Bad Script', cursive;
-        }
         header h1 {
           font-size: 125px;
         }
+        header h2 {
+          font-size: 34px;
+        }
         ```
-
-        `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
-
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/typography.html](project/examples/typography.html) and [project/examples/css/typography.css](project/examples/css/typography.css)
+        <br>
+        Next, add importance to some keywords in the header (e.g. name). The `<strong>` tag can be used to give importance to text on the page and we can also use it as a "hook" to style the elements as well.
+          
+        ```
+        <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
+        <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
+        ```
+        
+        If you want this style to be available for the entire page, then there's no need to use a descendant selector like in the previous step.
+        
+        ```
+        strong {
+          color: #9D6381;
+        }
+        ```
+        
+        <br>
+        Since the footer has a dark background, we now need to change the default dark text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
+        
+        ```
+        footer {
+          background: #0F110C;
+          color: #CECCCC;
+        }
+        ```
+        
+        Notice the colour of the link didn't change from default blue? Let's make it the same colour as our `strong` style by combining selectors.
+        
+        ```
+        strong, a {
+          color: #9D6381;
+        }
+        ```
+        
+        Your page should now look similar to [exercise-9.html](reference/exercise-9.html) in your **reference** folder.
       </script>
     </section>
-
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Descendant selectors
-
-        Matches any element that is a descendant (nested tag) of the element declared before it. Note the space in *between* each selector. This is a requirement.
-
-        ```css
-        p a {
-          /* targets only anchor link tags nested inside of a p tag */
-        }
-        ```
-        **Pro tip!** Avoid going more than three levels.
-
-        ```
-        nav ul li a span {
-          /* NOOOOOOOOOOO */
-        }
-        ```
-
-        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific.
-
-        It&#39;s generally better to start with generic selectors and make them more specific, as needed.
+        ## Customize! (15mins)
+        
+        We still have a few more concepts to cover such as aligning and styling the images and the navigation but take some time to do some customizing of your page.
+        
+        Don't worry about the size of the images or position of it just yet.  Stick to the concepts covered thus far (spacing, colours and font styles), update the content or compare your code to  [exercise-9.html](reference/exercise-9.html) in your **reference** folder.  
+        
+        [List resources]
       </script>
     </section>
+    
+    
     <!-- Last slide -->
     <section class="slide last">
       <h2>Thank you!</h2>
