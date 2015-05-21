@@ -1354,13 +1354,13 @@ margin: 0px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Border box: width & padding
+        ## Border box: width, padding & border
         
-        In CSS the relationship between `width` and `padding` can be confusing.  
+        In CSS the relationship between `width`, `padding` and border can be confusing.  
         
-        For example, if you set the width of a box to be 500px and adding 20px of padding on the left and right side, the size of the box will actually be: 500 + 20 + 20 = 540px.
+        For example, if you set the width of a box to be 500px and adding 20px of padding on the left and right side and a 2px border, the width of the box will actually be: 500 + 20 + 20 + 15 + 15 = 570px.
         
-        <pre class="delayed"><code style="background:transparent;border:none;">¯\_(ツ)_/¯</code></pre>
+        <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
         
         
         <div class="delayed">
@@ -1369,7 +1369,8 @@ margin: 0px;</textarea>
           <div class="col-2">
             <textarea class="snippet" data-subject="#example">background: lightblue;
 width: 500px;
-padding: 0px 20px;</textarea>
+padding: 0px 20px;
+border: 15px solid green;</textarea>
             <div id="example" class="example" style="box-sizing: content-box;">
               <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
             </div>
@@ -1378,7 +1379,8 @@ padding: 0px 20px;</textarea>
           <div class="col-2">
             <textarea class="snippet" data-subject="#example2">background: lightblue;
 width: 500px;
-padding: 0px 20px;</textarea>
+padding: 0px 20px;
+border: 15px solid green;</textarea>
             <div id="example2" class="example">
               <p>This example DOES have the border box fix.</p>
             </div>
@@ -1548,7 +1550,6 @@ padding: 0px 20px;</textarea>
       </script>
     </section>
     
-    
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Customize! (15mins) [30 2:15pm]
@@ -1604,14 +1605,24 @@ padding: 0px 20px;</textarea>
       <script type="text/template">
         ##Stacked elements
 
-        By default, all of the *block* level elements also stack on top of each other (since they take up 100% width).  
+        By default, all of the *block* level elements also stack on top of each other (since they take up 100% width) in the order of how it is written.
+        
+        ```
+        <p>element 1</p>
+        <p>element 2</p>
+        ```
+        renders as:
+        <div class="example">
+          <p>element 1</p>
+          <p>element 2</p>
+        </div>
+        
         
         If we look at the previous box outline example, you can see that regardless of the width of the content, the content in the heading tags stack on top of each other.  But the links are sitting side by side, in a line.
         
         ![](framework/img/workshop/box-borders-stack.png)
         
         There are two ways to align content.  Let's first look at the `float` property.
-        
       </script>
     </section>
   
@@ -1716,6 +1727,279 @@ h1 {
         Using these examples, take some time to style your About and Loves images.
       
         For your reference, check out [exercise-10.html](reference/exercise-10.html) in your reference folder.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Style the nav!
+        ##CSS display & position
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Inline & Block review
+        
+        What are some characteristics of **inline** elements?
+        
+        * same height and width of their content <!-- .element: class="delayed" -->
+        * does not apply sizing properties (margin, padding, height and width) as expected<!-- .element: class="delayed" -->
+        * displays side by side, in a line.<!-- .element: class="delayed" -->
+        
+        What are some characteristics of<!-- .element: class="delayed" --> **block** elements?
+        
+        * spans 100% of its container<!-- .element: class="delayed" -->
+        * takes sizing properties (margin, padding, height and width)<!-- .element: class="delayed" -->
+        * by default, stacks on top of each other<!-- .element: class="delayed" -->
+        
+        <br>
+        These are default behaviors of these elements but you can change that with the CSS<!-- .element: class="delayed" --> `display` property.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##CSS Display Property
+
+        As with other default styles, CSS can be used to change the behavior of inline and block elements with the CSS `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block` (has both inline & block characteristics).
+
+        In the example below, let's first add padding and margin to both elements to see what happens.  Then we'll change the display values to see how that changes the behaviours.
+
+        <textarea class="snippet" data-subject="#display">.inline {
+          background: lightblue;
+          padding: ;
+          margin: ;
+          display: ;
+        }
+        .block {
+          background: orange;
+          padding: ;
+          margin: ;
+          display: ;
+        }</textarea>
+        
+        <aside id="display">
+          <span class="inline">inline element</span>
+          <div class="block">block element</div>
+        </aside>
+        
+        
+        More about inline & block elements and the display property <!-- .element: class="footnote" --> [here](https://css-tricks.com/almanac/properties/d/display/).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Display: sizing and layout
+        
+        Changing the `display` property not only changes the sizing properties but can also be used for layout styles (e.g. making block elements sit side by side).
+        
+        Earlier we used `float` to align elements (profile image and about text).  As you've already seen, there are often more than one way to do the same thing.
+        
+        Today we are going to use to `display` to change the sizing properties of the navigation links. 
+        
+        <br>
+        To learn more about `display` for layout styles vs `float` (as well as other techniques), see these further readings [here](http://www.ternstyle.us/blog/float-vs-inline-block) and [here](http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/).
+      </script>
+    </section>
+    
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        ## Let's style that nav already! [3pm]
+        
+        These next few steps will take your nav from the example on the left to the one on the right. Let's go!
+        
+        ![](framework/img/workshop/nav-no-style.png)
+        ![](framework/img/workshop/nav-styled.png)
+        
+        First, let's temporarily put a background colour on the links to see more clearly the spacing changes that are going to happen. What selector should be used to target only the links within the `<nav>`?
+        
+        <div class="delayed">
+          <pre><code>nav a {
+          background: blue;
+        }</code></pre>
+
+          <img src="framework/img/workshop/nav-bg.png">
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Class Exercise #11: nav links
+        
+        Adding **padding** to the anchor link vs **margin** has a specific effect here.  Let's look at both, to see the difference. (Try it in your code!)
+        
+        <div class="col-2">
+          <pre><code>nav a {
+          background: blue;
+          padding: 15px;
+        }</code></pre>
+        ![](framework/img/workshop/link-padding.png)
+        </div>
+        
+        <div class="col-2">
+          <pre><code>nav a {
+          background: blue;
+          margin: 15px;
+        }</code></pre>
+        ![](framework/img/workshop/link-margin.png)
+        </div>
+        
+        Padding adds space <!-- .element: class="delayed" -->*inside* the element, making the hit area bigger bigger, which is better for usability. 
+        
+        But there's still something wrong.  Notice how the padding at the top of the link is not showing properly?  That's because links are an<!-- .element: class="delayed" -->  *inline* element.  
+        
+        What <!-- .element: class="delayed" --> `display` value should we change it to so it can still be aligned side by side but also take the padding property values properly? <span class="delayed"><code >inline-block</code></span>
+        
+        <div class="delayed">
+          <pre><code>nav a {
+          background: blue;
+          padding: 15px;
+          display: inline-block;
+        }</code></pre>
+          
+          Ta da!
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Comment your code
+        
+        Try adding some comments to help you remember what each property does.
+        
+        ```
+        nav a {
+          background: blue;
+          padding: 15px; /* one value adds same amount of padding on all sides */
+          display: inline-block; /* changes links from default inline element to add padding properly */
+        }
+        ```
+      </script>
+    </section>
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Class Exercise #11: nav links (continued)
+
+        
+        Next up: 
+        
+        1. delete the temp/test background colour
+        1. change the text to uppercase letters using `text-transform`
+        1. remove the default underline using `text-decoration`
+        
+        ```
+        nav a {
+          padding: 15px; /* one value adds same amount of padding on all sides */
+          display: inline-block; /* changes links from default inline element to add padding properly */
+          text-transform: uppercase; /* changes letters to uppercase */
+          text-decoration: none; /* removes underline */
+        }
+        ```
+        
+        Now let's make the text align to the right using `text-align`. Set this property on the *parent* of the links, `<nav>`, so it can align all the child elements,`<a>`.
+          
+        ```
+        nav {
+          text-align: right;
+        }
+        ```
+        
+        Your page should now look similar to [exercise-11.html](reference/exercise-11.html) in your **reference** folder.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Next up! Hover effects and fixed nav
+          
+        ![exercise example](framework/img/workshop/hover-transition.gif)
+        </nav>
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## pseudo-class & hover effects
+        
+        It's common to apply a hover states to links in general and even a little extra styling for navigation links.
+        
+        A CSS `pseudo-class` is a keyword that is *attached* to a selector and specifies a *state* of the element. For example `:hover` (note the colon before the keyword) will apply a style only when the user hovers over the element which the pseudo-class is attached to.
+        
+        Let's try out some styles below.
+        
+        <textarea class="snippet" data-subject="#hover">a {
+          padding: 10px;
+        }
+        a:hover { 
+          border: 1px solid black;
+          background: red;
+          color: white;
+        }</textarea>
+        <a id="hover">I'm a link!</a>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Intro to Positioning
+
+          In HTML, elements stack on top of each other in the order of how it is written.
+          ```
+          <p>element 1</p>
+          <p>element 2</p>
+          <p>element 3</p>
+          ```
+          renders as:
+          <div class="example">
+            <p>element 1</p>
+            <p>element 2</p>
+            <p>element 3</p>
+          </div>
+
+          In order to move elements outside of the default stacking order, we can use CSS floats or positioning.  Both of these concepts are the more complicated parts of CSS and require much more discussion.
+
+          Here are two indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Fixed positioning
+      </script>
+    </section>
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class exercise #12: Hover
+        
+        It's common to apply a hover states to links in general and even a little extra styling for navigation links.
+        
+        A CSS `pseudo-class` is a keyword that is *attached* to a selector and specifies a *state* of the element. For example `:hover` (note the colon before the keyword) will apply a style only when the user hovers over the element which the pseudo-class is attached to.
+        
+        Let's first change the background colour of the nav links on hover.  Right now it's transparent (by defuault).  Attach `:hover` to the `nav a` element to target the hover state on the nav link.
+        
+        ```
+        nav a:hover {
+          background: #9D6381;
+        }
+        ```
+      </script>
+    </section>
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Next steps
+        
+        1. adjust spacing, font styles, etc.
+        1. use icon fonts instead of images for the social icons
+        1. 
       </script>
     </section>
     
