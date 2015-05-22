@@ -75,6 +75,7 @@ nav a {
   text-decoration: none; /* removes underline */
   margin: 10px; /* adds space around each link */
   color: #0F110C;
+  font-weight: 400;
 }
 
 nav a:hover {

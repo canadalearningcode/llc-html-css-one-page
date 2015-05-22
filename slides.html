@@ -92,20 +92,24 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Web Browsers
-
-        The main functionality of the browser is to present the *web resource* and display it in the browser window. The *web resource* is usually an HTML document, but can be other types such as PDFs or images.
-
-        HTML documents are saved with an **.html** file extension (just like PDFs have a .pdf file extension).
         
-        Choose a modern web browser that supports current web standards and development tools. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers. Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
+        The main functionality of the browser is to present a *web resource* in the browser window. Choose a modern web browser that supports current web standards and dev tools for a better web experience.
+
+        In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in other browsers), you can view the source of *any* web page. Right-click / two-finger tap anywhere on the browser and select **View Web Source**.
+                
+        Go to http://ladieslearningcode.com and try it. That&rsquo;s HTML!
         
         <br>
-        Go to http://ladieslearningcode.com, right-click or two-finger tap and select "View Page Source".
+        **Chrome Developer tools** take it a step further and allows you to *inspect* any web page, making it easier to test & debug code. The tools can be accessed in 3 ways:
 
-        That&rsquo;s HTML!  You can do this on ANY web page.
+        * Option 1: right-click / two-finger tap on a web page and select **Inspect Element**  
+        * Option 2: select the menu icon in the top right hand corner and select **Tools > Developer Tools**   
+        * Option 3: keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+
 
         <br>
-        To set Chrome as your default browser, follow <!-- .element: class="footnote" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+        Visit <!-- .element: class="footnote" -->[browsehappy.com](http://browsehappy.com) for more info about modern browsers.   
+        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). More about dev tools: http://discover-devtools.codeschool.com
       </script>
     </section>
 
@@ -121,7 +125,7 @@
         <br>
         **[Atom](https://atom.io/)** is the editor we'll be using today.
         
-        **Pro tip!** Improve your work flow with [keyboard shortcuts](shortcuts-cheatsheet.html).
+        **Pro tip!** Improve your work flow with [keyboard shortcuts](keyboard-shortcuts.pdf).
       </script>
     </section>
 
@@ -130,7 +134,7 @@
       <script type="text/template">
         ##Edit some HTML!
 
-        1. Open Atom and select **File > Open**.
+        1. Open your text editor and select **File > Open**.
         1. Navigate to the **llc-html-css-one-page-master** folder and click it *once* to select it. Then select **Open**.  
            The project folder and all its contents will appear in the sidebar.
         1. In the sidebar, click on **project** to open the folder and then select **basic.html** to open the file.
@@ -141,8 +145,8 @@
         1. Now change the text *between* the `<p></p>` & save it.
         1. This time, go to your browser and *refresh* the web page.
 
-        This is your editing work flow:  
-        Make changes. Save. Refresh browser. Repeat. Repeat. Repeat.
+        <br>
+        This is your editing work flow: Make changes. Save. Refresh browser. Repeat. Repeat. Repeat.
         
         All of your exercises today will be completed in the<!-- .element: class="footnote" --> **projects** folder.  The **reference** folder includes examples for each exercise.  The **framework** folder contains files to make this presentation work so avoid editing anything in there!
       </script>
@@ -173,12 +177,14 @@
       </script>
     </section>
 
-    <section class="slide centered" data-markdown>
+    <section class="slide first-website" data-markdown>
       <script type="text/template">
-        ## Ta-da!
-        You just created your first website. HTML + CSS = website
-
-        ![](framework/img/workshop/jay-yeezy-laughing.gif)
+        <div class="text">
+          <h1>Ta-da!</h1>
+          <p>
+            You just created your first website. HTML + CSS = website
+          </p>
+        </div>
       </script>
     </section>
 
@@ -202,7 +208,7 @@
       <script type="text/template">
         ##HTML: The content layer
 
-        When writing HTML, *tags* are used to wrap and describe the content that is inside of them.
+        When writing HTML, *tags* are used to wrap and describe the content inside of them.
 
         Here are a couple tags you've just seen, used for adding content to the page.
 
@@ -210,18 +216,15 @@
         <h1>This tag describes a heading</h1>
         <p>This tag is for paragraphs.</p>
         ```
+        
+        The structure of a webpage is defined by HTML tags and are denoted by `<` left angled brackets and right angled brackets `>` (`shift` + `,` and `shift` + `.` ).
 
         <br>
-        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>`  
-        (`shift` + `,` and `shift` + `.` ).
-
         Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to wrap the content.  Note that the closing tag has a forward slash (`/`).
 
         ```
         <tag> opening tag --- closing tag </tag>
         ```
-
-
       </script>
     </section>
 
@@ -238,12 +241,11 @@
         Nested tags create a family tree-like relationship and is often referred to as the *parent* node and *child* nodes.  The inner tag is the child of the outer tag.
         
         <br>
-        **Attributes** provides additional information or instruction for the element and is included inside the opening HTML tag in the form of `attribute="value"`. We'll be seeing different kinds of attributes as today's project progresses.
+        **Attributes** provides additional information or instruction for the element and is included *inside the opening HTML tag* in the form of `attribute="value"`. We'll be seeing different kinds of attributes as today's project progresses.
 
         ```
         <tag attribute="value">content</tag>
         ```
-
       </script>
     </section>
 
@@ -257,7 +259,7 @@
         <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
 
-        Whitespace through indentation (tabs) make your HTML more human-readable. Every time a tag is nested, add one tab.  Getting into this habit from the start will help keep you organized.
+        Whitespace through indentation (tabs) makes the HTML easier for you to read. Every time a tag is nested, add one tab.  Getting into this habit from the start will help keep you organized.
 
         **The tags below should be included in all HTML documents.**
 
@@ -305,7 +307,7 @@
 
         * always the first tag
         * it is the root element & ancestor of all other elements because everything is nested inside.
-        * identifies document as HTML
+        * identifies the document as HTML
         * the `lang` *attribute* classifies the language (more about attributes later)
 
         <pre><code>&lt;!DOCTYPE html&gt;
@@ -672,7 +674,8 @@
       <script type="text/template">
         ##Image file types
 
-        **gif** - smaller file size when used for line art, charts, and images with minimal colour variation
+        **gif** - smaller file size when used for line art, charts, and images with minimal colour variation.   
+        (That's why animated gifs tend to look grainy but oh so fun!)
 
         **jpg** - smaller file size when used for photographs with lots of rich colours or gradients
 
@@ -680,16 +683,16 @@
 
         **svg** - XML-based vector image format for 2D graphics with support for interactivity and animation
         
-        [Here's a big list of image placeholder site](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
+        <br>
+        [Here's a big list of image placeholder sites](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
       </script>
     </section>
-
 
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Image files
 
-        It's best practice to organize your images into its own folder.  In the **project** folder, there is already a folder called **images** with some sample images you can use today (or add your own to that folder).
+        It's best practice to organize image files into its own folder.  In today's **project** directory, there is already an **images** folder with some sample images you can use today (or add your own to that folder).
 
         Since the images are not in the same folder as **index.html**, use a *relative* path to link to the file.
 
@@ -753,7 +756,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #4: Add the navigation
+        ##Class Exercise #4: Add the navigation
 
         On one-page websites, we can still create a navigation by setting the links to specific spots on the page.
 
@@ -804,18 +807,16 @@
         1. Add a profile image
         2. Add three or four images to your "Loves" section
         3. Add the social links to the contact section.  There are some images available in the **project > images ** folder.  Try making the images into links!
-
-        **Bonus exercise**:  
-        Take some time to make sure everything in indented properly to make it easier to read.
-
+        4. **Bonus exercise** - make sure all the code is indented properly to make it easier to read.
+        
+        <br>
         And that's it! That's all of the HTML we'll need today for your project. 
         
+        [Here's the list of image placeholder sites again](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
+        
         Your page should look something like this: [reference/exercise-5.html](reference/exercise-5.html)
-
       </script>
     </section>
-
-
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -857,16 +858,18 @@
         * used to separate content from presentation
         * introduced to solve the issues of using HTML tags and attributes for presentation
         * a stylesheet contains a list of rules that cascade to reduce redundancy and saves time
-
-        Every browser has its own *user agent stylesheet* that adds default styles to tags. We can use CSS to override these styles as well as add our own.
+        
+        <br>
+        Every browser has its own *user agent stylesheet* that adds default styles to tags.  
+        Use CSS to override these styles as well as add your own.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS Syntax
+        ##CSS Syntax & Terminology
 
-        CSS is a different language from HTML.  It's a stylesheet language with its own syntax rules. A style sheet contains a list of style rules to define how the HTML elements should look.
+        A CSS file contains a list of style rules to define how the HTML elements should look. CSS is a different language from HTML and has its own syntax rules as well.
 
         **Selectors:** determines which HTML element(s) to apply the styles to.
 
@@ -902,8 +905,8 @@
 
         There are many CSS properties with new ones being added and old ones being retired (deprecated).  It's good to have a few resources on hand.
 
-        http://caniuse.com
-        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+        http://caniuse.com  
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference  
         http://htmldog.com/reference/cssproperties/
       </script>
     </section>
@@ -922,9 +925,9 @@
 
         This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
-        The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet.
+        The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` and `href`. The value of `href` points to the file location of the style sheet.
 
-        Though not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
+        Though not required, css files are often saved in a separate folder for organization, so make sure the file path points to the appropriate directory.
         ```
         <head>
           <title>Page Title</title>
@@ -939,11 +942,9 @@
       <script type="text/template">
         ##Create a CSS File
 
-        Back in Sublime Text, create a new CSS file by selecting **File > New File**.
+        Back in the text editor, create a new CSS file by selecting **File > New File**.
 
         Let&#39;s call it **styles.css** and add it to **index.html**.
-
-        <p class="footnote">**PRO TIP!** Sublime Text has a shortcut.  Type "link" with no brackets, then the tab key. Voila!</p>
 
         ```
         <link rel="stylesheet" href="css/styles.css">
@@ -981,13 +982,15 @@
 
           <div class="footnote">
             <br>
-            **Colour resources:**
-
-            http://colours.neilorangepeel.com
-            http://www.colorpicker.com
-            http://www.colourlovers.com
-            http://flatuicolors.com
-            http://color.hailpixel.com
+            **Colour resources:**  
+            
+            http://coolors.co  
+            http://colours.neilorangepeel.com  
+            http://wesandersonpalettes.tumblr.com  
+            http://www.colorpicker.com  
+            http://www.colourlovers.com  
+            http://flatuicolors.com  
+            http://color.hailpixel.com  
           </div>
       </script>
     </section>
@@ -1021,19 +1024,19 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Web safe fonts
 
-        Web safe fonts are pre-installed fonts on your computer but not all operating systems have the same fonts installed.  Use a font *stack* and choose fonts that look similar to provide a fallback option.
+        Web safe fonts are pre-installed fonts on your computer.  Because not all operating systems have the same fonts installed, use a font *stack* and choose fonts that look similar to provide a fallback option.
 
-        If you want to use fonts other than ones pre-installed, as of CSS3, you can use Web Fonts like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
+        If you want to use fonts other than the pre-installed fonts, as of CSS3, you can use Web Fonts like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
 
         The web has a number of fonts that are considered "web safe". Some of the most used fonts are:
 
-        Arial
-        Verdana
-        Times New Roman
-        Georgia
-        Courier
-
-        http://www.cssfontstack.com
+        * Arial
+        * Verdana
+        * Times New Roman
+        * Georgia
+        * Courier
+        
+        Resource: http://www.cssfontstack.com
       </script>
     </section>
 
@@ -1120,7 +1123,7 @@ text-transform: lowercase;</textarea>
           * creates a consistent baseline
           * some default styles are removed
           * several popular CSS resets to choose from
-          * You can use them as is, modify them or create your own.
+          * use them as is, modify them or create your own
 
         For today's project, let's go to http://www.cssreset.com/ and use **Eric Meyer’s “Reset CSS” 2.0**.
         Select "Get The Code" to copy it and add it to the very top of our **styles.css** stylesheet.
@@ -1129,8 +1132,11 @@ text-transform: lowercase;</textarea>
         Your page should now look something like this:
 
         ![](framework/img/workshop/css-reset.png)
-
-        **Further reading:**<!-- .element: class="footnote" --> http://www.cssreset.com/to-reset-or-to-normalize-that-is-the-question/<!-- .element: class="footnote" -->
+        
+        <br>
+        You can also create a separate stylesheet just for the reset code. Just remember to link to it before your custom stylesheet, **styles.css** in today's project. 
+        
+        **Further reading:** http://www.cssreset.com/to-reset-or-to-normalize-that-is-the-question/
       </script>
     </section>
 
@@ -1140,27 +1146,35 @@ text-transform: lowercase;</textarea>
 
         Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements?
         
-        The space between and around the elements can be changes using CSS properties, `margin` and `padding` (more on this soon).
-
-        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
-
         ![](framework/img/workshop/css-reset-1.png)
         ![](framework/img/workshop/css-reset-2.jpg)
+        
+        The space between and around the elements can be changed using CSS properties, `margin` and `padding` (more on this soon).
+
+        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
       </script>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Lunchtime! [2.25hrs]
+        ## Lunchtime!
 
         Optional exercises:
 
-        1. check your code with exercise6.html and styles6.css
+        1. check your code with **exercise6.html** and **styles6.css** in the **reference** folder
         2. pick some new fonts
-        3. pick a color pallette - the final project has three colours
+        3. pick a color palette - the final project has [three colours](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c)
+        4. pick a background image - there are some to choose from in **project > images ** or use one of the resources from here: https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
         
-        
-        add resources
+        <br>
+        **Colour resources:**  
+        http://coolors.co  
+        http://colours.neilorangepeel.com  
+        http://wesandersonpalettes.tumblr.com  
+        http://www.colorpicker.com  
+        http://www.colourlovers.com  
+        http://flatuicolors.com  
+        http://color.hailpixel.com  
       </script>
     </section>
     
@@ -1175,9 +1189,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ## Class attributes
         
-        We're going to give the About section a different treatment later so leave it for now.  
-        
-        Let's add background colours to Loves & Footer.  For the Loves `<section>`, we can't use `section` as our selector since that will also apply to the About `<section>` as well.  Remember we added a `class` *attribute*?
+        Let's add background colours to Loves & Footer.  We're going to give the About section a different treatment later so leave it for now. We can't use `section` as the selector since that will apply to both the About & Loves portion of the page. Instead, add css to the `class` name.  See the example below.
           
         ```
         <section id="about" class="about">
@@ -1192,7 +1204,7 @@ text-transform: lowercase;</textarea>
         ```
         section { background: blue; }
         ```
-        Applies to any element that contains this class, defined by leading period.
+        Applies to any element that contains this class, **defined by leading period**.
         ```
         .about { background: red; }
         ```
@@ -1203,13 +1215,11 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Class Exercise #7 - Background colours
         
-        Let's add the background colours to each section of the page.  This will also help to visualize the blocks of content as well.
-        
-        (You can use the sample colours for now if you don't have a palette in mind.) <!-- .element: class="footnote" -->
+        Let's add the background colours to each section of the page.  This will also help to visualize the blocks of content as well.  Use the colours in the examples for now if you don't have a palette just yet.
         
         Now would also be a good time to use `/* CSS comments */` to organize your code. You can put any letters and characters in your comments as long as they start with `/*` and end with `*/` .
         
-        In the final sample project, both the header and navigation have the same background colour.  How would you select them both at the same time?
+        In the final sample project, both the header and navigation have the same background colour.  Select them both at the same time by *combining* the selector.
         
         (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
         
@@ -1229,7 +1239,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Class Exercise #7 - Background colours, part 2
         
-        To apply a background colour to just the "Loves" section, what selector should we use?
+        Next, apply a background colour to just the "Loves" section.
         
         ```
         /* LOVES - things I love 
@@ -1277,7 +1287,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ## The Box Model
         
-        There are 5 CSS properties used to determine the size and spacing of these boxes. `width` and `height` are used to set specific sizes but there are 3 properties that also changes the size of the HTML elements.
+        There are 5 CSS properties used to determine the size and spacing of these boxes.
         
         <div class="col-2">
           ![Box Model example](framework/img/workshop/box-model-layout.png)
@@ -1302,9 +1312,8 @@ text-transform: lowercase;</textarea>
         **margin** - adds/removes space **outside** of the element  
         **padding** - adds/removes space **inside** of the element
 
-        The values for both properties can be declared using 1 to 4 values.  
-        A variety of measurement units (px, %, ems, rems, etc) can be used.
-
+        The values for both properties can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
+        
         Setting the value to "0" will *remove* any default space and any positive value will *add* space.
 
         ```css
@@ -1346,15 +1355,15 @@ margin: 0px;</textarea>
       <script type="text/template">
         ## Border box: width, padding & border
         
-        In CSS the relationship between `width`, `padding` and border can be confusing.  
+        In CSS the relationship between the `width`, `padding` and `border` properties can be confusing.  
         
-        For example, if you set the width of a box to be 500px and adding 20px of padding on the left and right side and a 2px border, the width of the box will actually be: 500 + 20 + 20 + 15 + 15 = 570px.
+        For example, if you set the width of a box to 500px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be: 500 + 20 + 20 + 15 + 15 = 570px.
         
         <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
         
         
         <div class="delayed">
-          <p>Luckily, there's a fix for this. Let's compare how this works with and without the fix.</p>
+          <p>Luckily, there's a fix for this. First, let's compare how this works with and without the fix.</p>
           
           <div class="col-2">
             <textarea class="snippet" data-subject="#example">background: lightblue;
@@ -1384,7 +1393,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ## * { Box-sizing: Border-box } FTW
         
-        Add this snippet to your project now (and to all future projects) to fix the width/padding issue.
+        Add this snippet to your project now (and to all future projects) to fix the width/padding/border issue.
         
         ```
         /* apply a natural box layout model to all elements, but allowing components to change */
@@ -1401,11 +1410,11 @@ border: 15px solid green;</textarea>
   
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8 - Spacing [30]
+        ##Class Exercise #8 - Spacing
         
         (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding. Also, feel free to use the amount of space that looks good to you or follow the examples below.)
         
-        Let's add some padding to all the sections (except the nav) so the content is not all squished to the edge and has consistent styling throughout the parts of the page. What selectors should we use to target them all at the same time?
+        Add some padding to all the sections (except the nav) so the content is not squished to the edge and has consistent styling throughout the different sections of the page. Combine the selectors to target them all at the same time.
         
         ```
         header, section, footer {
@@ -1420,8 +1429,16 @@ border: 15px solid green;</textarea>
           text-align: center;
         }
         ```
-        
-        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! Also, adding `line-height` will add some space *between* the lines of text in the paragraph and bumping up the font-size will make it easier to read.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #8 - Spacing
+         
+        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! 
+          
+        Also, add `line-height` to add space *between* the lines of text in the paragraph and bump up the `font-size` to make it easier to read.
         
         ```
         h1 {
@@ -1447,8 +1464,6 @@ border: 15px solid green;</textarea>
         But as you may have already noticed, there's no clear cut path for what to build first.  It takes a step by step approach of slowly building it, piece by piece.
         
         Let's keep going!
-        
-        [ add gif? ]
       </script>
     </section>
     
@@ -1542,7 +1557,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Customize! (15mins) [30 2:15pm]
+        ## Customize! (15mins)
         
         We still have a few more concepts to cover such as aligning, styling the images and the navigation but take some time to customize your page.
         
@@ -1551,15 +1566,13 @@ border: 15px solid green;</textarea>
         You can also update the content or compare your code to  [exercise-9.html](reference/exercise-9.html) in your **reference** folder.  
         
         Square images are also better for the upcoming exercises.  You can crop and resize them using this free tool, [Pixlr](https://pixlr.com/web), between 200px - 400px is best. 
-        
-        [List resources]
       </script>
     </section>
     
     <section class="slide title" data-markdown>
       <script type="text/template">
         #More CSS!
-        ##Page layout, Rounded corners,<br> Background images [gif]?
+        ##Page layout, Rounded corners,<br> Background images
       </script>
     </section>
     
@@ -1620,17 +1633,16 @@ border: 15px solid green;</textarea>
       <!-- <script type="text/template"> -->
         <h2>Float left or right</h2>
         
-        <p style="float:none;border:none;">To get block level elements to line up side by side, we have to *break* the stacking flow.  Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side. This will cause any element after the floated element to move up beside it.</p>
+        <p style="float:none;border:none;">To get block level elements to line up side by side, we have to <em>break</em> the stacking flow.  Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side. This will cause any element after the floated element to move up beside it.</p>
         
-        <textarea class="snippet" data-subject="float">p {
-  border: 2px solid red;
-}
-
-h1 { 
+        <textarea class="snippet" data-subject="#float">h1 { 
   border: 1px solid blue;
   float: ;
+}
+p {
+  border: 2px solid red;
 }</textarea>
-        <div id="float" class="box">
+        <div id="float">
           <h1 style="font-size:25px;">heading1 tag</h1>
           <p>paragraph tag</p>
         </div>
@@ -1735,7 +1747,7 @@ h1 {
         
         * same height and width of their content <!-- .element: class="delayed" -->
         * does not apply sizing properties (margin, padding, height and width) as expected<!-- .element: class="delayed" -->
-        * displays side by side, in a line.<!-- .element: class="delayed" -->
+        * displays side by side, in a line<!-- .element: class="delayed" -->
         
         What are some characteristics of<!-- .element: class="delayed" --> **block** elements?
         
@@ -1796,7 +1808,7 @@ h1 {
     
     <section class="slide side-by-side" data-markdown>
       <script type="text/template">
-        ## Let's style that nav already! [3pm]
+        ## Let's style that nav already!
         
         These next few steps will take your nav from the example on the left to the one on the right. Let's go!
         
@@ -1969,7 +1981,7 @@ h1 {
         nav a:hover {
           background: #9D6381;
           color: #CECCCC;
-          border-radius: 4px;
+          border-radius: 4px; /* adds rounded corners */
         }
         ```
       </script>
@@ -1988,7 +2000,7 @@ h1 {
         <br>
         This concept is one of the more complicated parts of CSS and takes some practice. To view more about positioning, check out [this extra resource](framework/positioning.html).
 
-        Here are two more indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
+        Being able to place elements wherever you want sounds great at first, but should actually be used sparingly. Here are two more indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
       </script>
     </section>
     
@@ -2040,7 +2052,7 @@ h1 {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Final Exercise! Fixed Nav bar (10mins)
+        ## Exercise #12: Fixed Nav bar (10mins)
         
         Fix that nav! Using the previous example, set your navigation to be fixed at the top of the page.  
         
@@ -2053,11 +2065,9 @@ h1 {
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide centered final-exercise" data-markdown>
       <script type="text/template">
-        ## Bonus exercise!
-        
-        [add gif]
+        # Final exercise!
       </script>
     </section>
     
@@ -2092,8 +2102,8 @@ h1 {
         Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
         
         <div class="col-2">
-        ![](framework/img/workshop/graphical-z-index.gif)
-      </div>
+        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: width="100%" -->
+        </div>
 
         <div class="col-2">
           If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
@@ -2116,7 +2126,7 @@ h1 {
       <script type="text/template">
         ## More Background Styles
         
-        If the image is smaller than the width of your browser window, it will repeat by default. We can change fix that with the value of `no-repeat` and also add two more, `fixed` and `cover`.   
+        If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value and also add two more, `fixed` and `cover`.   
         
         Let&#39;s add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window! The end code will look like this:
 
@@ -2160,17 +2170,58 @@ h1 {
       </script>
     </section>
     
-    
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Next steps
         
-        1. adjust spacing, font styles, etc.
+        Here are a few more ideas for furthering your project.
+
+        1. adjust spacing, font styles, etc. 
+          * see [final.html](reference/final.html) and **final.css** in your reference folder to compare
         1. use icon fonts instead of images for the social icons
-        1. https://github.com/cferdinandi/smooth-scroll
+          * Try Font Awesome icon fonts: http://fortawesome.github.io/Font-Awesome/
+          * similar to Google fonts, add their CSS file and see documentation to get started
+        1. Add a smooth scroll in your nav with the basic JavaScript plugin: https://github.com/cferdinandi/smooth-scroll
+        1. add metadata - info here: https://support.google.com/webmasters/answer/79812?hl=en
+        1. [Add a favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon)
+        
       </script>
     </section>
     
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Resources
+        
+        1. Online tutorials:
+          * http://learn.shayhowe.com/html-css/
+          * https://www.codeschool.com/courses/front-end-foundations
+        1. http://www.htmlandcssbook.com
+        1. Try a few more Ladies Learning Code workshops such as:
+          * CSS for Beginners
+          * HTML & CSS: Building a Multi-Page Website
+          * jQuery for Beginners
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      ##Getting your site online
+
+      You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
+      
+      * [hover.com](http://hover.com/ladiescode) - Domain registration
+      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - Domain and hosting - Use coupon code **LLC40** to get $40 off your registration!
+
+      To get your files online, you will need upload your files to your newly purchased hosting server. There are a few pieces of information you will need and are usually provided to you by your hosting service provider.
+
+      * FTP Address
+      * Username
+      * Password
+
+      Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)  
+      Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
+    </section>
+
     
     <!-- Last slide -->
     <section class="slide last">
