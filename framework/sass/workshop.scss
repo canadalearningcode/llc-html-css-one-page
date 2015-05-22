@@ -1,5 +1,92 @@
 @import "variables";
 @import "mixins";
 
+@mixin label($padding, $color) {
+  padding-top: $padding+px;
+  color: $color;
+  border-left: 4px solid $color;
+}
+
+
+
 /* Styles specific to this workshop
 ------------------------------------*/
+.highlighted-tags strong {
+  background: #ddd;
+  padding: 5px;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+
+  [class^="hljs-"]{
+    color: black;
+    font-weight: bold;
+  }
+}
+.first-website {
+  background: url(../img/workshop/jay-yeezy-laughing.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;  
+  
+  .text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    
+    h1 {
+      font-weight: bold;
+    }
+  }
+}
+.page-layout {
+  .screenshot,
+  .labels {
+    float: left;
+  }
+  .labels p {
+    padding-left: 20px;
+  }
+  .screenshot {
+    margin-right: 20px;
+  }
+  .nav {
+    @include label(0, red);
+  }
+  .header {
+    @include label(250, blue);
+  }
+  .about {
+    @include label(340, green);
+  }
+  .loves {
+    @include label(325, purple);
+  }
+  .footer {
+    @include label(160, orange);
+  }
+}
+
+.css-gif {
+  background: url(../img/workshop/css.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;
+
+  h2 {
+    color: black;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.498039);
+  }
+}
+
+.final-exercise {
+  background: url(../img/workshop/excited-baby.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;  
+  
+  h1 {
+    font-weight: bold;
+  }
+}

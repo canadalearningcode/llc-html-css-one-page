@@ -54,6 +54,8 @@ h2 {
     font-weight: normal;
     background: none;
     text-transform: lowercase; }
+  h2 + table {
+    margin-top: 15px; }
 
 h3 {
   margin-bottom: 5px;
@@ -98,13 +100,32 @@ pre {
     overflow-y: auto; }
 
 code {
-  font-family: Andale Mono, Monaco, monospace;
+  font-family: Monaco, Andale Mono, monospace;
   color: #444;
-  padding: 1px 4px;
   font-size: 20px;
   background: white;
   border-radius: 4px;
-  padding: 0 6px; }
+  padding: 3px 6px; }
+
+/* table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+  table pre {
+    margin: 0; }
+  table code {
+    background: transparent; }
+  table .hljs {
+    border: none;
+    background: transparent; }
+
+td {
+  border: 1px solid #b109aa;
+  padding: 10px 50px 10px 10px; }
+
+th {
+  text-align: left;
+  padding-left: 10px; }
 
 .footnote {
   line-height: 1.25;
@@ -123,8 +144,9 @@ a.highlight {
 [class^="col-"],
 [class*="col-"] {
   float: left; }
-  [class^="col-"]:first-child,
-  [class*="col-"]:first-child {
+  [class^="col-"]:first-child, [class^="col-"]:first-of-type,
+  [class*="col-"]:first-child,
+  [class*="col-"]:first-of-type {
     margin-right: 2%; }
 
 .col-2 {
@@ -240,29 +262,31 @@ e.g.
   border-radius: 5px;
   padding: 0 10px 0 6px; }
   .heading-bg span.light {
-    background: rgba(255, 255, 255, 0.3); }
+    background: rgba(255, 255, 255, 0.2); }
   .heading-bg span.dark {
-    color: #222222; }
-.heading-bg.connected span {
-  display: inline-block;
-  padding: 6px 15px; }
-.heading-bg.connected .light:last-child {
-  margin-left: 244px;
-  margin-top: 4px; }
+    color: #222222;
+    margin-bottom: 4px; }
+.heading-bg.connected {
+  font-size: 30px; }
+  .heading-bg.connected span {
+    display: inline-block;
+    padding: 6px 10px; }
 
 /* Title & Intro slides
 ------------------------*/
 .intro {
   /*uncomment this if you don't want to use a background image */
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(../img/banner-home1.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner-home2.jpg) no-repeat;
   background-size: cover;
   color: #ffffff; }
   .intro .logo {
     height: 65px; }
-  .intro h1 {
+  .intro h1.heading-bg {
     font-size: 75px;
-    margin: 20px 0;
+    margin: 5px 0 35px;
     color: #ffffff; }
+    .intro h1.heading-bg .dark {
+      font-size: 55px; }
   .intro .info ul {
     margin: 0;
     padding: 0;
