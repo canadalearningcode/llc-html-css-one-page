@@ -1881,11 +1881,9 @@ h1 {
       </script>
     </section>
     
-    
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Class Exercise #11: nav links (continued)
-
         
         Next up: 
         
@@ -1918,6 +1916,8 @@ h1 {
       <script type="text/template">
         ## Next up! Hover effects and fixed nav
           
+        To create this effect, we are going to use a `pseudo-class` and `position`.
+        
         ![exercise example](framework/img/workshop/hover-transition.gif)
         </nav>
       </script>
@@ -1947,48 +1947,224 @@ h1 {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Intro to Positioning
-
-          In HTML, elements stack on top of each other in the order of how it is written.
-          ```
-          <p>element 1</p>
-          <p>element 2</p>
-          <p>element 3</p>
-          ```
-          renders as:
-          <div class="example">
-            <p>element 1</p>
-            <p>element 2</p>
-            <p>element 3</p>
-          </div>
-
-          In order to move elements outside of the default stacking order, we can use CSS floats or positioning.  Both of these concepts are the more complicated parts of CSS and require much more discussion.
-
-          Here are two indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
-      </script>
-    </section>
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ## Fixed positioning
-      </script>
-    </section>
-    
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
         ##Class exercise #12: Hover
         
-        It's common to apply a hover states to links in general and even a little extra styling for navigation links.
-        
-        A CSS `pseudo-class` is a keyword that is *attached* to a selector and specifies a *state* of the element. For example `:hover` (note the colon before the keyword) will apply a style only when the user hovers over the element which the pseudo-class is attached to.
-        
-        Let's first change the background colour of the nav links on hover.  Right now it's transparent (by defuault).  Attach `:hover` to the `nav a` element to target the hover state on the nav link.
+        Let's first change the background colour of the nav links on hover.  Right now it's transparent (by default).  Attach `:hover` to the `nav a` element to target the hover state on the nav *link*.
         
         ```
         nav a:hover {
           background: #9D6381;
         }
         ```
+        
+        This example used the same colour for the background as the link so now we'll have to change the font colour. Also, if you want to add some space around the links, now would be a good time to use `margin` since we want to push the elements away from the edge and each other.
+        
+        
+        ```
+        nav a {
+          margin: 10px; /* adds space around each link */
+        }
+        nav a:hover {
+          background: #9D6381;
+          color: #CECCCC;
+        }
+        ```
+        
+        How about some rounded corners?
+        
+        ```
+        nav a {
+          margin: 10px; /* adds space around each link */
+        }
+        nav a:hover {
+          background: #9D6381;
+          color: #CECCCC;
+          border-radius: 4px;
+        }
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Intro to the position property
+        
+        So far, we've seen that `float` and `display` can be used to manipulate the elements default layout and stacking flow but there is one more option: `position`.
+
+        The `position` property can be used to place elements in a specific spot relative to another element or the page without affecting the elements around it the way floats do. There are four value options: `relative`, `absolute`, `fixed` and `static` (default).
+
+        Today we are using `fixed` positioning and will focus on that option. 
+        
+        <br>
+        This concept is one of the more complicated parts of CSS and takes some practice. To view more about positioning, check out [this extra resource](framework/positioning.html).
+
+        Here are two more indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Fixed positioning
+        
+        First, pick a `position` *value* type, which will be `fixed` for today's project. Then, `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
+        
+        Fixed will always be positioned to the viewport and will always stay on the same spot on the page (where ever you put it), even on page scroll. Let's use the nav HTML as an example.
+        
+        ```
+        <nav>
+          <a href="#about">About</a>
+          <a href="#loves">Loves</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        ```
+        
+        Apply `position` to the `nav`, not the `a` because we want to position the entire navigation block. Let's go through each property one by one. <span class="footnote">(advance the slide to see the answer)</span>
+        
+        <textarea class="snippet" data-subject="#fixed">nav { 
+  background: #CECCCC;
+  position: ;
+  top: ;
+  left: ;
+  width: ; 
+}</textarea>
+
+        <nav id="fixed">
+          <a href="#about" style="border-bottom:none;padding:20px;">About</a>
+          <a href="#loves" style="border-bottom:none;padding:20px;">Loves</a>
+          <a href="#contact" style="border-bottom:none;padding:20px;">Contact</a>
+        </nav>
+
+        <div class="delayed">
+          <pre><code>nav { 
+          background: #CECCCC;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%; 
+        }</code></pre>
+
+          You can also use `right: 0` rather than `width: 100%` and it will work too!
+        </div>  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Final Exercise! Fixed Nav bar (10mins)
+        
+        Fix that nav! Using the previous example, set your navigation to be fixed at the top of the page.  
+        
+        Try not to copy & paste the code but use it as a reference guide.
+        
+        <br>
+        **Bonus exercise**: When you fix the nav, the header will no longer stack under it and will instead go *underneath* it.  Add some space to the top of the header to push it down a bit.
+        
+        Your page should now look similar to [exercise-12.html](reference/exercise-12.html) in your **reference** folder.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Bonus exercise!
+        
+        [add gif]
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Background images
+
+        So far, we've been using `background` to add colours but it can also be used to add background images. There are two ways to declare the `background` property and the value must include the image file path.
+
+        ```css
+        /* shorthand */
+        background: url(folder-name/image-file.jpg);
+        ```
+        ```css
+        /* longhand */
+        background-image: url(folder-name/image-file.jpg);
+        ```
+
+        **Important:** Note the location of the CSS file.  Since it&#39;s inside of a folder, we need to adjust the file path to reflect that, using `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
+
+        ```css
+        background: url(../folder-name/image-file.jpg);
+        ```
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Background styles & the x-axis
+        
+        Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
+
+        Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
+        
+        <div class="col-2">
+        ![](framework/img/workshop/graphical-z-index.gif)
+      </div>
+
+        <div class="col-2">
+          If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
+        <pre>
+
+        ```
+        body {
+          background: url(../images/buildings.jpg);
+        }
+        ```
+        </pre>
+        
+        Right now you can only see the image in the About section because all the other sections have background colours declared.
+        
+        </div>  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## More Background Styles
+        
+        If the image is smaller than the width of your browser window, it will repeat by default. We can change fix that with the value of `no-repeat` and also add two more, `fixed` and `cover`.   
+        
+        Let&#39;s add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window! The end code will look like this:
+
+        ```
+        header { /* longhand */
+          background-image: url('../images/buildings.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        ```
+        ```
+        header { /* shorthand */
+          background: url(../images/buildings.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+        ```
+
+        Note that <!-- .element: class="footnote" -->`background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. If no background position value is used, background-size won’t work in the shorthand style so in this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## Opaque background Styles
+        
+        The image looks fancy but now it's hard to read the text!  Remember RGB colour values?  We can use this instead of hex or keyword values to set an opacity to a background colour.
+        
+        Most online colour resources will have all the different types of values listed, or use image editing software like Photoshop.  Or a quick online search almost always ends up with a solution like this tool right here: http://hex.colorrrs.com !
+        
+        The value to create this effect is `rgba(r value, g value, b value, alpha transparency percentage)`. See the example below:
+        
+        ```
+        .about {
+          background: rgba(97, 41, 64, 0.95);
+        }
+        ```
+        The higher the alpha transparency, the more solid the colour will be.
       </script>
     </section>
     
@@ -1999,7 +2175,7 @@ h1 {
         
         1. adjust spacing, font styles, etc.
         1. use icon fonts instead of images for the social icons
-        1. 
+        1. https://github.com/cferdinandi/smooth-scroll
       </script>
     </section>
     

@@ -13,7 +13,8 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  
+  background: url(../images/toronto.jpg) no-repeat fixed;
+  background-size: cover;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
@@ -71,6 +72,7 @@ nav a {
   text-transform: uppercase; /* changes letters to uppercase */
   text-decoration: none; /* removes underline */
   margin: 10px; /* adds space around each link */
+  color: #0F110C;
 }
 
 nav a:hover {
@@ -84,6 +86,7 @@ nav a:hover {
 -----------------------------------------*/
 .about {
   overflow: hidden;
+  background: rgba(97, 41, 64, 0.90);
 }
 .profile-img {
   float: right;
@@ -109,6 +112,10 @@ nav a:hover {
 footer {
   background: #0F110C;
   color: #CECCCC;
+}
+footer img {
+  width: 60px;
+  margin: 15px;
 }
 
 
