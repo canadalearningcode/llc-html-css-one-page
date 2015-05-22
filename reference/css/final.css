@@ -22,6 +22,7 @@ h1, h2 {
 h1 {
   font-size: 100px;
   margin-bottom: 40px;
+  text-transform: lowercase;
 }
 header, 
 section, 
@@ -54,6 +55,7 @@ header {
 }
 header h1 {
   font-size: 125px;
+  text-transform: none;
 }
 header h2 {
   font-size: 34px;
@@ -87,6 +89,7 @@ nav a:hover {
 .about {
   overflow: hidden;
   background: rgba(97, 41, 64, 0.90);
+  color: #fff;
 }
 .profile-img {
   float: right;
@@ -115,7 +118,7 @@ footer {
 }
 footer img {
   width: 60px;
-  margin: 15px;
+  margin: 5px;
 }
 
 

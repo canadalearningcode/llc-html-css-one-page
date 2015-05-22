@@ -36,12 +36,14 @@
         <span>Ladies Learning Code!</span>
       </h1>
       <div class="heading-bg connected">
-        <span class="dark">GET CONNECTED:</span>
-        <span class="light">NETWORK: network name</span><br>
-        <span class="light">PASSWORD: thepassword</span>
+        <!-- <span class="dark">GET CONNECTED:</span><br> -->
+        <h3><span class="dark">Get connected:</span></h3>
+        <span class="light">NETWORK: The Lab <br> 
+          PASSWORD: thisisthelab<br>
+          Learner files: bit.ly/html-css-onepage</span><br>
+        <!-- <span class="light">PASSWORD: thisisthelab</span><br> -->
+        <!-- <span class="light">Learner files: bit.ly/html-css-onepage</span> -->
       </div>
-
-      <p>Download Learner materials: bit.ly/html-css-onepage</p>
     </div>
 
     <div class="sponsor">
@@ -74,22 +76,9 @@
       <script type="text/template">
         ##Today&rsquo;s project
 
-        See the whole project [here](project/final.html).
+        See the whole project [here](reference/final.html).
 
         ![final project](framework/img/workshop/final-project.jpg)
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Course Outline
-
-        * Getting started
-        * Intro to HTML & CSS
-        * Write the HTML for your project
-        * Write the CSS for your project
-        * Final touches
-        * Next steps
       </script>
     </section>
 
@@ -104,12 +93,13 @@
       <script type="text/template">
         ##Web Browsers
 
-        Choose a modern web browser that supports current web standards and development tools. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers. Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
-
         The main functionality of the browser is to present the *web resource* and display it in the browser window. The *web resource* is usually an HTML document, but can be other types such as PDFs or images.
 
         HTML documents are saved with an **.html** file extension (just like PDFs have a .pdf file extension).
-
+        
+        Choose a modern web browser that supports current web standards and development tools. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers. Today we'll be using **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**.
+        
+        <br>
         Go to http://ladieslearningcode.com, right-click or two-finger tap and select "View Page Source".
 
         That&rsquo;s HTML!  You can do this on ANY web page.
@@ -126,10 +116,12 @@
         * Used to write and edit code.
         * Default text editors come preinstalled on your computers (Notepad - Windows or TextEdit - Apple) but don't include many frills.
         * Lots of paid and free options that include useful features such as colour highlighting and various plugins for improving workflow. Find one that works for you.
-        * Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Atom](https://atom.io/), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/)
+        * Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
 
         <br>
-        **[Sublime Text](http://www.sublimetext.com/)** is the editor we'll be using today.
+        **[Atom](https://atom.io/)** is the editor we'll be using today.
+        
+        **Pro tip!** Improve your work flow with [keyboard shortcuts](shortcuts-cheatsheet.html).
       </script>
     </section>
 
@@ -138,21 +130,23 @@
       <script type="text/template">
         ##Edit some HTML!
 
-        1. Open Sublime Text and select **File > Open**.
-        1. Navigate to the **llc-html-css-one-page-master** folder.
-        1. Click on the **project** folder *once* to select it and click **Open**.
+        1. Open Atom and select **File > Open**.
+        1. Navigate to the **llc-html-css-one-page-master** folder and click it *once* to select it. Then select **Open**.  
            The project folder and all its contents will appear in the sidebar.
-        1. In the sidebar, double-click on **basic.html** to open it in Sublime.
-        1. Make a change to the text *between* the `<h1></h1>` and save it (**File > Save**).
-        1. Right click or two-finger tap in Sublime and select Open in Browser to open the HTML file in your *default* browser.
+        1. In the sidebar, click on **project** to open the folder and then select **basic.html** to open the file.
+        1. Make a change to the text *between* the `<h1></h1>` and save it (**File > Save** or refer to shortcuts cheat sheet).
+        1. Go to your Windows Explorer/Finder and navigate to the project folder and double click on **basic.html** to open it in your default browser. 
+          * (If Chrome is not your default, right-click/two-finger tap on **basic.html** and choose **Open With > Chrome**) 
+          * You should see the text that you added!
         1. Now change the text *between* the `<p></p>` & save it.
         1. This time, go to your browser and *refresh* the web page.
 
-        This is your editing work flow: Make changes. Save. Refresh browser. Repeat. Repeat. Repeat.
-
-        If Chrome is not your default browser, go to your Window/Finder and navigate to the project folder, right-click/two-finger tap on index.html and choose Open With > Chrome <!-- .element: class="footnote" -->
+        This is your editing work flow:  
+        Make changes. Save. Refresh browser. Repeat. Repeat. Repeat.
+        
+        All of your exercises today will be completed in the<!-- .element: class="footnote" --> **projects** folder.  The **reference** folder includes examples for each exercise.  The **framework** folder contains files to make this presentation work so avoid editing anything in there!
       </script>
-    </section>
+    </section>    
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -169,7 +163,7 @@
           </style>
         </head>
         ```
-        To make all of the paragraphs red, it would look like the example below. Add it between the style tags. Save and refresh your browser!
+        To make all the paragraph red, look at the example below. Add it between the style tags. Save and refresh your browser!
 
         ```
         p {
@@ -182,11 +176,9 @@
     <section class="slide centered" data-markdown>
       <script type="text/template">
         ## Ta-da!
-        You just created your first website.
+        You just created your first website. HTML + CSS = website
 
-        HTML + CSS = website
-
-        [add gif]
+        ![](framework/img/workshop/jay-yeezy-laughing.gif)
       </script>
     </section>
 
@@ -220,7 +212,8 @@
         ```
 
         <br>
-        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>` (`shift` + `,` and `shift` + `.` ).
+        The structure of a webpage is defined by HTML tags and are denoted by `<` angled brackets `>`  
+        (`shift` + `,` and `shift` + `.` ).
 
         Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to wrap the content.  Note that the closing tag has a forward slash (`/`).
 
@@ -243,17 +236,12 @@
         ```
 
         Nested tags create a family tree-like relationship and is often referred to as the *parent* node and *child* nodes.  The inner tag is the child of the outer tag.
-
-        **Attributes** provides additional information or instruction for the element and is included inside the opening HTML tag in the form of attribute="value". We'll be seeing different kinds of attributes as today's project progresses.
+        
+        <br>
+        **Attributes** provides additional information or instruction for the element and is included inside the opening HTML tag in the form of `attribute="value"`. We'll be seeing different kinds of attributes as today's project progresses.
 
         ```
         <tag attribute="value">content</tag>
-        ```
-
-        HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
-
-        ```
-        <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
 
       </script>
@@ -262,10 +250,14 @@
     <section id="basic-tags" class="slide" data-markdown>
       <script type="text/template">
         ##Organizing your code
+        
+        HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
-        Whitespace through indentation (tabs) make your HTML more human-readable.
+        ```
+        <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
+        ```
 
-        Every time a tag is nested, add one tab.  Getting into this habit early on will help keep your code organized from the start. Also, use HTML *comments* to leave notes for yourself or for organizing your code. Note the syntax in the example below.
+        Whitespace through indentation (tabs) make your HTML more human-readable. Every time a tag is nested, add one tab.  Getting into this habit from the start will help keep you organized.
 
         **The tags below should be included in all HTML documents.**
 
@@ -277,7 +269,7 @@
             <title></title>
           </head>
           <body>
-            <!-- page content here -->
+            <!-- page content here (this is an HTML comment) -->
           </body>
         </html>
         ```
@@ -335,11 +327,10 @@
         ##The HEAD ELEMENT
 
         * includes information about the page but does not display content
-        not displaying content
         * the `<title></title>` element is the only required element
-          * defines title of the web page/document
+          * defines the title of the web page/document
           * displayed in the browser toolbar, bookmarks and search engine results
-        * CSS, JavaScript & [metadata](searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags) can also be included
+        * CSS, JavaScript & [metadata](searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags) can also be included here
           * `<meta charset="UTF-8">` sets the [character encoding](https://code.google.com/p/doctype-mirror/wiki/MetaCharsetAttribute) of an HTML document
 
         <pre><code>&lt;!DOCTYPE html&gt;
@@ -389,7 +380,7 @@
         <tag attribute="value">content</tag>
         ```
 
-        There are many different types of attributes for used different purposes. We just saw two attributes in our basic HTML page example .
+        There are many different types of attributes used for different purposes. We just saw two attributes in our basic HTML page example, `lang` and `charset`.
 
         The `lang` attribute is used to classify the language.
 
@@ -409,11 +400,11 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Class Exercise #1: Create your project's HTML page
-
+        
         1. In your text editor, create a new file (**File** > **New File**)
         2. Save and name it `index.html` (**File** > **Save**)
         3. Add all of the basic HTML tags.
-          Refer to [this slide](slides.html#basic-tags) or the previous example in [basic.html](project/basic.html) for reference.
+          Refer to [this slide](slides.html#basic-tags) or **basic.html** for reference.
         4. Update the `<title></title>` to properly reflect your page.
 
         We're not adding content yet so all you will see in the browser is a blank page and your page title in the browser toolbar.
@@ -427,7 +418,7 @@
       <script type="text/template">
         ## PLANNING THE PAGE LAYOUT
 
-        An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with semantic markup is a good way to start.
+        An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with [semantic](http://html5doctor.com/lets-talk-about-semantics/) markup is a good way to start.
 
         If you don't have a design to work from, many developers and designers like to start planning with a simple sketch. For today, let's take a look at the final design to see how to group related elements and create a page structure.
 
@@ -490,7 +481,7 @@
       <script type="text/template">
         ##HTML5 Structural Elements
 
-        In HTML5, new semantic tags were introduced to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. Using HTML5 tags, the previous example could look like this instead:
+        HTML5 introduced new semantic tags to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. Using HTML5 tags, the previous example could look like this instead:
 
         ```xml
         <nav>
@@ -526,7 +517,8 @@
 
         Back in the text editor, add the HTML5 structural tags to setup the page layout.
 
-        You will need these tags: `<nav>`, `<header>`, two `<section>`'s and the `<footer>` for the contact info. Only add the structural blocks in this step, no content just yet.
+        You will need these tags: `<nav>`, `<header>`, two `<section>`'s and the `<footer>` for the contact info.  
+        Only add the structural HTML blocks in this step, no content just yet.
 
         Also, use HTML comments to help organize the code like so:
 
@@ -537,8 +529,7 @@
         </nav>
         ```
 
-        For reference, view **references > exercise-2.html** included in **llc-html-css-one-page-master** folder.
-
+        For reference, view [exercise-2.html](reference/exercise-2.html) in your **reference** folder.
       </script>
     </section>
 
@@ -660,7 +651,7 @@
 
         Self-closing tags don't format content. Instead they are used to embed objects onto the page, they *are* the content. Because of this, they do not require a closing tag.
 
-        Images are an example of a self-closing tag. It also requires a `src` *attribute* to tell the browser the source of the image file location.
+        Images are an example of a self-closing tag. It also requires a `src` *attribute* to tell the browser the location of the image file.
 
         ```
         <img src="path/to/image/file">
@@ -681,15 +672,15 @@
       <script type="text/template">
         ##Image file types
 
-        gif - smaller file size when used for line art, charts, and images with minimal colour variation
+        **gif** - smaller file size when used for line art, charts, and images with minimal colour variation
 
-        jpg - smaller file size when used for photographs with lots of rich colours or gradients
+        **jpg** - smaller file size when used for photographs with lots of rich colours or gradients
 
-        png - larger file size but has best quality and is great for images with transparent backgrounds
+        **png** - larger file size but has best quality and is great for images with transparent backgrounds
 
-        svg - [todo]
+        **svg** - XML-based vector image format for 2D graphics with support for interactivity and animation
         
-        List placeholder images.
+        [Here's a big list of image placeholder site](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
       </script>
     </section>
 
@@ -698,11 +689,11 @@
       <script type="text/template">
         ##Image files
 
-        It's best practice to organize your images into its own folder.  In *project*, there is already a folder called *images* with some sample images you can use today (or add your own to that folder).
+        It's best practice to organize your images into its own folder.  In the **project** folder, there is already a folder called **images** with some sample images you can use today (or add your own to that folder).
 
-        Since the images are not in the same folder as **index.html**, you would need to use a *relative* path to link to the file.
+        Since the images are not in the same folder as **index.html**, use a *relative* path to link to the file.
 
-        From your starting point (**index.html**), you need to tell the folder to go into a specific folder, in this case "images", then the filename.
+        From your starting point (**index.html**), you need to tell the folder to go into a specific folder, in this case **images**, then the filename.
 
         ```
         <img src="images/image-file.jpg">
@@ -721,7 +712,7 @@
       <script type="text/template">
         ## Links / Anchor tag
 
-        Links (hyperlinks) are represented by the anchor (`<a>`) tag. It also needs an `href` attribute to provide information for where the link should go.
+        Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` attribute to provide information for where the link should go.
 
         #####Link to an external site
         ```xml
@@ -777,7 +768,7 @@
         ```
 
         What should the value be for the `href` attribute?
-
+        
         ```
         <nav>
           <a href="#about">About</a>
@@ -812,15 +803,14 @@
 
         1. Add a profile image
         2. Add three or four images to your "Loves" section
-        3. Add the social links to the contact section.  Make the images into links!
+        3. Add the social links to the contact section.  There are some images available in the **project > images ** folder.  Try making the images into links!
 
-        **Bonus** Take some time to make sure everything in indented properly to make it easier to read.
+        **Bonus exercise**:  
+        Take some time to make sure everything in indented properly to make it easier to read.
 
-        And that's it! That's all of the HTML we'll need today for your project.
-
-        Your page should look something like this:
-
-        [reference/exercise-5.html](reference/exercise-5.html)
+        And that's it! That's all of the HTML we'll need today for your project. 
+        
+        Your page should look something like this: [reference/exercise-5.html](reference/exercise-5.html)
 
       </script>
     </section>
@@ -831,7 +821,7 @@
       <script type="text/template">
         ##Presentational tags - nope!
 
-        It’s important to create semantic, clean and valid markup before adding styles. Though HTML has some default styles, remember, it is used to only describing the content - not defining how it looks. That's what CSS is for.
+        It’s important to create semantic, clean and valid markup before adding styles with CSS. Though HTML has some default styles, remember, it is used to only describing the content - not defining how it looks. That's what CSS is for.
 
         Here are a few (deprecated) tags you should no longer use:
 
@@ -2164,7 +2154,9 @@ h1 {
           background: rgba(97, 41, 64, 0.95);
         }
         ```
-        The higher the alpha transparency, the more solid the colour will be.
+        The higher the alpha transparency, the more solid the colour will be. 
+        
+        Changing the transparancy will help to make the text easier to read but you can also change the font colour as well, depending on the background colour you chose. (The example final project uses white text for this section.)<!-- .element: class="footnote" -->
       </script>
     </section>
     
