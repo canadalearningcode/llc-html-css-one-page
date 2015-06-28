@@ -19,7 +19,7 @@ h1, h2 {
   font-family: 'Bad Script', cursive;
 }
 h1 {
-  font-size: 100px;
+  font-size: 75px;
   margin-bottom: 40px;
 }
 header, 
@@ -52,7 +52,7 @@ header {
   padding-top: 250px;
 }
 header h1 {
-  font-size: 125px;
+  font-size: 115px;
 }
 header h2 {
   font-size: 34px;

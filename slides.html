@@ -90,7 +90,7 @@
       <script type="text/template">
         ##Web Browsers
         
-        The main functionality of the browser is to present a *web resource* in the browser window. Choose a modern web browser that supports current web standards and dev tools for a better experience.
+        The main functionality of the [browser](http://browsehappy.com) is to present a *web resource* in the browser window. Choose a modern web browser that supports current web standards and dev tools for a better experience.
 
         In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in other browsers), you can view the source of *any* web page. Right-click / two-finger tap anywhere on the browser and select **View Web Source**.
                 
@@ -103,10 +103,9 @@
         * Option 2: select the menu icon in the top right hand corner and select **Tools > Developer Tools**   
         * Option 3: keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
 
-
         <br>
-        Visit <!-- .element: class="footnote" -->[browsehappy.com](http://browsehappy.com) for more info about modern browsers.   
-        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). More about dev tools: http://discover-devtools.codeschool.com
+        To set Chrome as your default browser, follow <!-- .element: class="footnote" -->[these instructions](https://support.google.com/chrome/answer/95417?hl=en).  
+        More about dev tools: http://discover-devtools.codeschool.com
       </script>
     </section>
 
@@ -117,10 +116,11 @@
         * Used to write and edit code.
         * Default text editors come preinstalled on your computers (Notepad - Windows or TextEdit - Apple) but don't include many frills.
         * Lots of paid and free options that include useful features such as colour highlighting and various plugins for improving workflow. Find one that works for you.
-        * Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
+        * Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/) (untimed free trial), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
 
         <br>
-        **[Atom](https://atom.io/)** is the editor we'll be using today.
+        **[Atom](https://atom.io/)** is totally free and is the editor we'll be using today.  
+        (If you already have Sublime Text installed, that will work as well but just might look a little bit different.)
         
         **Pro tip!** Improve your work flow with [keyboard shortcuts](http://ladieslearningcode.com/downloads/keyboard-shortcuts.pdf).
       </script>
@@ -794,8 +794,16 @@
         ```
         
         How do we get it to link to a specific part of the page? <span class="delayed">Use an `id` attribute.</span>
-        
-        <pre class="delayed"><code>&lt;section id="about" class="about"&gt;
+        </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #4: Add the navigation (continued)
+
+        Add in the `id` attributes and values to create an anchor for the in page links.
+
+        <pre><code>&lt;section id="about" class="about"&gt;
         ...
         &lt;/section&gt;
 
@@ -1456,13 +1464,14 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ##Class Exercise #8 - Spacing
          
-        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! 
+        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! Also, let's also customize the font sizes as well.
           
-        Also, add `line-height` to add space *between* the lines of text in the paragraph and bump up the `font-size` to make it easier to read.
+        Also, add `line-height` to add space *between* the lines of text in the paragraph to make it easier to read.
         
         ```
         h1 {
           margin-bottom: 40px;
+          font-size: 75px;
         }
         p {
           margin-bottom: 20px;
@@ -1515,7 +1524,7 @@ border: 15px solid green;</textarea>
 
         ```
         header h1 {
-          font-size: 125px;
+          font-size: 115px;
         }
         header h2 {
           font-size: 34px;
