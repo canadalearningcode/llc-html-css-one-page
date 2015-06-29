@@ -108,6 +108,8 @@ p, ol, ul {
 }
 
 ol, ul {
+	width: 94%;
+	
 	> li {
 		font-size: $font-size-default - 2;
 		margin: 4px 0;

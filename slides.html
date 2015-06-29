@@ -1076,7 +1076,7 @@ text-transform: lowercase;</textarea>
             <meta charset="UTF-8">
             <title>Laura Ipsum | Designer & Developer</title>
             <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" href="css/styles6.css">
+            <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
         1. Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
@@ -1136,7 +1136,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         ## Default Styles & CSS Reset
 
@@ -1176,7 +1176,7 @@ text-transform: lowercase;</textarea>
         ![](framework/img/workshop/css-reset-1.png)
         ![](framework/img/workshop/css-reset-2.jpg)
       </script>
-    </section>
+    </section> -->
     
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -1188,6 +1188,7 @@ text-transform: lowercase;</textarea>
         2. pick some new fonts
         3. pick a color palette - the final project has [three colours](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c)
         4. pick a background image - there are some to choose from in **project > images ** or use one of the resources from here: https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
+        5. If using your own images for the profile image or the Loves section, crop them to a smaller size.  Around 400px will work the best. Try [Pixlr](https://pixlr.com/web), a free image editing app 
         
         <br>
         **Colour resources:**  
@@ -1248,9 +1249,11 @@ text-transform: lowercase;</textarea>
         
         Let's add the background colours to different sections of the page.  This will also help to visualize the blocks of content as well.  Use the colours in the examples for now if you don't have a palette just yet.
         
-        Now would also be a good time to use `/* CSS comments */` to organize your code. You can put any letters and characters in your comments as long as they start with `/*` and end with `*/` .
+        Now would also be a good time to use `/* CSS comments */` to organize your code. 
+
+        You can use any letters and characters as long as they start with `/*` and end with `*/` .
         
-        In the final sample project, both the header and navigation have the same background colour.  Select them both at the same time by *combining* the selector.
+        In the final sample project, both the header and navigation have the same background colour.  Select both at the same time by *combining* the selector.
         
         (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
         
@@ -1300,17 +1303,16 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
     
-    <section class="slide side-by-side" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
         ## The Box Model
         
         The CSS **Box Model** describes the way CSS determines the size and spacing of HTML elements.
         To the browser, every HTML element is a rectangular / square box.
 
-        If we show the outlines of all the elements in our current and final HTML document, it will look like this:
+        If we show the outlines of all the elements in our current HTML document, it will look like this:
         
-        ![](framework/img/workshop/box-borders.png)
-        ![](framework/img/workshop/box-borders-final.png)
+        ![](framework/img/workshop/box-borders-example.png)<!-- .element: width="60%" -->
       </script>
     </section>
     
@@ -1322,17 +1324,21 @@ text-transform: lowercase;</textarea>
         
         <div class="col-2">
           ![Box Model example](framework/img/workshop/box-model-layout.png)
+
+
+        Image source: <!-- .element: class="footnote" --> [W3C](http://www.w3.org/wiki/The_CSS_layout_model_-_boxes_borders_margins_padding)
         </div>
         
         <div class="col-2">
-          <p><strong>width</strong> - can be set to a specific size via CSS </p>
-          <p><strong>height</strong> - can be set to a specific size via CSS </p>
-          <p><strong>margin</strong> - adds / removes space *outside* of the element  </p>
-          <p><strong>padding</strong> - adds / removes space *inside* of the element </p>
-          <p><strong>border</strong> - adds a border just outside of the element</p>
+          <p><strong>width</strong> - can be set to a specific size via CSS<br>
+          <strong>height</strong> - can be set to a specific size via CSS<br>
+          <strong>margin</strong> - adds / removes space *outside* of the element <br>
+          <strong>padding</strong> - adds / removes space *inside* of the element<br>
+          <strong>border</strong> - adds a border just outside of the element</p>
         </div>
         
-        Image source: <!-- .element: class="footnote" --> [W3C](http://www.w3.org/wiki/The_CSS_layout_model_-_boxes_borders_margins_padding)
+        Note the spacing between the elements on your page such as the headings and paragraphs. That's the default margin and padding for those elements.
+
       </script>
     </section>
     
@@ -1388,17 +1394,17 @@ margin: 0px;</textarea>
         
         In CSS the relationship between the `width`, `padding` and `border` properties can be confusing.  
         
-        For example, if you set the width of a box to 500px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be: 500 + 20 + 20 + 15 + 15 = 570px.
+        For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be: 480 + 20 + 20 + 15 + 15 = 550px.
         
         <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
         
         
         <div class="delayed">
-          <p>Luckily, there's a fix for this. First, let's compare how this works with and without the fix.</p>
+          <p>Luckily, there's a fix for this. Let's compare how this works with and without the fix. Notice that the values are the same in both examples but one appears to be bigger than the other?</p>
           
           <div class="col-2">
             <textarea class="snippet" data-subject="#example">background: lightblue;
-width: 500px;
+width: 480px;
 padding: 0px 20px;
 border: 15px solid green;</textarea>
             <div id="example" class="example" style="box-sizing: content-box;">
@@ -1408,7 +1414,7 @@ border: 15px solid green;</textarea>
           
           <div class="col-2">
             <textarea class="snippet" data-subject="#example2">background: lightblue;
-width: 500px;
+width: 480px;
 padding: 0px 20px;
 border: 15px solid green;</textarea>
             <div id="example2" class="example">
@@ -1449,7 +1455,7 @@ border: 15px solid green;</textarea>
         
         ```
         header, section, footer {
-          padding: 100px 150px
+          padding: 100px 150px;
         }
         ```
         
@@ -1465,23 +1471,32 @@ border: 15px solid green;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Class Exercise #8 - Spacing
-         
-        Now let's add some `margin` to the bottom of the `<h1>` and `<p>` tag to add some space around the elements.  If we want to target just the bottom, we can! Also, let's also customize the font sizes as well.
-          
-        Also, add `line-height` to add space *between* the lines of text in the paragraph to make it easier to read.
+        
+        Now let's use the `margin` property for the the `<h1>` and `<h2>` tag to remove the default space around it so the text isn't so spread out.  (You can *inspect the element* using the dev tools to see the default margin.)
+
+        Let's also customize the font styles using `font-size` and `line-height`.  Also, if you want to take out the default bold style of the `h1`, you can add the `font-weight` property.
         
         ```
+        h1, h2 {
+          margin: 0; /* removes default space */
+          font-weight: normal; /* removes default bold style */
+        }
         h1 {
-          margin-bottom: 40px;
-          font-size: 75px;
+          font-size: 75px;  
         }
         p {
-          margin-bottom: 20px;
           font-size: 18px;
-          line-height: 1.5;
+          line-height: 1.5; /* adjusts space between the lines */
         }
         ```
-        
+        Just one more thing. Notice the white space around the edge of the page? That's default space in the `body` element. Reset it by setting the values to 0;
+
+        ```
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        ```
         Your page should now look similar to [exercise-8.html](reference/exercise-8.html) in your **reference** folder.
       </script>
     </section>
@@ -1529,17 +1544,17 @@ border: 15px solid green;</textarea>
           font-size: 115px;
         }
         header h2 {
-          font-size: 34px;
+          font-size: 32px;
         }
         ```
-        Next, add importance to some keywords in the header (e.g. name). The `<strong>` tag can be used to give importance to text on the page and we can also use it as a "hook" to style the elements as well.
+        Next, let's highlight some keywords in the header (e.g. name). The semantic HTML meaning of the `<strong>` tag is used to give importance to the text, so be sure to use it to highlight important text. We can also then use it as a "hook" to add CSS too.
           
         ```
         <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
         <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
         ```
         
-        If you want this style to be available for the entire page, then there's no need to use a descendant selector like in the previous step.
+        If you want this style to be available anytime the `<strong>` tag is used, then there's no need to use a descendant selector like in the previous step.
         
         ```
         strong {
@@ -1553,7 +1568,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ##Class Exercise #9: Style the header & footer, part 2
         
-        Since the footer has a dark background, we now need to change the default dark text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
+        Since the footer has a dark background, we now need to change the default black text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
         
         ```
         footer {
@@ -1578,9 +1593,9 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ## Building a web page in blocks
         
-        When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles. But as you may have already noticed, there's no clear cut path for what to build first.  It's a step by step approach to building it, piece by piece.
+        When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles. But as you may have already noticed, there's no clear cut path for what to build first.  It often takes a step by step approach
         
-        To avoid CSS specificity issues, here's some general advice for when to use the selectors covered so far.
+        To avoid CSS specificity issues, here's some general advice for using the selectors covered so far.
         
         **HTML element selectors:**  Use this to apply a style to all or *most* of that particular element on the page.  (e.g. all links on the page).
         
@@ -1608,6 +1623,7 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
+    <!-- 
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Customize! (15mins)
@@ -1621,6 +1637,7 @@ border: 15px solid green;</textarea>
         Square images are also better for the upcoming exercises.  You can crop and resize them using this free tool, [Pixlr](https://pixlr.com/web), between 200px - 400px is best. 
       </script>
     </section>
+    -->
     
     <section class="slide title" data-markdown>
       <script type="text/template">
@@ -1710,11 +1727,14 @@ p {
       <script type="text/template">
         ##Class Exercise #10: Float & style the image
         
-        Add a class to the profile image so we can apply the float only to this image. Then float the image (right or left).  Also, add some space between the image and text using `margin`.
+        Add a class to the profile image so we can apply the float only to this image.
         
         ```
         <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
         ```
+
+        Then float the image (right or left).  Also, add space between the image and text using `margin`.
+
         ```
         .profile-img {
           float: right;
@@ -1759,11 +1779,9 @@ p {
         
         This can be a confusing concept and requires more discussion outside of the scope for today.  For more information, check out these extra resources:
         
-        http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664
-
-        http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
-        
-        http://css-tricks.com/snippets/css/clear-fix/
+        * http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664
+        * http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+        * http://css-tricks.com/snippets/css/clear-fix/
       </script>
     </section>
     
@@ -1827,7 +1845,7 @@ p {
       <script type="text/template">
         ##CSS Display Property
 
-        As with other default styles, CSS can be used to change the behavior of inline and block elements with the CSS `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block` (has both inline & block characteristics).
+        CSS can be used to change the behavior of inline and block elements with the `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block` (has both inline & block characteristics).
 
         In the example below, let's first add padding and margin to both elements to see what happens.  Then we'll change the display values to see how that changes the behaviors.
 
@@ -1858,11 +1876,11 @@ p {
       <script type="text/template">
         ## Display: sizing and layout
         
-        Changing the `display` property not only changes the sizing properties but can also be used for layout styles (e.g. making block elements sit side by side).
+        Changing the `display` property not only changes the sizing properties but is sometimes used for layout styles (e.g. making block elements sit side by side). Earlier we used `float` to align elements side by side (profile image and About text).  
+
+        As you've already seen, there are often more than one way to do the same thing.
         
-        Earlier we used `float` to align elements (profile image and about text).  As you've already seen, there are often more than one way to do the same thing.
-        
-        Today we are going to use to `display` to change the sizing properties of the navigation links. 
+        Today we are going to use to `display` to override the default inline behaviour to change the sizing properties of the navigation links. 
         
         <br>
         To learn more about `display` for layout styles vs `float` (as well as other techniques), see these further readings [here](http://www.ternstyle.us/blog/float-vs-inline-block) and [here](http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/).
@@ -1873,12 +1891,14 @@ p {
       <script type="text/template">
         ## Let's style that nav already!
         
-        These next few steps will take your nav from the example on the left to the one on the right. Let's go!
+        These next few steps will take your nav from the example on the left to the one on the right. 
+
+        Let's go!
         
         ![](framework/img/workshop/nav-no-style.png)
         ![](framework/img/workshop/nav-styled.png)
         
-        First, let's temporarily put a background colour on the links to see more clearly the spacing changes that are going to happen. What selector should be used to target only the links within the `<nav>`?
+        In your project, let's temporarily put a background colour on the links to see more clearly the spacing changes. What selector should be used to target only the links within the `<nav>`?
         
         <div class="delayed">
           <pre><code>nav a {
@@ -1892,9 +1912,9 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Class Exercise #11: nav links
+        ## Padding vs Margin
         
-        Adding **padding** to the anchor link vs **margin** has a specific effect here.  Let's compare both, to see what the differences are. (Try it in your code!)
+        Adding **padding** to the anchor link vs **margin** has a specific effect here.  Looking at the example below, let's compare both, to see what the differences are.
         
         <div class="col-2">
           <pre><code>nav a {
@@ -1912,15 +1932,22 @@ p {
         ![](framework/img/workshop/link-margin.png)
         </div>
         
+        <br>
         Padding adds space <!-- .element: class="delayed" -->*inside* the element, making the hit area bigger bigger, which is better for usability. 
         
-        But there's still something wrong.  Notice how the padding at the top of the link is not showing properly?  That's because links are an<!-- .element: class="delayed" -->  *inline* element.  
-        
-        What <!-- .element: class="delayed" --> `display` value should we change it to so it can still be aligned side by side but also take the padding property values properly? <span class="delayed"><code >inline-block</code></span>
+        But there is still something wrong.  Notice how the padding at the top of the link is not showing properly?  That's because links are an<!-- .element: class="delayed" -->  *inline* element. 
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #11: nav links
+
+        What `display` value should be used to keep the links aligned side by side but also take the padding property values properly? <span class="delayed"><code>inline-block</code></span>
         
         <div class="delayed">
           <pre><code>nav a {
-          background: blue;
           padding: 15px;
           display: inline-block;
         }</code></pre>
@@ -1929,23 +1956,7 @@ p {
         </div>
       </script>
     </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ## Comment your code
         
-        Try adding some comments to help you remember what each property does like the example below.
-        
-        ```
-        nav a {
-          background: blue;
-          padding: 15px; /* one value adds same amount of padding on all sides */
-          display: inline-block; /* changes links from default inline element to add padding properly */
-        }
-        ```
-      </script>
-    </section>
-    
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Class Exercise #11: nav links (continued)
@@ -1953,11 +1964,12 @@ p {
         1. delete the temp/test background colour
         1. change the text to uppercase letters using `text-transform`
         1. remove the default underline using `text-decoration`
+        1. add comments to remind yourself what each property is used for
         
         ```
         nav a {
           padding: 15px; /* one value adds same amount of padding on all sides */
-          display: inline-block; /* changes links from default inline element to add padding properly */
+          display: inline-block; /* changes links from default inline to add padding properly */
           text-transform: uppercase; /* changes letters to uppercase */
           text-decoration: none; /* removes underline */
         }
@@ -1990,7 +2002,7 @@ p {
       <script type="text/template">
         ## pseudo-class & hover effects
         
-        It's common to apply a hover states to links in general and even a little extra styling for navigation links.
+        It's common to apply a style to the hover states of links in general and even a little extra styling for navigation links.
         
         A CSS `pseudo-class` is a keyword that is *attached* to a selector and specifies a *state* of the element. For example `:hover` (note the colon before the keyword) will apply a style only when the user hovers over the element the pseudo-class is attached to.
         
@@ -2192,7 +2204,7 @@ p {
         Let&#39;s add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window! The end code will look like this:
 
         ```
-        header { /* longhand */
+        body { /* longhand */
           background-image: url('../images/buildings.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
@@ -2200,7 +2212,7 @@ p {
         }
         ```
         ```
-        header { /* shorthand */
+        body { /* shorthand */
           background: url(../images/buildings.jpg) no-repeat fixed;
           background-size: cover;
         }
