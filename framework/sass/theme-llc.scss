@@ -346,7 +346,7 @@ e.g.
 		padding: 0 10px 0 6px;
 
 		&.light {
-			background: rgba($white, 0.2);
+			background: rgba($white, 0.8);
 		}
 		&.dark {
 			color: $gray-dark;
@@ -355,6 +355,8 @@ e.g.
 	}
 	&.connected {	
 		font-size: 30px;
+		float: left;
+		margin-right: 20px;
 		
 		h3 {
 			// margin-left: 10px;
@@ -377,8 +379,11 @@ e.g.
 		          rgba($black, 0.7)), 
 	            url(../img/banner-home2.jpg) no-repeat;
 	background-size: cover;
-	color: $white;
-
+	// color: $white;
+	
+	&.first {
+		// background: #aaa;
+	}
 	.logo {
 		height: 65px;
 	}
