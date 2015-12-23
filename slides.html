@@ -4,79 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Ladies Learning Code</title>
-  <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
   <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
-
-  <!-- Theme-specific styles -->
-  <link href='http://fonts.googleapis.com/css?family=Quicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
-  <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
   <link rel="shortcut icon" href="framework/img/favicon.ico">
 
-  <!-- Workshop-specific styles -->
-  <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
-
-  <!-- Takes care of CSS3 prefixes! -->
+  <!-- Takes care of CSS3 prefixes -->
   <script src="framework/scripts/prefixfree.min.js"></script>
-
+  
   <!-- opens all links in a new window -->
   <base target="_blank">
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
-<body data-duration="360">
-
-  <!-- Welcome slide -->
-  <header class="slide intro first">
-    <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
-    <div class="info">
-      <!-- <div class="heading-bg connected">
-        <h3><span class="dark">Get connected:</span></h3>
-        <span class="light">NETWORK: HackerYou <br> 
-          PASSWORD: Thisishackeryou
-      </div> -->
-      <div class="heading-bg connected">
-        <h3><span class="dark">Download:</span></h3>
-        <span class="light">
-          Learner files: <strong>bit.ly/html-css-onepage</strong> (zip)<br>
-          > Unzip (PC users, "extract all")<br>
-          > Open <strong>slides.html</strong> in your browser<br>
-          <br>
-          Atom editor: http://atom.io
-        </span>
-      </div>
-    </div>
-
-    <div class="sponsor">
-      <p>In partnership with:</p>
-      <img src="framework/img/telus-logo-white.svg" alt="Telus logo">
-    </div>
-  </header>
-
+<body class="en" data-duration="360">
   <main>
-    <!-- Instructor info -->
-    <section class="slide intro">
-      <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
-      <div class="info">
-        <h1 class="heading-bg">
-          <span>Intro to HTML & CSS:</span><br>
-          <span>Build a one-page website</span>
-        </h1>
-        <!-- <h2><span>with</span> Instructor Name</h2>
-
-        <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
-        <ul>
-          <li><i class="fa fa-envelope"></i><a href="mailto:">hello@email.com</a></li>
-          <li><i class="fa fa-desktop"></i><a href="#">mywebsite.com</a></li>
-          <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
-        </ul> -->
+    <section class="slide welcome">
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
+      
+      <div class="instructions no-bullet-list">
+        <!-- ADD WIFI INFO HERE -->
+        <h2>Get Connected</h2>
+        <ul class="connected">
+          <li>Network: wifi network</li>
+          <li>Password: wifi password</li>
+        </ul>
+        <hr>
+        
+        <h2>Download<br> & Install</h2>
+        <ul class="downloads">
+          <li>Learner files (zip file): <a href="http://bit.ly/llc-onepage">http://bit.ly/llc-onepage</a>
+            <ul>
+              <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
+              <li>open <strong>slides.html</strong> in the browser to view the slides</li>
+            </ul>
+          </li>
+          <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
+          <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+          </li>
+        </ul>
       </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+      </footer>
     </section>
-
+    
+    <section class="slide intro">
+      <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
+      <h1 class="heading-bg">
+        <span>Intro to HTML & CSS:<br>Building a one-page website</span>
+      </h1>
+      
+      <!-- FILL IN INSTRUCTOR DETAILS -->
+      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <h2><span class="cursive">with</span> Instructor name</h2>  
+      <ul>
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="http://website.com">website.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+      
+      <div class="sponsor">
+        <p>In partnership with<br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+      </footer>
+    </section>
+    
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        ##Today&rsquo;s project
+        #Today&rsquo;s project
 
         See the whole project [here](reference/final.html).
 
@@ -93,7 +96,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Web Browsers
+        #Web Browsers
         
         The main functionality of the [browser](http://browsehappy.com) is to present a *web resource* in the browser window. Choose a modern web browser that supports current web standards and dev tools for a better experience.
 
@@ -116,7 +119,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Text Editor
+        #Text Editor
 
         * Used to write and edit code.
         * Default text editors come preinstalled on your computers (Notepad - Windows or TextEdit - Apple) but don't include many frills.
@@ -134,7 +137,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##HTML vs HTML & css
+        #HTML vs HTML & css
         
         This is what the Ladies Learning Code site looks like with and without CSS!
 
@@ -152,7 +155,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##HTML: The content layer
+        #HTML: The content layer
         
         Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note the closing tag has a forward slash (`/`).
 
@@ -175,7 +178,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Nested tags & attributes
+        #Nested tags & attributes
 
         Tags can be *nested* within other tags like this:
 
@@ -200,7 +203,7 @@
 
     <section id="basic-tags" class="slide" data-markdown>
       <script type="text/template">
-        ##Organizing your code
+        #Organizing your code
         
         HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
@@ -229,7 +232,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Setting up your project
+        #Setting up your project
                 
         1. Open the text editor and select **File > Open**.
         1. Navigate to the **llc-html-css-one-page-master** folder and click it *once* to select it. Then select **Open**.  
@@ -244,7 +247,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #1: Create your project's HTML page
+        #Class Exercise #1: Create your project's HTML page
         
         1. In the text editor, create a new file (**File** > **New File**)
         1. Save it as `index.html` (**File** > **Save**)
@@ -266,7 +269,7 @@
 
     <section class="slide highlighted-tags" data-markdown>
       <script type="text/template">
-        ##The Doctype
+        #The Doctype
         
         What do all these tags mean? Let's start with the doctype.
 
@@ -291,7 +294,7 @@
 
     <section class="slide highlighted-tags" data-markdown>
       <script type="text/template">
-        ##THE HTML ELEMENT
+        #THE HTML ELEMENT
 
         * always the first tag
         * it is the root element & ancestor of all other elements because everything is nested inside
@@ -314,7 +317,7 @@
 
     <section class="slide highlighted-tags" data-markdown>
       <script type="text/template">
-        ##The HEAD ELEMENT
+        #The HEAD ELEMENT
 
         * includes information about the page but does not display content
         * the `<title></title>` element is the only required element
@@ -340,7 +343,7 @@
 
     <section class="slide highlighted-tags" data-markdown>
       <script type="text/template">
-        ##THE BODY ELEMENT
+        #THE BODY ELEMENT
 
         All content to be displayed in the browser window goes between the `<body></body>` tags.
 
@@ -362,7 +365,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Attributes
+        # Attributes
 
         Provides additional information or instruction for the HTML element and is included *inside* the opening HTML tag in the form of `attribute="value"`.
 
@@ -389,7 +392,7 @@
 
     <section class="slide page-layout" data-markdown>
       <script type="text/template">
-        ## PLANNING THE PAGE LAYOUT
+        # PLANNING THE PAGE LAYOUT
 
         An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with [semantic](http://html5doctor.com/lets-talk-about-semantics/) markup is a good way to start.
         
@@ -419,7 +422,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## STRUCTURAL HTML TAGS
+        # STRUCTURAL HTML TAGS
 
         The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>` is the other.) It is used purely for grouping elements together for styling.
 
@@ -454,7 +457,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##HTML5 Structural Elements
+        #HTML5 Structural Elements
 
         HTML5 introduced new semantic tags to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. Using HTML5 tags, the previous example could look like this instead:
 
@@ -488,7 +491,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #2: Page structure
+        #Class Exercise #2: Page structure
 
         Back in the text editor, add the HTML5 structural tags to setup the page layout.
 
@@ -515,7 +518,7 @@
 
     <section class="slide" data-markdown>
     <script type="text/template">
-      ##Paragraphs & Headings
+      #Paragraphs & Headings
 
       **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
 
@@ -551,7 +554,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Headings & HTML5 Sectioning tags
+        #Headings & HTML5 Sectioning tags
 
         Prior to HTML5, generally only one `<h1>` was used per page.  With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its *own* outline.
 
@@ -593,7 +596,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #3: Add Content (15mins)
+        #Exercise #3: Add Content (15mins)
 
         Add in some text based content. Images & links will be added in the next exercise.
 
@@ -622,7 +625,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Review your code
+        #Review your code
         (Also found in [reference/exercise-3.html](reference/exercise-3.html))
         
         ```
@@ -673,7 +676,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Self-closing tags and images
+        #Self-closing tags and images
 
         Self-closing tags don't format content. Instead they are used to embed objects onto the page; they *are* the content. Because of this, they do not require a closing tag.
 
@@ -696,7 +699,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Image file types
+        #Image file types
 
         **gif** - smaller file size when used for line art, charts, and images with minimal colour variation.   
         (That's why animated gifs tend to look grainy but oh so fun!)
@@ -714,7 +717,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Image files
+        #Image files
 
         While not required, it's best practice to put image files into its own folder to keep your project files organized.  Today's **project** directory already includes an **images** folder, containing sample images or add your own to this folder.
 
@@ -739,11 +742,11 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Links / Anchor tag
+        # Links / Anchor tag
 
         Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` attribute to provide information for where the link should go.
 
-        #####Link to an external site
+        ####Link to an external site
         ```xml
         <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
         ```
@@ -782,7 +785,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #4: Add the navigation
+        #Class Exercise #4: Add the navigation
 
         One-page websites can still have a navigation by setting the links to go to a specific spot on the page. 
         
@@ -804,7 +807,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #4: Add the navigation (continued)
+        #Class Exercise #4: Add the navigation (continued)
 
         Add in the `id` attributes and values to create an anchor for the in page links.
 
@@ -840,7 +843,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #5: Add links and images (15mins)
+        #Exercise #5: Add links and images (15mins)
 
         1. Add a profile image.
         2. Add three or four images to your "Loves" section.
@@ -868,7 +871,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS: The presentation layer
+        #CSS: The presentation layer
 
         * CSS = cascading style sheet
         * stylesheet language with its own syntax rules
@@ -884,7 +887,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS Syntax & Terminology
+        #CSS Syntax & Terminology
 
         **Selectors:** determines which HTML element(s) to apply the styles to.
 
@@ -906,7 +909,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Multiple CSS Declarations
+        #Multiple CSS Declarations
 
         Multiple declarations (`property: value;` sets) can be added to one selector and declaration block to add and modify multiple styles.
 
@@ -928,7 +931,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Referencing CSS
+        #Referencing CSS
 
         There are several ways to include CSS in an HTML page. For the rest of the lesson we&#39;ll be using the **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
@@ -948,7 +951,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Create a CSS File
+        #Create a CSS File
 
         Back in the text editor, create a new CSS file by selecting **File > New File**.
 
@@ -986,7 +989,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##CSS colours
+          #CSS colours
 
           **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
 
@@ -1020,7 +1023,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS Font Styles
+        #CSS Font Styles
 
         Let&#39;s look at a few CSS properties for styling text. Change some values below and see what happens!
 
@@ -1045,7 +1048,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Web safe fonts
+        #Web safe fonts
 
         Web safe fonts are pre-installed fonts on your computer.  Because not all operating systems have the same fonts installed, use a font *stack* and choose fonts that look similar to provide a fallback option.
 
@@ -1065,7 +1068,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Web Fonts: Using Google Fonts
+        #Web Fonts: Using Google Fonts
 
         With [Google Fonts](http://www.google.com/fonts), you can link directly to their css files, making the fonts available to your site visitors.
 
@@ -1092,7 +1095,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Inheritance and Specificity
+        #Inheritance and Specificity
 
         One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
@@ -1117,7 +1120,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #6: Typography
+        #Class Exercise #6: Typography
 
         (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on your webpage.)<!-- .element: class="footnote" -->
 
@@ -1143,7 +1146,7 @@ text-transform: lowercase;</textarea>
 
     <!-- <section class="slide" data-markdown>
       <script type="text/template">
-        ## Default Styles & CSS Reset
+        # Default Styles & CSS Reset
 
         Every browser has its own default *user agent* stylesheet that adds default styles to the html elements. This can result in some inconsistencies across different browsers.
 
@@ -1172,7 +1175,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide side-by-side" data-markdown>
       <script type="text/template">
-        ##Reset CSS review
+        #Reset CSS review
 
         Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements? The space between and around the elements can be changed using CSS properties, `margin` and `padding` (more on this soon).
 
@@ -1185,7 +1188,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Break time!
+        #Break time!
 
         Optional exercises:
 
@@ -1216,7 +1219,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Class attributes
+        # Class attributes
         
         Remember adding a class attribute to the About & Loves section? They were added to differentiate them so we can give each section different styles.
 
@@ -1250,7 +1253,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #7 - Background colours
+        #Class Exercise #7 - Background colours
         
         Let's add the background colours to different sections of the page.  This will also help to visualize the blocks of content as well.  Use the colours in the examples for now if you don't have a palette just yet.
         
@@ -1276,7 +1279,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #7 - Background colours, part 2
+        #Class Exercise #7 - Background colours, part 2
         
         Next, apply a background colour to just the "Loves" section. The "About" section is getting a different treatment later, so leave it for now.
         
@@ -1310,7 +1313,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## The Box Model
+        # The Box Model
         
         The CSS **Box Model** describes the way CSS determines the size and spacing of HTML elements.
         To the browser, every HTML element is a rectangular / square box.
@@ -1323,7 +1326,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## The Box Model
+        # The Box Model
         
         There are 5 CSS properties used to determine the size and spacing of these boxes.
         
@@ -1349,7 +1352,7 @@ text-transform: lowercase;</textarea>
     
     <section id="margin-padding" class="slide" data-markdown>
       <script type="text/template">
-        ##Margin and Padding
+        #Margin and Padding
 
         **margin** - adds/removes space **outside** of the element  
         **padding** - adds/removes space **inside** of the element
@@ -1378,7 +1381,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Practice!
+        #Practice!
 
         Practice changing the margin and padding example below with 1 to 4 values. 
         
@@ -1395,7 +1398,7 @@ margin: 0px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Border box: width, padding & border
+        # Border box: width, padding & border
         
         In CSS the relationship between the `width`, `padding` and `border` properties can be confusing.  
         
@@ -1433,7 +1436,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## * { Box-sizing: Border-box } FTW
+        # * { Box-sizing: Border-box } FTW
         
         Add this snippet to your project now (and to all future projects) to fix the width/padding/border issue.
         
@@ -1452,7 +1455,7 @@ border: 15px solid green;</textarea>
   
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8 - Spacing
+        #Class Exercise #8 - Spacing
         
         (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding. Also, feel free to use the amount of space that looks good to you or follow the examples below.)
         
@@ -1475,7 +1478,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8 - Spacing
+        #Class Exercise #8 - Spacing
         
         Now let's use the `margin` property for the the `<h1>` and `<h2>` tag to remove the default space around it so the text isn't so spread out.  (You can *inspect the element* using the dev tools to see the default margin.)
 
@@ -1508,7 +1511,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Descendant selectors
+        #Descendant selectors
 
         Matches any element that is a descendant (nested tag) of another element. This is useful when you want to target elements inside of a block (e.g. the header)  without adding a class to every element. 
         
@@ -1533,7 +1536,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Class Exercise #9: Style the header & footer
+        # Class Exercise #9: Style the header & footer
         
         Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page so use *descendant selectors* instead.
         
@@ -1571,7 +1574,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #9: Style the header & footer, part 2
+        #Class Exercise #9: Style the header & footer, part 2
         
         Since the footer has a dark background, we now need to change the default black text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
         
@@ -1596,7 +1599,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Building a web page in blocks
+        # Building a web page in blocks
         
         When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles. But as you may have already noticed, there's no clear cut path for what to build first.  It often takes a step by step approach
         
@@ -1631,7 +1634,7 @@ border: 15px solid green;</textarea>
     <!-- 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Customize! (15mins)
+        # Customize! (15mins)
         
         We still have a few more concepts to cover such as aligning, styling the images and the navigation but take some time to customize your page.
         
@@ -1653,7 +1656,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Aligning content
+        # Aligning content
         
         Next up, we're going to align the image and the text to make it look like the below example. But first a few more CSS concepts.
         
@@ -1664,7 +1667,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Inline & Block Elements
+        #Inline & Block Elements
 
         **Block** elements span 100% of its container and takes sizing properties (margin, padding, height and width).
         **Inline** elements are the same height and width of their content, does not apply sizing properties as expected and displays side by side, in a line.
@@ -1681,7 +1684,7 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Stacked elements
+        #Stacked elements
 
         By default, all of the *block* level elements also stack on top of each other (since they take up 100% width) in the order of how it is written.
         
@@ -1730,7 +1733,7 @@ p {
     
     <section class="slide side-by-side" data-markdown>
       <script type="text/template">
-        ##Class Exercise #10: Float & style the image
+        #Class Exercise #10: Float & style the image
         
         Add a class to the profile image so we can apply the float only to this image.
         
@@ -1758,13 +1761,13 @@ p {
     
     <section class="slide centered css-gif" data-markdown>
       <script type="text/template">
-        ##CSS: Breaking stuff and putting it back together
+        #CSS: Breaking stuff and putting it back together
       </script>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Reset the float
+        # Reset the float
         
         Floating the element takes it out of the *natural stacking flow*. There are a couple of ways to restore the regular stacking of boxes after the floated elements.  Let's use the `overflow` option.
         
@@ -1792,7 +1795,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #10: Float & style the image, part 2 (10mins)
+        #Exercise #10: Float & style the image, part 2 (10mins)
         
         `border-radius` is a new CSS3 property, used to make rounded corners or perfect circles, removing the need to manipulate image files.
         
@@ -1827,7 +1830,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Inline & Block review
+        #Inline & Block review
         
         What are some characteristics of **inline** elements?
         
@@ -1848,7 +1851,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##CSS Display Property
+        #CSS Display Property
 
         CSS can be used to change the behavior of inline and block elements with the `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block` (has both inline & block characteristics).
 
@@ -1879,7 +1882,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Display: sizing and layout
+        # Display: sizing and layout
         
         Changing the `display` property not only changes the sizing properties but is sometimes used for layout styles (e.g. making block elements sit side by side). Earlier we used `float` to align elements side by side (profile image and About text).  
 
@@ -1894,7 +1897,7 @@ p {
     
     <section class="slide side-by-side" data-markdown>
       <script type="text/template">
-        ## Let's style that nav already!
+        # Let's style that nav already!
         
         These next few steps will take your nav from the example on the left to the one on the right. 
 
@@ -1917,7 +1920,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Padding vs Margin
+        # Padding vs Margin
         
         Adding **padding** to the anchor link vs **margin** has a specific effect here.  Looking at the example below, let's compare both, to see what the differences are.
         
@@ -1947,7 +1950,7 @@ p {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #11: nav links
+        #Class Exercise #11: nav links
 
         What `display` value should be used to keep the links aligned side by side but also take the padding property values properly? <span class="delayed"><code>inline-block</code></span>
         
@@ -1964,7 +1967,7 @@ p {
         
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Class Exercise #11: nav links (continued)
+        # Class Exercise #11: nav links (continued)
         
         1. delete the temp/test background colour
         1. change the text to uppercase letters using `text-transform`
@@ -1994,7 +1997,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Next up! Hover effects and fixed nav
+        # Next up! Hover effects and fixed nav
           
         To create this effect, we are going to use a `pseudo-class` and `position`.
         
@@ -2005,7 +2008,7 @@ p {
   
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## pseudo-class & hover effects
+        # pseudo-class & hover effects
         
         It's common to apply a style to the hover states of links in general and even a little extra styling for navigation links.
         
@@ -2027,7 +2030,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class exercise #12: Hover
+        #Class exercise #12: Hover
         
         Let's first change the background colour of the nav links on hover.  Right now it's transparent (by default).  Attach `:hover` to the `nav a` element to target the hover state on the nav *link*.
         
@@ -2067,7 +2070,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Intro to the `position` property
+        #Intro to the `position` property
         
         So far, we've seen that `float` and `display` can be used to manipulate the default layout and stacking flow but there is one more option: `position`.
 
@@ -2084,7 +2087,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Fixed positioning
+        # Fixed positioning
         
         First, pick a `position` *value* type, which will be `fixed` for today's project. Then, `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
         
@@ -2130,7 +2133,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Exercise #12: Fixed Nav bar (10mins)
+        # Exercise #12: Fixed Nav bar (10mins)
         
         Fix that nav! Using the previous example, set your navigation to be fixed at the top of the page.  
         
@@ -2151,7 +2154,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Background images
+        #Background images
 
         So far, we've been using `background` to add colours but it can also be used to add background images. There are two ways to declare the `background` property and the value must include the image file path.
 
@@ -2173,7 +2176,7 @@ p {
     </section>
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Background styles & the x-axis
+        # Background styles & the x-axis
         
         Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
 
@@ -2202,7 +2205,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## More Background Styles
+        # More Background Styles
         
         If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value and also add two more, `fixed` and `cover`.   
         
@@ -2229,7 +2232,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Opaque background Styles
+        # Opaque background Styles
         
         The image looks fancy but now it's hard to read the text!  Remember RGB colour values?  We can use this instead of hex or keyword values to set an opacity to a background colour.
         
@@ -2250,7 +2253,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Next steps
+        # Next steps
         
         Here are a few more ideas for furthering your project.
 
@@ -2268,7 +2271,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Resources
+        #Resources
         
         1. Online tutorials:
           * http://learn.shayhowe.com/html-css/
@@ -2281,7 +2284,7 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Getting your site online
+        #Getting your site online
 
         You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
         
@@ -2300,37 +2303,51 @@ p {
         Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
       </script>
     </section>
-
     
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      #Next Steps
+
+      [Affiliate info to be included in all presentations. Revise as required.]
+      
+      Explore more Ladies Learning Code workshops by following our [Roadmap](http://ladieslearningcode.com/roadmap/).
+      
+      ##Getting your site online
+      
+      You will need to register a domain name and purchase hosting. Here are some suggestions:
+      
+      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting - use promo code **LLC40** to get $40 off your registration!
+      * [hover.com](http://hover.com/ladiescode) - domains - save 10% with the promo code "learningcode"
+
+      Why keep your domains and hosting separate?<!-- .element: class="note" --> [Learn more about Hover](http://ladieslearningcode.com/getting-hosted-domains-with-hover/).
+
+      You will also need to upload your files to your hosting server. You will need some info usually provided by your hosting service provider: FTP Address, Username, Password.
+
+      Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
+    </script>
+    </section>
+
     <!-- Last slide -->
     <section class="slide last">
-      <h2>Thank you!</h2>
-
+      <h1>Thank you!</h1>
       <h2 class="heading-bg">
-      <span>INTRO TO HTML & CSS:</span><br>
-      <span>BUILD A ONE-PAGE WEBSITE</span>
-      </h2>
-      <!-- 
-      <h3><span>with</span> Instructor Name</h3>
+        <span>Title of Workshop<br>Second line</span>
+      </h2>  
 
-       <img class="instructor-img" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <h2><span class="cursive">with</span> Instructor Name</h2>
       <ul>
-        <li><i class="fa fa-envelope"></i><a href="mailto:">hello@email.com</a></li>
-        <li><i class="fa fa-desktop"></i><a href="#">mywebsite.com</a></li>
-        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
-      </ul> -->
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="#">mywebsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
 
-      <p class="attribution">Slide presentation created with <a href="https://github.com/LeaVerou/csss">Lea Verou&rsquo;s CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </section>
 
   </main><!-- cls main section -->
-
-  <footer>
-    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-    <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
-  </footer>
-
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
   <script src="framework/scripts/slideshow.js"></script>
 
   <!-- Uncomment the plugins you need -->
@@ -2341,10 +2358,9 @@ p {
 
   <script src="framework/scripts/plugins/markdown/marked.js"></script>
   <script src="framework/scripts/plugins/markdown/markdown.js"></script>
-  <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
   <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
+  <script src="framework/scripts/llc.js"></script>
   <script>
     var slideshow = new SlideShow();
 
@@ -2353,11 +2369,6 @@ p {
     for(var i=0; i<snippets.length; i++) {
       new CSSSnippet(snippets[i]);
     }
-
-    // Adds "edit me" note to editable code areas
-    jQuery(document).ready(function(){
-      jQuery(".snippet").before("<span class=\"edit\">edit me</span>");
-    });
   </script>
 </body>
 </html>
