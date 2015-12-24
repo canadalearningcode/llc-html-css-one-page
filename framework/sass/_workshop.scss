@@ -6,3 +6,46 @@
               url(../img/banner-home2.jpg) no-repeat;
   background-size: cover;
 }
+
+@mixin label($padding, $color) {
+  padding-top: $padding+px;
+  color: $color;
+  border-left: 4px solid $color;
+}
+.page-layout {
+  .screenshot,
+  .labels {
+    float: left;
+  }
+  .labels {
+    margin-bottom: 200px;
+  }
+  .labels p {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .screenshot {
+    margin-right: 20px;
+  }
+  .nav {
+    @include label(0, red);
+  }
+  .header {
+    @include label(247, blue);
+  }
+  .about {
+    @include label(326, green);
+  }
+  .loves {
+    @include label(315, purple);
+  }
+  .footer {
+    @include label(140, orange);
+  }
+}
+.essay-headings {
+  ol ul {
+    font-size: inherit;
+  }
+}

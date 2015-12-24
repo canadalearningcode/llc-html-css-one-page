@@ -20,7 +20,12 @@ body {
   border-top: 4px solid $llc-pink;
   -webkit-font-smoothing: antialiased;
   background: #ecf0f1;
+  
+  @media (min-width: 1401px) {
+    font-size: $font-size-base + 6;
+  }
 }
+
 h2 {
   margin: 0;
 }
@@ -292,6 +297,20 @@ a.highlight {
 }
 .col-wide {
   width: 60%;
+}
+
+//code samples
+.highlighted-tags strong {
+  background: #ddd;
+  padding: 5px;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+
+  [class^="hljs-"]{
+    color: black;
+    font-weight: bold;
+  }
 }
 
 
