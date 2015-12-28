@@ -49,3 +49,48 @@
     font-size: inherit;
   }
 }
+
+.first-website {
+  background: linear-gradient(rgba($black, 0.3),
+              rgba($black, 0.8)), url(../img/workshop/kids-dancing.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;  
+  
+  .text {
+    position: absolute;
+    bottom: 60px;
+
+    h1 {
+      font-size: 120px;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+      font-size: 40px;
+      color: white;
+    }
+  }
+}
+
+.css-gif {
+  background: url(../img/workshop/css.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;
+
+  h2 {
+    color: black;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.498039);
+  }
+}
+
+.final-exercise {
+  background: url(../img/workshop/excited-baby.gif) no-repeat 50%;
+  background-size: cover;
+  padding-top: 10px;  
+  
+  h1 {
+    font-weight: bold;
+  }
+}
+

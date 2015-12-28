@@ -211,7 +211,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Organizing your code
+        #Organizing your code (10:30)
         
         HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
@@ -271,7 +271,13 @@
       
       ![](framework/img/workshop/editor-add-project-1.jpg)
       
-      Then, navigate to the **llc-html-css-one-page-master** folder, select **project** and click **Open**. The files will now appear in the sidebar.
+      Then:
+      
+      * navigate to the **llc-html-css-one-page-master** folder
+      * select **project**
+      * click **Open**
+      
+      The files will now appear in the sidebar.
       </script>
     </section>
     
@@ -365,7 +371,7 @@
       <script type="text/template">
         #The HEAD ELEMENT
 
-        * includes information about the page but does not display content
+        * includes information about the page but *does not display content*
         * the `<title></title>` element is the only required element
           * defines the title of the web page/document
           * displayed in the browser tab, bookmarks and search engine results
@@ -446,15 +452,13 @@
 
     <section class="slide page-layout" data-markdown>
       <script type="text/template">
-        # PLANNING THE PAGE LAYOUT
+        # PLANNING THE PAGE LAYOUT (11:00)
 
         An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with [semantic](http://html5doctor.com/lets-talk-about-semantics/) markup is a good way to start.
         
         If you don't have a design to work from, many developers and designers like to start planning with a simple sketch. 
         
         For today, let's take a look at the final design to see how to group related elements and create a page structure.
-
-        
 
         ![final project](framework/img/workshop/final-project.jpg) <!-- .element: class="screenshot" -->
 
@@ -531,6 +535,8 @@
 
         Back in the text editor, let's add the HTML5 structural tags to setup the page layout. 
         Only add the structural HTML blocks in this step, no content just yet.
+        
+        We will need these tags: `<nav>`, `<header>`, two `<section>`'s and a `<footer>`
 
         Also, try using HTML comments to help organize the code like so:
 
@@ -589,18 +595,18 @@
       <script type="text/template">
         #Pre-HTML5 Heading outline
 
-        Prior to HTML5, before the sectioning tags were introduced, generally only one `<h1>` was used per page.  As such, the heading outline would look like this:
+        Prior to HTML5, before sectioning tags were introduced, usually only one `<h1>` was used per page.  As such, the heading outline would look like this:
 
         **Pre-HTML5 Heading Outline**
         ```xml
         <h1>Essay Title</h1>
 
-        <div class="intro">
+        <div>
           <h2>Introduction</h2>
           <p>stuff here</p>
         </div>
 
-        <div class="first-idea">
+        <div>
           <h2>First supporting idea</h2>
           <h3>point 1</h3>
           <h3>point 2</h3>
@@ -621,15 +627,15 @@
         ```xml
         <h1>Essay Title</h1>
 
-        <section class="intro">
-         <h1>Introduction</h1>
-         <p>stuff here</p>
+        <section>
+          <h1>Introduction</h1>
+          <p>stuff here</p>
         </section>
 
-        <section class="first-idea">
-         <h1>First supporting idea</h1>
-         <h2>point 1</h2>
-         <h2>point 2</h2>
+        <section>
+          <h1>First supporting idea</h1>
+          <h2>point 1</h2>
+          <h2>point 2</h2>
         </section>
         ```
         ---
@@ -642,12 +648,12 @@
       <script type="text/template">
         #Exercise #3: Add Content (15mins)
 
-        Add some text based content. Images & links will be covered next.
+        Add some text based content. Leave the navigation blank for now. Images & links will also be covered next.
         
         See <!-- .element: class="note" -->[reference/exercise-3.html](reference/exercise-3.html) for reference or view the next slide but only if you're stuck!
 
-        1. Add your name & tagline in the `<header>` section using the appropriate heading tags. (Leave the navigation blank for now.)  
-          <span class="note">**Reminder!** `<head>` and `<header>` are two different tags.</span>
+        1. Add your name & tagline in the `<header>` section using the appropriate heading tags. 
+          <span class="note">(**Reminder!** `<head>` and `<header>` are two different tags.)</span>
         1. In the **About** section, add a heading and a couple paragraphs.
         1. In the **Loves** section, add a heading and a paragraph.
         1. In the **Footer**, add a heading.
@@ -666,7 +672,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Review your code
+        #Review your code (11:45)
         
         (Also found in <!-- .element: class="note" -->[reference/exercise-3.html](reference/exercise-3.html))
         
@@ -711,77 +717,6 @@
           </body>
         </html>
         ```
-      </script>
-    </section>
-    
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Self-closing tags and images
-
-        Self-closing tags don't format content. They are used to embed objects onto the page; they *are* the content. A closing tag is not required.
-
-        Images use a self-closing tag. It also requires a `src` *attribute* to tell the browser the location of the image file.
-
-        ```
-        <img src="path/to/image/file-name">
-
-        ```
-
-        `alt` is another attribute that is added to images to provide *alternative text* to visually impaired web visitors using screen readers.
-
-        ```
-        <img src="http://placekitten.com/200/300" alt="kitten!">
-
-        ```
-        
-        ##Example of `alt` when image does not load:
-        <img src="" alt="kitten!">
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Image file types
-
-        **gif** - smaller file size when used for line art, charts, and images with minimal colour variation. <span class="note">(That's why animated gifs tend to look grainy but oh so fun!)</span>
-
-        **jpg** - smaller file size when used for photographs with lots of rich colours or gradients
-
-        **png** - larger file size but has best quality and is great for images with transparent backgrounds
-
-        **svg** - XML-based vector image format for 2D graphics with support for interactivity and animation
-        
-        <br>
-        [Here's a big list of image placeholder sites](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Image file paths
-
-        It's best practice (but not required) to put image files into its own folder to keep the project files organized.  Today's **project** directory already includes an **images** folder.
-
-        Since the images are not in the same folder as **index.html**, use a *relative* path to link to the file.
-
-        ```
-        <img src="images/image-file.jpg">
-        ```
-        The starting point (**index.html**), is outside of the **images** folder. The above example directs the browser to a folder named **images**, then the filename, *including the file extension*.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Image file paths
-        If you have a folder in a folder, then add include the subfolder into the path as well.
-
-        ```
-        <img src="folder/sub-folder/filename">
-        ```
-        
-        If your file extensions do not show by default, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
       </script>
     </section>
 
@@ -842,12 +777,10 @@
       <script type="text/template">
         #Class Exercise #4: Add the navigation
 
-        One-page websites can still have a navigation by setting the links to go to a specific spot on the page. 
+        One-page website navigations link to specific parts of the page. Navigations are often created using an HTML list and links or just with links. To learn more, check out the resource below.
+
+        Today we'll be using only links. In the `<nav>` section, let's add three links (About, Loves, Contact). 
         
-        You may have seen or heard about navigation links created using an HTML list. Here are some extra readings about using lists vs links only [here](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/) and [here](http://www.sitepoint.com/are-navigation-lists-necessary/).  Today we'll be using just links.
-
-        In the `<nav>` section, let's add three links (About, Loves, Contact). Often, a `#` symbol is used as a placeholder for the `href` value.
-
         ```
         <nav>
           <a href="#">About</a>
@@ -855,8 +788,13 @@
           <a href="#">Contact</a>
         </nav>
         ```
+        Often, a <!-- .element: class="note" --> `#` symbol is used as a placeholder for the `href` value.
         
         How do we get it to link to a specific part of the page? <span class="delayed">Use an `id` attribute.</span>
+        
+        ---
+        ###Resource
+        Here are some extra readings about using lists vs links only [here](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/) and [here](http://www.sitepoint.com/are-navigation-lists-necessary/).  
         </script>
     </section>
 
@@ -864,25 +802,22 @@
       <script type="text/template">
         #Class Exercise #4: Add the navigation (continued)
 
-        Add in the `id` attributes and values to create an anchor for the in page links.
-
-        <pre><code>&lt;section id="about" class="about"&gt;
-        ...
-        &lt;/section&gt;
-
-        &lt;section id="loves" class="loves"&gt;
-          ...
-        &lt;/section&gt;
-
-        &lt;footer id="contact"&gt;
-          ...
-        &lt;/footer&gt;   
-        </code></pre>
+        Add the `id` attribute to create an anchor for the in page links.<br>
+        <span class="note">(Reminder, the `class` will be used for CSS later)</span>
         
+        ```
+        <section id="about" class="about">
+        </section>
 
-        Now that the <!-- .element: class="delayed" -->`id` has been set, what should the value be for the `href` attribute?
-        
-        Same as the<!-- .element: class="delayed" --> `id` value, starting with the `#` symbol to represent an `id`.
+        <section id="loves" class="loves">
+        </section>
+
+        <footer id="contact">
+        </footer>  
+        ```
+
+        <span class="
+        delayed">Now that the `id` has been set, what should the value be for the `href` attribute?</span> <span class="delayed">The `id` value, starting with the `#` symbol to represent an `id`.</span>
         
         <pre class="delayed"><code>&lt;nav&gt;
           &lt;a href="#about"&gt;About&lt;/a&gt;
@@ -891,8 +826,78 @@
         &lt;/nav&gt;
         </code></pre>
         
-        If you test your links now, it may not seem like it's working.  The content on the page has to be long enough to scroll.  Try testing your links after the next exercise.<!-- .element: class="delayed" -->
+        <!-- .element: class="delayed" -->**Important!**  If you test your links now, it may not seem like it's working.  The content on the page has to be long enough to scroll.  You can try testing your links after the next exercise.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Self-closing tags and images (12:00)
+
+        Self-closing tags don't format content. They are used to embed objects onto the page; they *are* the content. A closing tag is not required.
+
+        Images use a self-closing tag. It also requires a `src` *attribute* to tell the browser the location of the image file.
+
+        ```
+        <img src="path/to/image/file-name">
+
+        ```
+
+        `alt` is another attribute that is added to images to provide *alternative text* to visually impaired web visitors using screen readers.
+
+        ```
+        <img src="http://placekitten.com/200/300" alt="kitten!">
+
+        ```
         
+        ##Example of `alt` when image does not load:
+        <img src="" alt="kitten!">
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Image file types
+
+        **gif** - smaller file size when used for line art, charts, and images with minimal colour variation. <span class="note">(That's why animated gifs tend to look grainy but oh so fun!)</span>
+
+        **jpg** - smaller file size when used for photographs with lots of rich colours or gradients
+
+        **png** - larger file size but has the best quality and is great for images with transparent backgrounds
+
+        **svg** - XML-based vector image format for 2D graphics with support for interactivity and animation
+        
+        ---
+        ###Resource
+        [Here's a big list of image placeholder sites](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Image file paths
+
+        It's best practice (but not required) to put image files into its own folder to keep the project files organized.  Today's **project** directory already includes an **images** folder.
+
+        Since the images are not in the same folder as **index.html**, use a *relative* path to link to the file.
+
+        ```
+        <img src="images/image-file.jpg">
+        ```
+        The starting point (**index.html**), is outside of the **images** folder. The above example directs the browser to a folder named **images**, then the filename, *including the file extension*.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Image file paths
+        If you have a folder in a folder, then add the subfolder into the path.
+
+        ```
+        <img src="folder/sub-folder/filename">
+        ```
+        
+        If your file extensions do not show by default, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
       </script>
     </section>
 
@@ -901,40 +906,39 @@
         #Exercise #5: Add links and images (15mins)
 
         1. Add a profile image.
-        2. Add three or four images to your "Loves" section.
-        3. Add the social links to the contact section.  There are some images available in the **project > images ** folder.  Try making the images into links!
+        1. Add three or four images to your "Loves" section.
+        1. Add the social links to the Footer/Contact section.  
+          * use the sample images in the **project > images ** folder
+          * use your own images
+          * use [placeholder](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/) images
+        1. Make the images into links.
         
-        **Bonus exercise**
+        Your page should look something like this: <!-- .element: class="note" -->[reference/exercise-5.html](reference/exercise-5.html)
         
+        **Bonus exercise**  
         Square images are better for the afternoon exercises. You can crop and resize them using this free tool, [Pixlr](http://apps.pixlr.com/editor/). Between 200px - 400px is best.
         
-        <br>
         And that's it! That's all of the HTML we'll need today for your project. 
-        
-        [Here's the list of image placeholder sites again](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
-        
-        Your page should look something like this: [reference/exercise-5.html](reference/exercise-5.html)
       </script>
     </section>
 
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #Intro to css
+        #Intro to CSS
         ##Cascading Style Sheets
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #CSS: The presentation layer
+        #CSS: The presentation layer (12:20)
 
-        * CSS = cascading style sheet
-        * stylesheet language with its own syntax rules
-        * used to separate content from presentation
-        * introduced to solve the issues of using HTML tags and attributes for presentation
-        * a stylesheet contains a list of rules that cascade to reduce redundancy and saves time
+        * stylesheet language with its own syntax rules, different from HTML
+        * used to separate content (HTML) from presentation (CSS)
+        * a stylesheet contains a list of rules to reduce redundancy and save time
         
-        CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colon `;`.
+        CSS requires the usage of these symbols:  
+        curly brackets `{ }`, colon `:` and semi-colon `;`
         
         ![keyboard](framework/img/workshop/keyboard-css.png)
       </script>
@@ -944,8 +948,7 @@
       <script type="text/template">
         #CSS Syntax & Terminology
 
-        **Selectors:** determines which HTML element(s) to apply the styles to.
-
+        **Selectors:** determines which HTML element(s) to apply the styles to.  
         **Declarations:** style rules written in `property:value` pairs, are wrapped by curly brackets `{ }` and must end with a semi-colon `;`
 
         ```
@@ -953,12 +956,13 @@
           property: value;
         }
         ```
-        **Properties** determine the type of style to be applied (e.g. color). **Values** are specific to the property (red). The example below changes the font colour of all paragraphs to red.
+        **Properties** determine the *type* of style to be applied (e.g. color). **Values** are specific to the property (red). 
         ```
         p {
           color: red;
         }
         ```
+        >What is the selector? Property? Value?
       </script>
     </section>
 
@@ -977,10 +981,12 @@
         Just be sure to end each declaration with a semi-colon.
 
         There are many CSS properties with new ones being added and old ones being retired (deprecated).  It's good to have a few resources on hand.
-
-        http://caniuse.com  
-        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference  
-        http://htmldog.com/reference/cssproperties/
+        
+        ---
+        ###Resources
+        * http://caniuse.com  
+        * https://developer.mozilla.org/en-US/docs/Web/CSS/Reference  
+        * http://htmldog.com/reference/cssproperties/
       </script>
     </section>
 
@@ -988,39 +994,38 @@
       <script type="text/template">
         #Referencing CSS
 
-        There are several ways to include CSS in an HTML page. For the rest of the lesson we&#39;ll be using the **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
+        For today's lesson, we&#39;ll be creating a separate style sheet file (uses a `.css` file extension) for the CSS. The style sheet is then referenced/added within the `<head>` of the HTML document (different from `<header>`).
+          
+        Use `<link>` tag and two *attributes*, `rel` and `href`.
 
-        The style sheet is referenced within the `<head></head>` of the document.  
-        Use a `<link>` tag and two *attributes*, `rel` (relationship) and `href` (points to style sheet file location).
-
-        Though not required, css files are often saved in a separate folder for organization, so make sure the file path points to the appropriate directory.
         ```
         <head>
           <title>Page Title</title>
           <link rel="stylesheet" href="css/style.css">
         </head>
         ```
-        Read more about the difference ways to reference CSS <!-- .element: class="footnote" -->[here](http://reference.sitepoint.com/css/linkingcss).
+        
+        Though not required, css files are often saved in a separate folder for organization, just like images.
+        
+        ---
+        ###Resource
+        There are several ways to add CSS. Read more about the difference ways to reference CSS <!-- .element: class="footnote" -->[here](http://reference.sitepoint.com/css/linkingcss).
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Create a CSS File
+        #Class Exercise: Create a CSS File (12:30)
 
-        Back in the text editor, create a new CSS file by selecting **File > New File**.
-
-        Some common file names are "global.css", "custom.css", "project-name.css", basically something that describes the content of the file.
-        
-        Let&#39;s call it **styles.css** and save it to the **css** folder (already included in your **project** folder).
-        
-        Then, add it to **index.html**.
-
-        ```
-        <link rel="stylesheet" href="css/styles.css">
-        ```
-
-        <br>
+        1. In the text editor, create a new CSS file by selecting **File > New File**.  
+        1. Let&#39;s call it **styles.css** and save it to the **css** folder (already included in your **project** folder).  
+        <span class="note">You can name the file anything but it's best to choose a name that describes the file content. (i.e. styles.css, global.css, custom.css, project-name.css, etc)</span>
+        1. Then, reference it in **index.html**.  
+          <span class="note">**Pro tip!** Type `link` and press tab!</span>
+          ```
+          <link rel="stylesheet" href="css/styles.css">
+          ```
+          
         Try a quick test to see if it is linked properly by adding a background color on the entire viewport.
 
         ```
@@ -1044,35 +1049,31 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          #CSS colours
+        #CSS colours
 
-          **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+        * **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+        * **RGB** - uses 3 numerical values between `0` (black) and `255` (white)
+        * **hex code** - number sign (`#`) followed by six characters (0-9, A-F)
 
-          **RGB (red-green-blue)** - uses 3 numerical values between `0` (represents black) and `255` (represents white)
-
-          **hex code** - number sign (`#`) followed by six hexadecimal characters (0-9, A-F)
-
-          ```
-          /* These are all the same colour - this is a CSS comment by the way! */
-          p {
-            background: firebrick;
-            background: rgb(178,34,34);
-            background: #B22222;
-          }
-          ```
-
-          <div class="footnote">
-            <br>
-            **Colour resources:**  
-            
-            http://coolors.co  
-            http://colours.neilorangepeel.com  
-            http://wesandersonpalettes.tumblr.com  
-            http://www.colorpicker.com  
-            http://www.colourlovers.com  
-            http://flatuicolors.com  
-            http://color.hailpixel.com  
-          </div>
+        ```
+        /* These are all the same colour - this is also a CSS comment by the way! */
+        p {
+          background: firebrick;
+          background: rgb(178,34,34);
+          background: #B22222;
+        }
+        ```
+        See below for colour resources.
+        
+        ---
+        ###Resources  
+        * http://colours.neilorangepeel.com
+        * http://coolors.co
+        * http://wesandersonpalettes.tumblr.com
+        * http://www.colorpicker.com
+        * http://www.colourlovers.com
+        * http://flatuicolors.com
+        * http://color.hailpixel.com
       </script>
     </section>
 
@@ -1092,47 +1093,62 @@ text-transform: lowercase;</textarea>
         <div id="css-type" class="example">
           <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
         </div>
-
-        Additional Resource:<!-- .element: class="footnote" --> [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+        
+        ###Resource
+        [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
 
         <div class="presenter-notes">
-            <p>Explain what each property does while updating each example in the code editor. Talk about the difference between using line-height with and without a measurement unit.</p>
+          <p>Explain what each property does while updating each example in the code editor. Talk about the difference between using line-height with and without a measurement unit.</p>
         </div>
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide no-bullet-list" data-markdown>
       <script type="text/template">
         #Web safe fonts
 
-        Web safe fonts are pre-installed fonts on your computer.  Because not all operating systems have the same fonts installed, use a font *stack* and choose fonts that look similar to provide a fallback option.
-
-        If you want to use fonts other than the pre-installed fonts, as of CSS3, you can use Web Fonts like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
-
-        The web has a number of fonts that are considered "web safe". Some of the most used fonts are:
-
-        * Arial
-        * Verdana
-        * Times New Roman
-        * Georgia
-        * Courier
+        Web safe refers to pre-installed fonts.  Operating systems do not have the same defaults, so it's best to use a font *stack* to provide a fallback option.
         
-        Resource: http://www.cssfontstack.com
+        ```
+        font-family: Helvetica, Arial, serif;
+        ```
+        
+        * Some common "web safe" are:
+          * <span style="font-family:Arial;">Arial</span>
+          * <span style="font-family:Verdana;">Verdana</span>
+          * <span style="font-family:Times New Roman;">Times New Roman</span>
+          * <span style="font-family:Georgia;">Georgia</span>
+          * <span style="font-family:Courier;">Courier</span>
+        
+        To see a complete list, check out this resource: http://www.cssfontstack.com
+      </script>
+    </section>
+
+    <section class="slide no-bullet-list" data-markdown>
+      <script type="text/template">
+        #Web Fonts
+        
+        With the introduction of CSS3, you can  now use fonts other than the pre-installed web safe fonts.
+        
+        There are some free options like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
+        
+        Google fonts provides a more straightforward option since you can link directly to their css files.  Let's take a look at how it works.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Web Fonts: Using Google Fonts
-
-        With [Google Fonts](http://www.google.com/fonts), you can link directly to their css files, making the fonts available to your site visitors.
-
-        1. Select the fonts you want to use and **Add to Collection**. **Review** to compare and try different options, then choose **Use** when ready.
-          * The LLC example project uses Open Sans and Bad Script.
-        1. Select font weights. The more you choose, the more it will slow down page load time.
-          * The LLC example project uses Open Sans Light 300, regular 400 and Bad Script normal 400.
+        #Class Exercise: Using Google Fonts (12:45)
+        
+        1. Go to [Google Fonts](http://www.google.com/fonts).
+        1. **Add to Collection** to select a font. 
+        ![](framework/img/workshop/google-fonts-1.jpg)
+        1. **Review** to compare. <span class="note">(The LLC example project uses Open Sans and Bad Script.)</span>
+          ![](framework/img/workshop/google-fonts-2.jpg)
+        1. Select **Use** to get the code. <span class="note">(You can change your selections in the next exercise.)</span>
+        1. Select font weights. <span class="note">The more you choose, the more it will slow down page load time.</span>
+          * The LLC project uses Open Sans Light 300, regular 400 and Bad Script normal 400.
           * The default character set should contain what you need.
-          * Select another option if you need to add additional language support.
         1. Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
           ```
           <head>
@@ -1142,15 +1158,57 @@ text-transform: lowercase;</textarea>
             <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
-        1. Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
-
-        That&#39;s it!
+        
+        To use the new fonts, add the font name to your CSS styles.
+        
+        ```
+        font-family: 'Open Sans', sans-serif;
+        ```
+        
+        Use the font name as you would with web safe fonts.
+        ```
+        h1 {
+          font-family: 'Open Sans', sans-serif;
+        }
+        ```
       </script>
     </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Break time!
+
+        Optional exercises:
+
+        1. The final project uses 2 different fonts, so feel free to pick two (or stick with the LLC project fonts used in the previous exercise).
+        1. Pick a color palette - the LLC project uses the last three colours from [this palette]((http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c). See below for more colour resources.
+        1. Pick a background image - there are some to choose from in **project > images ** or use one of the resources from here: https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
+        1. If using your own images for the profile image or the Loves section, crop them to a smaller size.  Around 400px will work the best. Try [Pixlr](https://pixlr.com/web), a free image editing app.
+        
+        ---
+        ###Resources
+        
+        * http://coolors.co  
+        * http://colours.neilorangepeel.com  
+        * http://wesandersonpalettes.tumblr.com  
+        * http://www.colorpicker.com  
+        * http://www.colourlovers.com  
+        * http://flatuicolors.com  
+        * http://color.hailpixel.com  
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Part 2
+        ##CSS, CSS and more CSS!
+      </script>
+    </section>
+    
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Inheritance and Specificity
+        #Inheritance and Specificity (1:30)
 
         One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
@@ -1199,71 +1257,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
-    <!-- <section class="slide" data-markdown>
-      <script type="text/template">
-        # Default Styles & CSS Reset
-
-        Every browser has its own default *user agent* stylesheet that adds default styles to the html elements. This can result in some inconsistencies across different browsers.
-
-        **What is a CSS Reset?**
-
-          * collection of CSS rules that resets the user agent styles
-          * creates a consistent baseline
-          * some default styles are removed
-          * several popular CSS resets to choose from
-          * use them as is, modify them or create your own
-
-        For today's project, let's go to http://www.cssreset.com/ and use **Eric Meyer’s “Reset CSS” 2.0**.  
-        Select "Get The Code" to copy it and add it to the very top of **styles.css**.
-        Save and refresh your browser!
-
-        Your page should now look something like this:
-
-        ![](framework/img/workshop/css-reset.png)
-        
-        <br>
-        You can also create a separate stylesheet just for the reset code. Just remember to link to it before your custom stylesheet, **styles.css** in today's project. 
-        
-        **Further reading:** http://www.cssreset.com/to-reset-or-to-normalize-that-is-the-question/
-      </script>
-    </section>
-
-    <section class="slide side-by-side" data-markdown>
-      <script type="text/template">
-        #Reset CSS review
-
-        Notice that in addition to making the font sizes the same for all of the elements, adding the Reset CSS also removed all the space between the elements? The space between and around the elements can be changed using CSS properties, `margin` and `padding` (more on this soon).
-
-        Though not a requirement, using resets are a great way to start off with a "blank slate." But it's still good to be aware of the default styles as well.
-        
-        ![](framework/img/workshop/css-reset-1.png)
-        ![](framework/img/workshop/css-reset-2.jpg)
-      </script>
-    </section> -->
     
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Break time!
-
-        Optional exercises:
-
-        1. check your code with **exercise6.html** and **styles6.css** in the **reference** folder
-        2. pick some new fonts
-        3. pick a color palette - the final project has [three colours](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c)
-        4. pick a background image - there are some to choose from in **project > images ** or use one of the resources from here: https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
-        5. If using your own images for the profile image or the Loves section, crop them to a smaller size.  Around 400px will work the best. Try [Pixlr](https://pixlr.com/web), a free image editing app 
-        
-        <br>
-        **Colour resources:**  
-        http://coolors.co  
-        http://colours.neilorangepeel.com  
-        http://wesandersonpalettes.tumblr.com  
-        http://www.colorpicker.com  
-        http://www.colourlovers.com  
-        http://flatuicolors.com  
-        http://color.hailpixel.com  
-      </script>
-    </section>
     
     <section class="slide title" data-markdown>
       <script type="text/template">

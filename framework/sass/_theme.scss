@@ -73,11 +73,12 @@ h6 {
 }
 a {
   color: $llc-pink;
-  text-decoration: none;
+  // text-decoration: none;
   outline: none;
 
   &:hover {
     color: $gray;
+    text-decoration: none;
   }
 }
 hr {
@@ -241,6 +242,13 @@ td {
 .resources,
 .resources + * {
   margin-top: 2px;
+}
+.resources {
+  margin-bottom: 5px;
+  
+  + ul li {
+    margin-bottom: 0;
+  }
 }
 .left {
   float: left; 
