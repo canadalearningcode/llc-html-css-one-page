@@ -74,12 +74,12 @@
 
 .css-gif {
   background: url(../img/workshop/css.gif) no-repeat 50%;
-  background-size: cover;
-  padding-top: 10px;
+  background-size: contain;
+  padding-top: 35%;
 
-  h2 {
+  h1 {
     color: black;
-    font-weight: bold;
+    font-size: 70px;
     background: rgba(255, 255, 255, 0.498039);
   }
 }

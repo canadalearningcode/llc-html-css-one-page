@@ -20,6 +20,9 @@ h1, h2 {
 h1 {
   font-size: 75px;
 }
+a {
+  color: #9D6381; 
+}
 header, 
 section, 
 footer {
@@ -33,8 +36,7 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
-strong,
-a {
+strong {
   color: #9D6381;
 }
 

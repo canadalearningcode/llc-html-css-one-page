@@ -90,7 +90,7 @@
     <section class="slide title" data-markdown>
       <script type="text/template">
         #Getting Started
-        ##Editing HTML, CSS & the Web Browser
+        ##The Web Browser & Writing HTML
       </script>
     </section>
 
@@ -650,17 +650,15 @@
 
         Add some text based content. Leave the navigation blank for now. Images & links will also be covered next.
         
-        See <!-- .element: class="note" -->[reference/exercise-3.html](reference/exercise-3.html) for reference or view the next slide but only if you're stuck!
+        See <!-- .element: class="note" -->[reference/exercise-3.html](project/reference/exercise-3.html) for reference or view the next slide but only if you're stuck!  
+        Your page will look similar to [this](framework/img/workshop/exercise-3.png).
 
         1. Add your name & tagline in the `<header>` section using the appropriate heading tags. 
           <span class="note">(**Reminder!** `<head>` and `<header>` are two different tags.)</span>
-        1. In the **About** section, add a heading and a couple paragraphs.
+        1. In the **About** section, add a heading and 2 paragraphs.
+          <span class="note">Don&#39;t have content to add? Use placeholder text! See resources below.</span>
         1. In the **Loves** section, add a heading and a paragraph.
         1. In the **Footer**, add a heading.
-
-        Your page will look similar to [this](framework/img/workshop/exercise-3.png).
-
-        Don&#39;t have content to add? Use placeholder text! See resources below.
         
         ---
         ###Resources        
@@ -674,7 +672,7 @@
       <script type="text/template">
         #Review your code (11:45)
         
-        (Also found in <!-- .element: class="note" -->[reference/exercise-3.html](reference/exercise-3.html))
+        (Also found in <!-- .element: class="note" -->[reference/exercise-3.html](project/reference/exercise-3.html))
         
         ```
         <!DOCTYPE html>
@@ -913,7 +911,7 @@
           * use [placeholder](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/) images
         1. Make the images into links.
         
-        Your page should look something like this: <!-- .element: class="note" -->[reference/exercise-5.html](reference/exercise-5.html)
+        Your page should look something like this: <!-- .element: class="note" -->[reference/exercise-5.html](project/reference/exercise-5.html)
         
         **Bonus exercise**  
         Square images are better for the afternoon exercises. You can crop and resize them using this free tool, [Pixlr](http://apps.pixlr.com/editor/). Between 200px - 400px is best.
@@ -1107,7 +1105,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Web safe fonts
 
-        Web safe refers to pre-installed fonts.  Operating systems do not have the same defaults, so it's best to use a font *stack* to provide a fallback option.
+        Web safe refers to pre-installed fonts.  Operating systems do not have the same defaults, so use a font *stack* to provide fallback options.
         
         ```
         font-family: Helvetica, Arial, serif;
@@ -1174,16 +1172,20 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide small-type" data-markdown>
       <script type="text/template">
         #Break time!
 
         Optional exercises:
 
-        1. The final project uses 2 different fonts, so feel free to pick two (or stick with the LLC project fonts used in the previous exercise).
-        1. Pick a color palette - the LLC project uses the last three colours from [this palette]((http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c). See below for more colour resources.
-        1. Pick a background image - there are some to choose from in **project > images ** or use one of the resources from here: https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
-        1. If using your own images for the profile image or the Loves section, crop them to a smaller size.  Around 400px will work the best. Try [Pixlr](https://pixlr.com/web), a free image editing app.
+        * The [final project](project/reference/final.html) uses 2 different fonts, so feel free to pick two (or stick with the LLC project fonts used in the previous exercise).
+        * Pick a color palette - the LLC project uses 3 colours from [this palette](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c). See below for more colour resources.
+        * Pick a background image - there are some in the **project > images** folder or use one of the resources from [here](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b).
+        * If using your own images, here are some suggested image sizes:
+          * profile image or the Loves section - 400px width x 400px height
+          * background images - 1000-1400px width
+          
+        Try [Pixlr](https://pixlr.com/web), a free image editing app to crop images.
         
         ---
         ###Resources
@@ -1205,7 +1207,6 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
     
-
     <section class="slide" data-markdown>
       <script type="text/template">
         #Inheritance and Specificity (1:30)
@@ -1214,10 +1215,12 @@ text-transform: lowercase;</textarea>
 
         ```
         <body>
-          <h1>My Website</h1><!-- child of body -->
-          <p>This is a paragraph.</p><!-- sibling of h1 -->
+          <h1>My Website</h1><!-- child of body, sibling of p -->
+          <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
         </body>
         ```
+
+        CSS properties in the `body` selector is inherited by the descendants elements. When a more specific selector is used (e.g. `h1`), it overrides the inherited values.
         ```
         body {
           color: #222222;
@@ -1226,8 +1229,6 @@ text-transform: lowercase;</textarea>
           color: blue;
         }
         ```
-
-        In the above example, the CSS properties in the body selector is inherited by the descendants elements (all nested elements). When a more specific selector is used (e.g. `h1`), it overrides the inherited values.
       </script>
     </section>
 
@@ -1235,7 +1236,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Class Exercise #6: Typography
 
-        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on your webpage.)<!-- .element: class="footnote" -->
+        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts.)<!-- .element: class="note" -->
 
         Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.
         Change the `font-weight` if you want to change it to a thinner or thicker font.
@@ -1246,56 +1247,93 @@ text-transform: lowercase;</textarea>
           font-weight: 300;
         }
         ```
+      </script>
+    </section>
 
-        Now let&#39;s set just the headings to use a different font from the body style. We can target multiple selectors at the same time by *combining* them with a comma.
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #6: Typography (continued)
+        
+        Now let&#39;s set a different font for only the headings. 
+        
+        To target multiple selectors at the same time, you can *combine* selectors with a comma.
 
         ```
-        h1, h2 {
+        h1, 
+        h2 {
           font-family: 'Bad Script', cursive;
         }
         ```
+        Your page should now look like [exercise 6](project/reference/exercise-6.html) in the reference folder.
       </script>
     </section>
 
-    
-    
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #CSS & Class attributes
+        #Class attributes & CSS Comments
       </script>
     </section>
-    
     
     <section class="slide" data-markdown>
       <script type="text/template">
         # Class attributes
         
-        Remember adding a class attribute to the About & Loves section? They were added to differentiate them so we can give each section different styles.
-
-        Note that `id` attributes can also be used for CSS but since `id`s can only be used once per page, some people prefer to use only classes for styling.  It is a personal preference but for today, let's use `class` for CSS.
+        Remember adding a class attribute to the About & Loves section? They were added to differentiate them, to give each section *different* styles.
         
-        ```
+        ```xml
         <section id="about" class="about">
           ...
         </section>
+        
         <section id="loves" class="loves">
           ...
         </section>
         ```
-      
-        To add specific styles, instead of using `section` as the selector, use the `class` name.
-      
-        Targets ALL `section` elements:
+        <!-- .element: class="note" -->**Note**: `id` attributes can also be used for CSS but that `id` can only be used once per page. Some people prefer to use only classes for styling because of this rule.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class attributes
+        
+        Instead of using `section` as the selector, use the `class` name, defined by leading period.
+        
+        Applies to *any* element with the `class` of **about**.
+        ```
+        .about { 
+          background: red; 
+        }
+        ```
+        
+        Targets *all* `section` elements:
         ```
         section { 
           background: blue; 
         }
         ```
-        Applies to any element that contains a specific `class`, **defined by leading period**:
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Organizing CSS with Comments
+        
+        Use CSS comments to organize your styles. It must start with `/*` and end with `*/` but can contain any characters in between. 
+        
+        Use whichever comment style works for you but here's a few common conventions: 
+        
         ```
-        .about { 
-          background: red; 
-        }
+        /* CSS Comments */
+        ```
+        ```
+        /* 
+        CSS Comments
+        */
+        ```
+        ```
+        /* CSS Comments
+        ----------------*/
         ```
       </script>
     </section>
@@ -1304,33 +1342,28 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Class Exercise #7 - Background colours
         
-        Let's add the background colours to different sections of the page.  This will also help to visualize the blocks of content as well.  Use the colours in the examples for now if you don't have a palette just yet.
+        Adding background colours to sections of the page is not only a design convention, it can  also help to visualize the HTML blocks of content.
         
-        Now would also be a good time to use `/* CSS comments */` to organize your code. 
+        In the final sample project, the header and navigation have the same background colour.  Select both by *combining* the selector.
 
-        You can use any letters and characters as long as they start with `/*` and end with `*/` .
-        
-        In the final sample project, both the header and navigation have the same background colour.  Select both at the same time by *combining* the selector.
-        
-        (Try to type this out rather than copy & paste but use this as a reference)<!-- .element: class="footnote" -->
-        
         ```
-        /* PAGE HEADER - heading and nav
+        /* PAGE HEADER & NAV
         -----------------------------------------*/
         header, 
         nav {
-          background: #CECCCC;
+          background: #CECCCC; /* or use your own colour palette */
         }
 
         ```  
+        Color reference: <!-- .element: class="note" --><span style="background:#CECCCC;padding:0 5px;">#CECCCC</span>
       </script>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #7 - Background colours, part 2
+        #Class Exercise #7 - Background colours
         
-        Next, apply a background colour to just the "Loves" section. The "About" section is getting a different treatment later, so leave it for now.
+        Next, apply a background colour to just the "Loves" section. The "About" section is getting a different treatment in a later exercise.
         
         ```
         /* LOVES - things I love 
@@ -1339,18 +1372,38 @@ text-transform: lowercase;</textarea>
           background: #9D6381;
         }
         ```
+        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
         
-        Since there's only one `<footer>`, we can use that as our selector.
+        Since there's only one `<footer>`, we can use that as our selector. Also, change the color of the text, if using a dark background colour.
         
         ```
         /* FOOTER - contact info
         -----------------------------------------*/
         footer {
           background: #0F110C;
+          color: #CECCCC;
         }
         ```
+        Color reference: <!-- .element: class="note" --><span style="background:#0F110C;padding:0 5px;color:#CECCCC;">background: #0F110C; color: #CECCCC;</span>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #7 - Background colours
         
-        Not exactly super polished yet but it's getting there.  Your page should look something like [exercise-7.html](reference/exercise-7.html) in your **reference** folder.
+        Notice the colour of the link didn't change from default blue? 
+        
+        To change the color of the link, select the anchor tag and override the default blue.
+        
+        ```
+        a {
+          color: #9D6381; 
+        }
+        ```
+        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        
+        Not exactly super polished yet but it's getting there.  Your page should look similar to [exercise-7.html](project/reference/exercise-7.html) in your **reference** folder.
       </script>
     </section>
     
@@ -1369,44 +1422,35 @@ text-transform: lowercase;</textarea>
 
         If we show the outlines of all the elements in our current HTML document, it will look like this:
         
-        ![](framework/img/workshop/box-borders-example.png)<!-- .element: width="60%" -->
+        ![](framework/img/workshop/box-borders-example.jpg)
+        
+        Note the spacing between the elements on your page such as the headings and paragraphs. That's the default `margin` and `padding` for those elements.
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide no-bullet-list" data-markdown>
       <script type="text/template">
         # The Box Model
         
-        There are 5 CSS properties used to determine the size and spacing of these boxes.
+        There are 5 CSS properties used to determine size and spacing.
         
-        <div class="col-2">
-          ![Box Model example](framework/img/workshop/box-model-layout.png)
+        ![Box Model example](framework/img/workshop/box-model-layout.jpg)<!-- .element: class="left" -->
 
+        * **width** - can set a specific width
+        * **height** - can set a specific height  
+        * **margin** - adds/removes space around the element  
+        * **padding** - adds/removes space inside of the element  
+        * **border** - adds a border just outside of the element
 
-        Image source: <!-- .element: class="footnote" --> [W3C](http://www.w3.org/wiki/The_CSS_layout_model_-_boxes_borders_margins_padding)
-        </div>
-        
-        <div class="col-2">
-          <p><strong>width</strong> - can be set to a specific size via CSS<br>
-          <strong>height</strong> - can be set to a specific size via CSS<br>
-          <strong>margin</strong> - adds / removes space *outside* of the element <br>
-          <strong>padding</strong> - adds / removes space *inside* of the element<br>
-          <strong>border</strong> - adds a border just outside of the element</p>
-        </div>
-        
-        Note the spacing between the elements on your page such as the headings and paragraphs. That's the default margin and padding for those elements.
-
+        Image source: <!-- .element: class="note" --> [W3C](http://www.w3.org/wiki/The_CSS_layout_model_-_boxes_borders_margins_padding)
       </script>
     </section>
     
     <section id="margin-padding" class="slide" data-markdown>
       <script type="text/template">
-        #Margin and Padding
+        #Margin and Padding Values
 
-        **margin** - adds/removes space **outside** of the element  
-        **padding** - adds/removes space **inside** of the element
-
-        The values for both properties can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
+        The values for both `margin` and `padding` can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
         
         Setting the value to "0" will *remove* any default space and any positive value will *add* space.
 
@@ -1428,66 +1472,72 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Practice!
+    <section class="slide">
+      <h1>Practice!</h1>
 
-        Practice changing the margin and padding example below with 1 to 4 values. 
-        
-        Notice that the background colour doesn't flow into the space created by margin, since margin adds space *around* and *outside* of the element.
-
-        <textarea class="snippet" data-subject="#example">background: lightblue;
+      <p>Practice using margin and padding below using 1 to 4 values.</p>
+      <textarea class="snippet" data-subject="#example">background: lightblue;
 padding: 0px;
 margin: 0px;</textarea>
-        <div id="example" class="example">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
-        </div>
-      </script>
+      <div id="example" class="example">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+      </div>
+      
+      <p>Notice that the background colour doesn't flow into the space created by <code>margin</code>, since margin adds space <strong>around</strong> and <strong>outside</strong> of the element.</p>
     </section>
     
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Border box: width, padding & border
+    <section class="slide">
+      <h1>Border box: width, padding &amp; border</h1>
+
+      <p>The relationship between <code>width</code>, <code>padding</code> and <code>border</code> can be confusing.  </p>
+
+      <p>Let’s try adding one property at a time, and watch how the size of the box changes: (1) set the width to 450px, (2) add 35px of padding, (3) increase the border to 15px.</p>
+      <textarea class="snippet" data-subject="#example">background: lightblue;
+width: ;
+padding: ;
+border: 1px solid green;</textarea>
+      <div id="example" class="example" style="box-sizing: content-box;">
+        <p style="box-sizing: content-box;">Border box example.</p>
+      </div>
+
+      <p>Notice how the size of the box gets wider?<p>
+      <p style="font-size: 28px;">width + padding left + padding right + border left + border right = total size<br> 
+      450 + 35 + 35 + 15 + 15 = 550px</p>
+      
+      <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
+    </section>
         
-        In CSS the relationship between the `width`, `padding` and `border` properties can be confusing.  
+    <section class="slide">
+      <h1>Border Box Fix</h1>
+        <p>Luckily, there's a fix for this.  But first let's compare how it looks with and without the fix. Notice that the values are the same in both examples but one appears to be bigger than the other?</p>
         
-        For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be: 480 + 20 + 20 + 15 + 15 = 550px.
-        
-        <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
-        
-        
-        <div class="delayed">
-          <p>Luckily, there's a fix for this. Let's compare how this works with and without the fix. Notice that the values are the same in both examples but one appears to be bigger than the other?</p>
-          
-          <div class="col-2">
-            <textarea class="snippet" data-subject="#example">background: lightblue;
-width: 480px;
-padding: 0px 20px;
+        <div class="col-2">
+          <textarea class="snippet" data-subject="#example">background: lightblue;
+width: 450px;
+padding: 35px;
 border: 15px solid green;</textarea>
-            <div id="example" class="example" style="box-sizing: content-box;">
-              <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
-            </div>
-          </div>    
-          
-          <div class="col-2">
-            <textarea class="snippet" data-subject="#example2">background: lightblue;
-width: 480px;
-padding: 0px 20px;
+          <div id="example" class="example" style="box-sizing: content-box;">
+            <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
+          </div>
+        </div>    
+        
+        <div class="col-2">
+          <textarea class="snippet" data-subject="#example2">background: lightblue;
+width: 450px;
+padding: 35px;
 border: 15px solid green;</textarea>
-            <div id="example2" class="example">
-              <p>This example DOES have the border box fix.</p>
-            </div>
-          </div> 
-          
-        </div>
-      </script>
+          <div id="example2" class="example">
+            <p>This example DOES have the border box fix.</p>
+          </div>
+        </div> 
+      </div>
     </section> 
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        # * { Box-sizing: Border-box } FTW
+        # * { Box-sizing: Border-box }
         
-        Add this snippet to your project now (and to all future projects) to fix the width/padding/border issue.
+        Add this snippet to your project now (and to all future projects) to fix how the width/padding/border size is rendered.
         
         ```
         /* apply a natural box layout model to all elements, but allowing components to change */
@@ -1498,27 +1548,33 @@ border: 15px solid green;</textarea>
           box-sizing: inherit;
         }
         ```
-        See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+        
+        Add it to the very top of your **styles.css** file.
+        
+        See more about The Box Model <!-- .element: class="note" --> [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
       </script>
     </section>
   
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #8 - Spacing
+        #Class Exercise #8 - Spacing & Typography
         
-        (Make sure the box model fix from the previous slide has been added to your<!-- .element: class="footnote" --> **styles.css** before proceeding. Also, feel free to use the amount of space that looks good to you or follow the examples below.)
+        (Make sure the box model fix from the previous slide has been added to<!-- .element: class="note" --> **styles.css** before proceeding. Also, use the amount of space that looks good to you & use the examples below as a guide.)
         
-        Add some padding to all the sections (except the nav) so the content is not squished to the edge and has consistent styling throughout the different sections of the page. Combine the selectors to target them all at the same time.
+        Add some padding to all the sections (except the nav) so the content is not squished to the edge and has consistent styling. Combine the selectors to target them all at the same time.
         
         ```
-        header, section, footer {
+        header, 
+        section, 
+        footer {
           padding: 100px 150px;
         }
         ```
         
-        The final project has the content in the "Loves" and footer section centered.  How can we target all the content in both of those sections at the same time?
+        The final project also has the content in the "Loves" and footer section centered.  How can we target all the content in both of those sections at the same time?
         
-        <pre class="delayed"><code>.loves, footer {
+        <pre class="delayed"><code>.loves, 
+        footer {
           text-align: center;
         }
         </code></pre>
@@ -1527,17 +1583,22 @@ border: 15px solid green;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #8 - Spacing
+        #Class Exercise #8 - Spacing & Typography
         
-        Now let's use the `margin` property for the the `<h1>` and `<h2>` tag to remove the default space around it so the text isn't so spread out.  (You can *inspect the element* using the dev tools to see the default margin.)
-
-        Let's also customize the font styles using `font-size` and `line-height`.  Also, if you want to take out the default bold style of the `h1`, you can add the `font-weight` property.
+        Use `margin` to adjust the default space around the  `<h1>` and `<h2>` tag.  (Let's *inspect the element* using the dev tools to see the default margin.) 
+          
+        Also, if you want to take out the default bold style of the `h1`, you can add the `font-weight` property.
         
         ```
         h1, h2 {
           margin: 0; /* removes default space */
           font-weight: normal; /* removes default bold style */
         }
+        ```
+        
+        Let's also customize some of the font styles using `font-size` and `line-height`.  
+        
+        ```
         h1 {
           font-size: 75px;  
         }
@@ -1546,7 +1607,16 @@ border: 15px solid green;</textarea>
           line-height: 1.5; /* adjusts space between the lines */
         }
         ```
-        Just one more thing. Notice the white space around the edge of the page? That's default space in the `body` element. Reset it by setting the values to 0;
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #8 - Spacing & Typography
+        
+        Just one more thing. Notice the white space around the edge of the page? That's default space in the `body` element. 
+        
+        Reset it by setting the values to 0.
 
         ```
         body {
@@ -1554,7 +1624,7 @@ border: 15px solid green;</textarea>
           padding: 0;
         }
         ```
-        Your page should now look similar to [exercise-8.html](reference/exercise-8.html) in your **reference** folder.
+        Your page should now look similar to [exercise-8.html](project/reference/exercise-8.html) in your **reference** folder.
       </script>
     </section>
     
@@ -1562,7 +1632,9 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         #Descendant selectors
 
-        Matches any element that is a descendant (nested tag) of another element. This is useful when you want to target elements inside of a block (e.g. the header)  without adding a class to every element. 
+        Matches any element that is a descendant (nested tag) of another element. 
+        
+        This is useful when targeting elements inside of a specific block of content (e.g. an `h1` in the `header`). 
         
         Note the space in *between* each selector. This is a requirement.
 
@@ -1570,16 +1642,30 @@ border: 15px solid green;</textarea>
         p a {
           /* targets only anchor link tags nested inside of a p tag */
         }
+        ul li a {
+          /* targets a link nested in a list item in an unordered list */
+        }
         ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Descendant selectors
+        
         **Pro tip!** Just like [Inception](http://www.imdb.com/title/tt1375666/), avoid going more than three levels.
 
         ```
-        nav ul li a span {
+        nav ul li a {
           /* NOOOOOOOOOOO */
         }
         ```
 
-        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. It&#39;s generally better to start with generic selectors and make them more specific, as needed.
+        You can skip a level but specificity rules apply. 
+        
+        For example, `nav ul li a` would override `nav a` because it&#39;s more specific. 
+        
+        It&#39;s generally better to start with generic selectors and make them more specific, as needed.
       </script>
     </section>
     
@@ -1604,45 +1690,33 @@ border: 15px solid green;</textarea>
           font-size: 32px;
         }
         ```
-        Next, let's highlight some keywords in the header (e.g. name). The semantic HTML meaning of the `<strong>` tag is used to give importance to the text, so be sure to use it to highlight important text. We can also then use it as a "hook" to add CSS too.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #9: Style the header & footer
+        
+        Next, let's highlight some keywords in the header (e.g. name). 
+        
+        The semantic HTML meaning of the `<strong>` tag is to give importance to the text, so be sure to use it only for important text.
           
         ```
         <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
         <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
         ```
+        Now it can also be used to add CSS. If you want this style to be available anytime the `<strong>` tag is used, then there's no need to use a descendant selector.
         
-        If you want this style to be available anytime the `<strong>` tag is used, then there's no need to use a descendant selector like in the previous step.
+        <!-- .element: class="note" -->**Pro tip!** Make sure the strong tag is used **semantically**, not just as a hook for styling!
         
         ```
         strong {
           color: #9D6381;
         }
         ```
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #9: Style the header & footer, part 2
+        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
         
-        Since the footer has a dark background, we now need to change the default black text color to something lighter to be able to see it.  Add a colour to the existing footer CSS declaration block.
-        
-        ```
-        footer {
-          background: #0F110C;
-          color: #CECCCC;
-        }
-        ```
-        
-        Notice the colour of the link didn't change from default blue? Let's make it the same colour as our `strong` style by combining selectors.
-        
-        ```
-        strong, a {
-          color: #9D6381;
-        }
-        ```
-        
-        Your page should now look similar to [exercise-9.html](reference/exercise-9.html) in your **reference** folder.
+        Your page should now look similar to [exercise-9.html](project/reference/exercise-9.html).
       </script>
     </section>
     
@@ -1650,9 +1724,18 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         # Building a web page in blocks
         
-        When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles. But as you may have already noticed, there's no clear cut path for what to build first.  It often takes a step by step approach
+        When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles. 
         
-        To avoid CSS specificity issues, here's some general advice for using the selectors covered so far.
+        But as you may have already noticed, there's no clear cut path for what to build first.  It often takes a step by step approach.
+        
+        To avoid CSS specificity issues, let's go over some general advice for using the selectors covered so far.
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS Selectors: Best Practices
         
         **HTML element selectors:**  Use this to apply a style to all or *most* of that particular element on the page.  (e.g. all links on the page).
         
@@ -1662,7 +1745,7 @@ border: 15px solid green;</textarea>
         }
         ```
         
-        **Descendant selectors:** Use this to apply a style to a specific element within another element. This way, you don't have to add a class attribute to each element. (e.g. Only links within the navigation)
+        **Descendant selectors:** Use this to apply a style to a specific element within another element. (e.g. Only links within the navigation)
         
         ```
         nav a {
@@ -1670,7 +1753,7 @@ border: 15px solid green;</textarea>
         }
         ```
         
-        **Class selectors:**  Use this to apply a style to an element that can be anywhere on the page and will not be specific to the HTML element, only the class.  (e.g. a portion of the page that uses the same HTML tag as another page block)
+        **Class selectors:**  Use this to apply a style to an element that is not specific to an  HTML element, only the class.  (e.g. a portion of the page that uses the same HTML tag as another page block)
         
         ```
         .about {
@@ -1680,41 +1763,14 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <!-- 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Customize! (15mins)
-        
-        We still have a few more concepts to cover such as aligning, styling the images and the navigation but take some time to customize your page.
-        
-        Don't worry about the positioning of the images and nav just yet.  Stick to the concepts covered so far (spacing, colours and font styles). 
-        
-        You can also update the content or compare your code to  [exercise-9.html](reference/exercise-9.html) in your **reference** folder.  
-        
-        Square images are also better for the upcoming exercises.  You can crop and resize them using this free tool, [Pixlr](https://pixlr.com/web), between 200px - 400px is best. 
-      </script>
-    </section>
-    -->
-    
     <section class="slide title" data-markdown>
       <script type="text/template">
         #More CSS!
         ##Page layout, Rounded corners,<br> Background images
       </script>
     </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Aligning content
-        
-        Next up, we're going to align the image and the text to make it look like the below example. But first a few more CSS concepts.
-        
-        ![](framework/img/workshop/about-image-float.png)
-      </script>
-    </section>
-    
-    
-    <section class="slide" data-markdown>
+  
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         #Inline & Block Elements
 
@@ -1729,98 +1785,117 @@ border: 15px solid green;</textarea>
         <textarea class="snippet" data-subject="#inline">background: ;</textarea>
         <a id="inline" href="#">link example</a>
       </script>
-    </section>
+    </section> -->
     
     <section class="slide" data-markdown>
       <script type="text/template">
         #Stacked elements
 
-        By default, all of the *block* level elements also stack on top of each other (since they take up 100% width) in the order of how it is written.
+        By default, most HTML elements are *block* level elements. This means they display stacked on top of each other and take up 100% width, in the order of how it is written.
         
         ```
         <p>element 1</p>
         <p>element 2</p>
         ```
-        renders as:
+        The above HTML example renders as:
+        
         <div class="example">
           <p>element 1</p>
           <p>element 2</p>
         </div>
-        
-        
-        If we look at the previous box outline example, you can see that regardless of the width of the content, the content in the heading tags stack on top of each other.  But the links are sitting side by side, in a line.
+      </script>
+    </section>
+      
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Block vs Inline
+
+        If we look at the previous box outline example, notice that regardless of the number of characters, the content in the heading tags stack on top of each other.  
         
         ![](framework/img/workshop/box-borders-stack.png)
         
-        There are two ways to align content.  Let's first look at the `float` property.
+        But the links are sitting side by side, in a line.  That's because links are **inline** elements.
+        
+        ---
+        ###Resources
+        * Stack Overflow - [display:inline vs display:block](http://stackoverflow.com/questions/3099030/displayinline-vs-displayblock)
+        * CSS Tricks - [display](https://css-tricks.com/almanac/properties/d/display/)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Aligning content
+        
+        Even though block elements such as headings & paragraphs by default display stacked on top of each other, there are ways to align block level elements using CSS. 
+        
+        Next up, we're going to align the image and the text to make it look like the below example.
+        
+        ![](framework/img/workshop/about-image-float.png)
+
       </script>
     </section>
   
     <section class="slide">
-      <!-- <script type="text/template"> -->
-        <h2>Float left or right</h2>
+      <h1>Float left or right</h1>
+      
+      <p>To get block level elements to line up side by side, the stacking flow has to be "broken" first.  Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side.</p> 
         
-        <p style="float:none;border:none;">To get block level elements to line up side by side, we have to <em>break</em> the stacking flow.  Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side.</p> 
-          
-        <p style="float:none;border:none;">This will cause any element after the floated element to move up beside it.</p>
-        
-        <br>
-        
-        <textarea class="snippet" data-subject="#float">h1 { 
-  border: 1px solid blue;
-  float: ;
-}
-p {
-  border: 2px solid red;
+      <p>Any element after the floated element to move up beside it.</p>
+      
+      <textarea class="snippet" data-subject="#float">img { 
+float: ;
 }</textarea>
-        <div id="float">
-          <h1 style="font-size:25px;">heading1 tag</h1>
-          <p>paragraph tag</p>
-        </div>
-      <!-- </script> -->
+      <div id="float">
+        <img src="http://placehold.it/150x150" alt="placeholder image">
+        <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id quasi iusto, ex cumque omnis iste eveniet mollitia corporis enim,</p>
+      </div>
     </section>
-    
-    <section class="slide side-by-side" data-markdown>
+
+    <section class="slide" data-markdown>
       <script type="text/template">
         #Class Exercise #10: Float & style the image
         
-        Add a class to the profile image so we can apply the float only to this image.
+        Add a class to the profile image so to apply the float only to this image.
         
-        ```
+        ```html
         <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
         ```
 
         Then float the image (right or left).  Also, add space between the image and text using `margin`.
 
-        ```
+        ```css
         .profile-img {
           float: right;
           margin-left: 20px;
         }
         ```
-        
-        Floating elements may have unexpected results, especially if the content following it varies in size or length.  See example below to see how the page will look based on different paragraph lengths.
+        Floating elements may have unexpected results.  See examples on the next slide.
+      </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        #Floats & breaking the stacking flow
         
         ![](framework/img/workshop/float-long-text.png)
         ![](framework/img/workshop/float-short-text.png)
         
-        If your content is the same size or longer than the floated element (the profile image) as shown on the left,  you won't notice this problem.  But it's still good to understand it and fix it to save the headaches that will come later!
+        If your content is the same size or longer than the floated element (the profile image) as shown on the left,  you won't notice this problem.  
+        
+        But it's still good to understand it and fix it to save the headaches that will come later!
       </script>
     </section>
     
     <section class="slide centered css-gif" data-markdown>
-      <script type="text/template">
-        #CSS: Breaking stuff and putting it back together
-      </script>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
         # Reset the float
         
-        Floating the element takes it out of the *natural stacking flow*. There are a couple of ways to restore the regular stacking of boxes after the floated elements.  Let's use the `overflow` option.
-        
-        Adding `overflow: hidden;` to the *parent* element forces the element to 'contain' any floated child elements, so they don't disrupt the elements after them.
+        Floating the element takes it out of the *natural stacking flow*. To restore the regular stacking flow *after* the floated element, it needs to be *reset*.  
+        Let's use the `overflow` option. Adding `overflow: hidden;` to the *parent* element forces it to 'contain' any floated child elements.
         
         ```
         <section id="about" class="about">
@@ -1833,8 +1908,14 @@ p {
           overflow: hidden;
         }
         ```
+      </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        # Resetting floats
         
-        This can be a confusing concept and requires more discussion outside of the scope for today.  For more information, check out these extra resources:
+        This is a concept that requires much more discussion outside of the scope for today.  For more information, check out these extra resources:
         
         * http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664
         * http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
@@ -1848,25 +1929,26 @@ p {
         
         `border-radius` is a new CSS3 property, used to make rounded corners or perfect circles, removing the need to manipulate image files.
         
-        The value can be set using various measurement units such as `px`, percentage `%`, `em` and `rem` (relative units). Let's use `px` and `%` today.
+        The value can be set using various measurement units. 
+        Let's look at how we can use `px` and `%` in the examples below.
         
         <div class="group">
           <div class="col-2">
             <textarea class="snippet" data-subject="#rounded">border-radius: 15px;</textarea>
             
-            <img id="rounded" src="reference/images/robots.jpg" alt="doughnuts" width="150">
+            <img id="rounded" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
           </div>
           
           <div class="col-2">
             <textarea class="snippet" data-subject="#circle">border-radius: 50%;</textarea>
             
-            <img id="circle" src="reference/images/robots.jpg" alt="doughnuts" width="150">
+            <img id="circle" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
           </div>
         </div>
         
         Using these examples, take some time to style your About and Loves images.
       
-        For your reference, check out [exercise-10.html](reference/exercise-10.html) in your reference folder.
+        For your reference, check out [exercise-10.html](project/reference/exercise-10.html) in your reference folder.
       </script>
     </section>
     
@@ -2040,7 +2122,7 @@ p {
         }
         ```
         
-        Your page should now look similar to [exercise-11.html](reference/exercise-11.html) in your **reference** folder.
+        Your page should now look similar to [exercise-11.html](project/reference/exercise-11.html) in your **reference** folder.
       </script>
     </section>
     
@@ -2191,7 +2273,7 @@ p {
         <br>
         **Bonus exercise**: When you fix the nav, the header will no longer stack under it and will instead go *underneath* it.  Add some space to the top of the header to push it down a bit.
         
-        Your page should now look similar to [exercise-12.html](reference/exercise-12.html) in your **reference** folder.
+        Your page should now look similar to [exercise-12.html](project/reference/exercise-12.html) in your **reference** folder.
       </script>
     </section>
     
@@ -2205,7 +2287,9 @@ p {
       <script type="text/template">
         #Background images
 
-        So far, we've been using `background` to add colours but it can also be used to add background images. There are two ways to declare the `background` property and the value must include the image file path.
+        So far, we've been using `background` to add colours but it can also be used to add background images. 
+        
+        There are two ways to declare the `background` property.
 
         ```css
         /* shorthand */
@@ -2215,11 +2299,28 @@ p {
         /* longhand */
         background-image: url(folder-name/image-file.jpg);
         ```
-
-        **Important:** Note the location of the CSS file.  Since it&#39;s inside of a folder, we need to adjust the file path to reflect that, using `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Background images
+        
+        **Important:** Note the location of the CSS file.  
+        
+        ```html
+        project
+          |-- css
+              |--styles.css
+          |-- images 
+          |-- reference
+          |-- index.html
+        ```
+        
+        Since it&#39;s inside of the **css** folder, the file path needs to reflect that. Use `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
 
         ```css
-        background: url(../folder-name/image-file.jpg);
+        background: url(../images/image-file.jpg);
         ```
       </script>
     </section>
@@ -2229,24 +2330,12 @@ p {
         
         Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
 
-        Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
-        
-        <div class="col-2">
-        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: width="100%" -->
+        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="left" -->
         </div>
 
-        <div class="col-2">
-          If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
-        <pre>
-
-        ```
-        body {
-          background: url(../images/buildings.jpg);
-        }
-        ```
-        </pre>
+        If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
         
-        Right now you can only see the image in the About section because all the other sections have background colours declared.
+        Image source and further reading <!-- .element: class="note" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
         
         </div>  
       </script>
@@ -2254,11 +2343,13 @@ p {
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        # More Background Styles
+        # Background Property
         
-        If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value and also add two more, `fixed` and `cover`.   
+        If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value.
         
-        Let&#39;s add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window! The end code will look like this:
+        A couple more values that can be added are `fixed` and `cover`.   
+        
+        Let&#39;s add the below sample code to our project, one value at a time. 
 
         ```
         body { /* longhand */
@@ -2274,8 +2365,10 @@ p {
           background-size: cover;
         }
         ```
-
-        Note that <!-- .element: class="footnote" -->`background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. If no background position value is used, background-size won’t work in the shorthand style so in this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
+        
+        ###Pro tip!
+        
+        Note that `background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. In this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
       </script>
     </section>
     
@@ -2283,20 +2376,29 @@ p {
       <script type="text/template">
         # Opaque background Styles
         
-        The image looks fancy but now it's hard to read the text!  Remember RGB colour values?  We can use this instead of hex or keyword values to set an opacity to a background colour.
+        The image adds some pizzazz but now it's hard to read the text!  Remember RGB colour values?  Use this instead of hex or keyword values to set an opacity to a background colour.
         
-        Most online colour resources will have all the different types of values listed, or use image editing software like Photoshop.  Or a quick online search almost always ends up with a solution like this tool right here: http://hex.colorrrs.com !
+        Most online colour resources will have all the different types of values listed, or use image editing software like Photoshop.  
         
-        The value to create this effect is `rgba(r value, g value, b value, alpha transparency percentage)`. See the example below:
+        Or a quick online search almost always ends up with a solution like this tool right here: <http://hex.colorrrs.com>!
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise: opaque background
         
+        Use `rgba()` as the value to create this effect.  The values must be declared using this syntax:
+        
+        ```
+        rgba(r value, g value, b value, alpha transparency percentage)
+        ```
         ```
         .about {
           background: rgba(97, 41, 64, 0.95);
         }
         ```
-        The higher the alpha transparency value, the more solid the colour will be. 
-        
-        Changing the transparency will help to make the text easier to read but you can also change the font colour as well, depending on the background colour you chose. (The example final project uses white text for this section.)<!-- .element: class="footnote" -->
+        The closer to 1 the alpha transparency value is, the more solid the colour will appear.
       </script>
     </section>
     
@@ -2307,7 +2409,7 @@ p {
         Here are a few more ideas for furthering your project.
 
         1. adjust spacing, font styles, etc. 
-          * see [final.html](reference/final.html) and **final.css** in your reference folder to compare
+          * see [final.html](project/reference/final.html) and **final.css** in your reference folder to compare
         1. use icon fonts instead of images for the social icons
           * Try Font Awesome icon fonts: http://fortawesome.github.io/Font-Awesome/
           * similar to Google fonts, add their CSS file and see documentation to get started

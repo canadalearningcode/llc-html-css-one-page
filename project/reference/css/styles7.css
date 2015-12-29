@@ -13,9 +13,12 @@ body {
 h1, h2 {
   font-family: 'Bad Script', cursive;
 }
+a {
+  color: #9D6381; 
+}
 
 
-/* PAGE HEADER - heading and nav
+/* PAGE HEADER & NAV
 -----------------------------------------*/
 header, 
 nav {
@@ -34,6 +37,5 @@ nav {
 -----------------------------------------*/
 footer {
   background: #0F110C;
+  color: #CECCCC;
 }
-
-

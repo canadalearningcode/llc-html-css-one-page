@@ -20,6 +20,9 @@ h1, h2 {
 h1 {
   font-size: 75px;
 }
+a {
+  color: #9D6381; 
+}
 header, 
 section, 
 footer {
@@ -54,6 +57,7 @@ nav {
 -----------------------------------------*/
 footer {
   background: #0F110C;
+  color: #CECCCC;
 }
 
 
