@@ -15,7 +15,6 @@ body {
 h1, h2 {
   font-family: 'Bad Script', cursive;
   margin: 0;
-  font-weight: normal;
 }
 h1 {
   font-size: 75px;
@@ -27,10 +26,6 @@ header,
 section, 
 footer {
   padding: 100px 150px
-}
-.loves,
-footer {
-  text-align: center;
 }
 p {
   font-size: 18px;

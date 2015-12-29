@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+  <main>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Links
+        
+        ##Link to other HTML pages
+        Use *relative* links here too since you'll be linking to files within your own folder and files.
+        
+        ```xml
+        <a href="page-name.html">Another page</a>
+        ```
+        
+        ##Link to a specific spot on a page
+        Add an `id` attribute to the tag where you would like the link to go to. 
+        
+        ```xml
+        <h2 id="goHere">This where you want the link to go TO.</h2>
+        ```
+        In the `href` attribute, use the `#` symbol and id name, with no spaces.
+        ```xml
+        <a href="#goHere">Click this link to navigate to a spot on the page</a>
+        ```
+
+        ##Link to a specific spot on another page
+        ```xml
+        <a href="about.html#goHere">Click this link to navigate to a spot on the page</a>
+        ```
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #4: Add the navigation
+
+        One-page website navigations link to specific parts of the page. Navigations are often created using an HTML list and links or just with links. To learn more, check out the resource below.
+
+        Today we'll be using only links. In the `<nav>` section, let's add three links (About, Loves, Contact). 
+        
+        ```
+        <nav>
+          <a href="#">About</a>
+          <a href="#">Loves</a>
+          <a href="#">Contact</a>
+        </nav>
+        ```
+        Often, a <!-- .element: class="note" --> `#` symbol is used as a placeholder for the `href` value.
+        
+        How do we get it to link to a specific part of the page? <span class="delayed">Use an `id` attribute.</span>
+        
+        ---
+        ###Resource
+        Here are some extra readings about using lists vs links only [here](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/) and [here](http://www.sitepoint.com/are-navigation-lists-necessary/).  
+        </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #4: Add the navigation (continued)
+
+        Add the `id` attribute to create an anchor for the in page links.<br>
+        <span class="note">(Reminder, the `class` will be used for CSS later)</span>
+        
+        ```
+        <section id="about" class="about">
+        </section>
+
+        <section id="loves" class="loves">
+        </section>
+
+        <footer id="contact">
+        </footer>  
+        ```
+
+        <span class="
+        delayed">Now that the `id` has been set, what should the value be for the `href` attribute?</span> <span class="delayed">The `id` value, starting with the `#` symbol to represent an `id`.</span>
+        
+        <pre class="delayed"><code>&lt;nav&gt;
+          &lt;a href="#about"&gt;About&lt;/a&gt;
+          &lt;a href="#loves"&gt;Loves&lt;/a&gt;
+          &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+        </code></pre>
+        
+        <!-- .element: class="delayed" -->**Important!**  If you test your links now, it may not seem like it's working.  The content on the page has to be long enough to scroll.  You can try testing your links after the next exercise.
+      </script>
+    </section>
+  </main><!-- cls main section -->
+  
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>

@@ -87,7 +87,7 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+    <section class="slide title dark" data-markdown>
       <script type="text/template">
         #Getting Started
         ##The Web Browser & Writing HTML
@@ -98,12 +98,15 @@
       <script type="text/template">
         #Web Browsers
         
-        The main functionality of the [browser](http://browsehappy.com) is to present a *web resource* in the browser window. Choose a modern web browser that supports current web standards and dev tools for a better experience.
-
-        In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in other browsers), you can view the source of *any* web page. Right-click / two-finger tap anywhere on the browser and select **View Web Source**.
-                
-        Go to http://ladieslearningcode.com and try it. That&rsquo;s HTML!
+        The main functionality of the [browser](http://browsehappy.com) is to present a *web resource* in the browser window. 
         
+        Choose a modern web browser that supports current web standards and dev tools for a better experience.
+
+        In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in other browsers), you can view the source of *any* web page. Right-click / two-finger tap anywhere on the browser and select **View Web Source**. That&rsquo;s HTML!
+        
+        ---
+        ###Resource 
+        http://browsehappy.com
       </script>
     </section>
 
@@ -133,7 +136,7 @@
         * some great options: [Notepad++](http://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/) (untimed free trial), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
 
         **[Atom](https://atom.io/)** is totally free and is the editor we'll be using today.  
-        <span class="note">(If you have another editor installed, it will work as well but just might look a little bit different.)</span>
+        <span class="note">(If you have another editor installed, it will work as well but some features may be different.)</span>
         
         ---
         ###Pro tip!
@@ -211,7 +214,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Organizing your code (10:30)
+        #Organizing your code
         
         HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
@@ -219,7 +222,7 @@
         <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
 
-        But whitespace through indentation (tabs) makes HTML easier to read. When nesting a tag, add one tab space. 
+        But for us, using whitespace through indentation (tabs) will makes HTML easier to read. When nesting a tag, add one tab space. 
         
         ```
         <outertag>
@@ -256,7 +259,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Setting up your project
+      #Setting up your project (10:30)
 
       Inside of the folder you downloaded today, open the **project** folder in your text editor to edit your project.
 
@@ -452,7 +455,7 @@
 
     <section class="slide page-layout" data-markdown>
       <script type="text/template">
-        # PLANNING THE PAGE LAYOUT (11:00)
+        # PLANNING THE PAGE LAYOUT
 
         An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with [semantic](http://html5doctor.com/lets-talk-about-semantics/) markup is a good way to start.
         
@@ -482,7 +485,7 @@
       <script type="text/template">
         #HTML5 Structural Elements
 
-        HTML5 introduced new tags to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. (There are many more.)
+        HTML5 introduced new tags to better describe blocks of content such as `<header>`, `<footer>` and `<section>`. (There are many more.)
         
         Prior to HTML5, the `<div>` tag was often used to group related content.  But the `<div>` doesn't have any semantic meaning. 
           
@@ -506,10 +509,6 @@
         Using HTML5 tags, the page could be structured like this:
 
         ```xml
-        <nav>
-          nav links here
-        </nav>
-
         <header>
           header content here
         </header>
@@ -531,22 +530,22 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #2: Page structure
+        #Class Exercise #2: Page structure (11:00)
 
         Back in the text editor, let's add the HTML5 structural tags to setup the page layout. 
         Only add the structural HTML blocks in this step, no content just yet.
         
-        We will need these tags: `<nav>`, `<header>`, two `<section>`'s and a `<footer>`
+        We will need these tags: `<header>`, two `<section>`'s and a `<footer>`
 
-        Also, try using HTML comments to help organize the code like so:
+        Also, you can use HTML comments to help organize the code like so:
 
         ```
-        <!-- site navigation -->
-        <nav>
-          
-        </nav>
+        <!-- page header -->
+        <header>
+
+        </header>
         ```
-        For reference, view <!-- .element: class="note" --> `exercise-2.html` in your **reference** folder or the previous slide.
+        View <!-- .element: class="note" --> `exercise-2.html` in your **reference** folder or the previous slide to check your code.
       </script>
     </section>
 
@@ -556,46 +555,54 @@
     </section>
 
     <section class="slide" data-markdown>
-    <script type="text/template">
-      #Paragraphs & Headings
+      <script type="text/template">
+        #Paragraphs
 
-      **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
+        **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
 
-      ```xml
-      <p>This is a paragraph.</p>
-      ```
+        ```xml
+        <p>This is a paragraph.</p>
+        
+        <p>This is a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vero dolor expedita quasi reiciendis minus unde sapiente id eveniet saepe officia quibusdam aspernatur, sint voluptate ipsam ex magni. Aliquam, ex!</p>
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Headings  
+        
+        There are six headings tags ranging from `<h1>` to `<h6>` used to describe the *hierarchy* of the page structure. To decide which heading to use, think about how you would arrange an essay outline.
 
-      **Headings:** There are six page headings tags ranging from `<h1>` to `<h6>` used to describe the *hierarchy* of the page structure. To decide which heading to use, think about how you would arrange an essay outline.
+        <div class="example essay-headings">
+        <p><strong>Essay Title</strong></p>
+        <ol>
+         <li>Introduction</li>
+         <li>First supporting idea
+           <ul>
+             <li>point 1</li>
+             <li>point 2</li>
+           </ul>
+         </li>
+         <li>Second supporting idea
+           <ul>
+             <li>point 1</li>
+             <li>point 2</li>
+           </ul>
+         </li>
+         <li>Conclusion</li>
+        </ol>
+        </div>
 
-      <div class="example essay-headings">
-      <p><strong>Essay Title</strong></p>
-      <ol>
-       <li>Introduction</li>
-       <li>First supporting idea
-         <ul>
-           <li>point 1</li>
-           <li>point 2</li>
-         </ul>
-       </li>
-       <li>Second supporting idea
-         <ul>
-           <li>point 1</li>
-           <li>point 2</li>
-         </ul>
-       </li>
-       <li>Conclusion</li>
-      </ol>
-      </div>
-
-      Let's look at how we could describe this hierarchy using heading tags.
-    </script>
+        Let's look at how we could describe this hierarchy using heading tags.
+      </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         #Pre-HTML5 Heading outline
 
-        Prior to HTML5, before sectioning tags were introduced, usually only one `<h1>` was used per page.  As such, the heading outline would look like this:
+        Prior to HTML5, before sectioning tags were introduced, usually only one `<h1>` was used per page.  The heading outline would look like this:
 
         **Pre-HTML5 Heading Outline**
         ```xml
@@ -648,10 +655,10 @@
       <script type="text/template">
         #Exercise #3: Add Content (15mins)
 
-        Add some text based content. Leave the navigation blank for now. Images & links will also be covered next.
+        Add some text based content. Images & links will also be covered next.
         
         See <!-- .element: class="note" -->[reference/exercise-3.html](project/reference/exercise-3.html) for reference or view the next slide but only if you're stuck!  
-        Your page will look similar to [this](framework/img/workshop/exercise-3.png).
+        Add the content below to make your page content look similar to [this](framework/img/workshop/exercise-3.png).
 
         1. Add your name & tagline in the `<header>` section using the appropriate heading tags. 
           <span class="note">(**Reminder!** `<head>` and `<header>` are two different tags.)</span>
@@ -670,7 +677,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Review your code (11:45)
+        #Review your code
         
         (Also found in <!-- .element: class="note" -->[reference/exercise-3.html](project/reference/exercise-3.html))
         
@@ -682,11 +689,6 @@
             <title>Laura Ipsum | Designer & Developer</title>
           </head>
           <body>
-            <!-- site navigation -->
-            <nav>
-
-            </nav>
-
             <!-- page header -->
             <header>
               <h1>Hi! I'm Laura Ipsum.</h1>
@@ -717,122 +719,12 @@
         ```
       </script>
     </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Links
-
-        Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` attribute to provide information for where the link should go.
-
-        ##Link to an external site
-        ```xml
-        <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
-        ```
-
-        ##Link to other HTML pages
-        Use *relative* links here too since you'll be linking to files within your own folder and files.
-        
-        ```xml
-        <a href="page-name.html">Another page</a>
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Links
-        
-        ##Link to a specific spot on a page
-        Add an `id` attribute to the tag where you would like the link to go to. 
-        
-        ```xml
-        <h2 id="goHere">This where you want the link to go TO.</h2>
-        ```
-        In the `href` attribute, use the `#` symbol and id name, with no spaces.
-        ```xml
-        <a href="#goHere">Click this link to navigate to a spot on the page</a>
-        ```
-
-        ##Link to a specific spot on another page
-        ```xml
-        <a href="about.html#goHere">Click this link to navigate to a spot on the page</a>
-        ```
-
-        ##Set link to open in a new window
-        Add an second attribute, `target`.
-        ```xml
-        <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
-        ```
-
-        ##Email link
-        ```xml
-        <a href="mailto:hello@myemail.com">hello@myemail.com</a>
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #4: Add the navigation
-
-        One-page website navigations link to specific parts of the page. Navigations are often created using an HTML list and links or just with links. To learn more, check out the resource below.
-
-        Today we'll be using only links. In the `<nav>` section, let's add three links (About, Loves, Contact). 
-        
-        ```
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Loves</a>
-          <a href="#">Contact</a>
-        </nav>
-        ```
-        Often, a <!-- .element: class="note" --> `#` symbol is used as a placeholder for the `href` value.
-        
-        How do we get it to link to a specific part of the page? <span class="delayed">Use an `id` attribute.</span>
-        
-        ---
-        ###Resource
-        Here are some extra readings about using lists vs links only [here](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/) and [here](http://www.sitepoint.com/are-navigation-lists-necessary/).  
-        </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #4: Add the navigation (continued)
-
-        Add the `id` attribute to create an anchor for the in page links.<br>
-        <span class="note">(Reminder, the `class` will be used for CSS later)</span>
-        
-        ```
-        <section id="about" class="about">
-        </section>
-
-        <section id="loves" class="loves">
-        </section>
-
-        <footer id="contact">
-        </footer>  
-        ```
-
-        <span class="
-        delayed">Now that the `id` has been set, what should the value be for the `href` attribute?</span> <span class="delayed">The `id` value, starting with the `#` symbol to represent an `id`.</span>
-        
-        <pre class="delayed"><code>&lt;nav&gt;
-          &lt;a href="#about"&gt;About&lt;/a&gt;
-          &lt;a href="#loves"&gt;Loves&lt;/a&gt;
-          &lt;a href="#contact"&gt;Contact&lt;/a&gt;
-        &lt;/nav&gt;
-        </code></pre>
-        
-        <!-- .element: class="delayed" -->**Important!**  If you test your links now, it may not seem like it's working.  The content on the page has to be long enough to scroll.  You can try testing your links after the next exercise.
-      </script>
-    </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Self-closing tags and images (12:00)
+        #Self-closing tags and images (11:30)
 
-        Self-closing tags don't format content. They are used to embed objects onto the page; they *are* the content. A closing tag is not required.
+        Self-closing tags don't format content or require a closing tag. They are used to embed objects onto the page; they *are* the content. 
 
         Images use a self-closing tag. It also requires a `src` *attribute* to tell the browser the location of the image file.
 
@@ -901,6 +793,30 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
+        # Hyperlinks 
+        
+        A hyperlink references data, such as a web document, that the reader can directly follow, usually by clicking or hovering. 
+        
+        Use the anchor tag, `<a>` to create the link. It also needs an `href` attribute to provide information for the location of the resource.
+
+        ```xml
+        <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
+        ```
+        
+        To set the link to open in a new window, add a second attribute, `target`.
+        ```xml
+        <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
+        ```
+
+        Here's the syntax for an email link.
+        ```xml
+        <a href="mailto:hello@myemail.com">hello@myemail.com</a>
+        ```
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
         #Exercise #5: Add links and images (15mins)
 
         1. Add a profile image.
@@ -908,18 +824,18 @@
         1. Add the social links to the Footer/Contact section.  
           * use the sample images in the **project > images ** folder
           * use your own images
-          * use [placeholder](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/) images
-        1. Make the images into links.
-        
+          * make the images into links
+          * use text links if you don't want to use an image
+
         Your page should look something like this: <!-- .element: class="note" -->[reference/exercise-5.html](project/reference/exercise-5.html)
         
-        **Bonus exercise**  
-        Square images are better for the afternoon exercises. You can crop and resize them using this free tool, [Pixlr](http://apps.pixlr.com/editor/). Between 200px - 400px is best.
+        <!-- .element: class="note" -->**Bonus exercise**  
+        Square images are better for the Part 2 exercises. You can crop and resize them using this free tool, [Pixlr](http://apps.pixlr.com/editor/). Between 200px - 400px is best.
         
-        And that's it! That's all of the HTML we'll need today for your project. 
+        That's it! That's all the HTML you'll need for today's project!
       </script>
     </section>
-
+    
     <section class="slide title" data-markdown>
       <script type="text/template">
         #Intro to CSS
@@ -929,14 +845,14 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #CSS: The presentation layer (12:20)
-
-        * stylesheet language with its own syntax rules, different from HTML
-        * used to separate content (HTML) from presentation (CSS)
-        * a stylesheet contains a list of rules to reduce redundancy and save time
+        #CSS: The presentation layer
         
-        CSS requires the usage of these symbols:  
-        curly brackets `{ }`, colon `:` and semi-colon `;`
+        * different language from HTML 
+        * stylesheet language with its own syntax rules
+        * used to separate content (HTML) from presentation (CSS)
+        * stylesheet contains a list of rules
+        
+        CSS requires these symbols: curly brackets `{ }`, colon `:`, semi-colon `;`
         
         ![keyboard](framework/img/workshop/keyboard-css.png)
       </script>
@@ -960,15 +876,15 @@
           color: red;
         }
         ```
-        >What is the selector? Property? Value?
+        >In the above example, what is the selector? Property? Value?
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Multiple CSS Declarations
+        #Multiple CSS Declarations (12:00)
 
-        Multiple declarations (`property: value;` sets) can be added to one selector and declaration block to add and modify multiple styles.
+        Multiple declarations can be added to one selector. Just be sure to end each declaration with a semi-colon and write them on a separate line for readability.
 
         ```
         h2 {
@@ -976,9 +892,7 @@
           font-size: 50px;
         }
         ```
-        Just be sure to end each declaration with a semi-colon.
-
-        There are many CSS properties with new ones being added and old ones being retired (deprecated).  It's good to have a few resources on hand.
+        There are many, many CSS properties. New ones are added as old ones being retired (deprecated).  It's good to have a few resources on hand.
         
         ---
         ###Resources
@@ -987,12 +901,31 @@
         * http://htmldog.com/reference/cssproperties/
       </script>
     </section>
+    
+    <section class="slide">
+      <h1>Practice Selecting an element</h1>
+      <p>Using the HTML example below, change the “selector” to apply the instructions in the comments.</p>
+<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;h2&gt;This is an h2.&lt;/h2&gt;
+</code></pre>
+<textarea class="snippet" data-subject="#css-selectors">selector { /* select the paragraph */
+  color: red;
+}
+selector { /* select the link */
+  color: blue;
+}</textarea>
+      <div id="css-selectors" class="example">
+        <p>This is a paragraph</p>
+        <h2 style="margin-top:0;">This is an h2</h2>
+    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         #Referencing CSS
 
-        For today's lesson, we&#39;ll be creating a separate style sheet file (uses a `.css` file extension) for the CSS. The style sheet is then referenced/added within the `<head>` of the HTML document (different from `<header>`).
+        Today, we&#39;ll be creating a separate style sheet file for the CSS.  To create a stylesheet, just name the file with a `.css` file extension. 
+        
+        The style sheet is then referenced within the `<head>` of the HTML document (different tag from `<header>`).
           
         Use `<link>` tag and two *attributes*, `rel` and `href`.
 
@@ -1003,7 +936,7 @@
         </head>
         ```
         
-        Though not required, css files are often saved in a separate folder for organization, just like images.
+        Though not required, css files are often saved in a separate folder for organization, just like images. <!-- .element: class="note" -->
         
         ---
         ###Resource
@@ -1013,24 +946,23 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise: Create a CSS File (12:30)
+        #Class Exercise: Create your project's CSS File
 
         1. In the text editor, create a new CSS file by selecting **File > New File**.  
-        1. Let&#39;s call it **styles.css** and save it to the **css** folder (already included in your **project** folder).  
-        <span class="note">You can name the file anything but it's best to choose a name that describes the file content. (i.e. styles.css, global.css, custom.css, project-name.css, etc)</span>
-        1. Then, reference it in **index.html**.  
-          <span class="note">**Pro tip!** Type `link` and press tab!</span>
+        1. Name it **styles.css** and save it to the **css** folder (already included in your **project** folder).  
+        <span class="note">You can name the file anything but it's best to choose a name that describes the file content.<br> (i.e. styles.css, global.css, custom.css, project-name.css, etc)</span>
+        1. Then, reference it in **index.html**. <span class="note">**Pro tip!** Type `link` and press tab!</span>
           ```
-          <link rel="stylesheet" href="css/styles.css">
+          <head>
+              <link rel="stylesheet" href="css/styles.css">
+          </head>
           ```
-          
-        Try a quick test to see if it is linked properly by adding a background color on the entire viewport.
-
-        ```
-        body {
-          background: lightblue;
-        }
-        ```
+        1. Run a test by adding a background color to the viewport (`body`).
+          ```
+          body {
+            background: lightblue;
+          }
+          ```
       </script>
     </section>
     
@@ -1049,7 +981,8 @@
       <script type="text/template">
         #CSS colours
 
-        * **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+        * **keywords** - use the actual name  
+        (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
         * **RGB** - uses 3 numerical values between `0` (black) and `255` (white)
         * **hex code** - number sign (`#`) followed by six characters (0-9, A-F)
 
@@ -1060,11 +993,16 @@
           background: rgb(178,34,34);
           background: #B22222;
         }
-        ```
-        See below for colour resources.
+        ``` 
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS colours
+               
+        Let's take a look at some of these colour resources.
         
-        ---
-        ###Resources  
         * http://colours.neilorangepeel.com
         * http://coolors.co
         * http://wesandersonpalettes.tumblr.com
@@ -1079,7 +1017,7 @@
       <script type="text/template">
         #CSS Font Styles
 
-        Let&#39;s look at a few CSS properties for styling text. Change some values below and see what happens!
+        The are quite a few CSS properties for styling text.  Here's a few to discuss today. Change some values below to see what happens!
 
         <textarea class="snippet" data-subject="#css-type">color: slateblue;
 font-family: Helvetica, Arial, serif;
@@ -1118,7 +1056,7 @@ text-transform: lowercase;</textarea>
           * <span style="font-family:Georgia;">Georgia</span>
           * <span style="font-family:Courier;">Courier</span>
         
-        To see a complete list, check out this resource: http://www.cssfontstack.com
+        To see a complete list, check out <http://www.cssfontstack.com>.
       </script>
     </section>
 
@@ -1136,7 +1074,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise: Using Google Fonts (12:45)
+        #Class Exercise: Using Google Fonts
         
         1. Go to [Google Fonts](http://www.google.com/fonts).
         1. **Add to Collection** to select a font. 
@@ -1157,30 +1095,87 @@ text-transform: lowercase;</textarea>
           </head>
           ```
         
-        To use the new fonts, add the font name to your CSS styles.
+        Now you're ready to use the new fonts. Use the font-family name listed in the Google Fonts page.
         
         ```
         font-family: 'Open Sans', sans-serif;
         ```
-        
-        Use the font name as you would with web safe fonts.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Inheritance and Specificity
+
+        A strength of CSS is styles can be inherited from parent to child elements. Let's review the family tree structure between the elements.
+
         ```
+        <body><!-- parent of h1 and p -->
+          <h1>My Website</h1><!-- child of body, sibling of p -->
+          <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
+        </body>
+        ```
+
+        CSS properties in the `body` selector is inherited by the descendant elements. A more specific selector will override the inherited values.
+        ```
+        body {
+          color: #222222;
+        }
         h1 {
-          font-family: 'Open Sans', sans-serif;
+          color: blue; /* overrides the inherited style */
         }
         ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #6: Typography
+
+        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts.)<!-- .element: class="note" -->
+
+        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.
+        
+        Change the `font-weight` to a thinner or thicker font (optional).
+
+        ```
+        body {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #6: Typography (continued)
+        
+        Let&#39;s set a different font for only the headings. 
+        
+        To target multiple selectors at the same time, you can *combine* selectors with a comma.
+
+        ```
+        h1, 
+        h2 {
+          font-family: 'Bad Script', cursive;
+        }
+        ```
+        Your page should now look like [exercise 6](project/reference/exercise-6.html) in the reference folder.
       </script>
     </section>
     
     <section class="slide small-type" data-markdown>
       <script type="text/template">
-        #Break time!
+        #Break time! (12:35)
 
         Optional exercises:
-
-        * The [final project](project/reference/final.html) uses 2 different fonts, so feel free to pick two (or stick with the LLC project fonts used in the previous exercise).
-        * Pick a color palette - the LLC project uses 3 colours from [this palette](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c). See below for more colour resources.
-        * Pick a background image - there are some in the **project > images** folder or use one of the resources from [here](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b).
+        
+        * Compare your code to [exercise-6.html](project/reference/exercise-6.html) in the reference folder.
+        * Pick two new fonts if you don't want to use the LLC selected fonts.
+        * Pick a color palette - the LLC project uses 3 colours from [this palette](http://coolors.co/app/fdecef-cecccc-9d6381-612940-0f110c).   
+        See below for more colour resources.
+        * Pick a background image from the **project > images** folder or use one of the resources from [here](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b).
         * If using your own images, here are some suggested image sizes:
           * profile image or the Loves section - 400px width x 400px height
           * background images - 1000-1400px width
@@ -1202,75 +1197,8 @@ text-transform: lowercase;</textarea>
     
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #Part 2
+        #Part 2 (1:20)
         ##CSS, CSS and more CSS!
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Inheritance and Specificity (1:30)
-
-        One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
-
-        ```
-        <body>
-          <h1>My Website</h1><!-- child of body, sibling of p -->
-          <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
-        </body>
-        ```
-
-        CSS properties in the `body` selector is inherited by the descendants elements. When a more specific selector is used (e.g. `h1`), it overrides the inherited values.
-        ```
-        body {
-          color: #222222;
-        }
-        h1 {
-          color: blue;
-        }
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #6: Typography
-
-        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts.)<!-- .element: class="note" -->
-
-        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.
-        Change the `font-weight` if you want to change it to a thinner or thicker font.
-
-        ```
-        body {
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 300;
-        }
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #6: Typography (continued)
-        
-        Now let&#39;s set a different font for only the headings. 
-        
-        To target multiple selectors at the same time, you can *combine* selectors with a comma.
-
-        ```
-        h1, 
-        h2 {
-          font-family: 'Bad Script', cursive;
-        }
-        ```
-        Your page should now look like [exercise 6](project/reference/exercise-6.html) in the reference folder.
-      </script>
-    </section>
-
-    <section class="slide title" data-markdown>
-      <script type="text/template">
-        #Class attributes & CSS Comments
       </script>
     </section>
     
@@ -1278,7 +1206,8 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         # Class attributes
         
-        Remember adding a class attribute to the About & Loves section? They were added to differentiate them, to give each section *different* styles.
+        Remember adding a class attribute to the About & Loves section?  
+        They were added to give each section *different* styles.
         
         ```xml
         <section id="about" class="about">
@@ -1289,7 +1218,7 @@ text-transform: lowercase;</textarea>
           ...
         </section>
         ```
-        <!-- .element: class="note" -->**Note**: `id` attributes can also be used for CSS but that `id` can only be used once per page. Some people prefer to use only classes for styling because of this rule.
+        **Note**: `id` attributes can also be used for CSS but can only be used once per page. Some prefer to use only classes for styling because of this rule but it's a personal preference.  Read more about it [here](http://oli.jp/2011/ids/) and [here](https://css-tricks.com/the-difference-between-id-and-class/).
       </script>
     </section>
     
@@ -1297,17 +1226,18 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         # Class attributes
         
-        Instead of using `section` as the selector, use the `class` name, defined by leading period.
+        Instead of using `section` as the selector, use the `class` name.
         
-        Applies to *any* element with the `class` of **about**.
+        Class selectors are defined by leading period.
+        
         ```
+        /* applies to any element with the class of about */
         .about { 
           background: red; 
         }
         ```
-        
-        Targets *all* `section` elements:
         ```
+        /* targets ALL section elements */
         section { 
           background: blue; 
         }
@@ -1319,9 +1249,9 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Organizing CSS with Comments
         
-        Use CSS comments to organize your styles. It must start with `/*` and end with `*/` but can contain any characters in between. 
+        Use CSS comments to organize your styles. 
         
-        Use whichever comment style works for you but here's a few common conventions: 
+        It must start with `/*` and end with `*/` but can contain any characters in between. Use whichever comment style works for you but here's a few common conventions: 
         
         ```
         /* CSS Comments */
@@ -1340,17 +1270,32 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #7 - Background colours
+        #Background colours
         
         Adding background colours to sections of the page is not only a design convention, it can  also help to visualize the HTML blocks of content.
         
-        In the final sample project, the header and navigation have the same background colour.  Select both by *combining* the selector.
+        In the final sample project, the `<header>` uses a light background colour.  
+        
+        > what selector should be used to apply this style?
+        
+<pre class="delayed"><code>header {
+  
+}</code></pre>
+        </script>
+      </section>
+
+      <section class="slide" data-markdown>
+        <script type="text/template">
+        #Class Exercise #7 - Background colours (1:30)
+        
+        Let's update our project.  
+        
+        Add comments to block off and organize the CSS file.  Use the sample below as reference.
 
         ```
-        /* PAGE HEADER & NAV
+        /* PAGE HEADER
         -----------------------------------------*/
-        header, 
-        nav {
+        header {
           background: #CECCCC; /* or use your own colour palette */
         }
 
@@ -1363,7 +1308,8 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Class Exercise #7 - Background colours
         
-        Next, apply a background colour to just the "Loves" section. The "About" section is getting a different treatment in a later exercise.
+        Next, apply a background colour to just the "Loves" section.  
+        <span class="note">(The "About" section is getting a different treatment in a later exercise.)</span>
         
         ```
         /* LOVES - things I love 
@@ -1417,10 +1363,9 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         # The Box Model
         
-        The CSS **Box Model** describes the way CSS determines the size and spacing of HTML elements.
-        To the browser, every HTML element is a rectangular / square box.
+        The CSS **Box Model** describes the way CSS determines the size and spacing of HTML elements. To the browser, every HTML element is a rectangular / square box.
 
-        If we show the outlines of all the elements in our current HTML document, it will look like this:
+        In the current project HTML document, the red lines in the examle below represent the outlines of all the elements.
         
         ![](framework/img/workshop/box-borders-example.jpg)
         
@@ -1448,11 +1393,13 @@ text-transform: lowercase;</textarea>
     
     <section id="margin-padding" class="slide" data-markdown>
       <script type="text/template">
-        #Margin and Padding Values
+        #Margin and Padding
 
         The values for both `margin` and `padding` can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
         
         Setting the value to "0" will *remove* any default space and any positive value will *add* space.
+        
+        Margin can also use negative values. Padding cannot.
 
         ```css
         padding: 2px 10px 2px 10px; /* top, right, bottom, left */
@@ -1460,8 +1407,20 @@ text-transform: lowercase;</textarea>
         padding: 2px 10px; /* top & bottom, right and left */
         padding: 2px /* all sides have the same value */
         ```
+        ```css
+        margin: 2px 10px 2px 10px; /* top, right, bottom, left */
+        margin: 2px 10px 2px; /* top, right & left, bottom */
+        margin: 2px 10px; /* top & bottom, right and left */
+        margin: 2px /* all sides have the same value */
+        ```
+      </script>
+      </section>
 
-        Both margin and padding can also be used by targeting a specific side.
+      <section class="slide" data-markdown>
+      <script type="text/template">
+        #Margin and Padding
+        
+        Both margin and padding can also used the longhand property to target a specific side.
 
         ```css
         margin-top: 2px;
@@ -1469,13 +1428,20 @@ text-transform: lowercase;</textarea>
         margin-bottom: 2px;
         margin-left: 2px;
         ```
+        
+        ```css
+        padding-top: 2px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        ```
       </script>
     </section>
 
     <section class="slide">
       <h1>Practice!</h1>
 
-      <p>Practice using margin and padding below using 1 to 4 values.</p>
+      <p>Practice using margin and padding below, using 1 to 4 values.</p>
       <textarea class="snippet" data-subject="#example">background: lightblue;
 padding: 0px;
 margin: 0px;</textarea>
@@ -1500,11 +1466,11 @@ border: 1px solid green;</textarea>
         <p style="box-sizing: content-box;">Border box example.</p>
       </div>
 
-      <p>Notice how the size of the box gets wider?<p>
+      <p>Notice how the size of the box gets wider? Let's look at the math.<p>
       <p style="font-size: 28px;">width + padding left + padding right + border left + border right = total size<br> 
       450 + 35 + 35 + 15 + 15 = 550px</p>
       
-      <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;">¯\_(ツ)_/¯</code></pre>
+      <pre class="delayed"><code style="background:transparent;border:none;font-weight:bold;font-size:40px;">¯\_(ツ)_/¯</code></pre>
     </section>
         
     <section class="slide">
@@ -1537,7 +1503,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         # * { Box-sizing: Border-box }
         
-        Add this snippet to your project now (and to all future projects) to fix how the width/padding/border size is rendered.
+        Add this snippet to your project (and to all future projects) to fix how the width/padding/border size is rendered.
         
         ```
         /* apply a natural box layout model to all elements, but allowing components to change */
@@ -1554,14 +1520,16 @@ border: 15px solid green;</textarea>
         See more about The Box Model <!-- .element: class="note" --> [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
       </script>
     </section>
-  
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise #8 - Spacing & Typography
+        #Class Exercise #8 - Spacing (2pm)
         
         (Make sure the box model fix from the previous slide has been added to<!-- .element: class="note" --> **styles.css** before proceeding. Also, use the amount of space that looks good to you & use the examples below as a guide.)
         
-        Add some padding to all the sections (except the nav) so the content is not squished to the edge and has consistent styling. Combine the selectors to target them all at the same time.
+        Add padding to all the portions of the page so the content is not squished to the edge and has consistent styling. 
+        
+        Combine the selectors to target them all at the same time.
         
         ```
         header, 
@@ -1570,6 +1538,39 @@ border: 15px solid green;</textarea>
           padding: 100px 150px;
         }
         ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #8 - Spacing 
+        
+        Notice the white space around the edge of the page? That's default space in the `body` element. 
+        
+        Reset it by setting the values to 0.
+
+        ```
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        ```
+        
+        Use `margin` to adjust the default space around the  `<h1>` and `<h2>` tag.  (You can *inspect the element* using the dev tools to see the default margin.)
+        
+        ```
+        h1, h2 {
+          margin: 0; /* removes default space */
+        }
+        ```
+        
+        Your page should now look similar to [exercise-8.html](project/reference/exercise-8.html) in your **reference** folder.
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #8 - Spacing
         
         The final project also has the content in the "Loves" and footer section centered.  How can we target all the content in both of those sections at the same time?
         
@@ -1607,24 +1608,6 @@ border: 15px solid green;</textarea>
           line-height: 1.5; /* adjusts space between the lines */
         }
         ```
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise #8 - Spacing & Typography
-        
-        Just one more thing. Notice the white space around the edge of the page? That's default space in the `body` element. 
-        
-        Reset it by setting the values to 0.
-
-        ```
-        body {
-          margin: 0;
-          padding: 0;
-        }
-        ```
-        Your page should now look similar to [exercise-8.html](project/reference/exercise-8.html) in your **reference** folder.
       </script>
     </section>
     

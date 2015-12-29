@@ -180,11 +180,15 @@ iframe {
   margin-bottom: 20px;
 }
 pre {
-  margin: 8px 0 30px;
+  // margin: 8px 0 30px;
+  margin: 30px 0 0;
   white-space: pre-wrap;
 
   code {
     overflow-y: auto;
+  }
+  + pre {
+    margin-top: 15px;
   }
 }
 code {
@@ -346,14 +350,6 @@ a.highlight {
   img {
     max-width: 100%;
   }
-  &:target {
-    /* overflow: auto; */
-  }
-  &.js-fiddle > iframe:only-of-type {
-    position: static;
-    width: 525px;
-    height: 350px;
-  }
   &.centered {
     text-align: center;
 
@@ -383,6 +379,7 @@ a.highlight {
   transform-style: preserve-3d;
   padding-left: 8%;
   padding-right: 8%;
+  background: $gray-dark;
 
   h1, h2 {
     position: relative;
@@ -395,10 +392,11 @@ a.highlight {
     line-height: 1.1;
   }
   h2 {
-    color: $gray;
+    color: $white;
+    letter-spacing: 0.05rem;
     font-size: $font-size-heading;
     font-family: "Quicksand",sans-serif;
-    letter-spacing: -0.05em;
+    // letter-spacing: -0.05em;
     text-transform: uppercase;
   }
 }
