@@ -9,19 +9,30 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
+  margin: 0; /* removes default space */
 }
 a {
   color: #9D6381; 
 }
-
-
-/* PAGE HEADER & NAV
------------------------------------------*/
 header, 
-nav {
+section, 
+footer {
+  padding: 100px 150px;
+}
+.loves, 
+footer {
+  text-align: center;
+}
+
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
   background: #CECCCC;
 }
 

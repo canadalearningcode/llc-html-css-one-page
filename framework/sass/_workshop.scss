@@ -28,11 +28,8 @@
   .screenshot {
     margin-right: 20px;
   }
-  .nav {
-    @include label(0, red);
-  }
   .header {
-    @include label(247, blue);
+    @include label(267, blue);
   }
   .about {
     @include label(326, green);

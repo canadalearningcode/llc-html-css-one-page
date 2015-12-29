@@ -8,16 +8,21 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; 
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
-  margin: 0;
+  margin: 0; /* removes default space */
+  font-weight: normal; /* removes default bold style */
 }
 h1 {
-  font-size: 75px;
+  font-size: 75px;  
+}
+p {
+  font-size: 18px;
+  line-height: 1.5; /* adjusts space between the lines */
 }
 a {
   color: #9D6381; 
@@ -25,18 +30,17 @@ a {
 header, 
 section, 
 footer {
-  padding: 100px 150px
+  padding: 100px 150px;
 }
-p {
-  font-size: 18px;
-  line-height: 1.5;
+.loves, 
+footer {
+  text-align: center;
 }
 
 
-/* PAGE HEADER - heading and nav
+/* PAGE HEADER
 -----------------------------------------*/
-header, 
-nav {
+header {
   background: #CECCCC;
 }
 
@@ -54,5 +58,3 @@ footer {
   background: #0F110C;
   color: #CECCCC;
 }
-
-

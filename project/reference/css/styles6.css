@@ -1,7 +1,40 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
+}
+a {
+  color: #9D6381; 
+}
+
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
+  background: #CECCCC;
+}
+
+
+/* LOVES - things I love 
+-----------------------------------------*/
+.loves {
+  background: #9D6381;
+}
+
+
+/* FOOTER - contact info
+-----------------------------------------*/
+footer {
+  background: #0F110C;
+  color: #CECCCC;
 }
