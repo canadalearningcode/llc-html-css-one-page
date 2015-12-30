@@ -104,6 +104,326 @@
         <!-- .element: class="delayed" -->**Important!**  If you test your links now, it may not seem like it's working.  The content on the page has to be long enough to scroll.  You can try testing your links after the next exercise.
       </script>
     </section>
+    
+    <!-- <section class="slide" data-markdown>
+      <script type="text/template">
+        #Inline & Block Elements
+
+        **Block** elements span 100% of its container and takes sizing properties (margin, padding, height and width).
+        **Inline** elements are the same height and width of their content, does not apply sizing properties as expected and displays side by side, in a line.
+
+        When in doubt, put a background colour on the element and if it spans the width of the container, then it's a block element. Otherwise, it's an inline element.
+
+        <textarea class="snippet" data-subject="#block" style="margin:0;">background: ;</textarea>
+        <p id="block">paragraph example</p>
+        <br>
+        <textarea class="snippet" data-subject="#inline">background: ;</textarea>
+        <a id="inline" href="#">link example</a>
+      </script>
+    </section> -->
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Style the nav!
+        ##CSS display & position
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Inline & Block review
+        
+        What are some characteristics of **inline** elements?
+        
+        * same height and width of their content <!-- .element: class="delayed" -->
+        * does not apply sizing properties (margin, padding, height and width) as expected<!-- .element: class="delayed" -->
+        * displays side by side, in a line<!-- .element: class="delayed" -->
+        
+        What are some characteristics of<!-- .element: class="delayed" --> **block** elements?
+        
+        * spans 100% of its container<!-- .element: class="delayed" -->
+        * takes sizing properties (margin, padding, height and width)<!-- .element: class="delayed" -->
+        * by default, stacks on top of each other<!-- .element: class="delayed" -->
+        
+        <br>
+        These are default behaviors of these elements but you can change that with the CSS<!-- .element: class="delayed" --> `display` property.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS Display Property
+
+        CSS can be used to change the behavior of inline and block elements with the `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block` (has both inline & block characteristics).
+
+        In the example below, let's first add padding and margin to both elements to see what happens.  Then we'll change the display values to see how that changes the behaviors.
+
+        <textarea class="snippet" data-subject="#display">.inline {
+          background: lightblue;
+          padding: ;
+          margin: ;
+          display: ;
+        }
+        .block {
+          background: orange;
+          padding: ;
+          margin: ;
+          display: ;
+        }</textarea>
+        
+        <aside id="display">
+          <span class="inline">inline element</span>
+          <div class="block">block element</div>
+        </aside>
+        
+        
+        More about inline & block elements and the display property <!-- .element: class="footnote" --> [here](https://css-tricks.com/almanac/properties/d/display/).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Display: sizing and layout
+        
+        Changing the `display` property not only changes the sizing properties but is sometimes used for layout styles (e.g. making block elements sit side by side). Earlier we used `float` to align elements side by side (profile image and About text).  
+
+        As you've already seen, there are often more than one way to do the same thing.
+        
+        Today we are going to use to `display` to override the default inline behaviour to change the sizing properties of the navigation links. 
+        
+        <br>
+        To learn more about `display` for layout styles vs `float` (as well as other techniques), see these further readings [here](http://www.ternstyle.us/blog/float-vs-inline-block) and [here](http://blog.karenmenezes.com/2014/apr/13/floats-inline-block-or-display-table-or-flexbox/).
+      </script>
+    </section>
+    
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        # Let's style that nav already!
+        
+        These next few steps will take your nav from the example on the left to the one on the right. 
+
+        Let's go!
+        
+        ![](framework/img/workshop/nav-no-style.png)
+        ![](framework/img/workshop/nav-styled.png)
+        
+        In your project, let's temporarily put a background colour on the links to see more clearly the spacing changes. What selector should be used to target only the links within the `<nav>`?
+        
+        <div class="delayed">
+          <pre><code>nav a {
+          background: blue;
+        }</code></pre>
+
+          <img src="framework/img/workshop/nav-bg.png">
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Padding vs Margin
+        
+        Adding **padding** to the anchor link vs **margin** has a specific effect here.  Looking at the example below, let's compare both, to see what the differences are.
+        
+        <div class="col-2">
+          <pre><code>nav a {
+          background: blue;
+          padding: 15px;
+        }</code></pre>
+        ![](framework/img/workshop/link-padding.png)
+        </div>
+        
+        <div class="col-2">
+          <pre><code>nav a {
+          background: blue;
+          margin: 15px;
+        }</code></pre>
+        ![](framework/img/workshop/link-margin.png)
+        </div>
+        
+        <br>
+        Padding adds space <!-- .element: class="delayed" -->*inside* the element, making the hit area bigger bigger, which is better for usability. 
+        
+        But there is still something wrong.  Notice how the padding at the top of the link is not showing properly?  That's because links are an<!-- .element: class="delayed" -->  *inline* element. 
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #11: nav links
+
+        What `display` value should be used to keep the links aligned side by side but also take the padding property values properly? <span class="delayed"><code>inline-block</code></span>
+        
+        <div class="delayed">
+          <pre><code>nav a {
+          padding: 15px;
+          display: inline-block;
+        }</code></pre>
+          
+          Ta da!
+        </div>
+      </script>
+    </section>
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #11: nav links (continued)
+        
+        1. delete the temp/test background colour
+        1. change the text to uppercase letters using `text-transform`
+        1. remove the default underline using `text-decoration`
+        1. add comments to remind yourself what each property is used for
+        
+        ```
+        nav a {
+          padding: 15px; /* one value adds same amount of padding on all sides */
+          display: inline-block; /* changes links from default inline to add padding properly */
+          text-transform: uppercase; /* changes letters to uppercase */
+          text-decoration: none; /* removes underline */
+        }
+        ```
+        
+        Now let's make the text align to the right using `text-align`. Set this property on the *parent* of the links, `<nav>`, so it can align all the child elements,`<a>`.
+          
+        ```
+        nav {
+          text-align: right;
+        }
+        ```
+        
+        Your page should now look similar to [exercise-11.html](project/reference/exercise-11.html) in your **reference** folder.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Next up! Hover effects and fixed nav
+          
+        To create this effect, we are going to use a `pseudo-class` and `position`.
+        
+        ![exercise example](framework/img/workshop/hover-transition.gif)
+        </nav>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Intro to the `position` property
+        
+        So far, we've seen that `float` and `display` can be used to manipulate the default layout and stacking flow but there is one more option: `position`.
+
+        The `position` property can be used to place elements in a specific spot relative to another element or the page.  It won't affecting the elements around it the way floats do. There are four value options: `relative`, `absolute`, `fixed` and `static` (default).
+
+        Today we are using `fixed` positioning and will focus on that option. 
+        
+        <br>
+        This concept is one of the more complicated parts of CSS and takes some practice. To view more about positioning, check out [this extra resource](framework/positioning.html).
+
+        Being able to place elements wherever you want sounds great at first, but should actually be used sparingly. Here are two more indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Fixed positioning
+        
+        First, pick a `position` *value* type, which will be `fixed` for today's project. Then, `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
+        
+        Fixed will always be positioned to the viewport and will always stay on the same spot on the page (where ever you put it), even on page scroll. Let's use the nav HTML as an example.
+        
+        ```
+        <nav>
+          <a href="#about">About</a>
+          <a href="#loves">Loves</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        ```
+        
+        Apply `position` to the `nav`, not the `a` because we want to position the *entire* navigation block. Let's go through each property one by one. <span class="footnote">(advance the slide to see the answer)</span>
+        
+        <textarea class="snippet" data-subject="#fixed">nav { 
+  background: #CECCCC;
+  position: ;
+  top: ;
+  left: ;
+  width: ; 
+}</textarea>
+
+        <nav id="fixed">
+          <a href="#about" style="border-bottom:none;padding:20px;">About</a>
+          <a href="#loves" style="border-bottom:none;padding:20px;">Loves</a>
+          <a href="#contact" style="border-bottom:none;padding:20px;">Contact</a>
+        </nav>
+
+        <div class="delayed">
+          <pre><code>nav { 
+          background: #CECCCC;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%; 
+        }</code></pre>
+
+          You can also use `right: 0` rather than `width: 100%` and it will work too!
+        </div>  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise #12: Fixed Nav bar (10mins)
+        
+        Fix that nav! Using the previous example, set your navigation to be fixed at the top of the page.  
+        
+        Try not to copy & paste the code but use it as a reference guide.
+        
+        <br>
+        **Bonus exercise**: When you fix the nav, the header will no longer stack under it and will instead go *underneath* it.  Add some space to the top of the header to push it down a bit.
+        
+        Your page should now look similar to [exercise-12.html](project/reference/exercise-12.html) in your **reference** folder.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class exercise #11: Hover
+        
+        Let's first change the background colour of the nav links on hover.  Right now it's transparent (by default).  Attach `:hover` to the `nav a` element to target the hover state on the nav *link*.
+        
+        ```
+        nav a:hover {
+          background: #9D6381;
+        }
+        ```
+        
+        This example used the same colour for the background as the link so now we'll have to change the font colour. Also, if you want to add some space around the links, now would be a good time to use `margin` since we want to push the elements away from each other.
+        
+        
+        ```
+        nav a {
+          margin: 10px; /* adds space around each link */
+        }
+        nav a:hover {
+          background: #9D6381;
+          color: #CECCCC;
+        }
+        ```
+        
+        How about some rounded corners?
+        
+        ```
+        nav a {
+          margin: 10px; /* adds space around each link */
+        }
+        nav a:hover {
+          background: #9D6381;
+          color: #CECCCC;
+          border-radius: 4px; /* adds rounded corners */
+        }
+        ```
+      </script>
+    </section>
   </main><!-- cls main section -->
   
   <script src="framework/scripts/jquery-1.11.0.min.js"></script>

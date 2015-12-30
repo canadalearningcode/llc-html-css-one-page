@@ -80,14 +80,14 @@
     background: rgba(255, 255, 255, 0.498039);
   }
 }
-
 .final-exercise {
-  background: url(../img/workshop/excited-baby.gif) no-repeat 50%;
+  background: linear-gradient(rgba($black, 0.5), rgba($black, 0)), url(../img/workshop/excited-baby.gif) no-repeat 50%;
   background-size: cover;
   padding-top: 10px;  
   
   h1 {
     font-weight: bold;
+    font-size: 70px;
   }
 }
 

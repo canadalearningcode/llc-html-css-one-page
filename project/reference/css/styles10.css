@@ -8,62 +8,63 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; 
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
-  margin: 0;
-  font-weight: normal;
+  margin: 0; /* removes default space */
+  font-weight: normal; /* removes default bold style */
 }
 h1 {
-  font-size: 75px;
+  font-size: 75px;  
+}
+p {
+  font-size: 18px;
+  line-height: 1.5; /* adjusts space between the lines */
 }
 a {
   color: #9D6381; 
 }
+a:hover {
+  color: #CECCCC;
+}
 header, 
 section, 
 footer {
-  padding: 100px 150px
+  padding: 100px 150px;
 }
-.loves,
+.loves, 
 footer {
   text-align: center;
-}
-p {
-  font-size: 18px;
-  line-height: 1.5;
 }
 strong {
   color: #9D6381;
 }
+img {
+  border-radius: 50%;
+}
 
 
-/* PAGE HEADER - heading and nav
+/* PAGE HEADER
 -----------------------------------------*/
-header, 
-nav {
+header {
   background: #CECCCC;
 }
 header h1 {
-  font-size: 115px;
+  font-size: 100px;
 }
 header h2 {
   font-size: 32px;
 }
 
 
-/* ABOUT 
+/* ABOUT
 -----------------------------------------*/
-.about {
-  overflow: hidden;
-}
 .profile-img {
   float: right;
   margin-left: 20px;
-  border-radius: 50%;
 }
 
 
@@ -73,8 +74,7 @@ header h2 {
   background: #9D6381;
 }
 .loves img {
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
   margin: 15px;
 }
 
@@ -85,6 +85,3 @@ footer {
   background: #0F110C;
   color: #CECCCC;
 }
-
-
-
