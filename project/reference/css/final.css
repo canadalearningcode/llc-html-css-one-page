@@ -9,91 +9,71 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background: url(../images/toronto.jpg) no-repeat fixed;
-  background-size: cover;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background: url(../images/buildings.jpg) no-repeat fixed;
+  background-size: cover;
 }
 h1, h2 {
   font-family: 'Bad Script', cursive;
-  margin: 0;
-  font-weight: normal;
+  margin: 0; /* removes default space */
+  font-weight: normal; /* removes default bold style */
+  text-transform: lowercase;
 }
 h1 {
-  font-size: 75px;
-  text-transform: lowercase;
+  font-size: 75px;  
+}
+p {
+  font-size: 18px;
+  line-height: 1.5; /* adjusts space between the lines */
+}
+a {
+  color: #9D6381; 
+}
+a:hover {
+  color: #CECCCC;
 }
 header, 
 section, 
 footer {
-  padding: 100px 150px
+  padding: 100px 150px;
 }
-.loves,
+.loves, 
 footer {
   text-align: center;
 }
-p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-strong,
-a {
+strong {
   color: #9D6381;
 }
+img {
+  border-radius: 50%;
+}
 
 
-/* PAGE HEADER - heading and nav
+/* PAGE HEADER
 -----------------------------------------*/
-header, 
-nav {
+header {
   background: #CECCCC;
 }
-header {
-  padding-top: 250px;
-}
 header h1 {
-  font-size: 115px;
-  text-transform: none;
+  font-size: 100px;
+  text-transform: inherit;
 }
 header h2 {
   font-size: 32px;
-}
-
-nav {
-  text-align: right;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; 
-}
-nav a {
-  padding: 15px; /* one value adds same amount of padding on all sides */
-  display: inline-block; /* changes links from default inline element to add padding properly */
-  text-transform: uppercase; /* changes letters to uppercase */
-  text-decoration: none; /* removes underline */
-  margin: 10px; /* adds space around each link */
-  color: #0F110C;
-  font-weight: 400;
-}
-
-nav a:hover {
-  background: #9D6381;
-  color: #CECCCC;
-  border-radius: 4px;  
+  text-transform: inherit;
 }
 
 
-/* ABOUT 
+/* ABOUT
 -----------------------------------------*/
 .about {
-  overflow: hidden;
-  background: rgba(97, 41, 64, 0.90);
-  color: #fff;
+  background: rgba(97, 41, 64, 0.95);
+  color: white;
 }
 .profile-img {
   float: right;
   margin-left: 20px;
-  border-radius: 50%;
 }
 
 
@@ -103,8 +83,7 @@ nav a:hover {
   background: #9D6381;
 }
 .loves img {
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
   margin: 15px;
 }
 
@@ -115,10 +94,3 @@ footer {
   background: #0F110C;
   color: #CECCCC;
 }
-footer img {
-  width: 60px;
-  margin: 5px;
-}
-
-
-
