@@ -1237,15 +1237,19 @@ text-transform: lowercase;</textarea>
         They were added to give each section *different* styles.
         
         ```xml
-        <section id="about" class="about">
+        <section class="about">
           ...
         </section>
         
-        <section id="loves" class="loves">
+        <section class="loves">
           ...
         </section>
         ```
-        **Note**: `id` attributes can also be used for CSS but can only be used once per page. Some prefer to use only classes for styling because of this rule but it's a personal preference.  Read more about it [here](http://oli.jp/2011/ids/) and [here](https://css-tricks.com/the-difference-between-id-and-class/).
+        
+        ---
+        ###Resource
+        
+        Note that `id` attributes can also be used for CSS but can only be used once per page. Some prefer to use only classes for styling because of this rule but it's a personal preference.  Read more about it [here](http://oli.jp/2011/ids/) and [here](https://css-tricks.com/the-difference-between-id-and-class/).
       </script>
     </section>
     
@@ -1303,7 +1307,7 @@ text-transform: lowercase;</textarea>
         
         In the final sample project, the `<header>` uses a light background colour.  
         
-        > what selector should be used to apply this style?
+        > What selector should be used to apply this style?
         
 <pre class="delayed"><code>header {
   
@@ -1803,9 +1807,10 @@ border: 15px solid green;</textarea>
 
         If we look at the previous box outline example again, notice that regardless of the number of characters, the content in the heading tags stack on top of each other.  
         
-        ![](framework/img/workshop/box-borders-stack.png)
+        ![](framework/img/workshop/box-borders-example.jpg)
+        <!-- ![](framework/img/workshop/box-borders-stack.png) -->
         
-        But the links are sitting side by side, in a line.  That's because links are **inline** elements.
+        Links are an example of *inline* elements, which sit side by side, in a line.  That's why you can add a link *within* a paragraph and not disrupt the flow of the text.
         
         ---
         ###Resources
@@ -1890,7 +1895,7 @@ border: 15px solid green;</textarea>
         Adding `overflow: hidden;` to the *parent* of the floated element forces it to 'contain' any floated child elements.
         
         ```
-        <section id="about" class="about">
+        <section class="about">
           <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
           ...
         </section>
@@ -1909,9 +1914,9 @@ border: 15px solid green;</textarea>
         
         This is a concept that requires much more discussion outside of the scope for today.  For more information, check out these extra resources:
         
-        * http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664
-        * http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
-        * http://css-tricks.com/snippets/css/clear-fix/
+        * [CSS Fundamentals: Containing Children](http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664)
+        * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
+        * [Force Element To Self-Clear its Children](http://css-tricks.com/snippets/css/clear-fix/)
       </script>
     </section>
     
