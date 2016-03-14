@@ -20,37 +20,35 @@
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
 <body class="en" data-duration="360">
   <main>
-    <section class="slide welcome">
+    <section class="slide welcome highlight">
       <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
       
-      <div class="instructions no-bullet-list">
+      <div class="instructions">
         <!-- ADD WIFI INFO HERE -->
-        <!-- <h2>Get Connected</h2>
-        <ul class="connected">
-          <li>Network: wifi network</li>
-          <li>Password: wifi password</li>
-        </ul>
+        <!-- <h2>Get <br>Connected</h2>
+        <p><strong>Wifi:</strong> wifi network</p>
+        <p><strong>Password:</strong> wifi password</p>
         <hr> -->
         
         <h2>Download<br> & Install</h2>
-        <ul class="downloads">
-          <li>Learner files (zip file): <a href="http://bit.ly/llc-onepage">http://bit.ly/llc-onepage</a>
+        <ol class="downloads">
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-html-css-one-page/archive/master.zip">http://bit.ly/llc-onepage</a>
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
-              <li>open <strong>slides.html</strong> in the browser to view the slides</li>
+              <li>open <em>slides.html</em> in the browser to view the slides</li>
             </ul>
           </li>
           <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
           <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
           </li>
-        </ul>
+        </ol>
       </div>
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
-    </section>
+    </section> 
     
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
@@ -79,15 +77,23 @@
     
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        #Today&rsquo;s project
+        # Today&rsquo;s project
 
         See the whole project [here](project/reference/final.html).
 
         ![final project](framework/img/workshop/final-project.jpg)
       </script>
     </section>
-
-    <section class="slide title dark" data-markdown>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Course Outline
+        
+        <div class="table-of-contents"></div> 
+      </script>
+    </section>
+    
+    <section class="slide title dark" data-markdown data-toc>
       <script type="text/template">
         #Getting Started
         ##The Web Browser & Writing HTML
@@ -155,7 +161,7 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #Intro to HTML
         ##HyperText Markup Language
@@ -575,7 +581,7 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       #Adding content
       ##Headings, paragraphs, images and links
     </section>
@@ -863,7 +869,7 @@
       </script>
     </section>
     
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #Intro to CSS
         ##Cascading Style Sheets
@@ -1003,7 +1009,13 @@ selector { /* select the link */
         </div>
       </script>
     </section>
-
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #CSS colours <br> & typography
+      </script>
+    </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
         #CSS colours
@@ -1066,7 +1078,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
-    <section class="slide no-bullet-list" data-markdown>
+    <section class="slide nested-list" data-markdown>
       <script type="text/template">
         #Web safe fonts
 
@@ -1087,7 +1099,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
 
-    <section class="slide no-bullet-list" data-markdown>
+    <section class="slide nested-list" data-markdown>
       <script type="text/template">
         #Web Fonts
         
@@ -1384,7 +1396,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
     
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #The Box Model
       </script>
@@ -1404,7 +1416,7 @@ text-transform: lowercase;</textarea>
       </script>
     </section>
     
-    <section class="slide no-bullet-list" data-markdown>
+    <section class="slide nested-list" data-markdown>
       <script type="text/template">
         # The Box Model
         
@@ -1773,10 +1785,10 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-        #More CSS!
-        ##Page layout, Rounded corners,<br> Background images
+        #Page layout
+        ##block, inline, float
       </script>
     </section>
     
@@ -1920,7 +1932,7 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #border-radius
         
@@ -1946,9 +1958,9 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        # pseudo-class & hover effects
+        # Pseudo class & hover effects
         
         It's common to apply a hover style to links. Use CSS *pseudo-class*, `:hover` to accomplish this.  This keyword is *attached* to a selector and specifies a *state* of the element, using a colon and **no** space.
         
@@ -1984,7 +1996,7 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #Background images
 
@@ -2126,7 +2138,7 @@ border: 15px solid green;</textarea>
       </script>
     </section>
     
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #Next steps
       </script>
