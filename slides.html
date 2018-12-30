@@ -96,7 +96,56 @@
     <section class="slide title dark" data-markdown data-toc>
       <script type="text/template">
         #Getting Started
-        ##The Web Browser & Writing HTML
+        ##Websites, The Web Browser & Writing HTML
+      </script>
+    </section>
+
+    <section class="slide website-table" data-markdown>
+      <script type="text/template">
+        #What exactly *is* a website?
+
+        A website is basically a one or more web pages (also known as *HTML documents*), that closely match a file folder structure.
+
+        Today we'll be building a website with one page.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Accessing websites and web pages
+
+        When we want to view a specific page on a website, we provide a *URL* to the browser.
+
+        ```xml
+        https://www.canadalearningcode.ca/about/
+        ```
+
+        The browser uses the URL to determine *how* and *where* to find the files that we're interested in. For example, the URL above would take us to the `About` page on the Canada Learning Code website.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #More about URLs
+
+        URLs typically contain the following pieces:
+
+        - `scheme` - This tells the browser *how* to find the file.
+        - `host` - This is the name of the website itself. It tells the browser *generally* where the file can be found (kind of like a home address).
+        - `path` - This tells the browser *specifically* where the file can be found. If the `host` is the home address, the `path` is the name of the person we're looking for, and which room they're in!
+
+        ```xml
+        <scheme>://<host>/<path>/
+        ```
+
+        ```xml
+        https://www.canadalearningcode.ca/about/
+        ```
+
+        ---
+        ###Resource
+        https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2
       </script>
     </section>
 
