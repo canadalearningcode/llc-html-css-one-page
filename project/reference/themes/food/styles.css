@@ -1,44 +1,45 @@
 /* BASE STYLES
 -----------------------------------------*/
 body {
-  color: #222;
-  background: url(../../images/conference/background.jpg) no-repeat fixed;
+  color: #eee;
+  background: url(../../../images/food/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #ffeb42;
+  color: #ffe1c4;
 }
 
 a:hover {
-  color: #ffd11a;
+  color: #e6be1b;
 }
 
 strong {
-  color: #ffeb42;
+  color: #ff5858;
 }
 
 /* PAGE HEADER
 -----------------------------------------*/
 header {
-  color: #eee;
-  background: #1e3799;
+  background: #003a28;
 }
 
 /* ABOUT
 -----------------------------------------*/
 .about {
-  background: rgba(30, 54, 153, 0.5);
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
 }
 
 /* LOVES - things I love
 -----------------------------------------*/
 .loves {
-  background: #ddd;
+  color: #222;
+  background: #fff3f3;
 }
 
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
-  background: #1e3799;
   color: #eee;
+  background: #003a28;
 }

@@ -2,43 +2,43 @@
 -----------------------------------------*/
 body {
   color: #111;
-  background: url(../../images/legal/background.jpg) no-repeat fixed;
+  background: url(../../../images/sports/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #ffde5c;
+  color: #ffff63;
 }
 
 a:hover {
-  color: #ffcb00;
+  color: yellow;
 }
 
 strong {
-  color: #000146;
+  color: #61009a;
 }
 
 /* PAGE HEADER
 -----------------------------------------*/
 header {
-  background: #eee;
+  background: #fafafa;
 }
 
 /* ABOUT
 -----------------------------------------*/
 .about {
   color: #eee;
-  background: rgba(0, 1, 70, 0.8);
+  background: rgba(17, 17, 17, 0.5);
 }
 
 /* LOVES - things I love
 -----------------------------------------*/
 .loves {
-  background: #eee;
+  background: #fafafa;
 }
 
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
-  background: #000146;
   color: #eee;
+  background: #30004c;
 }

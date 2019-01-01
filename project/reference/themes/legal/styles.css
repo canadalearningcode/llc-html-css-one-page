@@ -1,43 +1,44 @@
 /* BASE STYLES
 -----------------------------------------*/
 body {
-  background: url(../../images/fashion/background.jpg) no-repeat fixed;
+  color: #111;
+  background: url(../../../images/legal/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #5982ff;
+  color: #ffde5c;
 }
 
 a:hover {
-  color: #83a1fb;
+  color: #ffcb00;
 }
 
 strong {
-  color: #000;
+  color: #000146;
 }
 
 /* PAGE HEADER
 -----------------------------------------*/
 header {
-  background: #fff;
+  background: #eee;
 }
 
 /* ABOUT
 -----------------------------------------*/
 .about {
   color: #eee;
-  background: rgba(89, 130, 255, 0.9);
+  background: rgba(0, 1, 70, 0.8);
 }
 
 /* LOVES - things I love
 -----------------------------------------*/
 .loves {
-  background: #fff;
+  background: #eee;
 }
 
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
-  background: #000;
-  color: #fff;
+  background: #000146;
+  color: #eee;
 }

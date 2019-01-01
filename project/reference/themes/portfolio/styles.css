@@ -2,19 +2,19 @@
 -----------------------------------------*/
 body {
   color: #111;
-  background: url(../../images/sports/background.jpg) no-repeat fixed;
+  background: url(../../../images/portfolio/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #ffff63;
+  color: #ff4747;
 }
 
 a:hover {
-  color: yellow;
+  color: #f71e1e;
 }
 
 strong {
-  color: #61009a;
+  color: #ff4747;
 }
 
 /* PAGE HEADER
@@ -27,7 +27,7 @@ header {
 -----------------------------------------*/
 .about {
   color: #eee;
-  background: rgba(17, 17, 17, 0.5);
+  background: rgba(117, 0, 0, 0.8);
 }
 
 /* LOVES - things I love
@@ -39,6 +39,6 @@ header {
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
+  background: #111;
   color: #eee;
-  background: #30004c;
 }

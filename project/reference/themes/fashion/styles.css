@@ -1,44 +1,43 @@
 /* BASE STYLES
 -----------------------------------------*/
 body {
-  color: #111;
-  background: url(../../images/coffee-shop/background.jpg) no-repeat fixed;
+  background: url(../../../images/fashion/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #ffe1c4;
+  color: #5982ff;
 }
 
 a:hover {
-  color: #e6be1b;
+  color: #83a1fb;
 }
 
 strong {
-  color: #650202;
+  color: #000;
 }
 
 /* PAGE HEADER
 -----------------------------------------*/
 header {
-  background: #ffe1c4;
+  background: #fff;
 }
 
 /* ABOUT
 -----------------------------------------*/
 .about {
   color: #eee;
-  background: rgba(17, 17, 17, 0.5);
+  background: rgba(89, 130, 255, 0.9);
 }
 
 /* LOVES - things I love
 -----------------------------------------*/
 .loves {
-  background: #ffe1c4;
+  background: #fff;
 }
 
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
-  background: #111;
-  color: #eee;
+  background: #000;
+  color: #fff;
 }

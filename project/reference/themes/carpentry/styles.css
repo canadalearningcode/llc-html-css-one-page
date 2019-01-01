@@ -1,26 +1,27 @@
 /* BASE STYLES
 -----------------------------------------*/
 body {
-  color: #eee;
-  background: url(../../images/food/background.jpg) no-repeat fixed;
+  color: #111;
+  background: url(../../../images/carpentry/background.jpg) no-repeat fixed;
 }
 
 a {
-  color: #ffe1c4;
+  color: #fff0cb;
 }
 
 a:hover {
-  color: #e6be1b;
+  color: #ffda80;
 }
 
 strong {
-  color: #ff5858;
+  color: #612940;
 }
+
 
 /* PAGE HEADER
 -----------------------------------------*/
 header {
-  background: #003a28;
+  background: #fff0cb;
 }
 
 /* ABOUT
@@ -30,16 +31,16 @@ header {
   background: rgba(17, 17, 17, 0.5);
 }
 
+
 /* LOVES - things I love
 -----------------------------------------*/
 .loves {
-  color: #222;
-  background: #fff3f3;
+  background: #fff0cb;
 }
 
 /* FOOTER - contact info
 -----------------------------------------*/
 footer {
+  background: #1f1100;
   color: #eee;
-  background: #003a28;
 }
