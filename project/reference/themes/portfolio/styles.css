@@ -1,0 +1,44 @@
+/* BASE STYLES
+-----------------------------------------*/
+body {
+  color: #111;
+  background: url(../../../images/themes/portfolio/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ff4747;
+}
+
+a:hover {
+  color: #f71e1e;
+}
+
+strong {
+  color: #ff4747;
+}
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
+  background: #fafafa;
+}
+
+/* ABOUT
+-----------------------------------------*/
+.about {
+  color: #eee;
+  background: rgba(117, 0, 0, 0.8);
+}
+
+/* LOVES - things I love
+-----------------------------------------*/
+.loves {
+  background: #fafafa;
+}
+
+/* FOOTER - contact info
+-----------------------------------------*/
+footer {
+  background: #111;
+  color: #eee;
+}

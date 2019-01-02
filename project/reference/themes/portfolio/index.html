@@ -1,0 +1,60 @@
+<!--
+Hello there, and thanks for peaking under the hood of this example final project!
+You probably noticed that the images and colours used in on this page are different from the workshop exercises.
+To do something similar, see notes [1] and [2] below.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Laura Ipsum | Designer & Developer</title>
+    <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../css/final.css">
+    <!--
+        [1]
+        This secondary stylesheet includes the theme-specific colours and background image.
+        Since we're using it to override the workshop colours, it must be included *after* the base CSS file.
+    -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="../../../images/logo.png">
+  </head>
+
+  <body>
+    <header>
+      <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
+      <h2>I'm a digital <strong>designer</strong>, <strong>developer</strong>. Welcome to my portfolio!</h2>
+    </header>
+
+    <section id="about" class="about">
+      <!--
+        [2]
+        This profile image lives in one of the 'theme' folders.
+        If you'd like to use the theme images, make sure that your <img> tags include the correct folder name.
+      -->
+      <img class="profile-img" src="../../../images/themes/portfolio/profile.jpg" alt="Laura Ipsum">
+
+      <h1>About Me</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section id="loves" class="loves">
+      <h1>Love, Love, Love</h1>
+      <p>Here are a few things that I really love.</p>
+      <img src="../../../images/logo-llc.jpg" alt="Ladies Learning Code logo">
+      <img src="../../../images/doughnuts.jpg" alt="doughnuts">
+      <img src="../../../images/robots.jpg" alt="lovebot">
+    </section>
+
+    <footer id="contact">
+      <h1>Contact Me</h1>
+      <p>Email me at <a href="mailto:hello@myemail.com">hello@myemail.com</a> or find me around the web!</p>
+
+      <a href="https://twitter.com/"><img src="../../../images/twitter.png"></a>
+      <a href="https://facebook.com/"><img src="../../../images/facebook.png"></a>
+      <a href="https://linkedin.com/"><img src="../../../images/linkedin.png"></a>
+    </footer>
+  </body>
+</html>

@@ -84,7 +84,29 @@
         ![final project](framework/img/workshop/final-project.jpg)
       </script>
     </section>
-    
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Themes
+
+        We've also included some themed assets, and examples of how you can use them to customize your site!
+
+        !['Food' theme](framework/img/workshop/theme-food.png)<!-- .element: width="48%" -->
+        !['Coffee Shop' theme](framework/img/workshop/theme-coffee-shop.png)<!-- .element: width="48%" -->
+        !['Conference' theme](framework/img/workshop/theme-conference.png)<!-- .element: width="48%" -->
+        !['Fashion' theme](framework/img/workshop/theme-fashion.png)<!-- .element: width="48%" -->
+        !['Carpentry' theme](framework/img/workshop/theme-carpentry.png)<!-- .element: width="48%" -->
+        !['Legal' theme](framework/img/workshop/theme-legal.png)<!-- .element: width="48%" -->
+        !['Portfolio' theme](framework/img/workshop/theme-portfolio.png)<!-- .element: width="48%" -->
+        !['Sports' theme](framework/img/workshop/theme-sports.png)<!-- .element: width="48%" -->
+
+        ---
+        ###Theme Assets
+        * The theme images can be found in `/project/images/themes`
+        * The example theme code can be found in `/project/reference/themes`
+      </script>
+    </section>
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Course Outline
@@ -96,7 +118,56 @@
     <section class="slide title dark" data-markdown data-toc>
       <script type="text/template">
         #Getting Started
-        ##The Web Browser & Writing HTML
+        ##Websites, The Web Browser & Writing HTML
+      </script>
+    </section>
+
+    <section class="slide website-table" data-markdown>
+      <script type="text/template">
+        #What exactly *is* a website?
+
+        A website is basically a one or more web pages (also known as *HTML documents*), that closely match a file folder structure.
+
+        Today we'll be building a website with one page.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Accessing websites and web pages
+
+        When we want to view a specific page on a website, we provide a *URL* to the browser.
+
+        ```xml
+        https://www.canadalearningcode.ca/about/
+        ```
+
+        The browser uses the URL to determine *how* and *where* to find the files that we're interested in. For example, the URL above would take us to the `About` page on the Canada Learning Code website.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #More about URLs
+
+        URLs typically contain the following pieces:
+
+        - `scheme` - This tells the browser *how* to find the file.
+        - `host` - This is the name of the website itself. It tells the browser *generally* where the file can be found (kind of like a home address).
+        - `path` - This tells the browser *specifically* where the file can be found. If the `host` is the home address, the `path` is the name of the person we're looking for, and which room they're in!
+
+        ```xml
+        <scheme>://<host>/<path>/
+        ```
+
+        ```xml
+        https://www.canadalearningcode.ca/about/
+        ```
+
+        ---
+        ###Resource
+        https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2
       </script>
     </section>
 
@@ -314,7 +385,11 @@
         
         Having a good text editor and learning how to use it to its full potential will help your work flow. Today, let's update the text wrapping option to make it easier to read long blocks of code and text.
         
-        Go to **Preferences** to open the customization options.
+        To open the customization options:
+
+        *On a Mac:* Open the **Atom** menu and go to **Preferences**.
+
+        *On Windows:* Open the **File** menu and go to **Settings**.
 
         ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
 
@@ -751,6 +826,69 @@
         ```
       </script>
     </section>
+
+    <section class="slide project" data-markdown>
+      <script type="text/template">
+        #Paths
+
+        Even though today's project only has one page, it includes lots of different content.
+
+        Some of that content lives directly within the page itself (ie. the text), and some of it may live elsewhere (eg. in the images folder, on other websites, etc.).
+
+        When we want to display some content that lives *outside* of the current page, we have to tell the browser where to find it. This information is called a `path`.
+      </script>
+    </section>
+
+    <section class="slide project" data-markdown>
+      <script type="text/template">
+        #Types of Paths
+
+        Paths allow the browser to find, retrieve, and display external resources such as images, CSS/JS files, and even other pages.
+
+        There are two different types of paths:
+
+        * `Relative` - These tell the browser how to get from the current page to the external resource.
+        * `Absolute` - These tell the browser *exactly* where the external resource can be found online.
+      </script>
+    </section>
+
+    <section class="slide project" data-markdown>
+      <script type="text/template">
+        #Relative Paths
+
+        **We use relative paths when we're trying to make a connection between two resources within our own website.**
+
+        Relative paths start from the location of the current page, and tell the browser which folders should be looked in to find the external resource.
+
+        ```xml
+        images/backgrounds/dark/dark-background-1.jpg
+        ```
+
+        We can think of relative paths like directions.
+
+        We'll be using relative paths to add images shortly!
+      </script>
+    </section>
+
+    <section class="slide project" data-markdown>
+      <script type="text/template">
+        #Absolute Paths
+
+        **We use absolute paths to request resources that live *outside* of our own website (eg. elsewhere online).**
+
+        ```xml
+        // Image
+        http://website.com/images/image-1.jpg
+
+        // CSS
+        https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css
+        ```
+
+        Absolute paths start with a protocol (ie. `http` or `https`), followed by the location of the resource.
+
+        If relative paths are like directions, an absolute path is like a home address.
+      </script>
+    </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -797,7 +935,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Image file paths
+        #Image file organization
 
         It's best practice (but not required) to put image files into its own folder to keep the project files organized.  Today's **project** directory already includes an **images** folder.
 
@@ -812,7 +950,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Image file paths
+        #Image file organization
         If you have a folder in a folder, then add the subfolder into the path.
 
         ```
@@ -830,6 +968,8 @@
         A hyperlink references data, such as a web document, that the reader can directly follow, usually by clicking or hovering. 
         
         Use the anchor tag, `<a>` to create the link. It also needs an `href` attribute to provide information for the location of the resource.
+
+        The example below includes an *absolute* path to the Ladies Learning Code homepage.
 
         ```xml
         <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
@@ -1113,35 +1253,35 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise: Using Google Fonts
-        
+        #Class Exercise: How to Use Google Fonts
+
         1. Go to [Google Fonts](http://www.google.com/fonts).
-        1. **Add to Collection** to select a font. 
-        ![](framework/img/workshop/google-fonts-1.jpg)
-        1. **Review** to compare. <span class="note">(The LLC example project uses Open Sans and Bad Script.)</span>
-          ![](framework/img/workshop/google-fonts-2.jpg)
-        1. Select **Use** to get the code. <span class="note">(You can change your selections in the next exercise.)</span>
-        1. Select font weights. <span class="note">The more you choose, the more it will slow down page load time.</span>
-          * The LLC project uses Open Sans Light 300, regular 400 and Bad Script normal 400.
+        1. Click on the **+** icon to select a font, then click on the tab below to view your and customize your selections.
+        ![](framework/img/workshop/google-fonts.png)<!-- .element: width="90%" -->
+          * The LLC example project uses Open Sans and Bad Script.
+        1. Choose **Customize** to select font weights. <span class="note">The more you choose, the more it will slow down page load time.</span>
+          * The LLC project uses Open Sans light 300, regular 400, and Bad Script normal 400.
           * The default character set should contain what you need.
-        1. Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
+        1. Choose **Embed** to get the code:
+          * copy the `<link>` code snippet
+          * add it to the `<head>` of your HTML page. <span class="note">(Make sure to add the link *before* your the *styles.css* file)</span>
           ```
           <head>
-            <meta charset="UTF-8">
-            <title>Laura Ipsum | Designer & Developer</title>
-            <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" href="css/styles.css">
+          <meta charset="UTF-8">
+          <title>Laura Ipsum | Designer & Developer</title>
+          <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+          <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
-        
+
         Now you're ready to use the new fonts. Use the font-family name listed in the Google Fonts page.
-        
+
         ```
         font-family: 'Open Sans', sans-serif;
         ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Inheritance and Specificity

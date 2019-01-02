@@ -1,0 +1,45 @@
+/* BASE STYLES
+-----------------------------------------*/
+body {
+  color: #eee;
+  background: url(../../../images/themes/food/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ffe1c4;
+}
+
+a:hover {
+  color: #e6be1b;
+}
+
+strong {
+  color: #ff5858;
+}
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
+  background: #003a28;
+}
+
+/* ABOUT
+-----------------------------------------*/
+.about {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+/* LOVES - things I love
+-----------------------------------------*/
+.loves {
+  color: #222;
+  background: #fff3f3;
+}
+
+/* FOOTER - contact info
+-----------------------------------------*/
+footer {
+  color: #eee;
+  background: #003a28;
+}

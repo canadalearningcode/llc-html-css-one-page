@@ -1,0 +1,44 @@
+/* BASE STYLES
+-----------------------------------------*/
+body {
+  color: #111;
+  background: url(../../../images/themes/coffee-shop/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ffe1c4;
+}
+
+a:hover {
+  color: #e6be1b;
+}
+
+strong {
+  color: #650202;
+}
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
+  background: #ffe1c4;
+}
+
+/* ABOUT
+-----------------------------------------*/
+.about {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+/* LOVES - things I love
+-----------------------------------------*/
+.loves {
+  background: #ffe1c4;
+}
+
+/* FOOTER - contact info
+-----------------------------------------*/
+footer {
+  background: #111;
+  color: #eee;
+}

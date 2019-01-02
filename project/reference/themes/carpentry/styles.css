@@ -1,0 +1,46 @@
+/* BASE STYLES
+-----------------------------------------*/
+body {
+  color: #111;
+  background: url(../../../images/themes/carpentry/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #fff0cb;
+}
+
+a:hover {
+  color: #ffda80;
+}
+
+strong {
+  color: #612940;
+}
+
+
+/* PAGE HEADER
+-----------------------------------------*/
+header {
+  background: #fff0cb;
+}
+
+/* ABOUT
+-----------------------------------------*/
+.about {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+
+/* LOVES - things I love
+-----------------------------------------*/
+.loves {
+  background: #fff0cb;
+}
+
+/* FOOTER - contact info
+-----------------------------------------*/
+footer {
+  background: #1f1100;
+  color: #eee;
+}
