@@ -1,0 +1,44 @@
+/* STYLES DE BASE
+-----------------------------------------*/
+body {
+  color: #111;
+  background: url(../../../images/thèmes/café/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ffe1c4;
+}
+
+a:hover {
+  color: #e6be1b;
+}
+
+strong {
+  color: #650202;
+}
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  background: #ffe1c4;
+}
+
+/* À PROPOS
+-----------------------------------------*/
+.apropos {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+/* J'AIME - mes passe-temps
+-----------------------------------------*/
+.jaime {
+  background: #ffe1c4;
+}
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  background: #111;
+  color: #eee;
+}

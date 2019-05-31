@@ -1,0 +1,45 @@
+/* STYLES DE BASE
+-----------------------------------------*/
+body {
+  color: #eee;
+  background: url(../../../images/thèmes/nourriture/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ffe1c4;
+}
+
+a:hover {
+  color: #e6be1b;
+}
+
+strong {
+  color: #ff5858;
+}
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  background: #003a28;
+}
+
+/* À PROPOS
+-----------------------------------------*/
+.apropos {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+/* J'AIME - mes passe-temps
+-----------------------------------------*/
+.jaime {
+  color: #222;
+  background: #fff3f3;
+}
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  color: #eee;
+  background: #003a28;
+}

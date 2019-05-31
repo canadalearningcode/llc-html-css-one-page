@@ -1,0 +1,40 @@
+/* Appliquez un modèle de disposition de boîte naturel à tous les éléments tout en permettant aux composantes de changer. */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+h1, h2 {
+  font-family: 'Bad Script', cursive;
+}
+a {
+  color: #9D6381; 
+}
+
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  background: #CECCCC;
+}
+
+
+/* J'AIME - mes passe-temps  
+-----------------------------------------*/
+.jaime {
+  background: #9D6381;
+}
+
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  background: #0F110C;
+  color: #CECCCC;
+}

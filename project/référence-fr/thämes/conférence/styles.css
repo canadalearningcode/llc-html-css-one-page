@@ -1,0 +1,44 @@
+/* STYLES DE BASE
+-----------------------------------------*/
+body {
+  color: #222;
+  background: url(../../../images/thèmes/conférence/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #ffeb42;
+}
+
+a:hover {
+  color: #ffd11a;
+}
+
+strong {
+  color: #ffeb42;
+}
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  color: #eee;
+  background: #1e3799;
+}
+
+/* À PROPOS
+-----------------------------------------*/
+.apropos {
+  background: rgba(30, 54, 153, 0.5);
+}
+
+/* J'AIME - mes passe-temps
+-----------------------------------------*/
+.jaime {
+  background: #ddd;
+}
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  background: #1e3799;
+  color: #eee;
+}

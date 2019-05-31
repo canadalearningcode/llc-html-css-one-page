@@ -1,0 +1,46 @@
+/* STYLES DE BASE
+-----------------------------------------*/
+body {
+  color: #111;
+  background: url(../../../images/thèmes/menuiserie/background.jpg) no-repeat fixed;
+}
+
+a {
+  color: #fff0cb;
+}
+
+a:hover {
+  color: #ffda80;
+}
+
+strong {
+  color: #612940;
+}
+
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  background: #fff0cb;
+}
+
+/* À PROPOS
+-----------------------------------------*/
+.apropos {
+  color: #eee;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+
+/* J'AIME - mes passe-temps
+-----------------------------------------*/
+.jaime {
+  background: #fff0cb;
+}
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  background: #1f1100;
+  color: #eee;
+}

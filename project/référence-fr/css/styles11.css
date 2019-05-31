@@ -1,0 +1,92 @@
+/* Appliquez un modèle de disposition de boîte naturel à tous les éléments tout en permettant aux composantes de changer. */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background: url(../images/buildings.jpg) no-repeat fixed;
+  background-size: cover;
+}
+h1, h2 {
+  font-family: 'Bad Script', cursive;
+  margin: 0; /* enlève l'espace par défaut */
+  font-weight: normal; /* enlève le style gras par défaut */
+}
+h1 {
+  font-size: 75px;  
+}
+p {
+  font-size: 18px;
+  line-height: 1.5; /* règle l'espace entre les lignes */
+}
+a {
+  color: #9D6381; 
+}
+a:hover {
+  color: #CECCCC;
+}
+header, 
+section, 
+footer {
+  padding: 100px 150px;
+}
+.jaime, 
+footer {
+  text-align: center;
+}
+strong {
+  color: #9D6381;
+}
+img {
+  border-radius: 50%;
+}
+
+
+/* EN-TÊTE DE LA PAGE
+-----------------------------------------*/
+header {
+  background: #CECCCC;
+}
+header h1 {
+  font-size: 100px;
+}
+header h2 {
+  font-size: 32px;
+}
+
+
+/* À PROPOS
+-----------------------------------------*/
+.apropos {
+  background: rgba(97, 41, 64, 0.95);
+}
+.profile-img {
+  float: right;
+  margin-left: 20px;
+}
+
+
+/* J'AIME - mes passe-temps 
+-----------------------------------------*/
+.jaime {
+  background: #9D6381;
+}
+.jaime img {
+  width: 250px;
+  margin: 15px;
+}
+
+
+/* BAS DE PAGE - informations de contact
+-----------------------------------------*/
+footer {
+  background: #0F110C;
+  color: #CECCCC;
+}

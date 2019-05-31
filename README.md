@@ -7,10 +7,14 @@ JULY'S THEME IS: Food Security
 See slide 4 for suggestions on how learners can incorporate this month’s theme into their projects - if they choose to participate.
 
 # Ladies Learning Code
-## HTML & CSS for Beginners: Learn to Build a One Page Website From Scratch
+## Build a One-Page Website with HTML & CSS
 
 A full day introductory HTML & CSS workshop.
 This workshop covers HTML and CSS basics and is intended for complete beginners.
+
+## Quick Links
+
+Preview Slides : https://ladieslearningcode.github.io/llc-html-css-one-page/slides-en.html
 
 ### Attributions
 
@@ -78,3 +82,89 @@ This repository ships with a collection of image assets (located in `project/ima
 - [Background](https://unsplash.com/photos/TEYrLTKKMSg)
 - [Hero](https://unsplash.com/photos/LJ36url5Z_U)
 - [Profile](https://unsplash.com/photos/u1CAj5HJzO4)
+
+# Français
+# Ce contenu fait partie d'un thème mensuel!
+
+En 2019, nous encourageons la population du Canada à réfléchir, à apprendre, à partager et à collaborer pour résoudre des problèmes qui affectent toute la planète à l'aide de la technologie! Vous trouverez plus d'informations sur les thèmes mensuels en consultant notre [site](https://www.canadalearningcode.ca/monthly-themes/).
+
+*Le thème du mois de juillet est la sécurité alimentaire.*
+
+Consultez la diapositive n° 5 pour donner à votre groupe des idées pour intégrer le thème à leur projet. Les apprenantes ont le choix d'intégrer le thème à leur projet ou non.
+
+# Femmes en programmation
+## Création d’un site Web à une page avec le HTML et le CSS
+
+Atelier d'introduction au HTML et au CSS d'une durée d'une journée complète.
+Durant cet atelier conçu pour les débutantes, les apprenantes découvriront des notions essentielles du HTML et du CSS.
+
+## Liens rapides
+
+Aperçu des diapositives : https://ladieslearningcode.github.io/llc-html-css-one-page/slides-fr.html
+
+### Sources
+
+Ce contenu a été créé par Jesse R Mykolyn pour [Canada en programmation](https://www.canadalearningcode.ca/).
+Les diapositives ont été créées par [Christina Truong](http://christinatruong.com/) pour [Canada en programmation](https://www.canadalearningcode.ca/).
+Le contenu a été réalisé en collaboration avec Stacie DaPonte.
+
+Envoyez vos questions et vos commentaires par courriel à l'adresse [content@canadalearningcode.ca](mailto:content@canadalearningcode.ca).
+
+Ce contenu a été créé en collaboration avec des éducateurs, des représentants du secteur des technologies et des spécialistes de la technologie. Grâce à ces collaborateurs et à leurs recommandations, nous avons pu nous assurer que le contenu de la leçon répond aux besoins des éducateurs et reflète le secteur des technologies tout en étant adapté aux apprenants. Si vous souhaitez contribuer au contenu de nos prochaines leçons, veuillez nous en informer à l'aide de ce [formulaire](https://docs.google.com/forms/d/e/1FAIpQLSfJ8NSMKVAmzpdn3EAymxCbDDz3XZPxyDdmtQ87GECuvXzzDQ/viewform).
+
+Nous sommes ravis d'offrir notre contenu au public pour permettre à tous de l'utiliser au sein de leur communauté. C'est pourquoi nous l'avons conçu spécialement pour une utilisation avec attribution sous la licence [Creative Commons (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.fr).
+
+Nous vous invitons à ajouter le passage suivant à l'endroit où vous utilisez ou mentionnez notre contenu afin de l'attribuer à notre organisme en toute simplicité.
+
+« Bien que cet événement ne soit pas associé à [Canada en programmation](http://canadalearningcode.ca/fr), nous reconnaissons que l'organisme a créé [le contenu](https://github.com/ladieslearningcode) que nous utilisons dans ce cours sous la licence Creative Commons. »
+
+
+### Contribution
+
+En général, nous n'avons aucun problème à ce que vous ajoutiez des exemples significatifs pour les apprenantes et les apprenants. Toutefois, nous vous demandons de ne pas enlever d'éléments, car ceux-ci ont tous leur raison d'être. Par exemple, le contenu a été conçu pour atteindre des objectifs d'apprentissage précis et la conception reflète la culture de notre organisme. Si vous souhaitez proposer des modifications, soumettez-les sur Github dans « Issues » ou faites une nouvelle « pull request ». N'oubliez pas d'inclure le numéro des diapositives dans le titre de votre soumission.
+
+### Éléments graphiques
+
+#### Images
+
+Ce dossier comprend une collection d'images (dans `projet/images/`) que les apprenantes peuvent utiliser pour personnaliser leur projet. Toutes les images ont été regroupées dans des sous-dossiers (par exemple, `projet/images/menuiserie/`, `projet/images/café/`, etc.) et sont tirées du site [Unsplash](https://unsplash.com/). Consultez la section ci-dessous pour obtenir les sources des images.
+
+##### Menuiserie
+- [Arrière-plan](https://unsplash.com/photos/bBKVrH0vzB4)
+- [Image de premier plan](https://unsplash.com/photos/IC5sX-7PRN8)
+- [Profil](https://unsplash.com/photos/IQbC4VU4YPQ)
+
+##### Café
+- [Arrière-plan](https://unsplash.com/photos/TD4DBagg2wE)
+- [Image de premier plan](https://unsplash.com/photos/66RxrYlPShI)
+- [Profil](https://unsplash.com/photos/8jp-6SjVibM)
+
+##### Conférence
+- [Arrière-plan](https://unsplash.com/photos/aRTjFXs6HNc)
+- [Image de premier plan](https://unsplash.com/photos/bzdhc5b3Bxs)
+- [Profil](https://unsplash.com/photos/_UeY8aTI6d0)
+
+##### Mode
+- [Arrière-plan](https://unsplash.com/photos/Nv4QHkTVEaI)
+- [Image de premier plan](https://unsplash.com/photos/omKdUQ9R3Zo)
+- [Profil](https://unsplash.com/photos/W5qJExlQTGI)
+
+##### Nourriture
+- [Arrière-plan](https://unsplash.com/photos/Ngy0B2YWalk)
+- [Image de premier plan](https://unsplash.com/photos/vuDXJ60mJOA)
+- [Profil](https://unsplash.com/photos/6mbvYDjhxoo)
+
+##### Droit
+- [Arrière-plan](https://unsplash.com/photos/TEYrLTKKMSg)
+- [Image de premier plan](https://unsplash.com/photos/B6-H27CMbGI)
+- [Profil](https://unsplash.com/photos/gsV9RD_5RKg)
+
+##### Portfolio
+- [Arrière-plan](https://unsplash.com/photos/ETRPjvb0KM0)
+- [Image de premier plan](https://unsplash.com/photos/CabUqKlvKX0)
+- [Profil](https://unsplash.com/photos/ebxMHER0TMk)
+
+##### Sports
+- [Arrière-plan](https://unsplash.com/photos/TEYrLTKKMSg)
+- [Image de premier plan](https://unsplash.com/photos/LJ36url5Z_U)
+- [Profil](https://unsplash.com/photos/u1CAj5HJzO4)
