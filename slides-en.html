@@ -106,8 +106,8 @@
 
           --
           ###More Resources
-          ###[The State of Food Security and Nutrition in the World](http://www.fao.org/state-of-food-security-nutrition/en)
-          ### [Research paper on food security and conflict by FAO (United Nations)](http://www.fao.org/3/ca1587en/CA1587EN.pdf)
+          * [The State of Food Security and Nutrition in the World](http://www.fao.org/state-of-food-security-nutrition/en)
+          * [Research paper on food security and conflict by FAO (United Nations)](http://www.fao.org/3/ca1587en/CA1587EN.pdf)
 
         </script>
       </section>
@@ -252,9 +252,11 @@
         **[Atom](https://atom.io/)** is totally free and is the editor we'll be using today.
         <span class="note">(If you have another editor installed, it will work as well but some features may be different.)</span>
 
+        * If you are using a Chromebook, you can use <a href="https://chrome.google.com/webstore/detail/caret/fljalecfjciodhpcledpamjachpmelml?hl=en" target="_blank">Caret</a>
+
         ---
         ###Pro tip!
-        Improve your work flow with [keyboard shortcuts](http://ladieslearningcode.com/downloads/keyboard-shortcuts.pdf).
+        Improve your work flow with [keyboard shortcuts](http://www.canadalearningcode.ca/downloads/keyboard-shortcuts.pdf).
       </script>
     </section>
 
@@ -387,6 +389,7 @@
       Go to **File** > ** Add Project Folder**. A popup will appear.
 
       ![](framework/img/workshop/editor-add-project-1.jpg)
+      ![](framework/img/workshop/editor-add-project-pc.jpg)
 
       Then:
 
@@ -426,6 +429,7 @@
         For Windows Users, go to the **File** menu and choose Settings.
 
         ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
+        ![](framework/img/workshop/atom-settings-pc.jpg)<!-- .element: width="30%" -->
 
         Select the **Editor** tab in the left menu
 
@@ -462,9 +466,11 @@
           * navigate to the **llc-html-css-one-page-master > project** folder
           * double click on **index.html** to open it in your default browser
           <br><span class="note">(If Chrome is not your default, right-click/two-finger tap on **index.html** and choose **Open With > Chrome**)</span>
+        1. Where do you see the change you made in step 4 take affect?
 
-        There is no page *content* yet so the browser will show a blank page. The page *title* however, will show in the browser toolbar.
-
+        <!-- .element: class="delayed" -->
+        There is no page content yet so the browser will show a blank page. The page title however, will show in the browser toolbar.
+        <!-- .element: class="delayed" -->
         ![exercise 1 example](framework/img/workshop/exercise-1.jpg)
       </script>
     </section>
@@ -645,25 +651,25 @@
       <script type="text/template">
         #HTML5 Structural Elements
 
-        The `class` attribute is often used to differentiate blocks using the same HTML tag, to style. (More on adding styles with class later).
+        The `class` attribute is often used to differentiate blocks using the same HTML tag to apply specific styles to just 1 of those tags. (More on adding styles with class later).
 
         Using HTML5 tags, the page could be structured like this:
 
         ```xml
         <header>
-          header content here
+          <!-- header content here -->
         </header>
 
         <section class="about">
-          about content here
+          <!-- about content here -->
         </section>
 
         <section class="loves">
-          stuff I love goes here
+          <!-- stuff I love goes here -->
         </section>
 
         <footer>
-          footer / contact info here
+          <!-- footer / contact info here -->
         </footer>
         ```
       </script>
@@ -1144,7 +1150,7 @@
 <textarea class="snippet" data-subject="#css-selectors">selector { /* select the paragraph */
   color: red;
 }
-selector { /* select the link */
+selector { /* select the h2 */
   color: blue;
 }</textarea>
       <div id="css-selectors" class="example">
@@ -1240,7 +1246,7 @@ selector { /* select the link */
       <script type="text/template">
         #CSS colours
 
-        Let's take a look at some of these colour resources.
+        Let's take a look at some of these colour resources:
 
         * http://colours.neilorangepeel.com
         * http://coolors.co
@@ -1282,11 +1288,13 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Web safe fonts
 
-        Web safe refers to pre-installed fonts.  Operating systems do not have the same defaults, so use a font *stack* to provide fallback options.
+        Web safe fonts refers to fonts that come pre-installed on your computer. Operating systems do not always have the same fonts, so use a font *stack* to provide fallback options:
 
         ```
         font-family: Helvetica, Arial, sans-serif;
         ```
+
+        <small>If you're on a Windows PC and don't have Helvetica, use Arial instead.</small>
 
         * Some common "web safe" are:
           * <span style="font-family:Arial;">Arial</span>
@@ -1307,7 +1315,7 @@ text-transform: lowercase;</textarea>
 
         There are some free options like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
 
-        Google fonts provides a more straightforward option since you can link directly to their css files.  Let's take a look at how it works.
+        Google fonts provides a more straightforward option since you can link directly to their CSS files.  Let's take a look at how it works together!
       </script>
     </section>
 
@@ -1358,7 +1366,7 @@ text-transform: lowercase;</textarea>
         CSS properties in the `body` selector is inherited by the descendant elements. A more specific selector will override the inherited values.
         ```
         body {
-          color: #222222;
+          color: grey;
         }
         h1 {
           color: blue; /* overrides the inherited style */
@@ -1612,7 +1620,7 @@ text-transform: lowercase;</textarea>
 
         ![](framework/img/workshop/box-borders-example.jpg)
 
-        Note the spacing between the elements on your page such as the headings and paragraphs. That's the default `margin` and `padding` for those elements.
+        Note the spacing between the elements on your page such as the headings and paragraphs. That's the default `margin` and `padding` being applied by the browser for those elements.
       </script>
     </section>
 
@@ -1788,7 +1796,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         #Class Exercise #7 - Spacing
 
-        Notice the white space around the edge of the page? That's default space in the `body` element. Reset it by setting the values to 0.
+        Notice the white space around the edge of the page? That's default margin & padding being applied to the `body` element by the browser. Reset it by setting the values to 0.
 
         ```
         body {
@@ -2046,7 +2054,8 @@ border: 15px solid green;</textarea>
     <section class="slide">
       <h1>CSS Float</h1>
 
-      <p>To get block level elements to line up side by side, the stacking flow has to be <em>broken</em> first.</p>
+      <p>There are a few different ways to achieve this layout. Today, we're going to use the <code>float</code> method.</p>
+
       <p> Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side. Any element after the floated element will move up beside it. Let's try it out in the example below.</p>
 
       <textarea class="snippet" data-subject="#float">img {
@@ -2091,7 +2100,7 @@ border: 15px solid green;</textarea>
 
         If your content is the same size or longer than the floated element (the profile image) as shown on the left,  you won't notice this problem.
 
-        Adding more content won't fix this issue though.  First, we had to break the stacking order, now we have to put it back together.
+        Adding more content could fix this issue, but don't force yourself to write more content just to fix a layout issue. When we applied a float, we had to break the stacking order - so now we have to put it back together.
       </script>
     </section>
 
@@ -2101,6 +2110,8 @@ border: 15px solid green;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
         # Class Exercise: Reset the float
+
+        Each block element (`div`, `p`, `h1`, etc.) stack on top of each other vertically. 
 
         To restore the regular stacking flow *after* the floated element, it needs to be *reset*. There's a couple ways to do it. Today, let's use `overflow`.
 
@@ -2132,6 +2143,17 @@ border: 15px solid green;</textarea>
       </script>
     </section>
 
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+        # Alternatives to floats
+
+        You can also try these different methods to achieve a 2 column layout without the use of floats:
+        
+        * [How I Learned to Stop Floating and Love the inline-block](https://thoughtbot.com/blog/how-i-learned-to-stop-floating-and-love-the)
+        * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+      </script>
+    </section>
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #border-radius
@@ -2145,13 +2167,13 @@ border: 15px solid green;</textarea>
           <div class="col-2">
             <textarea class="snippet" data-subject="#rounded">border-radius: 15px;</textarea>
 
-            <img id="rounded" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
+            <img id="rounded" src="project/reference-en/images/doughnuts.jpg" alt="doughnuts" width="150">
           </div>
 
           <div class="col-2">
             <textarea class="snippet" data-subject="#circle">border-radius: 50%;</textarea>
 
-            <img id="circle" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
+            <img id="circle" src="project/reference-en/images/doughnuts.jpg" alt="doughnuts" width="150">
           </div>
         </div>
 
@@ -2182,9 +2204,9 @@ border: 15px solid green;</textarea>
 
         Take some time to style your About and Loves images.
 
-        You can also use `width` or `height` on the images to make them all the same size and `margin`, `padding`, `border` to space and style the images.
+        You can also use `width` or `height` on the images to make them all the same size, and apply `margin`, `padding` or `border` to space and style the images.
 
-        If you have some text links on your page, add a hover effect.
+        If you have some text links on your page, add a hover effect to them.
 
         For your reference, check out [exercise-10.html](project/reference/exercise-10.html).
       </script>
@@ -2213,6 +2235,12 @@ border: 15px solid green;</textarea>
         background-image: url(folder-name/image-file.jpg);
         ```
         `background` is shorthand for many different background properties.
+
+
+        ---
+        ###Resources
+        * W3C: [CSS Background properties](https://www.w3schools.com/css/css_background.asp)
+        * Moz: [CSS Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
       </script>
     </section>
 
