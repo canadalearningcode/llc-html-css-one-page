@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      ###Instructor Notes
+
+      ###Ladies Learning Code: Learn to Build a One Page Website with HTML & CSS
+
+      <br>
+      ##Schedule
+
+      <strong> Important note:</strong>
+      This is a guideline, not a rule! It is more important that the learners are following along then it is to get to the end of the slides!
+
+      <em>Please note</em>: this schedule is for a single day workshop.
+      If you are leading two weekday evenings, you can split this schedule up accordingly. Please remember to take a 15-30 minute break on both days. The first 15-20 minutes of the second day should be allocated for review and questions from the prior session.
+
+      * <strong>Intro (10:00 am - 11:00 am)</strong>: Today's Goal, Overview
+      * <strong>Intro to HTML (11:00 am - 12:30 am)</strong>: The anatomy of a webpage
+      * <strong>Lunch Break! (12:30 pm - 1:00 pm)</strong>
+      * <strong>CSS (1:00 pm - 3:30 pm)</strong>: Adding style to a webpage
+      * <strong>Wrapping it up (3:30 pm - 4:00 pm)</strong>
+
+
+      <br>
+      ##General Notes
+
+      * <strong>Important!</strong> Please give learners enough time to download learner files. Check in as people are entering the room to make sure they have learner files.
+      * A common issue with leaner files - make sure Windows users extract the folder. If a learner sees the slides without any styles, that is probably why.
+      
+      Before the class starts, update the WiFi credentials on slide 1.
+
+      <br>
+      ##Specific Examples
+
+      **Slide 4: Theme of the month**
+
+      We have a rotating theme of the month that will be highlighted on this slide. The learners can take some time to brainstorm how they relate to this theme - it could be from first-hand experience, a cultural connection, a systemic issue or barrier they face, etc. Learners are making the connection right on the outset that the technologies they're about to learn can be used to solve real life problems. If you have the time while preparing before the workshop, bookmark some examples of cool sites that surround the theme of the month and show them during this time to help the learners get inspired.
+
+      
+      **Slide 6: Themes**
+
+      Themes are like the clothes your site wears. The content in each case will remain the same (with the exception of some imagery), but with some changes to the CSS we can give the site a new look & feel! Emphasize that these are just starting points - you can choose which one you like the most and with the skills they will learn today, they can modify the theme to their liking!
+
+
+      **Slide 9: What exactly is a website?**
+
+      One page websites are trendy and utilitarian. If you are a person, a small business that offers a service, or just want to get an idea on the web, 1 page is sufficient to get your point across.
+
+
+      **Slide 11: MORE ABOUT URLS**
+
+      Scheme - AKA protocol: like the air traffic controller
+      Host - AKA domain: this is something you need to purchase when you want to get your site online (more on this at the end of the course)
+
+
+      **Slide 12: WEB BROWSERS**
+
+      Ever browser will render a web page SLIGHTLY differently. It's part of a developer's job to correct for this and make sure the experience is the same across all browsers. To make today's experience flow seamlessly, we're all going to use the same browser today.
+
+
+      **Slide 13: DEVELOPER TOOLS**
+
+      Using the Developer Tools can be really intimidating for beginners, especially this early on in the class. You can show it briefly and talk about how helpful it is for you, but don't dwell on this for too long. Underscore that these tools help make your workflow more efficient once you become more proficient with code. Some of the learners will really dive right in and get excited, but a majority will not be ready to use it today, and that's perfectly okay!
+
+
+      **Slide 15: HTML & CSS**
+
+      In the early days of the web, style, layout and format was not a concern. The purpose of the web was to share research papers, documents and raw information. Presentation through CSS was not introduced until 6 years later. You can show them the first website ever made (feel free to read the intro paragraph out loud to the class):
+      http://info.cern.ch/hypertext/WWW/TheProject.html
+
+
+      **Slide 17: HTML SYNTAX**
+
+      Take the time to point out these characters on the keyboard. They are not used often by average users, and take some time to form the muscle memory. Someone who can usually type blog posts or word documents without looking at the keyboard may have to look down more frequently today, and that is perfectly okay!
+
+
+      **Slide 19: Nested Tags**
+
+      Compare this to layering two sweaters - the order in which they close matters! You have to zip up your inner sweater before you can zip up the outer sweater - if you try to cross the zippers up, it won't work!
+
+
+      **Slide 20: ORGANIZING YOUR CODE**
+
+      Indentation is ESSENTIAL, especially for beginners, to better exercise the pattern recognition parts of their brains. It makes debugging your code 100x easier. REALLY emphasize and encourage good habits early on. When you're doing a code along, tell them out loud when it's important to indent, and when it is more of a personal preference (eg. text within an `<a>` tag)
+
+
+      **Slide 26: THE DOCTYPE**
+
+      You can briefly mention that they may see older Doctypes on the web, but we are moving away from those older versions.
+
+
+      **Slide 28: THE HEAD ELEMENT**
+
+      People can SEE your body, but they cannot see what is going on inside your head. What's going on inside your head is integral to making your body function, but you have to take a peak "under the hood" (viewsource) in order to see what elements are in the `head`.
+
+
+      **Slide 31: ATTRIBUTES**
+
+      In case you get asked, UTF-8 is the most popular character code. It covers European (latin based) languages, Greek, Kurdish, and Iranian languages. If you're website is in Mandarin, Cantonese or Japanese, you will need to use a different character code (UTF-8 only covers 86-88% of the characters in those languages).
+
+      To explain attributes in general, you can show them a fake tag to represent your coffee order:
+
+      ```
+      <coffee order="latte" milk="almond" sweetener="honey">Laura</coffee>
+      ```
+
+
+      **Slide 34: HTML5 STRUCTURAL ELEMENTS**
+
+      A class is like a piece of tape on a ziploc container in your fridge. It should describe the contents of the container.
+
+
+      **Slide 41: THE DEBATE ABOUT HEADINGS & HTML5 SECTIONING TAGS**
+
+      This is a hotly contested issue in SEO & web dev industries. People have very strong feelings one way or another. Here you can elaborate on your personal experience and opinion. Ask the mentors to jump in as well and share their ideas. The learners are leaning on your collective expertise to help them make a decision on what to do.
+
+
+      **Slide 48: ABSOLUTE PATHS**
+
+      Scroll down to make sure everyone sees the last sentence on this slide - it can be really helpful to understand the difference. This is a very difficult concept for beginners to wrap their heads around, so don't rush while explaining this one.
+
+
+      **Slide 53: HYPERLINKS**
+
+      Avoid using words like "click here" in a link. Use something more descriptive, like "get in touch with us" or "read the annual report". This is good practice for accessibility and gives the user a clear idea of what a link will do without having to read all the surrounding text for context.
+
+
+      **Slide 56: CSS: THE PRESENTATION LAYER**
+
+      Same as we did with the HTML syntax slide - take the time to point out these characters on the keyboard. They are not used often by average users, and take some time to form the muscle memory. Someone who can usually type blog posts or word documents without looking at the keyboard may have to look down more frequently today, and that is perfectly okay!
+
+
+      **Slide 57: CSS SYNTAX & TERMINOLOGY**
+
+      You can use the coffee order analogy again to explain how properties are applied to a selector. The barista is looking for YOU, as the selector. Then they gather the properties that you want in your beverage order:
+
+      ```
+      laura{
+         order: cold-brew;
+         milk: soy;
+         flavour: vanilla;
+      }
+      ```
+
+
+      **Slide 58: MULTIPLE CSS DECLARATIONS**
+
+      Remind learners that NONE of us have all the properties memorized. It's a good idea to bookmark some frequently used resources (found at the bottom of this slide), or walk them through how to do a Google search for a property, like 'change font size with CSS' or 'change colour of text with CSS'.
+
+
+      **Slide 66: CSS FONT STYLES**
+
+      Note out loud that `color` needs to spelled the American way. It's a common hiccup for beginners.
+
+
+      **Slide 69: CLASS EXERCISE: HOW TO USE GOOGLE FONTS**
+
+      Show them what happens when you select many fonts and the effect it has on the loading time. Think of each font as a rock you're adding to your backpack when going on a hike. The heavier the backpack, the slower you're going to be walking. A website works the same way! Keeping things lightweight and only including the resources you need makes the site perform faster.
+
+
+      **Slide 70: INHERITANCE AND SPECIFICITY**
+
+      Why is the `h1` more specific? Because it is a **child** of the body. Child elements are always more specific than their ancestors.
+
+
+      **Slide 73: CLASS EXERCISE #5: TYPOGRAPHY (CONTINUED)**
+
+      A good opportunity to bring up performance again. Images should always be cropped, resized and optimized for use on the web, otherwise large image files can really slow the website down.
+
+
+      **Slide 84: THE BOX MODEL**
+
+      Imagine you're packaging a fragile object for shipping. The `padding` is like the bubble wrap or packing peanuts that go inside the box to protect the object. The border is like the edge of the box. The margin is the distance between the box and whatever is around it.
+
+
+      **Slide 86: MARGIN AND PADDING**
+
+      Encourage people to use the long form for today if it is easier to understand. Alternatively use comments to remember which value represents which side.
+
+
+      **Slide 93: CLASS EXERCISE #7 - SPACING**
+
+      Take the time to see if a learner can answer this before you reveal the answer. No guess is a bad guess! Don't correct them immediately - type out what they say and see if someone else can make a correction. Only reveal the answer if they're really stuck.
+
+
+      **Slide 95: DESCENDANT SELECTORS**
+
+      It can help to either read this from right to left, or where you see a space, imagine saying "and then...". Each space looks one level deeper. 
+      A common mistake is to use the syntax or descendant selectors when you meant to combine selectors, or vice versa. Commas are used when you are listing items in a sentence: "I need to buy bread, apples, bananas etc."
+
+
+      **Slide 99: BUILDING A WEB PAGE IN BLOCKS**
+
+      Tips to organize yourself when building a website:<br>
+      1. Draw out your plan on paper<br>
+      2. Create a to-do list and be as granular as possible - computational thinking is all about taking a big problem and breaking it up into small, actionable steps<br>
+      3. Do the broad brush strokes first and add in more detail as you go. Start with the content skeleton, then apply layout, then colours, and so on.<br>
+      4. Take some breaks as you go - when you look at the same code for a long time you start to loose objectivity. Refactor your code after you've taken some time away from it - do you have unused styles you could delete? Could you have coded something in a more efficient way?
+
+
+      **Slide 103: BLOCK VS INLINE**
+
+      Tip - apply this to your CSS to show them these borders:
+
+      `* {outline: 3px solid red;}` - you can adjust the border size depending on the size of the space and projector
+
+
+      **Slide 108: CSS GIF**
+
+      This is a very relatable GIF - whether you're a beginner or a seasoned dev. Take some time to have a laugh, then refer back to the broken layout to try and explain the concept clearly. Walk up to the projector and use your hands to describe what is going on.
+
+
+      **Slide 112: CSS GIF**
+
+      Just note the 50% border radius will only crop the image into a circle if the original image is square. Otherwise it'll be an oval shape.
+
+
+      **Slide 123: Today...**
+
+      Now is the time to acknowledge and congratulate the learners - they should feel proud for taking the time to learn something new, push themselves out of their comfort zone and challenge themselves. This workshop covered a lot, so feeling overwhelmed is totally expected and normal. Don't forget to acknowledge and thank the mentors at this time too!
+
+
+      **Slide 125: NEXT STEPS!**
+
+      Get them excited about where they can go from here, whether that be through more workshops with us, independent learning, or where they can find local meet-up groups or events, online or in person. 
+
+      **Slide 127: GETTING YOUR SITE ONLINE**
+
+      If you have the time, talk about the difference between a domain name and a hosting provider - a lot of people think that you only have to purchase a domain name to get your site online and aren't aware of the hosting part. You can describe this as paying rent for a physical space (computer) where your files will live.
+
+
+    </script>
+  </section>
+
+  </main><!-- cls main section -->
+
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>
