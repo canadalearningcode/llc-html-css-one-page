@@ -194,7 +194,7 @@
         - `hôte` - Il s'agit du nom du site Web. L'hôte indique au navigateur où se trouve *généralement* le fichier (un peu comme une adresse de maison).
         - `chemin` - Il indique au navigateur *précisément* où le fichier se trouve. Si l'`hôte` est comme une adresse de maison, le `chemin` est le nom de la personne que nous recherchons et le local où elle se trouve.
 
-        ```xml
+        ```html
         <schéma>//<hôte>/<chemin>/
         ```
 
@@ -292,12 +292,12 @@
 
         Les balises viennent normalement en paire : il y a une balise d'ouverture et une balise de fermeture. Ces balises *enveloppent* le contenu. Si vous regardez bien, la balise de fermeture prend une barre oblique vers l'avant (/), mais pas la balise d'ouverture.
 
-        ```
+        ```html
         <balise> balise d'ouverture --- balise de fermeture </balise>
         ```
 
         Les *balises* HTML décrivent le contenu qui se trouve à l'intérieur afin que le navigateur puisse le comprendre.
-        ```
+        ```html
         <h1>Cette balise décrit un en-tête.</h1>
         <p>Cette balise décrit un paragraphe.</p>
         ```
@@ -310,7 +310,7 @@
 
         Les balises peuvent être *imbriquées*, c'est-à-dire mises dans d'autres balises, comme ceci :
 
-        ```
+        ```html
         <baliseexterne>contenu externe <baliseinterne>contenu interne</baliseinterne> contenu externe</baliseexterne>
         ```
 
@@ -318,7 +318,7 @@
 
         La balise interne, qui se trouve dans une autre balise (la balise externe), est l'enfant de la balise externe.
 
-        ```
+        ```html
         <parent>
           <enfant></enfant>
         </parent>
@@ -332,13 +332,13 @@
 
         Le HTML a été conçu pour être lisible par les navigateurs Web (pas par les humains). Ce passage est tout à fait compréhensible pour un navigateur :
 
-        ```
+        ```html
         <!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
 
         Pour nous, en tant qu'humains, les espaces et l'indentation (la touche Tab) facilitent la lecture du HTML. Lorsque vous imbriquez une balise, n'oubliez pas d'ajouter un espace de tabulation.
 
-        ```
+        ```html
         <baliseexterne>
           <baliseinterne>
           </baliseinterne>
@@ -353,7 +353,7 @@
 
         Les balises ci-dessous doivent être comprises dans **tous** les documents HTML.
 
-        ```
+        ```html
         <!DOCTYPE html>
         <html lang="fr">
           <head>
@@ -377,7 +377,7 @@
 
       À l'intérieur du dossier de fichiers d'apprentissage que vous avez téléchargé aujourd'hui, ouvrez le dossier **projet** dans l'éditeur de texte pour modifier votre projet.
 
-      ```html
+      ```xml
       llc-html-css-one-page-master-fr
         |-- framework // Ce dossier contient les fichiers des diapositives. Ne modifiez pas les fichiers qui s'y trouvent!
         |-- projet // Ce dossier contient les fichiers des exercices de l'atelier (images et fichiers CSS et HTML).
@@ -404,7 +404,7 @@
 
         La structure du dossier de projet ressemble à ceci :
 
-        ```html
+        ```xml
         projet
           |-- images
           |-- référence
@@ -454,7 +454,7 @@
         1. Enregistrez-le sous le nom de `index.html` (**File** > **Save**).
         1. Ajoutez toutes les balises HTML de base. Consultez [cette diapositive](slides-fr.html#basic-tags) pour en savoir plus sur les balises.
         1. *Entre* les balises `<title></title>`, ajoutez un *titre de page* qui représente le contenu de votre page. Par exemple :
-          ```
+          ```html
           <title>Laura Ipsum | Conceptrice et développeuse numérique</title>
           ```
         1. Ouvrez `index.html` dans votre navigateur.
@@ -569,7 +569,7 @@
         * Ils suivent la syntaxe `attribut="valeur"` (remarquez bien les guillemets).
         * Il y a beaucoup d'attributs différents.
 
-        ```
+        ```html
         <balise attribut="valeur">contenu</balise>
         ```
       </script>
@@ -583,12 +583,12 @@
 
         L'attribut `lang` sert à indiquer la langue de la page.
 
-        ```
+        ```html
         <html lang="fr">
         ```
 
         L'attribut `charset` indique le codage de caractères de la page.
-        ```
+        ```html
         <meta charset="UTF-8">
         ```
 
@@ -612,9 +612,9 @@
 
         header <!-- .element: class="header" -->
 
-        apropos <!-- .element: class="apropos" -->
+        apropos <!-- .element: class="about" -->
 
-        jaime <!-- .element: class="jaime" -->
+        jaime <!-- .element: class="loves" -->
 
         footer <!-- .element: class="footer" -->
         </div>
@@ -649,7 +649,7 @@
 
         Avec les balises HTML5, la page pourrait être structurée comme ceci :
 
-        ```xml
+        ```html
         <header>
           Le contenu de l'en-tête va ici.
         </header>
@@ -680,7 +680,7 @@
 
         De plus, vous pouvez utiliser les commentaires HTML pour organiser la page, comme ceci :
 
-        ```
+        ```html
         <!-- En-tête de la page -->
         <header>
 
@@ -701,7 +701,7 @@
 
         Qu'ils comportent une ou plusieurs phrases, les **paragraphes** ont besoin d'une paire de balises `<p></p>`.
 
-        ```xml
+        ```html
         <p>Ceci est un paragraphe.</p>
 
         <p>Ceci est un long paragraphe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vero dolor expedita quasi reiciendis minus unde sapiente id eveniet saepe officia quibusdam aspernatur, sint voluptate ipsam ex magni. Aliquam, ex!</p>
@@ -747,7 +747,7 @@
         Avant l'arrivée du HTML5 et des balises de section, une seule balise `<h1>` était utilisée par page généralement. La structure des en-têtes ressemblait à ceci :
 
         **Structure des en-têtes, avant le HTML5**
-        ```xml
+        ```html
         <h1>Titre du texte</h1>
 
         <div>
@@ -773,7 +773,7 @@
         Grâce aux balises de section du HTML5, chaque partie du document comprenant une balise de section a maintenant sa *propre structure*.
 
         **Structure des en-têtes HTML5**
-        ```xml
+        ```html
         <h1>Titre du texte</h1>
 
         <section>
@@ -850,7 +850,7 @@
 
         (Vous trouverez aussi le code suivant dans <!-- .element: class="note" -->`exercice-3.html`)
 
-        ```
+        ```html
         <!DOCTYPE html>
         <html lang="fr">
           <head>
@@ -960,14 +960,14 @@
 
         Les images utilisent une balise autofermante ainsi qu'un *attribut* `src` pour indiquer au navigateur l'emplacement du fichier d'image.
 
-        ```
+        ```html
         <img src="chemin/vers/image/nom-du-fichier"/>
 
         ```
 
         L'attribut `alt` est aussi ajouté aux images pour offrir du *texte alternatif* qui servira à décrire l'image aux personnes ayant une déficience visuelle qui utilisent un lecteur d'écran pour consulter le site.
 
-        ```
+        ```html
         <img src="http://placekitten.com/200/300" alt="Un chaton!"/>
 
         ```
@@ -1003,7 +1003,7 @@
 
         Comme les images ne sont pas dans le même dossier que **index.html**, utilisez un chemin *relatif* pour lier les fichiers d'image.
 
-        ```
+        ```html
         <img src="images/fichier-image.jpg" alt="description de l'image">
         ```
         Le point de départ (**index.html**) se trouve à l'extérieur du dossier **images**. L'exemple ci-dessous dirige le navigateur vers le dossier nommé **images**, puis vers le nom du fichier *avec l'extension du fichier*.
@@ -1015,7 +1015,7 @@
         #Chemins d'accès des fichiers d'image
         Si vous avez un dossier dans un dossier (c'est-à-dire un sous-dossier), ajoutez le sous-dossier au chemin d'accès.
 
-        ```
+        ```html
         <img src="dossier/sous-dossier/nom-du-fichier" alt="description de l'image">
         ```
 
@@ -1033,17 +1033,17 @@
 
         L'exemple ci-dessous comprend un *chemin absolu* vers la page d'accueil de Canada en programmation.
 
-        ```xml
+        ```html
         <a href="http://canadalearningcode.ca">Canada en programmation</a>
         ```
 
         Afin que le lien s'ouvre dans une nouvelle fenêtre, ajoutez un deuxième attribut, `target` (qui indique que la cible est une fenêtre vide).
-        ```xml
+        ```html
         <a href="http://canadalearningcode.ca" target="_blank">Canada en programmation</a>
         ```
 
         Voici la syntaxe pour créer un lien vers une adresse courriel :
-        ```xml
+        ```html
         <a href="mailto:allo@moncourriel.com">allo@moncourriel.com</a>
         ```
       </script>
@@ -1102,13 +1102,13 @@
 
         **Déclarations :** Ce sont des règles de style écrites selon le format `propriété:valeur`. Elles sont entourées d'accolades `{ }` et se terminent par un point-virgule `;`.
 
-        ```
+        ```css
         sélecteur {
           propriété: valeur;
         }
         ```
         **Propriétés :** Elles déterminent le *type* de style à appliquer (par exemple, la couleur). Les **valeurs** sont propres à la propriété (dans l'exemple suivant, la valeur est rouge (`red`)).
-        ```
+        ```css
         p {
           color: red;
         }
@@ -1123,7 +1123,7 @@
 
         Il est possible d'ajouter de multiples déclarations à un sélecteur. Assurez-vous d'écrire chaque déclaration avec un point-virgule et de mettre chaque déclaration sur une ligne différente pour faciliter la lecture du code.
 
-        ```
+        ```css
         h2 {
           background-color: green;
           font-size: 50px;
@@ -1166,7 +1166,7 @@ sélecteur { /* Sélectionnez le lien */
 
         Utilisez la balise `<link>`et deux *attributs*, `rel` et `href`.
 
-        ```
+        ```html
         <head>
           <title>Titre de la page</title>
           <link rel="stylesheet" href="css/style.css">
@@ -1189,13 +1189,13 @@ sélecteur { /* Sélectionnez le lien */
         1. Nommez-le **styles.css** et enregistrez-le dans le dossier **css** (qui se trouve déjà dans le dossier **projet**).
         <span class="note">Vous pouvez nommer le fichier n'importe comment, mais nous vous recommandons de choisir un nom qui décrit le contenu du fichier.<br> (par exemple, styles.css, global.css, perso.css, nomduprojet.css, etc.)</span>
         1. Ensuite, faites référence du fichier dans **index.html**. <span class="note">**Truc de pro!** Tapez `link` et appuyez sur Tab!</span>
-          ```
+          ```html
           <head>
               <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
         1. Essayez le fichier de styles en ajoutant une couleur d'arrière-plan à la fenêtre d'affichage (dans `body`).
-          ```
+          ```css
           body {
             background: lightblue;
           }
@@ -1228,7 +1228,7 @@ sélecteur { /* Sélectionnez le lien */
         * **Code RGB** - Les codes RGB (RVB en français, pour rouge, vert, bleu) ont 3 valeurs numériques qui se trouvent entre `0` (noir) et `255` (blanc).
         * **Code hexadécimal** - Le code hex est composé du carré (`#`) suivi par 6 caractères (0-9, A-F).
 
-        ```
+        ```css
         /* Ces trois codes de couleur représentent la même couleur. Au fait, ceci est un commentaire CSS! */
         p {
           background: firebrick;
@@ -1287,7 +1287,7 @@ text-transform: lowercase;</textarea>
 
         Les polices dites « prêtes pour le Web » sont installées par défaut. Toutefois, comme les systèmes d'exploitation n'ont pas les mêmes polices installées par défaut, utilisez une pile de polices (« font stack ») pour avoir des options de rechange.
 
-        ```
+        ```css
         font-family: Helvetica, Arial, sans-serif;
         ```
 
@@ -1328,18 +1328,18 @@ text-transform: lowercase;</textarea>
         1. Choisissez **Embed** pour obtenir le code d'intégration :
           * Copiez l'extrait de code `<link>`;
           * Ajoutez-le à la partie `<head>` de votre page HTML. <span class="note">(Assurez-vous d'ajouter le lien *avant* le fichier *styles.css*.)</span>
-          ```
+          ```html
           <head>
-          <meta charset="UTF-8">
-          <title>Laura Ipsum | Conceptrice et développeuse</title>
-          <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-          <link rel="stylesheet" href="css/styles.css">
+            <meta charset="UTF-8">
+            <title>Laura Ipsum | Conceptrice et développeuse</title>
+            <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
 
         Maintenant, tout est en place pour utiliser les nouvelles polices. Utilisez le nom font-family indiqué sur la page Google Fonts.
 
-        ```
+        ```css
         font-family: 'Open Sans', sans-serif;
         ```
       </script>
@@ -1351,7 +1351,7 @@ text-transform: lowercase;</textarea>
 
         La force du CSS est le système d'héritage : le style peut être hérité d'un « élément  parent » à un « élément enfant ». Voyons voir la structure de l'arbre généalogique des éléments.
 
-        ```
+        ```html
         <body><!-- parent d'h1 et de p -->
           <h1>Mon site Web</h1><!-- enfant de body, frère de p -->
           <p>Ceci est un paragraphe.</p><!-- enfant de body, frère d'h1 -->
@@ -1359,7 +1359,7 @@ text-transform: lowercase;</textarea>
         ```
 
         Les propriétés CSS dans le sélecteur `body` sont héritées des éléments descendants. S'il y a un sélecteur spécifique, ce sélecteur remplacera les valeurs héritées.
-        ```
+        ```css
         body {
           color: #222222;
         }
@@ -1380,7 +1380,7 @@ text-transform: lowercase;</textarea>
 
         Changez `font-weight` pour une police au poids plus faible ou élevé (fine ou épaisse) (facultatif).
 
-        ```
+        ```css
         body {
           font-family: 'Open Sans', sans-serif;
           font-weight: 300;
@@ -1397,7 +1397,7 @@ text-transform: lowercase;</textarea>
 
         Pour cibler plusieurs sélecteurs en même temps, il est possible de *combiner* des sélecteurs en ajoutant une virgule.
 
-        ```
+        ```css
         h1,
         h2 {
           font-family: 'Bad Script', cursive;
@@ -1450,7 +1450,7 @@ text-transform: lowercase;</textarea>
         Vous souvenez-vous de l'attribut de classe que nous avons ajouté aux sections À propos et J'aime?
         L'attribut de classe sert à donner un style *différent* à chaque section.
 
-        ```xml
+        ```html
         <section class="apropos">
           ...
         </section>
@@ -1475,13 +1475,13 @@ text-transform: lowercase;</textarea>
 
         Les sélecteurs de classe sont identifiables par le point qui les précède.
 
-        ```
+        ```css
         /* S'applique à tout élément ayant la classe apropos */
         .apropos {
           background: red;
         }
         ```
-        ```
+        ```css
         /* Cible TOUS les éléments « section » */
         section {
           background: blue;
@@ -1498,15 +1498,15 @@ text-transform: lowercase;</textarea>
 
         Les commentaires commencent par `/*` et se terminent par `*/`. Vous pouvez écrire tout ce que vous voulez entre les deux. Choisissez le style de commentaire qui vous convient parmi les formats courants suivants :
 
-        ```
+        ```css
         /* Mes commentaires CSS */
         ```
-        ```
+        ```css
         /*
         Mes commentaires CSS
         */
         ```
-        ```
+        ```css
         /* Mes commentaires CSS
         ----------------*/
         ```
@@ -1537,7 +1537,7 @@ text-transform: lowercase;</textarea>
 
         Ajoutez des commentaires pour bloquer des parties du fichier CSS et l'organiser. Référez-vous à l'exemple ci-dessous.
 
-        ```
+        ```css
         /* EN-TÊTE DE LA PAGE
         -----------------------------------------*/
         header {
@@ -1556,18 +1556,18 @@ text-transform: lowercase;</textarea>
         Ensuite, appliquez une couleur d'arrière-plan seulement à la section « J'aime ».
         <span class="note">(Nous donnerons à la section « À propos » son propre style dans un autre exercice.)</span>
 
-        ```
+        ```css
         /* J'AIME - Mes passe-temps
         -----------------------------------------*/
         .jaime {
           background: #9D6381;
         }
         ```
-        Référence pour la couleur : <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Référence pour la couleur : <!-- .element: class="note" --><span style="background:#9D6381;color:white;padding:0 5px;">#9D6381</span>
 
         Comme il n'y a qu'un bas de page `<footer>`, nous pouvons l'utiliser comme sélecteur. Modifiez aussi la couleur du texte si votre arrière-plan est foncé.
 
-        ```
+        ```css
         /* BAS DE PAGE - Informations de contact
         -----------------------------------------*/
         footer {
@@ -1587,12 +1587,12 @@ text-transform: lowercase;</textarea>
 
         Pour modifier la couleur du lien, sélectionnez la balise d'ancrage et remplacez la couleur par défaut en définissant une autre couleur.
 
-        ```
+        ```css
         a {
           color: #9D6381;
         }
         ```
-        Référence pour la couleur : <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Référence pour la couleur : <!-- .element: class="note" --><span style="color:#9D6381;padding:0 5px;">#9D6381</span>
 
         La page n'est pas encore tout à fait au point, mais nous y sommes presque. Maintenant, elle devrait ressembler à [exercice-6.html](project/référence-fr/exercice-6.html) dans le dossier « référence ».
       </script>
@@ -1750,7 +1750,7 @@ border: 15px solid green;</textarea>
 
         Ajoutez cet extrait de code à votre projet (et à vos futurs projets) pour régler le problème de la taille de largeur, de remplissage et de bordure.
 
-        ```
+        ```css
         /* Appliquez un modèle de disposition de boîte naturel à tous les éléments tout en permettant aux composantes de changer. */
         html {
           box-sizing: border-box;
@@ -1776,7 +1776,7 @@ border: 15px solid green;</textarea>
 
         Combinez les sélecteurs pour les cibler en même temps.
 
-        ```
+        ```css
         header,
         section,
         footer {
@@ -1792,7 +1792,7 @@ border: 15px solid green;</textarea>
 
         Si vous regardez bien, il y a de l'espace blanc près du bord de la page. Il s'agit de l'espace par défaut dans l'élément `body`. Vous pouvez le réinitialiser en mettant les valeurs à 0.
 
-        ```
+        ```css
         body {
           margin: 0;
           padding: 0;
@@ -1801,7 +1801,7 @@ border: 15px solid green;</textarea>
 
         Utilisez `margin` pour définir l'espace par défaut autour des balises  `<h1>` et `<h2>`.  (Vous pouvez *inspecter l'élément* avec les outils de développement pour voir la valeur de marge par défaut.)
 
-        ```
+        ```css
         h1, h2 {
           margin: 0; /* enlève l'espace par défaut */
         }
@@ -1831,7 +1831,7 @@ border: 15px solid green;</textarea>
 
         Si vous souhaitez enlever le style par défaut (gras) des en-têtes, vous pouvez ajouter la propriété `font-weight`.
 
-        ```
+        ```css
         h1, h2 {
           font-weight: normal; /* enlève le style gras par défaut */
         }
@@ -1839,7 +1839,7 @@ border: 15px solid green;</textarea>
 
         Maintenant, personnalisons les styles des polices avec `font-size` et `line-height`.
 
-        ```
+        ```css
         h1 {
           font-size: 75px;
         }
@@ -1879,7 +1879,7 @@ border: 15px solid green;</textarea>
 
         **Truc de pro!** Comme dans [Inception](http://www.imdb.com/title/tt1375666/), n'allez pas plus loin que trois niveaux.
 
-        ```
+        ```css
         nav ul li a {
           /* NOOOOOOOOOOON */
         }
@@ -1899,14 +1899,14 @@ border: 15px solid green;</textarea>
 
         Ajoutons des styles propres à l'en-tête (header) pour qu'il se démarque du reste de la page.  Nous ne pouvons pas utiliser `h1` ou `h2` seul, car cela sélectionnerait toutes les balises d'en-tête sur la page. Utilisez plutôt les *sélecteurs de descendants*.
 
-        ```xml
+        ```html
         <header>
           <h1>Salut, je m'appelle Laura Ipsum.</h1>
           <h2>Je suis conceptrice et développeuse numérique et une grande amatrice de beignes.</h2>
         </header>
         ```
 
-        ```
+        ```css
         header h1 {
           font-size: 100px;
         }
@@ -1925,7 +1925,7 @@ border: 15px solid green;</textarea>
 
         Le sens HTML sémantique de la balise `<strong>` est de donner de l'importance (de la force!) au texte. Assurez-vous de l'utiliser seulement apour du texte important.
 
-        ```
+        ```html
         <h1>Salut, je m'appelle <strong>Laura Ipsum</strong>.</h1>
         <h2>Je suis <strong>conceptrice</strong> et <strong>développeuse</strong> numérique et une grande amatrice de beignes.</h2>
         ```
@@ -1933,12 +1933,12 @@ border: 15px solid green;</textarea>
 
         <!-- .element: class="note" -->**Truc de pro!** Utilisez la balise strong **sémantiquement** (pour indiquer l'importance du texte), pas seulement pour le style!
 
-        ```
+        ```css
         strong {
           color: #9D6381;
         }
         ```
-        Référence pour la couleur : <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Référence pour la couleur : <!-- .element: class="note" --><span style="color:#9D6381;padding:0 5px;">#9D6381</span>
 
         Votre page devrait ressembler à ceci : [exercice-9.html](project/référence-fr/exercice-9.html).
       </script>
@@ -1963,7 +1963,7 @@ border: 15px solid green;</textarea>
 
         **Sélecteurs d'éléments HTML :**  Utilisez-les pour appliquer un style à tous les éléments ou à la *plupart* des éléments sélectionnés sur la page (par exemple, tous les liens).
 
-        ```
+        ```css
         a {
           color: red;
         }
@@ -1971,7 +1971,7 @@ border: 15px solid green;</textarea>
 
         **Sélecteurs de descendants :** Utilisez-les pour appliquer un style à un élément précis à l'intérieur d'un autre élément (par exemple, seulement les liens dans la navigation).
 
-        ```
+        ```css
         nav a {
           color: blue;
         }
@@ -1979,7 +1979,7 @@ border: 15px solid green;</textarea>
 
         **Sélecteurs de classe :**  Utilisez-les pour appliquer un style qui n'est pas propre à un élément HTML précis, mais à une classe précise (par exemple, à une partie de la page qui utilise la même balise HTML qu'un autre bloc de la page).
 
-        ```
+        ```css
         .apropos {
           color: green;
         }
@@ -2000,7 +2000,7 @@ border: 15px solid green;</textarea>
 
         Par défaut, la plupart des éléments HTML sont des éléments *blocs*. Cela veut dire qu'ils s'affichent empilés les uns sur les autres avec une largeur de 100 % et dans l'ordre qu'ils ont été ajoutés au code.
 
-        ```
+        ```html
         <p>élément 1</p>
         <p>élément 2</p>
         <p>élément 3</p>
@@ -2111,13 +2111,13 @@ border: 15px solid green;</textarea>
 
         En ajoutant `overflow: hidden;` au *parent* de l'élément flotté, vous le forcez à « contenir » tous les éléments enfants flottés.
 
-        ```
+        ```html
         <section class="apropos">
           <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
           ...
         </section>
         ```
-        ```
+        ```css
         .apropos {
           overflow: hidden;
         }
@@ -2227,7 +2227,7 @@ border: 15px solid green;</textarea>
 
         **Important :** Notez bien l'emplacement du fichier CSS.
 
-        ```html
+        ```xml
         projet/
           |-- css/
               |--styles.css
@@ -2267,13 +2267,13 @@ border: 15px solid green;</textarea>
 
         Si l'image est plus petite que la largeur de la fenêtre de votre navigateur, elle se répétera par défaut. Pour empêcher cela, ajoutez la valeur `no-repeat` comme dans l'exemple qui suit :
 
-        ```
+        ```css
         body { /* forme longue */
           background-image: url(../images/buildings.jpg);
           background-repeat: no-repeat;
         }
         ```
-        ```
+        ```css
         body { /* forme courte */
           background: url(../images/buildings.jpg) no-repeat;
         }
@@ -2287,7 +2287,7 @@ border: 15px solid green;</textarea>
 
         Ajoutons l'extrait de code ci-dessous à notre projet, une valeur à la fois, pour essayer chaque propriété.
 
-        ```
+        ```css
         body { /* forme longue */
           background-image: url('../images/buildings.jpg');
           background-repeat: no-repeat;
@@ -2295,7 +2295,7 @@ border: 15px solid green;</textarea>
           background-size: cover;
         }
         ```
-        ```
+        ```css
         body { /* forme courte */
           background: url(../images/buildings.jpg) no-repeat fixed;
           background-size: cover;
