@@ -1,11 +1,4 @@
 # English
-## This content is featured in a monthly theme!
-
-In 2019, we want to challenge Canadians to pause and think, learn about, share, and work towards solving issues that affect us all on a global scale – while leveraging the power of technology!  More information on monthly themes [here](https://www.canadalearningcode.ca/code-can-change-the-world/).
-
-JULY'S THEME IS: Food Security
-
-See slide 4 for suggestions on how learners can incorporate this month’s theme into their projects - if they choose to participate.
 
 # Ladies Learning Code
 ## Build a One-Page Website with HTML & CSS
@@ -85,13 +78,6 @@ This repository ships with a collection of image assets (located in `project/ima
 - [Profile](https://unsplash.com/photos/u1CAj5HJzO4)
 
 # Français
-## Ce contenu fait partie d'un thème mensuel!
-
-En 2019, nous encourageons la population du Canada à réfléchir, à apprendre, à partager et à collaborer pour résoudre des problèmes qui affectent toute la planète à l'aide de la technologie! Vous trouverez plus d'informations sur les thèmes mensuels en consultant notre [site](https://www.canadalearningcode.ca/monthly-themes/).
-
-*Le thème du mois de juillet est la sécurité alimentaire.*
-
-Consultez la diapositive n° 5 pour donner à votre groupe des idées pour intégrer le thème à leur projet. Les apprenantes ont le choix d'intégrer le thème à leur projet ou non.
 
 # Femmes en programmation
 ## Création d’un site Web à une page avec le HTML et le CSS
