@@ -19,6 +19,16 @@
   }
   .labels {
     margin-bottom: 200px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul > li:before {
+      content: "";
+      margin-left: 10px;
+    }
   }
   .labels p {
     padding-left: 20px;
