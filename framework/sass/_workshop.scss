@@ -2,7 +2,7 @@
 ------------------------------------*/
 .slide.intro {
   background: linear-gradient(rgba($black, 0.7),
-              rgba($black, 0.7)), 
+              rgba($black, 0.7)),
               url(../img/banner-home2.jpg) no-repeat;
   background-size: cover;
 }
@@ -38,7 +38,7 @@
     @include label(315, purple);
   }
   .footer {
-    @include label(140, orange);
+    @include label(140, red);
   }
 }
 .essay-headings {
@@ -51,8 +51,8 @@
   background: linear-gradient(rgba($black, 0.3),
               rgba($black, 0.8)), url(../img/workshop/kids-dancing.gif) no-repeat 50%;
   background-size: cover;
-  padding-top: 10px;  
-  
+  padding-top: 10px;
+
   .text {
     position: absolute;
     bottom: 60px;
@@ -83,11 +83,10 @@
 .final-exercise {
   background: linear-gradient(rgba($black, 0.5), rgba($black, 0)), url(../img/workshop/excited-baby.gif) no-repeat 50%;
   background-size: cover;
-  padding-top: 10px;  
-  
+  padding-top: 10px;
+
   h1 {
     font-weight: bold;
     font-size: 80px;
   }
 }
-

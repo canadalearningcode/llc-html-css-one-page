@@ -195,7 +195,7 @@
         - `host` - This is the name of the website itself. It tells the browser *generally* where the file can be found (kind of like a home address).
         - `path` - This tells the browser *specifically* where the file can be found. If the `host` is the home address, the `path` is the name of the person we're looking for, and which room they're in!
 
-        ```xml
+        ```html
         <scheme>//<host>/<path>/
         ```
 
@@ -295,12 +295,12 @@
 
         Tags usually come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note the closing tag has a forward slash (`/`).
 
-        ```
+        ```html
         <tag> opening tag --- closing tag </tag>
         ```
 
         HTML *tags* describe the content inside of them to the web browser.
-        ```
+        ```html
         <h1>This tag describes a heading</h1>
         <p>This tag is for paragraphs.</p>
         ```
@@ -313,7 +313,7 @@
 
         Tags can be *nested* within other tags like this:
 
-        ```
+        ```html
         <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
         ```
 
@@ -321,7 +321,7 @@
 
         The inner tag is the child of the outer tag.
 
-        ```
+        ```html
         <parent>
           <child></child>
         </parent>
@@ -335,13 +335,13 @@
 
         HTML was created for web browsers to read (not humans) so this makes perfect sense to a web browser:
 
-        ```
+        ```html
         <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body></body></html>
         ```
 
         But for us, using whitespace through indentation (tabs) will makes HTML easier to read. When nesting a tag, add one tab space.
 
-        ```
+        ```html
         <outertag>
           <innertag>
           </innertag>
@@ -356,7 +356,7 @@
 
         The tags below should be included in ** *all* ** HTML documents.
 
-        ```
+        ```html
         <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -380,7 +380,7 @@
 
       Inside of the folder you downloaded today, open the **project** folder in your text editor to edit your project.
 
-      ```html
+      ```xml
       llc-html-css-one-page-master
         |-- framework // Contains files needed for slide presentation. Do not edit!
         |-- project // Contains the exercise files for this workshop. (images, CSS & HTML files)
@@ -408,7 +408,7 @@
 
         Your project folder structure will look like this:
 
-        ```html
+        ```xml
         project
           |-- images
           |-- reference
@@ -459,7 +459,7 @@
         1. Save it as `index.html` (**File** > **Save**)
         1. Add all of the basic HTML tags. Refer to [this slide](slides-en.html#basic-tags) for reference.
         1. In *between* the `<title></title>` tags, add a *page title* that reflects the content of your webpage. Example:
-          ```
+          ```html
           <title>Laura Ipsum | Digital Designer & Developer</title>
           ```
         1. Open `index.html` in the browser.
@@ -576,7 +576,7 @@
         * follows the syntax of `attribute="value"` (note the quotes)
         * many different attributes
 
-        ```
+        ```html
         <tag attribute="value">content</tag>
         ```
       </script>
@@ -590,12 +590,12 @@
 
         The `lang` attribute is used to classify the language.
 
-        ```
+        ```html
         <html lang="en">
         ```
 
         The `charset` attribute sets the character encoding.
-        ```
+        ```html
         <meta charset="UTF-8">
         ```
 
@@ -656,7 +656,7 @@
 
         Using HTML5 tags, the page could be structured like this:
 
-        ```xml
+        ```html
         <header>
           <!-- header content here -->
         </header>
@@ -687,7 +687,7 @@
 
         Also, you can use HTML comments to help organize the code like so:
 
-        ```
+        ```html
         <!-- page header -->
         <header>
 
@@ -708,7 +708,7 @@
 
         **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
 
-        ```xml
+        ```html
         <p>This is a paragraph.</p>
 
         <p>This is a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vero dolor expedita quasi reiciendis minus unde sapiente id eveniet saepe officia quibusdam aspernatur, sint voluptate ipsam ex magni. Aliquam, ex!</p>
@@ -753,7 +753,7 @@
         Prior to HTML5, before sectioning tags were introduced, usually only one `<h1>` was used per page.  The heading outline would look like this:
 
         **Pre-HTML5 Heading Outline**
-        ```xml
+        ```html
         <h1>Essay Title</h1>
 
         <div>
@@ -779,7 +779,7 @@
         With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its *own* outline.
 
         **HTML5 Heading Outline**
-        ```xml
+        ```html
         <h1>Essay Title</h1>
 
         <section>
@@ -855,7 +855,7 @@
 
         (Also found in <!-- .element: class="note" -->`exercise-3.html`)
 
-        ```
+        ```html
         <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -965,14 +965,14 @@
 
         Images use a self-closing tag. It also requires a `src` *attribute* to tell the browser the location of the image file.
 
-        ```
+        ```html
         <img src="path/to/image/file-name">
 
         ```
 
         `alt` is another attribute that is added to images to provide *alternative text* to visually impaired web visitors using screen readers.
 
-        ```
+        ```html
         <img src="http://placekitten.com/200/300" alt="kitten!">
 
         ```
@@ -1008,7 +1008,7 @@
 
         Since the images are not in the same folder as **index.html**, use a *relative* path to link to the file.
 
-        ```
+        ```html
         <img src="images/image-file.jpg" alt="description of image">
         ```
         The starting point (**index.html**), is outside of the **images** folder. The above example directs the browser to a folder named **images**, then the filename, *including the file extension*.
@@ -1020,7 +1020,7 @@
         #Image file organization
         If you have a folder in a folder, then add the subfolder into the path.
 
-        ```
+        ```html
         <img src="folder/sub-folder/filename" alt="description of image">
         ```
 
@@ -1038,17 +1038,17 @@
 
         The example below includes an *absolute* path to the Ladies Learning Code homepage.
 
-        ```xml
+        ```html
         <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
         ```
 
         To set the link to open in a new window, add a second attribute, `target`.
-        ```xml
+        ```html
         <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
         ```
 
         Here's the syntax for an email link.
-        ```xml
+        ```html
         <a href="mailto:hello@myemail.com">hello@myemail.com</a>
         ```
       </script>
@@ -1105,13 +1105,13 @@
         **Selectors:** determines which HTML element(s) to apply the styles to.
         **Declarations:** style rules written in `property:value` pairs, are wrapped by curly brackets `{ }` and must end with a semi-colon `;`
 
-        ```
+        ```css
         selector {
           property: value;
         }
         ```
         **Properties** determine the *type* of style to be applied (e.g. color). **Values** are specific to the property (red).
-        ```
+        ```css
         p {
           color: red;
         }
@@ -1126,7 +1126,7 @@
 
         Multiple declarations can be added to one selector. Just be sure to end each declaration with a semi-colon and write them on a separate line for readability.
 
-        ```
+        ```css
         h2 {
           background-color: green;
           font-size: 50px;
@@ -1169,7 +1169,7 @@ selector { /* select the h2 */
 
         Use `<link>` tag and two *attributes*, `rel` and `href`.
 
-        ```
+        ```html
         <head>
           <title>Page Title</title>
           <link rel="stylesheet" href="css/style.css">
@@ -1192,13 +1192,13 @@ selector { /* select the h2 */
         1. Name it **styles.css** and save it to the **css** folder (already included in your **project** folder).
         <span class="note">You can name the file anything but it's best to choose a name that describes the file content.<br> (i.e. styles.css, global.css, custom.css, project-name.css, etc)</span>
         1. Then, reference it in **index.html**. <span class="note">**Pro tip!** Type `link` and press tab!</span>
-          ```
+          ```html
           <head>
               <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
         1. Run a test by adding a background color to the viewport (`body`).
-          ```
+          ```css
           body {
             background: lightblue;
           }
@@ -1232,7 +1232,7 @@ selector { /* select the h2 */
         * **RGB** - uses 3 numerical values between `0` (black) and `255` (white)
         * **hex code** - number sign (`#`) followed by six characters (0-9, A-F)
 
-        ```
+        ```css
         /* These are all the same colour - this is also a CSS comment by the way! */
         p {
           background: firebrick;
@@ -1291,7 +1291,7 @@ text-transform: lowercase;</textarea>
 
         Web safe fonts refers to fonts that come pre-installed on your computer. Operating systems do not always have the same fonts, so use a font *stack* to provide fallback options:
 
-        ```
+        ```css
         font-family: Helvetica, Arial, sans-serif;
         ```
 
@@ -1334,18 +1334,18 @@ text-transform: lowercase;</textarea>
         1. Choose **Embed** to get the code:
           * copy the `<link>` code snippet
           * add it to the `<head>` of your HTML page. <span class="note">(Make sure to add the link *before* your the *styles.css* file)</span>
-          ```
+          ```html
           <head>
-          <meta charset="UTF-8">
-          <title>Laura Ipsum | Designer & Developer</title>
-          <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-          <link rel="stylesheet" href="css/styles.css">
+            <meta charset="UTF-8">
+            <title>Laura Ipsum | Designer & Developer</title>
+            <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="css/styles.css">
           </head>
           ```
 
         Now you're ready to use the new fonts. Use the font-family name listed in the Google Fonts page.
 
-        ```
+        ```css
         font-family: 'Open Sans', sans-serif;
         ```
       </script>
@@ -1357,7 +1357,7 @@ text-transform: lowercase;</textarea>
 
         A strength of CSS is styles can be inherited from parent to child elements. Let's review the family tree structure between the elements.
 
-        ```
+        ```html
         <body><!-- parent of h1 and p -->
           <h1>My Website</h1><!-- child of body, sibling of p -->
           <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
@@ -1365,7 +1365,7 @@ text-transform: lowercase;</textarea>
         ```
 
         CSS properties in the `body` selector is inherited by the descendant elements. A more specific selector will override the inherited values.
-        ```
+        ```css
         body {
           color: grey;
         }
@@ -1386,7 +1386,7 @@ text-transform: lowercase;</textarea>
 
         Change the `font-weight` to a thinner or thicker font (optional).
 
-        ```
+        ```css
         body {
           font-family: 'Open Sans', sans-serif;
           font-weight: 300;
@@ -1403,7 +1403,7 @@ text-transform: lowercase;</textarea>
 
         To target multiple selectors at the same time, you can *combine* selectors with a comma.
 
-        ```
+        ```css
         h1,
         h2 {
           font-family: 'Bad Script', cursive;
@@ -1457,7 +1457,7 @@ text-transform: lowercase;</textarea>
         Remember adding a class attribute to the About & Loves section?
         They were added to give each section *different* styles.
 
-        ```xml
+        ```html
         <section class="about">
           ...
         </section>
@@ -1482,13 +1482,13 @@ text-transform: lowercase;</textarea>
 
         Class selectors are defined by leading period.
 
-        ```
+        ```css
         /* applies to any element with the class of about */
         .about {
           background: red;
         }
         ```
-        ```
+        ```css
         /* targets ALL section elements */
         section {
           background: blue;
@@ -1505,15 +1505,15 @@ text-transform: lowercase;</textarea>
 
         It must start with `/*` and end with `*/` but can contain any characters in between. Use whichever comment style works for you but here's a few common conventions:
 
-        ```
+        ```css
         /* CSS Comments */
         ```
-        ```
+        ```css
         /*
         CSS Comments
         */
         ```
-        ```
+        ```css
         /* CSS Comments
         ----------------*/
         ```
@@ -1544,7 +1544,7 @@ text-transform: lowercase;</textarea>
 
         Add comments to block off and organize the CSS file.  Use the sample below as reference.
 
-        ```
+        ```css
         /* PAGE HEADER
         -----------------------------------------*/
         header {
@@ -1563,18 +1563,18 @@ text-transform: lowercase;</textarea>
         Next, apply a background colour to just the "Loves" section.
         <span class="note">(The "About" section is getting a different treatment in a later exercise.)</span>
 
-        ```
+        ```css
         /* LOVES - things I love
         -----------------------------------------*/
         .loves {
           background: #9D6381;
         }
         ```
-        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;color:white;padding:0 5px;">#9D6381</span>
 
         Since there's only one `<footer>`, we can use that as our selector. Also, change the color of the text, if using a dark background colour.
 
-        ```
+        ```css
         /* FOOTER - contact info
         -----------------------------------------*/
         footer {
@@ -1594,12 +1594,12 @@ text-transform: lowercase;</textarea>
 
         To change the color of the link, select the anchor tag and override the default blue.
 
-        ```
+        ```css
         a {
           color: #9D6381;
         }
         ```
-        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Color reference: <!-- .element: class="note" --><span style="color:#9D6381;padding:0 5px;">#9D6381</span>
 
         Not exactly super polished yet but it's getting there.  Your page should look similar to [exercise-6.html](project/reference/exercise-6.html) in your **reference** folder.
       </script>
@@ -1757,7 +1757,7 @@ border: 15px solid green;</textarea>
 
         Add this snippet to your project (and to all future projects) to fix how the width/padding/border size is rendered.
 
-        ```
+        ```css
         /* apply a natural box layout model to all elements, but allowing components to change */
         html {
           box-sizing: border-box;
@@ -1783,7 +1783,7 @@ border: 15px solid green;</textarea>
 
         Combine the selectors to target them all at the same time.
 
-        ```
+        ```css
         header,
         section,
         footer {
@@ -1799,7 +1799,7 @@ border: 15px solid green;</textarea>
 
         Notice the white space around the edge of the page? That's default margin & padding being applied to the `body` element by the browser. Reset it by setting the values to 0.
 
-        ```
+        ```css
         body {
           margin: 0;
           padding: 0;
@@ -1808,7 +1808,7 @@ border: 15px solid green;</textarea>
 
         Use `margin` to adjust the default space around the  `<h1>` and `<h2>` tag.  (You can *inspect the element* using the dev tools to see the default margin.)
 
-        ```
+        ```css
         h1, h2 {
           margin: 0; /* removes default space */
         }
@@ -1838,7 +1838,7 @@ border: 15px solid green;</textarea>
 
         If you want to remove the default bold style of the headings, you can add the `font-weight` property.
 
-        ```
+        ```css
         h1, h2 {
           font-weight: normal; /* removes default bold style */
         }
@@ -1846,7 +1846,7 @@ border: 15px solid green;</textarea>
 
         Let's also customize some font styles using `font-size` and `line-height`
 
-        ```
+        ```css
         h1 {
           font-size: 75px;
         }
@@ -1886,7 +1886,7 @@ border: 15px solid green;</textarea>
 
         **Pro tip!** Just like [Inception](http://www.imdb.com/title/tt1375666/), avoid going more than three levels.
 
-        ```
+        ```css
         nav ul li a {
           /* NOOOOOOOOOOO */
         }
@@ -1906,14 +1906,14 @@ border: 15px solid green;</textarea>
 
         Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page, so use *descendant selectors* instead.
 
-        ```xml
+        ```html
         <header>
           <h1>Hi! I'm Laura Ipsum.</h1>
           <h2>I'm a digital designer and developer with a penchant for gourmet doughnuts.</h2>
         </header>
         ```
 
-        ```
+        ```css
         header h1 {
           font-size: 100px;
         }
@@ -1932,7 +1932,7 @@ border: 15px solid green;</textarea>
 
         The semantic HTML meaning of the `<strong>` tag is to give importance to the text, so be sure to use it only for important text.
 
-        ```
+        ```html
         <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
         <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
         ```
@@ -1940,12 +1940,12 @@ border: 15px solid green;</textarea>
 
         <!-- .element: class="note" -->**Pro tip!** Make sure the strong tag is used **semantically**, not just as a hook for styling!
 
-        ```
+        ```css
         strong {
           color: #9D6381;
         }
         ```
-        Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
+        Color reference: <!-- .element: class="note" --><span style="color:#9D6381;padding:0 5px;">#9D6381</span>
 
         Your page should now look similar to [exercise-9.html](project/reference/exercise-9.html).
       </script>
@@ -1970,7 +1970,7 @@ border: 15px solid green;</textarea>
 
         **HTML element selectors:**  Use this to apply a style to all or *most* of that particular element on the page.  (e.g. all links on the page).
 
-        ```
+        ```css
         a {
           color: red;
         }
@@ -1978,7 +1978,7 @@ border: 15px solid green;</textarea>
 
         **Descendant selectors:** Use this to apply a style to a specific element within another element. (e.g. Only links within the navigation)
 
-        ```
+        ```css
         nav a {
           color: blue;
         }
@@ -1986,7 +1986,7 @@ border: 15px solid green;</textarea>
 
         **Class selectors:**  Use this to apply a style to an element that is not specific to an  HTML element, only the class.  (e.g. a portion of the page that uses the same HTML tag as another page block)
 
-        ```
+        ```css
         .about {
           color: green;
         }
@@ -2007,7 +2007,7 @@ border: 15px solid green;</textarea>
 
         By default, most HTML elements are *block* level elements. This means they display stacked on top of each other and take up 100% width, in the order of how it is written.
 
-        ```
+        ```html
         <p>element 1</p>
         <p>element 2</p>
         <p>element 3</p>
@@ -2118,13 +2118,13 @@ border: 15px solid green;</textarea>
 
         Adding `overflow: hidden;` to the *parent* of the floated element forces it to 'contain' any floated child elements.
 
-        ```
+        ```html
         <section class="about">
           <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
           ...
         </section>
         ```
-        ```
+        ```css
         .about {
           overflow: hidden;
         }
@@ -2251,7 +2251,7 @@ border: 15px solid green;</textarea>
 
         **Important:** Note the location of the CSS file.
 
-        ```html
+        ```xml
         project/
           |-- css/
               |--styles.css
@@ -2291,13 +2291,13 @@ border: 15px solid green;</textarea>
 
         If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value like this:
 
-        ```
+        ```css
         body { /* longhand */
           background-image: url(../images/buildings.jpg);
           background-repeat: no-repeat;
         }
         ```
-        ```
+        ```css
         body { /* shorthand */
           background: url(../images/buildings.jpg) no-repeat;
         }
@@ -2311,7 +2311,7 @@ border: 15px solid green;</textarea>
 
         Let&#39;s add the below sample code to our project, one value at a time, to see how each property works.
 
-        ```
+        ```css
         body { /* longhand */
           background-image: url('../images/buildings.jpg');
           background-repeat: no-repeat;
@@ -2319,7 +2319,7 @@ border: 15px solid green;</textarea>
           background-size: cover;
         }
         ```
-        ```
+        ```css
         body { /* shorthand */
           background: url(../images/buildings.jpg) no-repeat fixed;
           background-size: cover;
