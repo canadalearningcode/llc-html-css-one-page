@@ -8,7 +8,9 @@ This workshop covers HTML and CSS basics and is intended for complete beginners.
 
 ## Quick Links
 
-Preview Slides : https://ladieslearningcode.github.io/llc-html-css-one-page/slides-en.html
+Preview Slides : [https://ladieslearningcode.github.io/llc-html-css-one-page/slides-en.html](https://ladieslearningcode.github.io/llc-html-css-one-page/slides-en.html)
+
+Instructor notes : [https://ladieslearningcode.github.io/llc-html-css-one-page/notes-en.html](https://ladieslearningcode.github.io/llc-html-css-one-page/notes-en.html)
 
 ### Attributions
 
@@ -87,7 +89,9 @@ Durant cet atelier conçu pour les débutantes, les apprenantes découvriront de
 
 ## Liens rapides
 
-Aperçu des diapositives : https://ladieslearningcode.github.io/llc-html-css-one-page/slides-fr.html
+Aperçu des diapositives : [https://ladieslearningcode.github.io/llc-html-css-one-page/slides-fr.html](https://ladieslearningcode.github.io/llc-html-css-one-page/slides-fr.html)
+
+Notes de la formatrice : [https://ladieslearningcode.github.io/llc-html-css-one-page/notes-fr.html](https://ladieslearningcode.github.io/llc-html-css-one-page/notes-fr.html)
 
 ### Sources
 
